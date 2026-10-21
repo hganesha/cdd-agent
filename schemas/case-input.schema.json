@@ -1,0 +1,224 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.atlas-cdd.internal/1.0.0/case-input.schema.json",
+  "title": "CaseInput",
+  "type": "object",
+  "required": [
+    "case_id",
+    "schema_version",
+    "case_type",
+    "trigger",
+    "cdd_level_requested",
+    "relationship",
+    "claimed_customer",
+    "jurisdiction_profile",
+    "policy_version",
+    "sla",
+    "budget",
+    "bundle_ref",
+    "requested_by"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "pattern": "^CASE-[0-9]+$"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "case_type": {
+      "enum": [
+        "INDIVIDUAL",
+        "LEGAL_ENTITY",
+        "TRUST",
+        "PARTNERSHIP"
+      ]
+    },
+    "trigger": {
+      "enum": [
+        "NEW_RELATIONSHIP",
+        "PERIODIC_REVIEW",
+        "TRIGGER_EVENT",
+        "ALERT_ESCALATION"
+      ]
+    },
+    "cdd_level_requested": {
+      "enum": [
+        "SDD",
+        "CDD",
+        "EDD"
+      ]
+    },
+    "relationship": {
+      "type": "object",
+      "required": [
+        "products",
+        "jurisdictions",
+        "purpose_statement"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "products": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "expected_currency": {
+          "type": "string",
+          "pattern": "^[A-Z]{3}$"
+        },
+        "expected_monthly_volume": {
+          "$ref": "#/$defs/money"
+        },
+        "channels": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "RELATIONSHIP_MANAGER",
+              "DIGITAL",
+              "INTRODUCER",
+              "BRANCH",
+              "THIRD_PARTY"
+            ]
+          }
+        },
+        "jurisdictions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}$"
+          }
+        },
+        "purpose_statement": {
+          "type": "string",
+          "minLength": 5,
+          "maxLength": 500
+        }
+      }
+    },
+    "claimed_customer": {
+      "type": "object",
+      "description": "Claim, never evidence. Escaped before being shown to the model."
+    },
+    "jurisdiction_profile": {
+      "type": "string"
+    },
+    "policy_version": {
+      "type": "string"
+    },
+    "sla": {
+      "type": "object",
+      "required": [
+        "deadline"
+      ],
+      "properties": {
+        "deadline": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "interim_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "budget": {
+      "type": "object",
+      "required": [
+        "max_usd",
+        "max_tokens",
+        "max_wallclock_s"
+      ],
+      "properties": {
+        "max_usd": {
+          "type": "number",
+          "minimum": 1
+        },
+        "max_tokens": {
+          "type": "integer",
+          "minimum": 100000
+        },
+        "max_wallclock_s": {
+          "type": "integer",
+          "minimum": 60,
+          "maximum": 86400
+        }
+      }
+    },
+    "bundle_ref": {
+      "type": "object",
+      "required": [
+        "manifest_uri"
+      ],
+      "properties": {
+        "manifest_uri": {
+          "type": "string"
+        },
+        "doc_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "page_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "prior_case_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rfi_round": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 5
+    },
+    "requested_by": {
+      "type": "object",
+      "required": [
+        "analyst_id"
+      ],
+      "properties": {
+        "analyst_id": {
+          "type": "string"
+        },
+        "desk": {
+          "type": "string"
+        }
+      }
+    },
+    "contains_special_category_data": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "$defs": {
+    "money": {
+      "type": "object",
+      "required": [
+        "amount",
+        "currency"
+      ],
+      "properties": {
+        "amount": {
+          "type": "string",
+          "pattern": "^-?[0-9]+(\\.[0-9]+)?$"
+        },
+        "currency": {
+          "type": "string",
+          "pattern": "^[A-Z]{3}$"
+        }
+      }
+    }
+  }
+}

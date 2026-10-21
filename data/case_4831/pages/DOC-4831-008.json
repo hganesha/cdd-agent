@@ -1,0 +1,366 @@
+{
+ "doc_id": "DOC-4831-008",
+ "filename": "bank_statements_2026.pdf",
+ "pages": [
+  {
+   "page": 1,
+   "text": "ACCOUNT STATEMENT \u2014 MERIDIAN TRADE HOLDINGS LTD\nBank: Alpine International Bank\nAccount: 4471-0092-8813  Currency: USD\nStatement period: 2026-07-01 to 2026-09-30\nOpening balance: USD 188,400\nClosing balance: USD 402,915\nTotal credits: USD 12,880,000\nTotal debits: USD 12,665,485\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 2,
+   "text": "TRANSACTION SUMMARY\nInbound counterparties: 14 (9 in the United Arab Emirates, 5 in Turkey)\nOutbound counterparties: 22 (11 in Hong Kong, 11 in Turkey)\nLargest single credit: USD 2,400,000\nRound-value credits over USD 100,000: 31\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 3,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 3\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-04     REF-00003    TRADING PARTNER 003          89,000    \u2014\n2026-07-05     REF-00503    TRADING PARTNER 103    \u2014               89,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 4,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 4\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-05     REF-00004    TRADING PARTNER 004          36,000    \u2014\n2026-07-06     REF-00504    TRADING PARTNER 104    \u2014              182,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 5,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 5\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-06     REF-00005    TRADING PARTNER 005         105,000    \u2014\n2026-07-07     REF-00505    TRADING PARTNER 105    \u2014              153,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 6,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 6\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-07     REF-00006    TRADING PARTNER 006          73,000    \u2014\n2026-07-08     REF-00506    TRADING PARTNER 106    \u2014              152,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 7,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 7\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-08     REF-00007    TRADING PARTNER 007         197,000    \u2014\n2026-07-09     REF-00507    TRADING PARTNER 107    \u2014               24,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 8,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 8\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-09     REF-00008    TRADING PARTNER 008         183,000    \u2014\n2026-07-10     REF-00508    TRADING PARTNER 108    \u2014              264,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 9,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 9\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-10     REF-00009    TRADING PARTNER 009          47,000    \u2014\n2026-07-11     REF-00509    TRADING PARTNER 109    \u2014              285,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 10,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 10\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-11     REF-00010    TRADING PARTNER 010         159,000    \u2014\n2026-07-12     REF-00510    TRADING PARTNER 110    \u2014              212,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 11,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 11\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-12     REF-00011    TRADING PARTNER 011         184,000    \u2014\n2026-07-13     REF-00511    TRADING PARTNER 111    \u2014              244,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 12,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 12\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-13     REF-00012    TRADING PARTNER 012         129,000    \u2014\n2026-07-14     REF-00512    TRADING PARTNER 112    \u2014              259,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 13,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 13\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-14     REF-00013    TRADING PARTNER 013          69,000    \u2014\n2026-07-15     REF-00513    TRADING PARTNER 113    \u2014              122,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 14,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 14\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-15     REF-00014    TRADING PARTNER 014         297,000    \u2014\n2026-07-16     REF-00514    TRADING PARTNER 114    \u2014              142,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 15,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 15\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-16     REF-00015    TRADING PARTNER 015         294,000    \u2014\n2026-07-17     REF-00515    TRADING PARTNER 115    \u2014              205,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 16,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 16\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-17     REF-00016    TRADING PARTNER 016         135,000    \u2014\n2026-07-18     REF-00516    TRADING PARTNER 116    \u2014              139,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 17,
+   "text": "[page could not be rendered \u2014 scan skew and low resolution; text unreadable]",
+   "blank": false,
+   "ocr_confidence": 0.31
+  },
+  {
+   "page": 18,
+   "text": "[page could not be rendered \u2014 scan skew and low resolution; text unreadable]",
+   "blank": false,
+   "ocr_confidence": 0.31
+  },
+  {
+   "page": 19,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 19\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-20     REF-00019    TRADING PARTNER 019         122,000    \u2014\n2026-07-21     REF-00519    TRADING PARTNER 119    \u2014              161,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 20,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 20\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-21     REF-00020    TRADING PARTNER 020         240,000    \u2014\n2026-07-22     REF-00520    TRADING PARTNER 120    \u2014              242,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 21,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 21\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-22     REF-00021    TRADING PARTNER 021         186,000    \u2014\n2026-07-23     REF-00521    TRADING PARTNER 121    \u2014               44,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 22,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 22\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-23     REF-00022    TRADING PARTNER 022         121,000    \u2014\n2026-07-24     REF-00522    TRADING PARTNER 122    \u2014              110,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 23,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 23\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-24     REF-00023    TRADING PARTNER 023         295,000    \u2014\n2026-07-25     REF-00523    TRADING PARTNER 123    \u2014              159,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 24,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 24\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-25     REF-00024    TRADING PARTNER 024          68,000    \u2014\n2026-07-26     REF-00524    TRADING PARTNER 124    \u2014              214,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 25,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 25\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-26     REF-00025    TRADING PARTNER 025          91,000    \u2014\n2026-07-27     REF-00525    TRADING PARTNER 125    \u2014               98,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 26,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 26\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-27     REF-00026    TRADING PARTNER 026         187,000    \u2014\n2026-07-28     REF-00526    TRADING PARTNER 126    \u2014              143,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 27,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 27\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-28     REF-00027    TRADING PARTNER 027         240,000    \u2014\n2026-07-29     REF-00527    TRADING PARTNER 127    \u2014              163,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 28,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 28\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-01     REF-00028    TRADING PARTNER 028         161,000    \u2014\n2026-07-02     REF-00528    TRADING PARTNER 128    \u2014              148,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 29,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 29\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-02     REF-00029    TRADING PARTNER 029         163,000    \u2014\n2026-07-03     REF-00529    TRADING PARTNER 129    \u2014              223,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 30,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 30\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-03     REF-00030    TRADING PARTNER 030         174,000    \u2014\n2026-07-04     REF-00530    TRADING PARTNER 130    \u2014              195,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 31,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 31\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-04     REF-00031    TRADING PARTNER 031         105,000    \u2014\n2026-07-05     REF-00531    TRADING PARTNER 131    \u2014               22,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 32,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 32\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-05     REF-00032    TRADING PARTNER 032          68,000    \u2014\n2026-07-06     REF-00532    TRADING PARTNER 132    \u2014               69,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 33,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 33\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-06     REF-00033    TRADING PARTNER 033         281,000    \u2014\n2026-07-07     REF-00533    TRADING PARTNER 133    \u2014              250,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 34,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 34\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-07     REF-00034    TRADING PARTNER 034          14,000    \u2014\n2026-07-08     REF-00534    TRADING PARTNER 134    \u2014              197,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 35,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 35\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-08     REF-00035    TRADING PARTNER 035         279,000    \u2014\n2026-07-09     REF-00535    TRADING PARTNER 135    \u2014               25,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 36,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 36\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-09     REF-00036    TRADING PARTNER 036         249,000    \u2014\n2026-07-10     REF-00536    TRADING PARTNER 136    \u2014              240,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 37,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 37\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-10     REF-00037    TRADING PARTNER 037         194,000    \u2014\n2026-07-11     REF-00537    TRADING PARTNER 137    \u2014              283,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 38,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 38\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-11     REF-00038    TRADING PARTNER 038         269,000    \u2014\n2026-07-12     REF-00538    TRADING PARTNER 138    \u2014               87,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 39,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 39\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-12     REF-00039    TRADING PARTNER 039          83,000    \u2014\n2026-07-13     REF-00539    TRADING PARTNER 139    \u2014              272,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 40,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 40\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-13     REF-00040    TRADING PARTNER 040          93,000    \u2014\n2026-07-14     REF-00540    TRADING PARTNER 140    \u2014              183,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 41,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 41\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-14     REF-00041    TRADING PARTNER 041          50,000    \u2014\n2026-07-15     REF-00541    TRADING PARTNER 141    \u2014              156,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 42,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 42\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-15     REF-00042    TRADING PARTNER 042         170,000    \u2014\n2026-07-16     REF-00542    TRADING PARTNER 142    \u2014               75,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 43,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 43\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-16     REF-00043    TRADING PARTNER 043         108,000    \u2014\n2026-07-17     REF-00543    TRADING PARTNER 143    \u2014               18,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 44,
+   "text": "[page could not be rendered \u2014 scan skew and low resolution; text unreadable]",
+   "blank": false,
+   "ocr_confidence": 0.31
+  },
+  {
+   "page": 45,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 45\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-18     REF-00045    TRADING PARTNER 045          35,000    \u2014\n2026-07-19     REF-00545    TRADING PARTNER 145    \u2014               18,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 46,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 46\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-19     REF-00046    TRADING PARTNER 046         252,000    \u2014\n2026-07-20     REF-00546    TRADING PARTNER 146    \u2014               73,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 47,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 47\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-20     REF-00047    TRADING PARTNER 047         219,000    \u2014\n2026-07-21     REF-00547    TRADING PARTNER 147    \u2014              106,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 48,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 48\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-21     REF-00048    TRADING PARTNER 048          13,000    \u2014\n2026-07-22     REF-00548    TRADING PARTNER 148    \u2014              264,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 49,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 49\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-22     REF-00049    TRADING PARTNER 049         124,000    \u2014\n2026-07-23     REF-00549    TRADING PARTNER 149    \u2014              288,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 50,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 50\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-23     REF-00050    TRADING PARTNER 050         112,000    \u2014\n2026-07-24     REF-00550    TRADING PARTNER 150    \u2014              202,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 51,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 51\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-24     REF-00051    TRADING PARTNER 051          20,000    \u2014\n2026-07-25     REF-00551    TRADING PARTNER 151    \u2014              201,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 52,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 52\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-25     REF-00052    TRADING PARTNER 052         139,000    \u2014\n2026-07-26     REF-00552    TRADING PARTNER 152    \u2014               69,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 53,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 53\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-26     REF-00053    TRADING PARTNER 053          53,000    \u2014\n2026-07-27     REF-00553    TRADING PARTNER 153    \u2014              208,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 54,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 54\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-27     REF-00054    TRADING PARTNER 054         223,000    \u2014\n2026-07-28     REF-00554    TRADING PARTNER 154    \u2014              140,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 55,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 55\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-28     REF-00055    TRADING PARTNER 055         246,000    \u2014\n2026-07-29     REF-00555    TRADING PARTNER 155    \u2014              248,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 56,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 56\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-01     REF-00056    TRADING PARTNER 056         214,000    \u2014\n2026-07-02     REF-00556    TRADING PARTNER 156    \u2014              194,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 57,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 57\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-02     REF-00057    TRADING PARTNER 057          94,000    \u2014\n2026-07-03     REF-00557    TRADING PARTNER 157    \u2014              228,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 58,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 58\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-03     REF-00058    TRADING PARTNER 058         162,000    \u2014\n2026-07-04     REF-00558    TRADING PARTNER 158    \u2014               14,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 59,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 59\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-04     REF-00059    TRADING PARTNER 059         288,000    \u2014\n2026-07-05     REF-00559    TRADING PARTNER 159    \u2014               86,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  },
+  {
+   "page": 60,
+   "text": "TRANSACTION DETAIL \u2014 PAGE 60\nDate        Reference     Counterparty                 Debit        Credit\n2026-07-05     REF-00060    TRADING PARTNER 060          35,000    \u2014\n2026-07-06     REF-00560    TRADING PARTNER 160    \u2014              299,000\n",
+   "blank": false,
+   "ocr_confidence": 0.97
+  }
+ ]
+}

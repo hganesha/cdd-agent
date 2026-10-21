@@ -1,0 +1,64 @@
+{
+  "case_id": "CASE-4831",
+  "schema_version": "1.0.0",
+  "created_at": "2026-10-20T13:02:11Z",
+  "case_type": "LEGAL_ENTITY",
+  "trigger": "NEW_RELATIONSHIP",
+  "cdd_level_requested": "CDD",
+  "relationship": {
+    "products": [
+      "COMMERCIAL_LENDING",
+      "FX",
+      "TRADE_FINANCE"
+    ],
+    "expected_currency": "USD",
+    "expected_monthly_volume": {
+      "amount": "450000",
+      "currency": "USD"
+    },
+    "channels": [
+      "RELATIONSHIP_MANAGER"
+    ],
+    "jurisdictions": [
+      "GB",
+      "AE",
+      "VG",
+      "CY"
+    ],
+    "purpose_statement": "Trade finance for commodity imports"
+  },
+  "claimed_customer": {
+    "legal_name": "Meridian Trade Holdings Ltd",
+    "jurisdiction_of_incorporation": "VG",
+    "incorporation_number": "1744882",
+    "registered_address": "Trident Chambers, P.O. Box 146, Road Town, Tortola, VG1110",
+    "business_nature": "Commodity trading",
+    "declared_ubos": [
+      {
+        "name": "Elena Vasquez",
+        "ownership_pct": "60"
+      }
+    ]
+  },
+  "jurisdiction_profile": "US_FED_FINCEN_CDD",
+  "policy_version": "risk-model-2026.3",
+  "sla": {
+    "deadline": "2026-10-22T17:00:00Z",
+    "interim_at": "2026-10-21T12:00:00Z"
+  },
+  "budget": {
+    "max_usd": 45.0,
+    "max_tokens": 6000000,
+    "max_wallclock_s": 21600
+  },
+  "bundle_ref": {
+    "manifest_uri": "data/case_4831/bundle.json"
+  },
+  "prior_case_refs": [],
+  "rfi_round": 0,
+  "requested_by": {
+    "analyst_id": "U-8842",
+    "desk": "COMMERCIAL_BANKING"
+  },
+  "contains_special_category_data": false
+}

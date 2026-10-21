@@ -1,0 +1,151 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.atlas-cdd.internal/1.0.0/run-state.schema.json",
+  "title": "RunState",
+  "type": "object",
+  "required": [
+    "run_id",
+    "case_id",
+    "stage",
+    "checkpoint",
+    "budget_used",
+    "page_ledger",
+    "updated_at"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "case_id": {
+      "type": "string"
+    },
+    "stage": {
+      "enum": [
+        "INTAKE",
+        "TRIAGE",
+        "EXTRACT",
+        "LINK",
+        "OWNERSHIP",
+        "SCREEN",
+        "ACTIVITY",
+        "RATE",
+        "GAP",
+        "COMPOSE",
+        "CRITIQUE",
+        "DELIVER",
+        "AWAITING_HUMAN",
+        "PAUSED",
+        "PARTIAL_DELIVERY",
+        "DONE",
+        "FAILED"
+      ]
+    },
+    "stage_entered_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "checkpoint": {
+      "type": "string"
+    },
+    "completed_units": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "in_flight": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "unit": {
+            "type": "string"
+          },
+          "worker": {
+            "type": "string"
+          },
+          "attempt": {
+            "type": "integer"
+          },
+          "started": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "dead_letter": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "unit": {
+            "type": "string"
+          },
+          "error": {
+            "type": "string"
+          },
+          "attempts": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "page_ledger": {
+      "type": "object",
+      "properties": {
+        "read": {
+          "type": "integer"
+        },
+        "skipped_dupe": {
+          "type": "integer"
+        },
+        "illegible": {
+          "type": "integer"
+        },
+        "pending": {
+          "type": "integer"
+        }
+      }
+    },
+    "budget_used": {
+      "type": "object",
+      "properties": {
+        "usd": {
+          "type": "number"
+        },
+        "tokens": {
+          "type": "integer"
+        },
+        "wallclock_s": {
+          "type": "integer"
+        }
+      }
+    },
+    "counters": {
+      "type": "object"
+    },
+    "next_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "resumed_from": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

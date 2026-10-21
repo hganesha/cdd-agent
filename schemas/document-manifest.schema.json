@@ -1,0 +1,207 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.atlas-cdd.internal/1.0.0/document-manifest.schema.json",
+  "title": "DocumentManifest",
+  "type": "object",
+  "required": [
+    "case_id",
+    "run_id",
+    "documents",
+    "page_ledger",
+    "summary"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "doc_id",
+          "sha256",
+          "detected_type",
+          "pages",
+          "extractability",
+          "quality_score",
+          "quarantine_flag"
+        ],
+        "properties": {
+          "doc_id": {
+            "type": "string",
+            "pattern": "^DOC-[0-9]+-[0-9]{3}$"
+          },
+          "filename": {
+            "type": "string"
+          },
+          "mime": {
+            "type": "string"
+          },
+          "bytes": {
+            "type": "integer"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "declared_type": {
+            "type": "string"
+          },
+          "detected_type": {
+            "type": "string"
+          },
+          "issuer": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "doc_date": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "pages": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "language": {
+            "type": "string"
+          },
+          "extractability": {
+            "enum": [
+              "native_text",
+              "ocr",
+              "mixed",
+              "illegible"
+            ]
+          },
+          "quality_score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "duplicate_of": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "recency_verdict": {
+            "enum": [
+              "CURRENT",
+              "AGING",
+              "EXPIRED",
+              "UNDATED"
+            ]
+          },
+          "expected_relevance": {
+            "enum": [
+              "EXPECTED",
+              "UNEXPECTED",
+              "IRRELEVANT",
+              "SUSPICIOUS"
+            ]
+          },
+          "rationale": {
+            "type": "string",
+            "maxLength": 300
+          },
+          "quarantine_flag": {
+            "type": "boolean"
+          },
+          "quarantine_reason": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "evidence_id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "page_ledger": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "doc_id",
+          "page",
+          "status"
+        ],
+        "properties": {
+          "doc_id": {
+            "type": "string"
+          },
+          "page": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "status": {
+            "enum": [
+              "READ",
+              "SKIPPED_DUPLICATE",
+              "ILLEGIBLE",
+              "PENDING",
+              "BLANK"
+            ]
+          },
+          "method": {
+            "enum": [
+              "native_text",
+              "ocr",
+              "mixed",
+              "none"
+            ]
+          },
+          "ocr_confidence": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "reason": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "documents_total": {
+          "type": "integer"
+        },
+        "pages_total": {
+          "type": "integer"
+        },
+        "pages_read": {
+          "type": "integer"
+        },
+        "pages_illegible": {
+          "type": "integer"
+        },
+        "pages_pending": {
+          "type": "integer"
+        },
+        "unusable_pct": {
+          "type": "number"
+        },
+        "quarantined": {
+          "type": "integer"
+        }
+      }
+    }
+  }
+}

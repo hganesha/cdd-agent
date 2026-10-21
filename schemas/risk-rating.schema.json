@@ -1,0 +1,156 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.atlas-cdd.internal/1.0.0/risk-rating.schema.json",
+  "title": "RiskRating",
+  "type": "object",
+  "required": [
+    "model_version",
+    "inherent",
+    "residual",
+    "cdd_level",
+    "review_cadence",
+    "trace"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "model_version": {
+      "type": "string"
+    },
+    "inherent": {
+      "$ref": "#/$defs/banded"
+    },
+    "mitigants": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "mitigant_id",
+          "points",
+          "evidence_refs"
+        ],
+        "properties": {
+          "mitigant_id": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "points": {
+            "type": "number",
+            "maximum": 0
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "residual": {
+      "$ref": "#/$defs/banded"
+    },
+    "cdd_level": {
+      "enum": [
+        "SDD",
+        "CDD",
+        "EDD"
+      ]
+    },
+    "review_cadence": {
+      "enum": [
+        "ANNUAL",
+        "BIANNUAL",
+        "QUARTERLY",
+        "MONTHLY",
+        "TRIGGER_ONLY"
+      ]
+    },
+    "trace": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "factor",
+          "weight",
+          "input",
+          "contribution"
+        ],
+        "properties": {
+          "factor": {
+            "type": "string"
+          },
+          "policy_rule_id": {
+            "type": "string"
+          },
+          "weight": {
+            "type": "number"
+          },
+          "input": {
+            "type": "string"
+          },
+          "contribution": {
+            "type": "number"
+          },
+          "evidence_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "unresolved_inputs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "provisional": {
+      "type": "boolean"
+    },
+    "override_note": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "engine_evidence_id": {
+      "type": "string"
+    }
+  },
+  "$defs": {
+    "banded": {
+      "type": "object",
+      "required": [
+        "score",
+        "band"
+      ],
+      "properties": {
+        "score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "band": {
+          "enum": [
+            "LOW",
+            "MEDIUM",
+            "HIGH",
+            "VERY_HIGH"
+          ]
+        },
+        "factors": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  }
+}

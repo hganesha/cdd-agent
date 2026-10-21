@@ -1,0 +1,196 @@
+# Tool Gateway Manifest — ATLAS-CDD v1.0.0
+# A tool absent from this file cannot be called. The gateway enforces side-effect class,
+# allowlists, rate limits, idempotency and audit logging. Credentials are never in prompts.
+
+version: 1.0.0
+defaults:
+  timeout_s: 120
+  max_retries: 4
+  backoff: exponential_jitter
+  audit: true                  # every call -> W5/W8 evidence + trace log (PII redacted)
+  redact_fields: [names, dob, id_number, account_number, address]
+
+tools:
+
+  # ── Document access ─────────────────────────────────────────────────────────
+  doc.metadata:
+    class: read
+    idempotent: true
+    inputs:  {doc_id: string}
+    outputs: {mime, bytes, sha256, pages, pdf_info, exif}
+  doc.render_pages:
+    class: read
+    idempotent: true
+    inputs:  {doc_id: string, pages: array<int>, dpi: int}
+    outputs: {images: array<uri>}
+  doc.read_page:
+    class: read
+    idempotent: true
+    inputs:  {doc_id: string, page: int}
+    outputs: {blocks[], tables[], stamps[], method, ocr_confidence}
+  doc.ocr:
+    class: read
+    idempotent: true
+    rate_limit: {qps: 20}
+    inputs:  {doc_id: string, pages: array<int>, layout: bool}
+    outputs: {text, blocks[], ocr_confidence}
+  doc.classify:
+    class: read
+    idempotent: true
+    inputs:  {doc_id: string, page_sample: array<int>}
+    outputs: {detected_type, issuer, doc_date, confidence}
+  doc.cross_check:
+    class: read
+    idempotent: true
+    inputs:  {doc_id_a: string, doc_id_b: string, fields: array<string>}
+    outputs: {matches[], mismatches[]}
+  table.extract:
+    class: read
+    idempotent: true
+    inputs:  {doc_id: string, page: int, bbox: array}
+    outputs: {headers[], rows[][]}
+  vlm.describe_region:
+    class: read
+    idempotent: true
+    inputs:  {doc_id: string, page: int, bbox: array, question: string}
+    outputs: {description, confidence}
+  stamp.detect:
+    class: read
+    idempotent: true
+    inputs:  {doc_id: string, page: int}
+    outputs: {stamps: [{text, bbox, confidence}]}
+  quality.score:
+    class: read
+    idempotent: true
+    inputs:  {doc_id: string, page: int}
+    outputs: {blur, skew, contrast, resolution, score}
+  lang.detect:
+    class: read
+    idempotent: true
+    inputs:  {text: string}
+    outputs: {language, confidence}
+  hash.dedupe:
+    class: read
+    idempotent: true
+    inputs:  {sha256_list: array<string>}
+    outputs: {groups: array<array<string>>}
+
+  # ── Normalisation (deterministic, no LLM) ───────────────────────────────────
+  normalize.datetime:   {class: pure, idempotent: true, inputs: {value: string, locale: string}, outputs: {iso8601, precision, ambiguous}}
+  normalize.address:    {class: pure, idempotent: true, inputs: {value: string, country: string}, outputs: {components, normalized}}
+  normalize.identifier: {class: pure, idempotent: true, inputs: {value: string, id_type: string}, outputs: {normalized, checksum_valid, format_valid}}
+  name.transliterate:   {class: pure, idempotent: true, inputs: {name: string, script: string}, outputs: {variants[]}}
+  entity.canonicalize:  {class: pure, idempotent: true, inputs: {name: string, entity_type: string}, outputs: {canonical, suffix_removed, tokens[]}}
+  similarity.match:     {class: pure, idempotent: true, inputs: {a: string, b: string, algorithm: string}, outputs: {score, detail}}
+
+  # ── Graph & arithmetic (deterministic, never an LLM) ────────────────────────
+  graph.build:      {class: pure, idempotent: true, inputs: {nodes: array, edges: array}, outputs: {graph_id}}
+  graph.paths:      {class: pure, idempotent: true, inputs: {graph_id: string, source: string, target: string, max_depth: int}, outputs: {paths[]}}
+  graph.cycles:     {class: pure, idempotent: true, inputs: {graph_id: string}, outputs: {cycles[]}}
+  calc.ownership:   {class: pure, idempotent: true, inputs: {paths: array, threshold: number}, outputs: {effective[], trace[]}}
+  calc.ratio:       {class: pure, idempotent: true, inputs: {numerator: number, denominator: number}, outputs: {ratio}}
+  math.recompute:   {class: pure, idempotent: true, inputs: {expression: string, claimed: number}, outputs: {computed, match}}
+
+  # ── External data (read-only, contracted) ───────────────────────────────────
+  registry.company_search:
+    class: external_read
+    idempotent: true
+    rate_limit: {qps: 2, daily: 2000}
+    audit_dataset: true
+    inputs:  {name: string, jurisdiction: string, reg_number: string|null}
+    outputs: {matches: [{name, reg_number, status, incorporation_date, address}], dataset_version}
+  registry.filing_get:
+    class: external_read
+    idempotent: true
+    rate_limit: {qps: 2}
+    inputs:  {reg_number: string, jurisdiction: string}
+    outputs: {filings[], officers[], share_capital, charges[], dataset_version}
+  registry.officers:      {class: external_read, idempotent: true, inputs: {reg_number: string}, outputs: {officers[]}}
+  registry.charges:       {class: external_read, idempotent: true, inputs: {reg_number: string}, outputs: {charges[]}}
+  sanctions.screen:
+    class: external_read
+    idempotent: true
+    rate_limit: {qps: 5}
+    audit_dataset: true
+    inputs:  {subject: object, lists: array<string>}
+    outputs: {hits: [{name, list, score, matched_attrs[], case_ref}], dataset_versions: object, queried_at}
+  pep.screen:             {class: external_read, idempotent: true, rate_limit: {qps: 5}, inputs: {subject: object}, outputs: {hits[], dataset_version}}
+  enforcement.screen:     {class: external_read, idempotent: true, rate_limit: {qps: 3}, inputs: {subject: object}, outputs: {hits[], dataset_version}}
+  watchlist.versions:     {class: external_read, idempotent: true, inputs: {lists: array<string>}, outputs: {versions: object}}
+  media.search:
+    class: external_read
+    idempotent: true
+    rate_limit: {qps: 2}
+    allowlist_domains_only: true
+    inputs:  {query: string, lookback_years: int, categories: array<string>, min_tier: int}
+    outputs: {results: [{title, url, outlet, date, snippet, tier}]}
+  web.fetch_allowlisted:
+    class: external_read
+    idempotent: true
+    allowlist_domains_only: true
+    denies: [file://, ftp://, non-https, private_ip_ranges]
+    inputs:  {url: string}
+    outputs: {text, fetched_at, content_hash}
+  source.tier:            {class: pure, idempotent: true, inputs: {domain: string}, outputs: {tier, category}}
+  event.dedupe:           {class: pure, idempotent: true, inputs: {events: array}, outputs: {clusters[]}}
+
+  # ── Policy engine ───────────────────────────────────────────────────────────
+  policy.rde_lookup:      {class: pure, idempotent: true, inputs: {case_type: string, cdd_level: string, policy_version: string}, outputs: {rde_list[]}}
+  policy.threshold:       {class: pure, idempotent: true, inputs: {key: string, policy_version: string}, outputs: {value}}
+  policy.risk_engine:
+    class: pure
+    idempotent: true
+    deterministic: true
+    inputs:  {factor_inputs: array, policy_version: string, jurisdiction_profile: string}
+    outputs: {inherent, mitigants, residual, band, cdd_level, review_cadence, trace[], engine_version}
+  policy.conformance:
+    class: pure
+    idempotent: true
+    inputs:  {case_id: string, dossier_ref: string, policy_version: string}
+    outputs: {violations[]}
+
+  # ── Orchestration / state ───────────────────────────────────────────────────
+  state.checkpoint: {class: write_state, idempotent: true, inputs: {run_id: string, state: object}, outputs: {checkpoint_id}}
+  state.resume:     {class: read, idempotent: true, inputs: {run_id: string}, outputs: {state}}
+  queue.enqueue:    {class: write_state, idempotent: true, inputs: {queue: string, unit: string, key: string}, outputs: {job_id}}
+  budget.meter:     {class: read, idempotent: true, inputs: {run_id: string}, outputs: {used, remaining, pct}}
+  progress.emit:    {class: write_state, idempotent: false, inputs: {run_id: string, event: object}, outputs: {ok}}
+  dlq.push:         {class: write_state, idempotent: true, inputs: {run_id: string, unit: string, error: string}, outputs: {ok}}
+  evidence.append:
+    class: write_append_only
+    idempotent: true
+    inputs:  {record: object}
+    outputs: {evidence_id, record_hash, seq}
+  evidence.verify_chain: {class: read, idempotent: true, inputs: {case_id: string, from_seq: int}, outputs: {valid, head_hash, broken_at}}
+
+  # ── Model calls (pinned; schema-constrained where noted) ────────────────────
+  llm.extract_constrained:
+    class: model
+    idempotent: false
+    inputs:  {page_ref: string, schema_id: string, prompt_version: string}
+    outputs: {facts[], usage}
+  llm.compose:
+    class: model
+    idempotent: false
+    inputs:  {section: string, retrieved_spans: array, facts: object, prompt_version: string}
+    outputs: {section_text, citations[], usage}
+
+  # ── Human-in-the-loop ───────────────────────────────────────────────────────
+  human.task_create: {class: external_write_limited, idempotent: true, inputs: {case_id: string, gate: string, payload: object, routed_to: string, sla: string}, outputs: {ticket_id}}
+  notify.send:       {class: external_write_limited, idempotent: true, allowlist: [internal_channels_only], inputs: {channel: string, message: object}, outputs: {ok}}
+  render.markdown:   {class: pure, idempotent: true, inputs: {doc: object, template: string}, outputs: {markdown, sha256}}
+  render.pdf:        {class: pure, idempotent: true, inputs: {markdown: string}, outputs: {pdf_uri, sha256}}
+
+# ── Explicitly denied capabilities ────────────────────────────────────────────
+denied:
+  - any_write_to_core_banking
+  - any_write_to_case_status          # only SK-14/human can change case state
+  - any_write_to_risk_rating          # engine + human override only
+  - any_delete_of_evidence
+  - any_edit_of_evidence              # corrections are new records only
+  - outbound_email_to_customer
+  - social_media_scraping
+  - login_gated_source_access
+  - payment_or_account_actions
+  - regulatory_filing
+  - arbitrary_http                   # only allowlisted domains via web.fetch_allowlisted

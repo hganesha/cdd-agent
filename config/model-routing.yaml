@@ -1,0 +1,115 @@
+# Model & Version Pinning — ATLAS-CDD v1.0.0
+# Models are referenced by logical role, resolved to pinned IDs at deploy time.
+# `RunManifest.versions.models` records the resolved IDs for the run.
+
+agent_version: atlas-cdd-1.0.0
+prompt_versions:
+  system:  {path: prompts/system.md, hash: "sha256:3cd17e93b05a6fdaea5c3ced9c7ea417b5c5c6e279e6577e10296aa489a87bbc"}
+  stages:  {path: prompts/subsystem-prompts.md, hash: "computed_at_build"}
+  critic:  {path: prompts/subsystem-prompts.md#SK-13, hash: "computed_at_build"}
+policy_version: risk-model-2026.3
+
+# Logical role → routing policy
+roles:
+
+  triage:
+    description: document classification, cheap and high-volume
+    model_class: small_fast
+    temperature: 0.0
+    max_output_tokens: 1500
+    constrained_output: document-classification.schema.json
+
+  page_ingest:
+    description: layout/OCR post-correction and block structuring
+    model_class: vision_capable_mid
+    temperature: 0.0
+    max_output_tokens: 4000
+
+  extract:
+    description: cited field extraction — must be highest reliability
+    model_class: frontier_reasoning
+    temperature: 0.0
+    max_output_tokens: 8000
+    constrained_output: extraction-result.schema.json
+    require_verbatim_span: true
+    no_free_text: true
+
+  resolve:
+    description: entity resolution proposals
+    model_class: frontier_reasoning
+    temperature: 0.0
+
+  ownership_reasoning:
+    description: structure interpretation; arithmetic delegated to calc.*
+    model_class: frontier_reasoning
+    temperature: 0.0
+    tools_exclusive: [calc.ownership, graph.paths, graph.cycles]
+
+  media_research:
+    description: adverse media query planning and article reading
+    model_class: frontier_reasoning
+    temperature: 0.2
+    tools: [media.search, web.fetch_allowlisted, source.tier]
+    egress: allowlisted_domains_only
+
+  activity:
+    model_class: mid
+    temperature: 0.2
+
+  risk_narrative:
+    description: explains engine output; may never change it
+    model_class: mid
+    temperature: 0.2
+    forbidden: [policy.risk_engine]     # engine called by orchestrator, not narrated into existence
+
+  compose:
+    description: dossier writing
+    model_class: frontier_reasoning
+    temperature: 0.2
+    max_output_tokens: 12000
+    sectioned: true                     # write section by section, assemble at end
+
+  critic:
+    description: independent adversarial review
+    model_class: frontier_reasoning
+    temperature: 0.0
+    different_family_from: compose      # correlated-blind-spot control
+    tools: [citation.verify, math.recompute, policy.conformance, contradiction.scan,
+            injection.scan, rde.coverage]
+    must_not_see: [compose_chain_of_thought]
+
+  gap_rfi:
+    model_class: mid
+    temperature: 0.2
+
+  gate:
+    model_class: mid
+    temperature: 0.0
+
+# Cross-cutting model rules
+rules:
+  - id: MR-01
+    rule: "No model call may authorise a tool call outside the run's tool_allowlist."
+  - id: MR-02
+    rule: "Extraction prompts receive one document (or page window) at a time; never the corpus."
+  - id: MR-03
+    rule: "Composition and critique never receive raw document images; they receive spans and evidence ids."
+  - id: MR-04
+    rule: "Any numeric field in output must originate from a calc.*/policy.* tool call reference."
+  - id: MR-05
+    rule: "Critic runs on a different model family than compose; if unavailable, run two critics of different families and require both to pass."
+  - id: MR-06
+    rule: "Provider fallback is allowed only to a model of equal or higher capability within the same role class; the fallback must be recorded in RunManifest."
+  - id: MR-07
+    rule: "Prompt cache the system prompt + policy block per run; never cache document content across cases."
+
+# Cost guardrails per role (fraction of case budget)
+budget_shares:
+  triage: 0.05
+  extract: 0.22
+  media_research: 0.18
+  ownership_reasoning: 0.06
+  compose: 0.09
+  critic: 0.07
+  gap_rfi: 0.04
+  other: 0.29

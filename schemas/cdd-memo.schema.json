@@ -1,0 +1,270 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.atlas-cdd.internal/1.0.0/cdd-memo.schema.json",
+  "title": "CDDInvestigationReport",
+  "type": "object",
+  "required": [
+    "report_id",
+    "case_id",
+    "run_id",
+    "status",
+    "decision_authority",
+    "generated_at",
+    "policy_version",
+    "prompt_version",
+    "executive_summary",
+    "sections",
+    "findings",
+    "limitations",
+    "artifact"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "report_id": {
+      "type": "string"
+    },
+    "case_id": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "DRAFT",
+        "PROVISIONAL",
+        "FINAL_ADVISORY",
+        "PARTIAL",
+        "BLOCKED"
+      ]
+    },
+    "decision_authority": {
+      "const": "HUMAN"
+    },
+    "required_gate": {
+      "enum": [
+        "NONE",
+        "G1",
+        "G2",
+        "G3",
+        "G4"
+      ]
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "policy_version": {
+      "type": "string"
+    },
+    "prompt_version": {
+      "type": "string"
+    },
+    "executive_summary": {
+      "type": "object",
+      "required": [
+        "text",
+        "recommendation",
+        "confidence",
+        "key_drivers"
+      ],
+      "properties": {
+        "text": {
+          "type": "string",
+          "maxLength": 3000
+        },
+        "recommendation": {
+          "enum": [
+            "PROCEED",
+            "PROCEED_WITH_CONDITIONS",
+            "HOLD_FOR_RFI",
+            "ESCALATE_EDD",
+            "REFER_MLRO"
+          ]
+        },
+        "confidence": {
+          "enum": [
+            "HIGH",
+            "MEDIUM",
+            "LOW"
+          ]
+        },
+        "key_drivers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "factor",
+              "evidence_refs"
+            ],
+            "properties": {
+              "factor": {
+                "type": "string"
+              },
+              "evidence_refs": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "single_most_important_open_question": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "sections": {
+      "type": "object",
+      "required": [
+        "s1_profile",
+        "s2_identification",
+        "s3_verification",
+        "s4_ownership_control",
+        "s5_purpose_activity",
+        "s6_screening_media",
+        "s7_risk_assessment",
+        "s8_gaps_confidence",
+        "s9_red_flags",
+        "s10_recommendation",
+        "s11_evidence_index",
+        "s12_attestation"
+      ],
+      "properties": {
+        "s1_profile": {
+          "type": "object"
+        },
+        "s2_identification": {
+          "type": "object"
+        },
+        "s3_verification": {
+          "type": "object"
+        },
+        "s4_ownership_control": {
+          "type": "object"
+        },
+        "s5_purpose_activity": {
+          "type": "object"
+        },
+        "s6_screening_media": {
+          "type": "object"
+        },
+        "s7_risk_assessment": {
+          "type": "object"
+        },
+        "s8_gaps_confidence": {
+          "type": "object"
+        },
+        "s9_red_flags": {
+          "type": "object"
+        },
+        "s10_recommendation": {
+          "type": "object"
+        },
+        "s11_evidence_index": {
+          "type": "object"
+        },
+        "s12_attestation": {
+          "type": "object"
+        }
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^FND-"
+      }
+    },
+    "judgments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "text",
+          "basis"
+        ],
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "basis": {
+            "const": "judgment"
+          },
+          "confidence": {
+            "enum": [
+              "HIGH",
+              "MEDIUM",
+              "LOW"
+            ]
+          }
+        }
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "required": [
+        "markdown_sha256",
+        "evidence_ledger_head"
+      ],
+      "properties": {
+        "markdown_sha256": {
+          "type": "string"
+        },
+        "pdf_sha256": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evidence_ledger_head": {
+          "type": "string"
+        }
+      }
+    },
+    "human_signoff": {
+      "type": [
+        "object",
+        "null"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "executive_summary": {
+            "properties": {
+              "recommendation": {
+                "enum": [
+                  "ESCALATE_EDD",
+                  "REFER_MLRO"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "required_gate": {
+            "enum": [
+              "G3"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

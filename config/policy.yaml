@@ -1,0 +1,175 @@
+# Policy Pack — ATLAS-CDD
+# Versioned artifact. The agent pins `version` at run start; changing it mid-run is forbidden.
+# Every number the agent uses in a rating must come from this file.
+
+version: risk-model-2026.3
+jurisdiction_profile: US_FED_FINCEN_CDD
+effective_from: 2026-07-01
+regulatory_refs:
+  - "31 CFR 1010.230 — Customer Due Diligence for financial institutions"
+  - "FFIEC BSA/AML Examination Manual — CDD"
+  - "FATF Recommendation 10 (CDD) and 24 (beneficial ownership)"
+  - "FATF Guidance: Beneficial Ownership of Legal Persons (2023 update)"
+
+ownership:
+  ubo_threshold_pct: 25          # ≥ threshold = beneficial owner
+  max_lookthrough_depth: 4       # beyond → UNRESOLVED_UBO + RFI
+  control_prong: true            # required when no natural person meets the threshold
+  cumulative_paths: true         # sum across indirect paths
+  treat_trust_roles_as_control: [SETTLOR, TRUSTEE, PROTECTOR, BENEFICIARY_WITH_VESTED_INTEREST]
+  nominee_disclosure_required: true
+
+documents:
+  max_age_days:
+    proof_of_address: 90
+    bank_statement: 90
+    registry_extract: 180
+    audited_financials: 540
+    certificate_of_good_standing: 180
+  id_expiry_grace_days: 0        # expired ID = not acceptable
+  min_quality_score: 0.60        # below → ILLEGIBLE
+  max_pages_per_case: 2000
+  max_bytes_per_file: 200_000_000
+  allow_structural_gap_alternatives: true
+
+screening:
+  lists:
+    sanctions: [OFAC_SDN, OFAC_CAPTA, OFAC_SSI, UN_CONSOLIDATED, EU_CFSP, UK_OFSI, LOCAL_REGULATOR]
+    pep: [PEP_GLOBAL, PEP_DOMESTIC, PEP_IO, RCA]
+    enforcement: [SEC, FCA, FINCEN_ENFORCEMENT, DOJ, LOCAL_REGULATOR]
+  required_parties: [CUSTOMER, ALL_BENEFICIAL_OWNERS, ALL_DIRECTORS, ALL_AUTHORISED_SIGNATORIES, CONTROL_PERSON]
+  optional_parties: [SHAREHOLDERS_BELOW_THRESHOLD, COUNTERPARTIES, INTRODUCER]
+  list_max_age_days: 1           # must re-query if list snapshot older
+  score_thresholds: {true: 0.85, strong: 0.65, weak: 0.40}
+  dispositive_conflict_cap: WEAK # DOB delta > 2y, differing ID number → cap strength
+  agent_may_clear_sanctions_hit: false
+  require_query_record_on_zero_hit: true
+
+adverse_media:
+  lookback_years: 5
+  tiers_permitted: [1, 2, 3]
+  tier4_corroboration_only: true
+  categories:
+    - financial_crime
+    - fraud
+    - corruption_bribery
+    - sanctions_evasion
+    - organised_crime
+    - human_trafficking
+    - drug_trafficking
+    - terrorism_financing
+    - tax_evasion
+    - environmental_crime
+    - market_abuse
+    - professional_disqualification
+  max_queries_per_subject: 12
+  require_article_read: true     # headline-only classification is a defect
+
+risk_model:
+  dimensions:
+    customer:  {weight: 0.35}
+    product:   {weight: 0.20}
+    geography: {weight: 0.25}
+    channel:   {weight: 0.10}
+    behaviour: {weight: 0.10}
+  bands:
+    LOW:       {min: 0,  max: 39}
+    MEDIUM:    {min: 40, max: 59}
+    HIGH:      {min: 60, max: 79}
+    VERY_HIGH: {min: 80, max: 100}
+  cdd_level:
+    LOW: SDD
+    MEDIUM: CDD
+    HIGH: EDD
+    VERY_HIGH: EDD
+  review_cadence:
+    LOW: BIANNUAL
+    MEDIUM: ANNUAL
+    HIGH: QUARTERLY
+    VERY_HIGH: MONTHLY
+  mitigant_cap_points: 15
+  unresolved_factor_rule: worst_case_endpoint   # never optimistic
+
+  # Band floors: a single severe factor cannot be averaged away by a benign portfolio of others.
+  # Applied after the weighted score; the override that fired is written into the trace.
+  overrides:
+    - {if_factor: F-CUST-03, min_band: VERY_HIGH, reason: "sanctions proximity"}
+    - {if_factor: F-GEO-01,  min_band: VERY_HIGH, reason: "FATF call-for-action nexus"}
+    - {if_factor: F-CUST-01, min_band: HIGH,      reason: "PEP exposure"}
+    - {if_factor: F-CUST-04, min_band: HIGH,      reason: "opaque / unresolved ownership"}
+    - {if_factor: F-CUST-07, min_band: HIGH,      reason: "shell indicators"}
+    - {if_factor: F-BEH-01,  min_band: HIGH,      reason: "activity inconsistent with declared profile"}
+    - {if_factor: F-BEH-02,  min_band: HIGH,      reason: "source of funds/wealth unexplained"}
+    - {if_factor: F-GEO-04,  min_band: VERY_HIGH, reason: "sanctions jurisdiction nexus"}
+
+  factors:
+    - {id: F-CUST-01, name: PEP_EXPOSURE,                dimension: customer,  points: 25, rule: "customer or BO or close associate is a PEP"}
+    - {id: F-CUST-02, name: ADVERSE_MEDIA,               dimension: customer,  points: 20, rule: "material adverse media within lookback"}
+    - {id: F-CUST-03, name: SANCTIONS_PROXIMITY,         dimension: customer,  points: 30, rule: "near-match or associated party on a sanctions list"}
+    - {id: F-CUST-04, name: OPAQUE_OWNERSHIP,            dimension: customer,  points: 20, rule: "nominee, bearer shares, unresolved UBO, opacity jurisdiction"}
+    - {id: F-CUST-05, name: COMPLEX_STRUCTURE,           dimension: customer,  points: 12, rule: "≥3 layers or ≥3 jurisdictions or circularity"}
+    - {id: F-CUST-06, name: CASH_INTENSIVE,              dimension: customer,  points: 15, rule: "sector primarily cash-based"}
+    - {id: F-CUST-07, name: SHELL_INDICATORS,            dimension: customer,  points: 18, rule: "no employees, no premises, no operations evidence"}
+    - {id: F-CUST-08, name: PRIOR_SAR,                   dimension: customer,  points: 20, rule: "prior SAR on the customer or related party"}
+    - {id: F-PROD-01, name: HIGH_RISK_PRODUCT,           dimension: product,   points: 20, rule: "correspondent, private banking, VASP, prepaid, trade finance"}
+    - {id: F-PROD-02, name: CASH_HEAVY_PRODUCT,          dimension: product,   points: 12, rule: "cash deposits, cash-settled instruments"}
+    - {id: F-GEO-01,  name: FATF_CALL_FOR_ACTION,        dimension: geography, points: 40, rule: "nexus to FATF blacklist jurisdiction"}
+    - {id: F-GEO-02,  name: FATF_GREY_LIST,              dimension: geography, points: 20, rule: "nexus to FATF grey list"}
+    - {id: F-GEO-03,  name: SECRECY_JURISDICTION,        dimension: geography, points: 18, rule: "nexus to high-secrecy / non-cooperative jurisdiction per tier table"}
+    - {id: F-GEO-04,  name: SANCTIONS_NEXUS,             dimension: geography, points: 35, rule: "trade, funds or ownership nexus to a sanctioned jurisdiction"}
+    - {id: F-GEO-05,  name: HIGH_CORRUPTION,            dimension: geography, points: 15, rule: "nexus to jurisdiction in high CPI band per tier table"}
+    - {id: F-CHAN-01, name: NON_FACE_TO_FACE,            dimension: channel,   points: 15, rule: "onboarded remotely without in-person verification"}
+    - {id: F-CHAN-02, name: INTRODUCED_BUSINESS,         dimension: channel,   points: 18, rule: "third-party introducer with reliance"}
+    - {id: F-BEH-01,  name: ACTIVITY_INCONSISTENT,       dimension: behaviour, points: 25, rule: "expected vs declared or observed inconsistency"}
+    - {id: F-BEH-02,  name: SOF_SOW_UNVERIFIED,          dimension: behaviour, points: 20, rule: "source of funds/wealth unverified or unexplained"}
+    - {id: F-BEH-03,  name: THIRD_PARTY_FUNDING,         dimension: behaviour, points: 20, rule: "funding from an unrelated third party"}
+
+geography_tiers:            # objective, published mapping — never inferred by the model
+  tier_1_low:      [US, GB, CA, AU, NZ, DE, FR, NL, SE, NO, DK, FI, IE, CH, JP, SG, HK, KR]
+  tier_2_medium:   [IT, ES, PT, PL, CZ, GR, AE, IL, MY, TW, CL, UY, MU, ZA, IN, CN]
+  tier_3_high:     [RU, BY, VE, MM, KH, SY, SD, SS, YE, LY, SO, KP]
+  tier_4_opacity:  [VG, KY, BVI, PA, SC, LI, MC, AN, WS, NR, VU]   # added as F-CUST-04/F-GEO-03 trigger
+  fatf_call_for_action: [KP, IR, MM]
+  fatf_grey_list_2026Q3: [SY, YE, SS, NG, CM, VN]   # replaced from public list at policy build time
+
+decision_matrix:
+  # residual band + conditions → required CDD level and allowed recommendation
+  LOW:
+    default_cdd: SDD
+    allowed_recommendations: [PROCEED, PROCEED_WITH_CONDITIONS, HOLD_FOR_RFI]
+    min_coverage_pct: 90
+  MEDIUM:
+    default_cdd: CDD
+    allowed_recommendations: [PROCEED_WITH_CONDITIONS, HOLD_FOR_RFI, ESCALATE_EDD]
+    min_coverage_pct: 95
+  HIGH:
+    default_cdd: EDD
+    allowed_recommendations: [HOLD_FOR_RFI, ESCALATE_EDD, REFER_MLRO]
+    min_coverage_pct: 100
+  VERY_HIGH:
+    default_cdd: EDD
+    allowed_recommendations: [ESCALATE_EDD, REFER_MLRO]
+    min_coverage_pct: 100
+
+gates:
+  G1_bundle_unusable_pct: 30
+  G3_force_on: [RESIDUAL_HIGH_OR_ABOVE, UNRESOLVED_UBO, MATERIAL_CONTRADICTION,
+                COVERAGE_BELOW_MINIMUM, INJECTION_ATTEMPT, SCREENING_INCOMPLETE, CRITIC_FAIL]
+  G4_sampling_rate_low_risk: 0.10
+  auto_final_allowed: false       # no case closes without a human
+
+budgets:
+  default: {usd: 45.0, tokens: 6_000_000, wallclock_s: 21600}
+  soft_stop_pct: 80
+  per_stage_caps: {SK-08: 8.0, SK-12: 4.0, SK-13: 3.0}
+
+rfi:
+  max_rounds: 2
+  default_deadline_days: 10
+  escalate_on_non_response: true
+
+retention:
+  evidence_ledger_years: 5
+  edd_or_mlro_referred_years: 10
+  dossier_years: 5
+  chain_verification_cadence: daily_and_on_delivery
