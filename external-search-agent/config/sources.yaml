@@ -1,0 +1,65 @@
+# Source policy — WEBIS-SEARCH
+# Tiering is a policy artefact, versioned and reviewed. It decides what may be cited, not the model.
+version: 1.0.0
+effective_from: '2026-07-01'
+
+max_tier_citable: 3          # tier 4 sources may corroborate but never carry a claim alone
+tier4_corroboration_only: true
+
+tiers:
+  1:
+    label: official / primary
+    weight: 45
+    domains: [fca.org.uk, sec.gov, eur-lex.europa.eu, ofsi.gov.uk, worldbank.example,
+              un.org, justice.gov, ecb.europa.eu]
+    citable_alone: true
+  2:
+    label: established press
+    weight: 30
+    domains: [financialgazette.example, financialtimes.example, reuters.example,
+              globalwire.example, bloomberg.example]
+    citable_alone: true
+  3:
+    label: trade / regional press
+    weight: 18
+    domains: [commoditytoday.example, shippingdesk.example, localnews.example,
+              regionalbusinesswire.example, citydesk.example]
+    citable_alone: true
+  4:
+    label: low quality / aggregator
+    weight: 5
+    domains: [biznewsaggregator.example, viralbiz.example, scrapedleaks.example]
+    citable_alone: false
+  5:
+    label: unclassified
+    weight: 0
+    domains: []
+    citable_alone: false
+
+denied_domains:
+  - scrapedleaks.example      # obtained without consent; contains personal data
+  - viralbiz.example          # adversarial content; quarantined on sight
+
+# robots / terms of service: this agent obeys the strictest applicable rule
+compliance:
+  obey_robots: true
+  honour_paywalls: true          # never attempt to bypass a payment barrier
+  honour_licensing: true
+  store_full_text: false         # passages only; full text stays at the publisher
+  respect_noarchive: true
+  min_delay_ms_between_fetches_per_domain: 1000
+  user_agent: "WEBIS-SEARCH/1.0 (+compliance@bank.example)"
+
+# freshness: how old a fact may be before it must be refreshed
+freshness:
+  regulatory_action_days: 30
+  corporate_status_days: 7
+  adverse_media_days: 90
+  identity_days: 365
+  undated_source_max_age_days: 0     # an undated source cannot carry a factual claim alone
+
+# personal data handling
+pii:
+  redact_in_evidence: true
+  prohibited_content: [payment_card, passport_like, bank_detail]
+  discard_sources_containing: [scrapedleaks.example]

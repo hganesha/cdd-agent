@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.ops.internal/1.0.0/rfi.schema.json",
+  "title": "RequestForInformation",
+  "description": "Output of OPS-OUTREACH. A draft can never exceed state READY_TO_SEND: reaching SENT requires an approval record naming a human approver who is not the drafting agent.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["rfi_id", "case_id", "customer_id", "round", "max_rounds", "state", "as_of",
+               "due_date", "subject", "body", "message_hash", "questions", "internal_actions",
+               "covers_rde_ids", "authority_action", "approval", "language", "evidence_id"],
+  "properties": {
+    "rfi_id": {"type": "string", "pattern": "^RFI-[0-9]+-[0-9]+$"},
+    "case_id": {"type": "string", "pattern": "^CASE-[0-9]+$"},
+    "customer_id": {"type": "string", "pattern": "^CUST-[0-9]+$"},
+    "round": {"type": "integer", "minimum": 1},
+    "max_rounds": {"type": "integer", "minimum": 1},
+    "state": {"enum": ["READY_TO_SEND", "PENDING_APPROVAL", "SENT", "RESPONSE_ASSESSED",
+                       "REFUSED_ROUNDS_EXHAUSTED", "CLOSED"]},
+    "as_of": {"type": "string", "format": "date"},
+    "due_date": {"type": "string", "format": "date"},
+    "subject": {"type": "string", "minLength": 8},
+    "body": {"type": "string", "minLength": 40},
+    "message_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "questions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["rde_id", "question", "documents", "obligation", "closes_gap"],
+        "properties": {
+          "rde_id": {"type": "string", "pattern": "^RDE-[0-9]{2}$"},
+          "question": {"type": "string", "minLength": 15},
+          "documents": {"type": "array", "items": {"type": "string"}},
+          "obligation": {"type": "string"},
+          "closes_gap": {"type": "boolean"}
+        }
+      }
+    },
+    "internal_actions": {
+      "type": "array",
+      "description": "Obligations that must never be asked of a customer; they stay inside the bank.",
+      "items": {
+        "type": "object",
+        "required": ["obligation", "action"],
+        "properties": {"obligation": {"type": "string"}, "action": {"type": "string"}}
+      }
+    },
+    "covers_rde_ids": {"type": "array", "items": {"type": "string", "pattern": "^RDE-[0-9]{2}$"}},
+    "authority_action": {"const": "rfi.issue"},
+    "approval": {
+      "type": "object",
+      "required": ["required", "action", "requested_by", "approver_role", "ttl_hours", "state"],
+      "properties": {
+        "required": {"const": true},
+        "action": {"const": "rfi.issue"},
+        "requested_by": {"const": "OPS-OUTREACH"},
+        "approver_role": {"type": "string", "minLength": 3},
+        "ttl_hours": {"type": "integer", "minimum": 1},
+        "approver": {"type": ["string", "null"],
+                     "description": "Null until a human approves. An agent that fills this in has forged an approval."},
+        "approved_at": {"type": ["string", "null"]},
+        "state": {"enum": ["PENDING", "APPROVED", "EXPIRED", "REJECTED"]}
+      }
+    },
+    "language": {
+      "type": "object",
+      "required": ["locale", "reading_level", "tipping_off_check"],
+      "properties": {"locale": {"type": "string"},
+                     "reading_level": {"type": "string"},
+                     "tipping_off_check": {"type": "string"}}
+    },
+    "evidence_id": {"type": "string", "pattern": "^OX-[0-9]{6}$"}
+  }
+}

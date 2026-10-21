@@ -1,0 +1,44 @@
+{
+ "records": {
+  "CUST-1001": {
+   "customer_id": "CUST-1001",
+   "internal_rating": "B-",
+   "rating_date": "2026-08-01",
+   "expected_profile": {
+    "monthly_turnover": 450000.0,
+    "countries": [
+     "AE",
+     "EE"
+    ],
+    "products": [
+     "TRADE_FINANCE"
+    ],
+    "cash_ratio_max": 0.1
+   },
+   "watchlist": true,
+   "watchlist_reason": "turnover deviation flagged 2026-08",
+   "last_review": "2025-11-14",
+   "next_review_due": "2026-11-14"
+  },
+  "CUST-2002": {
+   "customer_id": "CUST-2002",
+   "internal_rating": "A",
+   "rating_date": "2026-06-15",
+   "expected_profile": {
+    "monthly_turnover": 780000.0,
+    "countries": [
+     "DE",
+     "EE",
+     "PL"
+    ],
+    "products": [
+     "PAYMENTS"
+    ],
+    "cash_ratio_max": 0.05
+   },
+   "watchlist": false,
+   "last_review": "2026-06-15",
+   "next_review_due": "2027-06-15"
+  }
+ }
+}

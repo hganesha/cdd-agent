@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.axiom.internal/1.0.0/policy-proposal.schema.json",
+  "title": "PolicyChangeProposal",
+  "type": "object",
+  "required": [
+    "proposal_id",
+    "status",
+    "author_agent",
+    "source",
+    "change",
+    "candidate",
+    "validation",
+    "impact",
+    "required_approvals",
+    "activation"
+  ],
+  "properties": {
+    "proposal_id": {
+      "type": "string",
+      "pattern": "^P-"
+    },
+    "status": {
+      "const": "DRAFT"
+    },
+    "author_agent": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "document",
+        "clauses_parsed"
+      ],
+      "properties": {
+        "document": {
+          "type": "string"
+        },
+        "clauses_parsed": {
+          "type": "integer"
+        },
+        "clauses_without_implementing_rule": {
+          "type": "array"
+        },
+        "coverage": {
+          "type": "number"
+        }
+      }
+    },
+    "change": {
+      "type": "object",
+      "required": [
+        "kind"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "data_patch",
+            "rule_patch"
+          ]
+        },
+        "description": {
+          "type": "string"
+        },
+        "pointer": {
+          "type": "string"
+        },
+        "old": {},
+        "new": {},
+        "rationale": {
+          "type": "string"
+        },
+        "source_clauses": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "rego": {
+          "type": "string"
+        }
+      }
+    },
+    "candidate": {
+      "type": "object"
+    },
+    "validation": {
+      "type": "object",
+      "required": [
+        "check_ok",
+        "tests_ok",
+        "restricted_capabilities"
+      ],
+      "properties": {
+        "check_ok": {
+          "type": "boolean"
+        },
+        "tests_ok": {
+          "type": "boolean"
+        },
+        "fmt_ok": {
+          "type": "boolean"
+        },
+        "restricted_capabilities": {
+          "const": true
+        },
+        "tests_detail": {
+          "type": "string"
+        },
+        "error": {
+          "type": "string"
+        }
+      }
+    },
+    "impact": {
+      "type": "object",
+      "properties": {
+        "cases_evaluated": {
+          "type": "integer"
+        },
+        "cases_changed": {
+          "type": "integer"
+        },
+        "changes": {
+          "type": "array"
+        },
+        "materiality": {
+          "type": "string"
+        },
+        "skipped": {
+          "type": "string"
+        }
+      }
+    },
+    "required_approvals": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "activation": {
+      "type": "object",
+      "required": [
+        "permitted_by_agent"
+      ],
+      "properties": {
+        "permitted_by_agent": {
+          "const": false
+        },
+        "reason": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

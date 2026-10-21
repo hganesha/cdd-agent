@@ -1,0 +1,11 @@
+{
+  "note": "sha256 pins of the prompt files. Editing a prompt without re-pinning fails `make contracts`, exactly as an undeclared policy change fails the corpus.",
+  "version": "ops-prompts-2026.10.1",
+  "files": {
+    "prompts/system.md": "sha256:0ce558d336537731f6f9ff20598df0a1cd662fe59d79279cec39dcad0b5db21f",
+    "prompts/ops-profile.md": "sha256:08a075f0203b25d98b4724dad2fe8087695ca987169915234de841a7c4035989",
+    "prompts/ops-verify.md": "sha256:63e6c672d35c822530323a3b749c59c80f3635e7ba4c0bb4cdea4f2f090e207f",
+    "prompts/ops-outreach.md": "sha256:8f46ccbbcf892859081ec53eac23d7718fc97a8cf865ae5939f2e206b2caa774",
+    "prompts/ops-decision.md": "sha256:f9d513a9c99edf36410d5a8141cd90e93e3a570c6b91835db16982fee27ce21f"
+  }
+}

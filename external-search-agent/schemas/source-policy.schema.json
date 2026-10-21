@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bank.example/schemas/webis/source-policy.schema.json",
+  "title": "SourcePolicy",
+  "description": "Shape of config/sources.yaml. Tiering and denial are policy artefacts: the model may read them, never write them.",
+  "type": "object",
+  "required": ["version", "effective_from", "max_tier_citable", "tiers", "denied_domains", "compliance"],
+  "additionalProperties": false,
+  "properties": {
+    "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "effective_from": {"type": "string", "format": "date"},
+    "max_tier_citable": {"type": "integer", "minimum": 1, "maximum": 5},
+    "tier4_corroboration_only": {"type": "boolean"},
+    "tiers": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["label", "weight", "domains", "citable_alone"],
+        "additionalProperties": false,
+        "properties": {
+          "label": {"type": "string"},
+          "weight": {"type": "number", "minimum": 0, "maximum": 100},
+          "domains": {"type": "array", "items": {"type": "string"}},
+          "citable_alone": {"type": "boolean"}
+        }
+      }
+    },
+    "denied_domains": {"type": "array", "items": {"type": "string"}},
+    "compliance": {
+      "type": "object",
+      "required": ["obey_robots", "honour_paywalls", "honour_licensing", "store_full_text"],
+      "additionalProperties": false,
+      "properties": {
+        "obey_robots": {"const": true},
+        "honour_paywalls": {"const": true},
+        "honour_licensing": {"const": true},
+        "store_full_text": {"const": false},
+        "respect_noarchive": {"type": "boolean"},
+        "min_delay_ms_between_fetches_per_domain": {"type": "integer", "minimum": 0},
+        "user_agent": {"type": "string"}
+      }
+    },
+    "freshness": {"type": "object"},
+    "pii": {"type": "object"}
+  }
+}

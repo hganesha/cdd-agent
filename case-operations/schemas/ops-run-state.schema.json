@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.ops.internal/1.0.0/ops-run-state.schema.json",
+  "title": "OpsRunState",
+  "description": "The checkpoint. Mutable working state, written atomically after every stage; the evidence ledger stays append-only.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "run_id",
+    "agent_id",
+    "case_id",
+    "created_at",
+    "updated_at",
+    "stages",
+    "counters",
+    "budget",
+    "status"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "run_id": {
+      "type": "string",
+      "pattern": "^RUN-[0-9A-F]{8}$"
+    },
+    "agent_id": {
+      "enum": [
+        "OPS-PROFILE",
+        "OPS-VERIFY",
+        "OPS-OUTREACH",
+        "OPS-DECIDE"
+      ]
+    },
+    "case_id": {
+      "type": "string",
+      "pattern": "^CASE-[0-9]+$"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "enum": [
+        "RUNNING",
+        "COMPLETE",
+        "PARTIAL",
+        "BUDGET_EXHAUSTED",
+        "FAILED"
+      ]
+    },
+    "stages": {
+      "type": "object",
+      "description": "stage name -> {completed_at, agent, evidence_id, payload}. A stage present here is never re-executed.",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "completed_at",
+          "payload"
+        ],
+        "properties": {
+          "completed_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "agent": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "evidence_id": {
+            "type": [
+              "string",
+              "null",
+              "array"
+            ]
+          },
+          "payload": {}
+        }
+      }
+    },
+    "counters": {
+      "type": "object",
+      "required": [
+        "api_calls",
+        "pages",
+        "checks"
+      ],
+      "properties": {
+        "api_calls": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "pages": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "checks": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "budget": {
+      "type": "object",
+      "properties": {
+        "api_calls": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "pages": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "checks": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "wall_clock_s": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "head_record_hash": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "description": "Ledger head at the last checkpoint; a checkpoint whose pin is no longer in the chain is discarded."
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "proposal_id": "P-TEST-001",
+  "status": "DRAFT",
+  "author_agent": "AXIOM-POLICY",
+  "created_at": "2026-10-21T15:57:52.404Z",
+  "source": {
+    "document": "corpus/SOP_CDD_v4.2_excerpt.md",
+    "clauses_parsed": 15,
+    "clauses_without_implementing_rule": [
+      {
+        "clause_id": "4.2",
+        "kind": "MANDATORY_STEP",
+        "quote": "A passport, national identity card or equivalent official photographic document shall be obtained and its validity recorded at the time of onboarding."
+      },
+      {
+        "clause_id": "7.3",
+        "kind": "DEADLINE",
+        "quote": "Enhanced due diligence must be completed within 30 days of the relationship being established where the customer presents a high risk. Section 8 \u2014 Documentation"
+      }
+    ],
+    "coverage": 86.7
+  },
+  "change": {
+    "kind": "data_patch",
+    "pointer": "/config/thresholds/rfi_max_rounds",
+    "old": 2,
+    "new": 3,
+    "description": "allow a third RFI round"
+  },
+  "candidate": {
+    "file": "policy/data.json",
+    "pointer": "/config/thresholds/rfi_max_rounds",
+    "old": 2,
+    "new": 3
+  },
+  "validation": {
+    "check_ok": true,
+    "check_detail": "",
+    "tests_ok": true,
+    "tests_detail": "PASS: 47/47",
+    "fmt_ok": false,
+    "unformatted_files": [
+      "/tmp/policy-sandbox-q23vkpij/policy/tests/disposition_test.rego"
+    ],
+    "restricted_capabilities": true
+  },
+  "impact": {
+    "cases_evaluated": 11,
+    "cases_changed": 0,
+    "changes": [],
+    "materiality": "LOW \u2014 no decision changes across the corpus"
+  },
+  "required_approvals": [
+    "FINANCIAL_CRIME",
+    "MODEL_RISK",
+    "PLATFORM_SECURITY",
+    "POLICY_OWNER"
+  ],
+  "activation": {
+    "permitted_by_agent": false,
+    "reason": "policy.activate is a prohibited action for every agent"
+  }
+}

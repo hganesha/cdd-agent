@@ -1,0 +1,265 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.axiom.internal/1.0.0/decision.schema.json",
+  "title": "PolicyDecision",
+  "type": "object",
+  "required": [
+    "decision_id",
+    "policy_version",
+    "outcome",
+    "reasons",
+    "obligations",
+    "risk",
+    "ubo",
+    "screening",
+    "coverage",
+    "gates",
+    "jurisdiction",
+    "agent_may_clear_sanctions_hit"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "decision_id": {
+      "type": "string",
+      "pattern": ":cdd-policy-"
+    },
+    "policy_version": {
+      "type": "string"
+    },
+    "outcome": {
+      "enum": [
+        "PERMIT",
+        "PERMIT_WITH_CONDITIONS",
+        "REQUIRE_RFI",
+        "REQUIRE_EDD",
+        "BLOCK"
+      ]
+    },
+    "reasons": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "RISK_BAND_VERY_HIGH",
+          "RISK_BAND_HIGH",
+          "RISK_BAND_FLOOR_APPLIED",
+          "SANCTIONS_HIT_REQUIRES_ADJUDICATION",
+          "PEP_EXPOSURE",
+          "UNRESOLVED_BENEFICIAL_OWNERSHIP",
+          "CONTROL_PRONG_MISSING",
+          "SCREENING_INCOMPLETE",
+          "COVERAGE_BELOW_MINIMUM",
+          "DECISION_BLOCKING_GAPS",
+          "UNKNOWN_RISK_FACTOR",
+          "MLRO_GATE_REQUIRED"
+        ]
+      }
+    },
+    "obligations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "kind",
+          "because"
+        ],
+        "properties": {
+          "kind": {
+            "enum": [
+              "ESCALATE_MLRO",
+              "OBTAIN_SOURCE_OF_WEALTH",
+              "CLOSE_UBO_GAP",
+              "COMPLETE_SCREENING",
+              "HUMAN_EDD_APPROVAL"
+            ]
+          },
+          "because": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "risk": {
+      "type": "object",
+      "required": [
+        "score",
+        "band",
+        "cdd_level",
+        "trace"
+      ],
+      "properties": {
+        "score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "band": {
+          "enum": [
+            "LOW",
+            "MEDIUM",
+            "HIGH",
+            "VERY_HIGH"
+          ]
+        },
+        "weighted_score_band": {
+          "enum": [
+            "LOW",
+            "MEDIUM",
+            "HIGH",
+            "VERY_HIGH"
+          ]
+        },
+        "cdd_level": {
+          "enum": [
+            "SDD",
+            "CDD",
+            "EDD"
+          ]
+        },
+        "review_cadence": {
+          "type": "string"
+        },
+        "trace": {
+          "type": "array"
+        },
+        "applied_overrides": {
+          "type": "array"
+        },
+        "valid_input": {
+          "type": "boolean"
+        }
+      }
+    },
+    "ubo": {
+      "type": "object",
+      "required": [
+        "threshold_pct",
+        "effective_pct",
+        "beneficial_owners",
+        "blocks_conclusion"
+      ],
+      "properties": {
+        "threshold_pct": {
+          "type": "number"
+        },
+        "effective_pct": {
+          "type": "object"
+        },
+        "beneficial_owners": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "unresolved_pct": {
+          "type": "number"
+        },
+        "blocks_conclusion": {
+          "type": "boolean"
+        },
+        "control_prong_required": {
+          "type": "boolean"
+        },
+        "control_prong_missing": {
+          "type": "boolean"
+        }
+      }
+    },
+    "screening": {
+      "type": "object",
+      "required": [
+        "requires_adjudication",
+        "screening_complete",
+        "agent_may_clear_sanctions_hit"
+      ],
+      "properties": {
+        "requires_adjudication": {
+          "type": "boolean"
+        },
+        "pep_exposure": {
+          "type": "boolean"
+        },
+        "screening_complete": {
+          "type": "boolean"
+        },
+        "agent_may_clear_sanctions_hit": {
+          "const": false
+        },
+        "blocking_hits": {
+          "type": "array"
+        },
+        "unqueried_lists": {
+          "type": "array"
+        }
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "required": [
+        "coverage_pct",
+        "blocks_decision"
+      ],
+      "properties": {
+        "coverage_pct": {
+          "type": "number"
+        },
+        "blocks_decision": {
+          "type": "boolean"
+        },
+        "below_minimum": {
+          "type": "boolean"
+        },
+        "blocking_rde_ids": {
+          "type": "array"
+        }
+      }
+    },
+    "gates": {
+      "type": "object",
+      "required": [
+        "required_gates",
+        "route_to"
+      ],
+      "properties": {
+        "required_gates": {
+          "type": "array"
+        },
+        "route_to": {
+          "enum": [
+            "MLRO",
+            "EDD_UNIT",
+            "COMPLIANCE_OFFICER"
+          ]
+        },
+        "blocks_final_status": {
+          "type": "boolean"
+        }
+      }
+    },
+    "jurisdiction": {
+      "type": "object",
+      "required": [
+        "profile"
+      ],
+      "properties": {
+        "profile": {
+          "type": "string"
+        },
+        "require_source_of_wealth": {
+          "type": "boolean"
+        },
+        "mlro_gate_required": {
+          "type": "boolean"
+        },
+        "min_coverage_floor": {
+          "type": "number"
+        }
+      }
+    },
+    "agent_may_clear_sanctions_hit": {
+      "const": false
+    },
+    "evaluated_at": {
+      "type": "string"
+    }
+  }
+}

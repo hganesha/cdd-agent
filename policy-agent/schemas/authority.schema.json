@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.axiom.internal/1.0.0/authority.schema.json",
+  "title": "AuthorityDecision",
+  "type": "object",
+  "required": [
+    "action",
+    "decision",
+    "reason",
+    "rule_version"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "rule_version": {
+      "type": "string"
+    },
+    "action": {
+      "type": "string"
+    },
+    "decision": {
+      "enum": [
+        "allowed",
+        "approval_required",
+        "denied"
+      ]
+    },
+    "reason": {
+      "enum": [
+        "explicitly_allowed",
+        "human_approval_required",
+        "prohibited_action",
+        "not_an_enumerated_capability"
+      ]
+    },
+    "approval": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "approver": {
+          "type": "string"
+        },
+        "ttl_hours": {
+          "type": "integer"
+        }
+      }
+    }
+  }
+}

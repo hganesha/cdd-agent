@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.ops.internal/1.0.0/ops-request.schema.json",
+  "title": "OpsRequest",
+  "description": "The unit of work handed to the OPS team: one case, one customer, one as-of instant.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["case_id", "customer_id", "as_of"],
+  "properties": {
+    "case_id": {"type": "string", "pattern": "^CASE-[0-9]+$"},
+    "customer_id": {"type": "string", "pattern": "^CUST-[0-9]+$"},
+    "customer_name": {"type": "string"},
+    "as_of": {"type": "string", "format": "date-time"},
+    "window_days": {"type": "integer", "minimum": 30, "maximum": 400, "default": 90},
+    "cdd_level_requested": {"enum": ["SDD", "CDD", "EDD"]},
+    "jurisdiction_profile": {"enum": ["US_FED_FINCEN_CDD", "EU_AMLD", "UK_MLR_2017"]},
+    "prior_rfi_rounds": {"type": "integer", "minimum": 0, "maximum": 2},
+    "evidence_pack": {
+      "type": "object",
+      "description": "Optional output of WEBIS-SEARCH. Absent means no external adverse-media evidence, which the profile must disclose rather than assume away."
+    },
+    "screening": {
+      "type": "object",
+      "description": "Screening results as returned by the list providers, if a screening connector supplied them."
+    }
+  }
+}

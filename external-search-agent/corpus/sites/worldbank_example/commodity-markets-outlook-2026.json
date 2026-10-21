@@ -1,0 +1,14 @@
+{
+ "url": "https://worldbank.example/commodity-markets-outlook-2026",
+ "domain": "worldbank.example",
+ "title": "Commodity Markets Outlook 2026",
+ "published": "2026-01-15",
+ "author": null,
+ "lang": "en",
+ "source_tier": 1,
+ "kind": "report",
+ "paywalled": false,
+ "robots": "allow",
+ "licensing": "open_government",
+ "body": "Global commodity prices are expected to ease modestly in 2026, with metals demand\nsoftening in advanced economies. The outlook discusses energy, metals and agricultural\nprices at an aggregate level and does not address individual firms."
+}

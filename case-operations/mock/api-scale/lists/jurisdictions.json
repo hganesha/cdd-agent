@@ -1,0 +1,36 @@
+{
+ "as_of": "2026-10-01",
+ "source": "policy-pack mirror",
+ "fatf_call_for_action": [
+  "KP",
+  "IR",
+  "MM"
+ ],
+ "fatf_grey_list": [
+  "YE",
+  "NG",
+  "ZA",
+  "VN",
+  "SY"
+ ],
+ "sanctioned_jurisdictions": [
+  "KP",
+  "IR",
+  "SY",
+  "RU",
+  "BY"
+ ],
+ "secrecy_jurisdictions": [
+  "PA",
+  "VU",
+  "SC",
+  "BZ"
+ ],
+ "high_corruption_cpi_band": [
+  "VE",
+  "YE",
+  "SY",
+  "NG",
+  "MM"
+ ]
+}

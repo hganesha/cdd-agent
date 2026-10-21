@@ -1,0 +1,238 @@
+{
+ "records": {
+  "CASE-4831": {
+   "case_id": "CASE-4831",
+   "customer_id": "CUST-1001",
+   "elements": [
+    {
+     "rde_id": "RDE-01",
+     "requirement": "identity verified",
+     "status": "SATISFIED",
+     "document": "certificate_of_incorporation",
+     "dated": "2024-02-01",
+     "blocks_decision": false
+    },
+    {
+     "rde_id": "RDE-02",
+     "requirement": "registered address verified",
+     "status": "SATISFIED",
+     "document": "trade_licence",
+     "dated": "2024-02-01",
+     "blocks_decision": false
+    },
+    {
+     "rde_id": "RDE-03",
+     "requirement": "beneficial ownership declared and evidenced",
+     "status": "MISSING",
+     "document": null,
+     "dated": null,
+     "blocks_decision": true
+    },
+    {
+     "rde_id": "RDE-04",
+     "requirement": "ownership chart traced to natural persons",
+     "status": "PARTIAL",
+     "document": "shareholder_register:2024-02-01",
+     "dated": "2024-02-01",
+     "blocks_decision": true
+    },
+    {
+     "rde_id": "RDE-05",
+     "requirement": "source of funds documented",
+     "status": "PARTIAL",
+     "document": "board_resolution:2024-02-01",
+     "dated": "2024-02-01",
+     "blocks_decision": false
+    },
+    {
+     "rde_id": "RDE-07",
+     "requirement": "source of wealth for PEP principal",
+     "status": "MISSING",
+     "document": null,
+     "dated": null,
+     "blocks_decision": true
+    },
+    {
+     "rde_id": "RDE-08",
+     "requirement": "screening against all required lists",
+     "status": "PARTIAL",
+     "document": "screening_log:2026-09-30",
+     "dated": "2026-09-30",
+     "blocks_decision": true
+    },
+    {
+     "rde_id": "RDE-11",
+     "requirement": "expected activity profile agreed",
+     "status": "SATISFIED",
+     "document": "onboarding_questionnaire",
+     "dated": "2024-02-19",
+     "blocks_decision": false
+    },
+    {
+     "rde_id": "RDE-14",
+     "requirement": "introducer reliance documented",
+     "status": "PARTIAL",
+     "document": "introducer_agreement",
+     "dated": "2024-02-10",
+     "blocks_decision": false
+    },
+    {
+     "rde_id": "RDE-19",
+     "requirement": "periodic review within cadence",
+     "status": "MISSING",
+     "document": null,
+     "dated": null,
+     "blocks_decision": false
+    },
+    {
+     "rde_id": "RDE-24",
+     "requirement": "tax residency certificate",
+     "status": "NOT_APPLICABLE",
+     "document": null,
+     "dated": null,
+     "blocks_decision": false
+    }
+   ]
+  },
+  "CASE-4902": {
+   "case_id": "CASE-4902",
+   "customer_id": "CUST-2002",
+   "elements": [
+    {
+     "rde_id": "RDE-01",
+     "requirement": "identity verified",
+     "status": "SATISFIED",
+     "document": "commercial_register_extract",
+     "dated": "2025-01-10",
+     "blocks_decision": true
+    },
+    {
+     "rde_id": "RDE-02",
+     "requirement": "registered address verified",
+     "status": "SATISFIED",
+     "document": "commercial_register_extract",
+     "dated": "2025-01-10",
+     "blocks_decision": false
+    },
+    {
+     "rde_id": "RDE-03",
+     "requirement": "beneficial ownership declared and evidenced",
+     "status": "SATISFIED",
+     "document": "shareholder_register:2025-01-10",
+     "dated": "2025-01-10",
+     "blocks_decision": true
+    },
+    {
+     "rde_id": "RDE-08",
+     "requirement": "screening against all required lists",
+     "status": "SATISFIED",
+     "document": "screening_log:2026-09-30",
+     "dated": "2026-09-30",
+     "blocks_decision": true
+    },
+    {
+     "rde_id": "RDE-11",
+     "requirement": "expected activity profile agreed",
+     "status": "SATISFIED",
+     "document": "onboarding_questionnaire",
+     "dated": "2019-09-04",
+     "blocks_decision": false
+    }
+   ]
+  },
+  "CASE-9001": {
+   "case_id": "CASE-9001",
+   "customer_id": "CUST-3003",
+   "elements": [
+    {
+     "rde_id": "RDE-01",
+     "requirement": "identity verified",
+     "status": "SATISFIED",
+     "document": "certificate_of_incorporation",
+     "dated": "2024-02-01",
+     "blocks_decision": false
+    },
+    {
+     "rde_id": "RDE-02",
+     "requirement": "registered address verified",
+     "status": "SATISFIED",
+     "document": "trade_licence",
+     "dated": "2024-02-01",
+     "blocks_decision": false
+    },
+    {
+     "rde_id": "RDE-03",
+     "requirement": "beneficial ownership declared and evidenced",
+     "status": "SATISFIED",
+     "document": null,
+     "dated": "2026-06-01",
+     "blocks_decision": false
+    },
+    {
+     "rde_id": "RDE-04",
+     "requirement": "ownership chart traced to natural persons",
+     "status": "SATISFIED",
+     "document": "shareholder_register:2024-02-01",
+     "dated": "2026-06-01",
+     "blocks_decision": false
+    },
+    {
+     "rde_id": "RDE-05",
+     "requirement": "source of funds documented",
+     "status": "PARTIAL",
+     "document": "board_resolution:2024-02-01",
+     "dated": "2024-02-01",
+     "blocks_decision": false
+    },
+    {
+     "rde_id": "RDE-07",
+     "requirement": "source of wealth for PEP principal",
+     "status": "MISSING",
+     "document": null,
+     "dated": null,
+     "blocks_decision": true
+    },
+    {
+     "rde_id": "RDE-08",
+     "requirement": "screening against all required lists",
+     "status": "PARTIAL",
+     "document": "screening_log:2026-09-30",
+     "dated": "2026-09-30",
+     "blocks_decision": true
+    },
+    {
+     "rde_id": "RDE-11",
+     "requirement": "expected activity profile agreed",
+     "status": "SATISFIED",
+     "document": "onboarding_questionnaire",
+     "dated": "2024-02-19",
+     "blocks_decision": false
+    },
+    {
+     "rde_id": "RDE-14",
+     "requirement": "introducer reliance documented",
+     "status": "PARTIAL",
+     "document": "introducer_agreement",
+     "dated": "2024-02-10",
+     "blocks_decision": false
+    },
+    {
+     "rde_id": "RDE-19",
+     "requirement": "periodic review within cadence",
+     "status": "MISSING",
+     "document": null,
+     "dated": null,
+     "blocks_decision": false
+    },
+    {
+     "rde_id": "RDE-24",
+     "requirement": "tax residency certificate",
+     "status": "NOT_APPLICABLE",
+     "document": null,
+     "dated": null,
+     "blocks_decision": false
+    }
+   ]
+  }
+ }
+}

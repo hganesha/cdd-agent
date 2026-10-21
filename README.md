@@ -1,232 +1,99 @@
-# ATLAS-CDD — Customer Due Diligence Investigation Agent
+# Three agents, one control loop
 
-A complete, implementation-ready definition of an agentic CDD investigator for a KYC function:
-**system prompt, 15 skill contracts, inputs/outputs, evidence-write model, long-running execution
-design, guardrails, evaluation plan — plus a runnable reference implementation** that works a
-300-page case end to end, crashes, resumes, and produces a cited dossier.
-
-```
-Definition     spec/00-agent-definition.md          ← start here
-Prompt         prompts/system.md                    ← drop-in, hash-pinned
-Skills         spec/02-skills.md                    15 contracts (I/O/evidence writes)
-Contracts      spec/03-io-contracts.md  schemas/    field-level + JSON Schema
-Evidence       spec/04-evidence-writes.md           append-only hash-chained ledger
-Long-running   spec/05-long-running-execution.md    checkpoint / resume / budget / degrade
-Guardrails     spec/06-guardrails.md                injection, fairness, data handling
-Evaluation     spec/07-evaluation.md                golden set, metrics, release gate
-Reference impl src/cdd_agent/                       runs the demo case offline
-Demo case      data/case_4831/                      23 documents, 300 pages
-```
-
----
-
-## 60-second tour
-
-The agent investigates a customer (individual, company, trust or partnership) across a document
-bundle that may run to hundreds of pages, and produces a **decision-ready dossier in which every
-material claim resolves to a quoted, page-anchored evidence record**.
-
-It is deliberately **analyst-grade, not decision-grade**: it recommends, cites and escalates. A named
-human Compliance Officer decides, and `decision_authority: HUMAN` is hard-coded into the output
-contract.
-
-The ten stages:
+A complete, runnable definition of the KYC investigation stack: an agent that investigates, an agent
+that fetches evidence, and a policy service that decides. Each is specified to the same depth —
+system prompt, skills with explicit inputs/outputs/evidence writes, I/O contracts, evidence writes,
+long-running behaviour, guardrails, evaluation — and each is actually executable and tested.
 
 ```
-INVENTORY → EXTRACT → LINK → OWNERSHIP → SCREEN → ACTIVITY → RATE → GAP → COMPOSE → CRITIQUE → DELIVER
+                 ┌──────────────────────────────────────────────────────────┐
+   web / registry │  WEBIS-SEARCH  ·  external evidence                      │
+   media / court  │  18 queries → 40 fetches → passages → citations          │
+                 │  refuses, quarantines, redacts; resumes after a crash    │
+                 └───────────────────────┬──────────────────────────────────┘
+                                         │  evidence_pack.json  (claims + citations only)
+                                         ▼
+                 ┌──────────────────────────────────────────────────────────┐
+   case file     │  CDD-INVESTIGATION  ·  findings, coverage, memo          │
+   documents     │  100s of pages, checkpointed, coverage matrix, gates     │
+                 └───────────────────────┬──────────────────────────────────┘
+                                         │  facts (factors, ownership, screening, coverage)
+                                         ▼
+                 ┌──────────────────────────────────────────────────────────┐
+                 │  AXIOM-POLICY  ·  OPA/Rego decision service              │
+                 │  risk band → ownership → screening → coverage → gates    │
+                 │  closed-enum outcome, human approval, hash-chained ledger│
+                 └──────────────────────────────────────────────────────────┘
 ```
 
-…with `SK-15` wrapping all of it for durable state, and the critic (`SK-13`) trying to break the
-dossier before a regulator does.
+The split is the point: **the agents propose, the policy decides.** No model can clear a sanctions hit,
+approve a case, or lower a risk band — those verbs are not in its vocabulary, and the Rego service will
+not accept them even if they were.
 
----
+## The three packages
 
-## Run it
-
-No API keys, no network, no installs beyond `pyyaml` + `jsonschema`.
-
-```bash
-cd src
-python3 -m cdd_agent.cli run --clean        # full investigation (~1 s, deterministic harness)
-python3 -m cdd_agent.cli verify             # independent hash-chain verification
-```
-
-Crash/resume demo:
-
-```bash
-python3 -m cdd_agent.cli run --clean --kill-at 8   # simulate a crash after 8 work units
-python3 -m cdd_agent.cli resume                    # resume from the checkpoint
-```
-
-Budget-stop demo:
-
-```bash
-python3 -m cdd_agent.cli run --clean --budget 6     # hard stop → PARTIAL delivery, limitations filled
-```
-
-Tests (no pytest required):
-
-```bash
-python3 tests/test_resumability.py    # 9 tests: crash/resume equivalence, tamper detection, budget
-python3 tests/test_contracts.py       # validates every artifact against its JSON Schema
-```
-
-### What a run produces (`out/`)
-
-| File | What it is |
-|---|---|
-| `CDD_dossier_CASE-4831.md` | The 12-section decision-ready dossier, every claim cited `[EV-…]` |
-| `report.json` | Machine-readable twin, conforms to `cdd-memo.schema.json` |
-| `evidence_ledger.jsonl` | Append-only, hash-chained evidence (119 records on the demo case) |
-| `findings.json` | Structured findings with severity, basis, confidence, evidence refs |
-| `coverage_matrix.json` | 24 required data elements × status × evidence |
-| `rfi_pack.json` | Prioritised, customer-ready requests for what is missing |
-| `document_manifest.json` | Document inventory + full page ledger |
-| `run_manifest.json` | Versions, input hashes, coverage, cost, limitations, chain head |
-| `progress.jsonl`, `state/` | Progress events, checkpoints, durable fact store |
-
-### The demo case (seeded on purpose)
-
-Meridian Trade Holdings Ltd — BVI commodity trader, 23 documents, 300 pages. It contains:
-
-- a **nominee shareholder holding 45%** with no disclosed principal → `UNRESOLVED_UBO`
-- a **PEP match** on the principal beneficial owner → band floor, EDD, gate G3
-- a **sanctions look-alike** that must *not* be cleared by the agent and must *not* inflate the rating
-- an **adverse media event at allegation stage** (open inquiry, no charges) with a same-name exclusion
-- **throughput annualising to 41.5× audited revenue** → activity inconsistency, no criminality claim
-- a **prompt-injection attempt** in white-on-white text → quarantine, finding, no compliance
-- **3 illegible scanned pages** → reported honestly, never guessed
-- a **degraded screening connector** → `SCREENING_INCOMPLETE` + forced gate, not "no hits"
-
-Result: residual **HIGH** (the weighted score alone would band LOW — policy floors apply), required
-CDD **EDD** while the relationship was requested at CDD, coverage **81%** (17/24 satisfied, 5 partial,
-0 missing), 3 decision-blocking gaps, recommendation **HOLD_FOR_RFI**, gates **G2 + G3**, 12 findings,
-119 evidence records, critic PASS.
-
----
-
-## The 15 skills
-
-| ID | Skill | Emits |
+| Package | What it is | Verify it |
 |---|---|---|
-| SK-01 | Document triage & inventory | W1 per document, run registration |
-| SK-02 | Layout-aware ingestion / OCR | W2 per page used, quarantine on injection |
-| SK-03 | Typed field extraction | W3 per material field, with verbatim span |
-| SK-04 | Entity resolution & linking | W3 attributes, W6 contradictions |
-| SK-05 | Ownership graph & UBO computation | W3 edges, W4 per computed %, W6 structural flags |
-| SK-06 | Registry corroboration | W5 per query (incl. NOT_FOUND), W6 mismatches |
-| SK-07 | Screening & hit triage | W5 per subject×list (incl. zero-hit), W6 triage |
-| SK-08 | Adverse media research | W5 queries, W3 events, W6 exclusions |
-| SK-09 | Activity & SoF/SoW consistency | W3 inputs, W4 ratios, W6 inconsistencies |
-| SK-10 | Risk scoring & CDD level | W4 engine trace (deterministic, never an LLM) |
-| SK-11 | Gap analysis & RFI | W6 gaps, W7 RFI artifact |
-| SK-12 | Dossier composition | W7 dossier + JSON report |
-| SK-13 | Adversarial critic / QA | W8 critique, W6 unrepaired defects |
-| SK-14 | Escalation & human gates | W8 gate events with actor + timestamp |
-| SK-15 | Case state & long-run manager | W1 run registration, W8 stage transitions |
+| [`cdd-investigation-agent/`](cdd-investigation-agent/README.md) | Investigation agent over a case file: 100s of pages, coverage matrix, risk floors, EDD/RFI gates, durable `case_state.json`. Spec 00–07, 8 schemas, 2 test suites. | `cd cdd-investigation-agent && make demo && make test` |
+| [`policy-agent/`](policy-agent/README.md) | **AXIOM-POLICY**: real Rego evaluated by a vendored OPA v1.21.3 under restricted capabilities. Risk banding with eight band floors, 25 % UBO threshold + control prong, five screening lists with a prohibition on agent clearance, coverage minimums, gate routing, three-valued action authority, bundle build/verify/activate, clause→proposal authoring. | `cd policy-agent && make check` → `PASS: 35/35`, `22/22`, `10/10` |
+| [`external-search-agent/`](external-search-agent/README.md) | **WEBIS-SEARCH**: governed external search. Source tiers, deny-list, robots/paywall compliance, citation-or-nothing packs, independence measured by *origin* (syndication collapsing), same-name discrimination, PII redaction, quarantine of instruction-bearing pages, checkpoint/resume. | `cd external-search-agent && make check` → `54/54`, `100.0 %` quote precision |
 
-Write classes (`W1`–`W9`) are defined in `spec/04-evidence-writes.md`; the rule that makes the whole
-thing auditable is **"no query, no clearance"** — a zero-hit screening result still needs a
-timestamped, dataset-versioned query record, because the query *is* the evidence.
+Everything runs offline: no network calls, no external services. `policy-agent/bin/opa` is vendored so
+the policy service is genuinely runnable.
 
----
+## What "complete definition" means here
 
-## What the reference implementation proves
+For each agent, the same eight documents, in the same order, built from the CDD agent's shape:
 
-Each claim below is asserted by an executable test, not by prose:
+```
+spec/00-agent-definition.md      what it is, what it is not, division of labour, design positions
+spec/01-system-prompt.md         the prompt's place in the control stack, clause by clause
+spec/02-skills.md                every skill: inputs · tools · outputs · evidence writes · failure · tests
+spec/03-io-contracts.md          the JSON Schemas and the guarantees they enforce
+spec/04-evidence-writes.md       what is written, when, keyed how, how tampering is detected
+spec/05-long-running-execution.md  checkpointing, resume guarantees, budgets, scale, failure modes
+spec/06-guardrails.md            untrusted content, prohibitions, change control, residual risks
+spec/07-evaluation.md            metrics, ground truth, SOP coverage, what the suite cannot tell you
+```
 
-| Claim | Test |
+plus `prompts/` (hash-pinned), `schemas/`, `config/`, a reference implementation, an executable test
+suite, `Makefile` and `README.md`.
+
+## Numbers that are asserted, not claimed
+
+| Claim | Where it is proved |
 |---|---|
-| Crash at any of 1/4/8/12 units and resume → identical page ledger, identical findings, zero duplicate evidence | `test_kill_and_resume_matches_clean_run`, `test_resume_at_multiple_points` |
-| Every finding carries ≥1 resolvable evidence reference | `test_every_finding_is_cited` |
-| All evidence write classes actually occur | `test_evidence_write_classes_present` |
-| Injection is quarantined, reported, and never influences conclusions | `test_injection_quarantined_and_reported` |
-| A WEAK sanctions look-alike neither clears nor escalates the rating | `test_sanctions_lookalike_not_cleared_or_inflated` |
-| Budget exhaustion yields an honest PARTIAL with limitations | `test_budget_hard_stop_delivers_partial` |
-| Tampering with the ledger is detected | `test_chain_tamper_is_detected` |
-| Every artifact conforms to its JSON Schema | `tests/test_contracts.py` |
+| The policy compiles with no network, clock or filesystem | `test_policy_compiles_under_restricted_capabilities` injects `http.send` into a copy → compile fails |
+| Two independent risk engines agree | `test_python_and_opa_risk_engines_agree` — Rego vs the CDD agent's Python model, ±0.01 across 8 factor combinations |
+| An agent cannot clear a sanctions hit | `agent_may_clear_sanctions_hit: const false` in the schema + `sanctions.clear` in `prohibited_actions` |
+| A policy change cannot self-activate | `activate()` requires `approver` + `ticket`; `PROPOSAL.status` is `const DRAFT` |
+| Every quotation re-derives from its source | `make verify` → `quote_precision: 100.0` over the pack |
+| Two outlets reprinting one wire are one source | `TestSKS6Triangulation` — `corroboration_count: 1`, with a note |
+| A page that instructs the agent cannot influence it | `TestSKS9Quarantine` on an **allowed** tier-3 domain: quarantined, `status: PARTIAL`, zero claims |
+| A crashed search resumes to the same answer | `TestSKS11Resumption` — interrupted + resumed `==` uninterrupted |
+| A pinned corpus outcome cannot drift | `make corpus` → `10/10 cases match the pinned baseline`, non-zero exit on change |
+| Decisions are reproducible from the ledger | `make replay` → `reproduced: true`, `differences: []` |
 
-Resume correctness depends on the **durable fact store** (`out/state/case_state.json`): extracted
-facts, findings and the page ledger are persisted per unit. A resume that rebuilds state from the
-ledger alone would silently lose extracted facts — the harness caught exactly that bug during
-development, which is why the fact store exists.
+## The case that ties them together
 
----
+`CASE-4831` — Meridian Trade Holdings Ltd, EDD, PEP exposure, 45 % of ownership unresolved, coverage at
+16.7 %:
 
-## Wiring it into production
+* **Search** returns four cited claims: FCA final notice `HIGH` (2 independent origins), negligent-not-
+  dishonest `MEDIUM`, administration `LOW` *with a syndication note* (two outlets, one wire), customs
+  inquiry `LOW` — plus three namesake exclusions, one quarantined injection, one aggregator allegation
+  recorded as circulating-only, and a paywalled source declared as a gap.
+* **Investigation** turns those into findings, computes a residual risk of **37.95** and a coverage
+  matrix that cannot reach the EDD minimum.
+* **Policy** returns `BLOCK`: `score 37.95`, `band HIGH` because a band floor fired on PEP exposure,
+  `weighted_score_band LOW`, route `EDD_UNIT`, obligations `CLOSE_UBO_GAP` / `COMPLETE_SCREENING` /
+  `HUMAN_EDD_APPROVAL`, `auto_final_allowed: false` — recorded as `PZ-nnnnnn`, reproducible by
+  `make replay`.
 
-The reference implementation is deterministic and model-free so it runs offline. Replace three
-adapters; everything else — contracts, evidence writes, idempotency, state machine — stays.
+Run each in one command:
 
-```python
-# 1. extraction adapter (src/cdd_agent/skills.py :: sk03_extract_document)
-#    replace the regex FIELD_PATTERNS pass with a constrained-decoding LLM call
-facts = llm.extract(page_ref=f"{doc_id}:{page}",
-                    schema_id="extraction-result.schema.json",
-                    prompt_version=PROMPTS["extract"])
-# the contract it must honour: value + verbatim_quote + page + char_span + basis + confidence
-
-# 2. connector adapters (sk06_registry / sk07_screening / sk08_media)
-#    swap SEEDED_LISTS for real list providers; keep recording dataset_version + queried_at
-
-# 3. composition + critic (sk12_compose / sk13_critic)
-#    frontier model for compose, a *different model family* for the critic,
-#    both reading retrieved spans rather than the corpus
+```bash
+cd external-search-agent && make demo
+cd ../cdd-investigation-agent && make demo
+cd ../policy-agent && make decide
 ```
-
-Then keep, unchanged:
-
-- the system prompt (`prompts/system.md`, hash-pinned in `RunManifest.prompt_hash`)
-- the evidence ledger and its write classes
-- the tool gateway manifest (`config/tools.yaml`) — anything not listed cannot be called
-- the policy pack (`config/policy.yaml`) — all thresholds, weights, band floors, decision matrix
-- the human gates
-
-### Deployment checklist
-
-1. Durable workflow engine (Temporal / Step Functions) for the stage machine; object store with WORM
-   for documents and the ledger; Postgres for case/run state; page-level search index.
-2. Screening and registry connectors behind an internal proxy with read-only scopes, rate limits and
-   audit logging. No credential ever reaches a prompt.
-3. Reviewer UI that renders each claim with its evidence record inline (quote + page crop + confidence).
-4. Retention configured to policy (5 years default, 10 for EDD/MLRO-referred), deletion as a
-   controlled lifecycle job — never a runtime capability.
-5. Run the eval harness (`spec/07-evaluation.md`) against the 260-case golden set and clear the
-   release gate before any production case.
-
----
-
-## Deliberate design choices worth arguing about
-
-- **Abstention is a first-class output.** `UNRESOLVED` is legal; a fabricated value is a P0 incident.
-  Coverage below the policy minimum *blocks* a FINAL status rather than being footnoted.
-- **The risk engine is not an LLM.** Scores are a pure function of (factor inputs, policy version).
-  The model explains the trace; it may not produce it. Band floors exist because a single severe
-  factor (PEP, opaque ownership, unexplained throughput) must not be averaged away by benign ones.
-- **The critic runs on a different model family** from the composer, to avoid correlated blind spots.
-- **Partial delivery is normal.** An interim dossier at 70% of SLA beats a perfect dossier that
-  arrives after the human needed it. `PARTIAL` with filled-in limitations is a success state.
-- **The agent never closes a case.** No code path leads from agent output to a closed case; every
-  high-risk, gapped or hit-bearing case routes to a human gate with a decision-ready question.
-
----
-
-## Repository layout
-
-```
-spec/            00 definition · 01 system prompt · 02 skills · 03 I/O contracts
-                 04 evidence writes · 05 long-running · 06 guardrails · 07 evaluation
-prompts/         system.md (drop-in) · subsystem-prompts.md (per-skill stage prompts)
-schemas/         8 JSON Schemas (case input, evidence, manifest, finding, risk, coverage, memo, run state)
-config/          tools.yaml (gateway manifest) · policy.yaml (thresholds/weights) · model-routing.yaml
-src/cdd_agent/   evidence.py · policy.py · skills.py · orchestrator.py · cli.py · make_case.py
-data/case_4831/  case.json · bundle.json · 23 document page files (300 pages)
-tests/           test_resumability.py (9) · test_contracts.py (schema validation)
-out/             run artifacts (regenerated by the CLI)
-```
-
----
-
-*Synthetic case data. No real customer information. The dossier format, evidence model and guardrails
-are written against FinCEN CDD (31 CFR 1010.230), FFIEC BSA/AML guidance and FATF Rec. 10/24, and are
-configurable to other regimes via the policy pack.*

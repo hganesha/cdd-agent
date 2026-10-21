@@ -1,0 +1,172 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bank.example/schemas/webis/evidence-record.schema.json",
+  "title": "EvidenceRecord",
+  "description": "One line of out/search_evidence.jsonl. Hash-chained: record_hash covers the canonical record minus record_hash and signature; prev_hash is the previous line's record_hash.",
+  "type": "object",
+  "required": [
+    "evidence_id",
+    "agent_id",
+    "seq",
+    "created_at",
+    "record_type",
+    "prev_hash",
+    "record_hash",
+    "signature"
+  ],
+  "properties": {
+    "evidence_id": {
+      "type": "string",
+      "pattern": "^WS-[0-9]{6}$"
+    },
+    "agent_id": {
+      "const": "WEBIS-SEARCH"
+    },
+    "seq": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "record_type": {
+      "enum": [
+        "QUERY",
+        "RETRIEVAL",
+        "CLAIM",
+        "QUARANTINE",
+        "PACK",
+        "STATE"
+      ]
+    },
+    "prev_hash": {
+      "type": "string",
+      "pattern": "^(sha256:[0-9a-f]{64}|GENESIS)$"
+    },
+    "record_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "signature": {
+      "type": "string",
+      "pattern": "^kms-stub:[0-9a-f]{16}$"
+    },
+    "request_id": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "query": {
+      "type": "object"
+    },
+    "claim": {
+      "type": "object",
+      "required": [
+        "text",
+        "confidence"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "confidence": {
+          "type": "string"
+        },
+        "corroboration_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "pack_id": {
+      "type": "string"
+    },
+    "event": {
+      "type": "string"
+    },
+    "detail": {
+      "type": "object"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "record_type": {
+            "const": "QUERY"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "query",
+          "request_id"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "record_type": {
+            "const": "RETRIEVAL"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "url"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "record_type": {
+            "const": "CLAIM"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "claim",
+          "request_id"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "record_type": {
+            "const": "QUARANTINE"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "url"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "record_type": {
+            "const": "STATE"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "event",
+          "detail"
+        ]
+      }
+    }
+  ]
+}

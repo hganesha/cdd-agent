@@ -1,0 +1,274 @@
+{
+  "config": {
+    "policy_version": "cdd-policy-2026.4",
+    "thresholds": {
+      "ubo_pct": 25,
+      "max_lookthrough_depth": 4,
+      "min_coverage_pct": {
+        "SDD": 90,
+        "CDD": 95,
+        "EDD": 100
+      },
+      "rfi_max_rounds": 2
+    },
+    "risk": {
+      "weights": {
+        "customer": 0.35,
+        "product": 0.2,
+        "geography": 0.25,
+        "channel": 0.1,
+        "behaviour": 0.1
+      },
+      "bands": {
+        "LOW": {
+          "min": 0,
+          "max": 39
+        },
+        "MEDIUM": {
+          "min": 40,
+          "max": 59
+        },
+        "HIGH": {
+          "min": 60,
+          "max": 79
+        },
+        "VERY_HIGH": {
+          "min": 80,
+          "max": 100
+        }
+      },
+      "cdd_level": {
+        "LOW": "SDD",
+        "MEDIUM": "CDD",
+        "HIGH": "EDD",
+        "VERY_HIGH": "EDD"
+      },
+      "review_cadence": {
+        "LOW": "BIANNUAL",
+        "MEDIUM": "ANNUAL",
+        "HIGH": "QUARTERLY",
+        "VERY_HIGH": "MONTHLY"
+      },
+      "factors": {
+        "F-CUST-01": {
+          "name": "PEP_EXPOSURE",
+          "dimension": "customer",
+          "points": 25,
+          "rule": "customer/BO/associate is a PEP"
+        },
+        "F-CUST-02": {
+          "name": "ADVERSE_MEDIA",
+          "dimension": "customer",
+          "points": 20,
+          "rule": "material adverse media in window"
+        },
+        "F-CUST-03": {
+          "name": "SANCTIONS_PROXIMITY",
+          "dimension": "customer",
+          "points": 30,
+          "rule": "near-match or associated party on sanctions list"
+        },
+        "F-CUST-04": {
+          "name": "OPAQUE_OWNERSHIP",
+          "dimension": "customer",
+          "points": 20,
+          "rule": "nominee/bearer/unresolved UBO/opacity jurisdiction"
+        },
+        "F-CUST-05": {
+          "name": "COMPLEX_STRUCTURE",
+          "dimension": "customer",
+          "points": 12,
+          "rule": ">=3 layers or >=3 jurisdictions or circularity"
+        },
+        "F-CUST-06": {
+          "name": "CASH_INTENSIVE",
+          "dimension": "customer",
+          "points": 15,
+          "rule": "sector primarily cash-based"
+        },
+        "F-CUST-07": {
+          "name": "SHELL_INDICATORS",
+          "dimension": "customer",
+          "points": 18,
+          "rule": "no employees/premises/operations evidence"
+        },
+        "F-CUST-08": {
+          "name": "PRIOR_SAR",
+          "dimension": "customer",
+          "points": 20,
+          "rule": "prior SAR on customer or related party"
+        },
+        "F-PROD-01": {
+          "name": "HIGH_RISK_PRODUCT",
+          "dimension": "product",
+          "points": 20,
+          "rule": "correspondent/private banking/VASP/prepaid/trade finance"
+        },
+        "F-PROD-02": {
+          "name": "CASH_HEAVY_PRODUCT",
+          "dimension": "product",
+          "points": 12,
+          "rule": "cash deposits or cash-settled instruments"
+        },
+        "F-GEO-01": {
+          "name": "FATF_CALL_FOR_ACTION",
+          "dimension": "geography",
+          "points": 40,
+          "rule": "nexus to FATF blacklist jurisdiction"
+        },
+        "F-GEO-02": {
+          "name": "FATF_GREY_LIST",
+          "dimension": "geography",
+          "points": 20,
+          "rule": "nexus to FATF grey list"
+        },
+        "F-GEO-03": {
+          "name": "SECRECY_JURISDICTION",
+          "dimension": "geography",
+          "points": 18,
+          "rule": "nexus to high-secrecy jurisdiction"
+        },
+        "F-GEO-04": {
+          "name": "SANCTIONS_NEXUS",
+          "dimension": "geography",
+          "points": 35,
+          "rule": "trade/funds/ownership nexus to sanctioned jurisdiction"
+        },
+        "F-GEO-05": {
+          "name": "HIGH_CORRUPTION",
+          "dimension": "geography",
+          "points": 15,
+          "rule": "nexus to high-CPI-band jurisdiction"
+        },
+        "F-CHAN-01": {
+          "name": "NON_FACE_TO_FACE",
+          "dimension": "channel",
+          "points": 15,
+          "rule": "remote onboarding without in-person verification"
+        },
+        "F-CHAN-02": {
+          "name": "INTRODUCED_BUSINESS",
+          "dimension": "channel",
+          "points": 18,
+          "rule": "third-party introducer reliance"
+        },
+        "F-BEH-01": {
+          "name": "ACTIVITY_INCONSISTENT",
+          "dimension": "behaviour",
+          "points": 25,
+          "rule": "expected vs declared/observed inconsistency"
+        },
+        "F-BEH-02": {
+          "name": "SOF_SOW_UNVERIFIED",
+          "dimension": "behaviour",
+          "points": 20,
+          "rule": "source of funds/wealth unverified"
+        },
+        "F-BEH-03": {
+          "name": "THIRD_PARTY_FUNDING",
+          "dimension": "behaviour",
+          "points": 20,
+          "rule": "funding from unrelated third party"
+        }
+      },
+      "band_floors": [
+        {
+          "if_factor": "F-CUST-03",
+          "min_band": "VERY_HIGH",
+          "reason": "sanctions proximity"
+        },
+        {
+          "if_factor": "F-GEO-01",
+          "min_band": "VERY_HIGH",
+          "reason": "FATF call-for-action nexus"
+        },
+        {
+          "if_factor": "F-GEO-04",
+          "min_band": "VERY_HIGH",
+          "reason": "sanctions jurisdiction nexus"
+        },
+        {
+          "if_factor": "F-CUST-01",
+          "min_band": "HIGH",
+          "reason": "PEP exposure"
+        },
+        {
+          "if_factor": "F-CUST-04",
+          "min_band": "HIGH",
+          "reason": "opaque or unresolved ownership"
+        },
+        {
+          "if_factor": "F-CUST-07",
+          "min_band": "HIGH",
+          "reason": "shell company indicators"
+        },
+        {
+          "if_factor": "F-BEH-01",
+          "min_band": "HIGH",
+          "reason": "activity inconsistent with declared profile"
+        },
+        {
+          "if_factor": "F-BEH-02",
+          "min_band": "HIGH",
+          "reason": "source of funds/wealth unexplained"
+        }
+      ]
+    },
+    "screening": {
+      "blocking_strengths": [
+        "TRUE",
+        "STRONG"
+      ],
+      "required_lists": [
+        "OFAC_SDN",
+        "UN_CONSOLIDATED",
+        "EU_CFSP",
+        "UK_OFSI",
+        "PEP_GLOBAL"
+      ]
+    },
+    "decision_matrix": {
+      "LOW": {
+        "allowed_recommendations": [
+          "PROCEED",
+          "PROCEED_WITH_CONDITIONS",
+          "HOLD_FOR_RFI"
+        ]
+      },
+      "MEDIUM": {
+        "allowed_recommendations": [
+          "PROCEED_WITH_CONDITIONS",
+          "HOLD_FOR_RFI",
+          "ESCALATE_EDD"
+        ]
+      },
+      "HIGH": {
+        "allowed_recommendations": [
+          "HOLD_FOR_RFI",
+          "ESCALATE_EDD",
+          "REFER_MLRO"
+        ]
+      },
+      "VERY_HIGH": {
+        "allowed_recommendations": [
+          "ESCALATE_EDD",
+          "REFER_MLRO"
+        ]
+      }
+    },
+    "gates": {
+      "force": [
+        "RESIDUAL_HIGH_OR_ABOVE",
+        "UNRESOLVED_UBO",
+        "SANCTIONS_BLOCKING_HIT",
+        "DECISION_BLOCKING_GAPS",
+        "COVERAGE_BELOW_MINIMUM",
+        "SCREENING_INCOMPLETE",
+        "CRITIC_FAIL",
+        "INJECTION_ATTEMPT"
+      ],
+      "sampling_rate_low_risk": 0.1,
+      "auto_final_allowed": false
+    }
+  }
+}

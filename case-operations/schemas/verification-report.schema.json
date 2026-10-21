@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.ops.internal/1.0.0/verification-report.schema.json",
+  "title": "VerificationReport",
+  "description": "Output of OPS-VERIFY. The only field the rest of the stack consumes is critic_status; it is forwarded to the policy service, where CRITIC_FAIL forces a human gate.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["verification_id", "case_id", "subject_agent", "stage", "critic_status",
+               "injection_attempt", "counts", "checks", "blocking_check_ids", "agent_id",
+               "evidence_id"],
+  "properties": {
+    "verification_id": {"type": "string", "pattern": "^VER-[0-9a-f]{8}$"},
+    "case_id": {"type": "string", "pattern": "^CASE-[0-9]+$"},
+    "subject_agent": {"type": "array", "items": {"type": "string", "pattern": "^OPS-[A-Z]+$"}},
+    "stage": {"enum": ["pre_decision", "pre_finalisation", "post_outreach"]},
+    "critic_status": {"enum": ["PASS", "FAIL"]},
+    "injection_attempt": {"type": "boolean"},
+    "counts": {
+      "type": "object",
+      "required": ["checks", "pass", "fail", "not_applicable", "blocking"],
+      "properties": {
+        "checks": {"type": "integer", "minimum": 1},
+        "pass": {"type": "integer", "minimum": 0},
+        "fail": {"type": "integer", "minimum": 0},
+        "not_applicable": {"type": "integer", "minimum": 0},
+        "blocking": {"type": "integer", "minimum": 0}
+      }
+    },
+    "checks": {
+      "type": "array",
+      "minItems": 13,
+      "items": {
+        "type": "object",
+        "required": ["check_id", "title", "verdict", "severity", "blocking", "detail", "evidence"],
+        "properties": {
+          "check_id": {"type": "string", "pattern": "^V-[0-9]{3}$"},
+          "title": {"type": "string"},
+          "verdict": {"enum": ["PASS", "FAIL", "NOT_APPLICABLE"]},
+          "severity": {"enum": ["BLOCKING", "MAJOR", "MINOR"]},
+          "blocking": {"type": "boolean"},
+          "detail": {"type": "string"},
+          "evidence": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "blocking_check_ids": {"type": "array", "items": {"type": "string", "pattern": "^V-[0-9]{3}$"}},
+    "agent_id": {"const": "OPS-VERIFY"},
+    "evidence_id": {"type": "string", "pattern": "^OX-[0-9]{6}$"}
+  }
+}

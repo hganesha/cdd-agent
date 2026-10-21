@@ -1,0 +1,36 @@
+# Model routing — AXIOM-POLICY.
+# The decision path has no model. These two routes exist for work around it, and neither can change
+# a decision field (spec/01-system-prompt.md).
+version: 1.0.0
+
+routes:
+  narrate:
+    enabled: true
+    model_tier: small
+    temperature: 0
+    max_output_tokens: 400
+    input: decision_envelope_only          # never the case file
+    postcondition: "every reason, obligation, gate and route appears verbatim; outcome unchanged"
+    on_violation: discard_narration         # the envelope is delivered regardless
+
+  author:
+    enabled: true
+    model_tier: small
+    temperature: 0
+    max_output_tokens: 1200
+    output_schema: schemas/policy-proposal.schema.json
+    postcondition: "proposal validates and status == DRAFT"
+    on_violation: discard_and_report
+
+  decision: null        # by construction
+  authority: null       # by construction
+
+limits:
+  max_usd_per_day: 5.0
+  max_author_proposals_per_day: 20
+  max_narration_chars: 2000
+
+prohibited_outputs:
+  - "any change to outcome, reasons, obligations, gates, route or risk"
+  - "any recommendation or prediction about the case"
+  - "any proposal that relaxes a prohibition (auto_final_allowed, sanctions clearance, prohibition list)"

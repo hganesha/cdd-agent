@@ -1,0 +1,142 @@
+{
+ "records": {
+  "CUST-1001": {
+   "customer_id": "CUST-1001",
+   "as_of": "2026-08-01",
+   "direct_holdings": [
+    {
+     "holder": "Elena Vasquez",
+     "pct": 37.0,
+     "type": "NATURAL_PERSON"
+    },
+    {
+     "holder": "Viktor Sorensen",
+     "pct": 18.0,
+     "type": "NATURAL_PERSON"
+    },
+    {
+     "holder": "Nominee Holdings Inc",
+     "pct": 45.0,
+     "type": "NOMINEE"
+    }
+   ],
+   "paths": [
+    {
+     "person": "Elena Vasquez",
+     "pcts": [
+      37.0
+     ],
+     "via": [
+      "direct"
+     ]
+    },
+    {
+     "person": "Viktor Sorensen",
+     "pcts": [
+      18.0
+     ],
+     "via": [
+      "direct"
+     ]
+    }
+   ],
+   "unresolved": [
+    {
+     "holder": "Nominee Holdings Inc",
+     "pct": 45.0,
+     "reason": "nominee principal not declared"
+    }
+   ],
+   "nominee_declared": false,
+   "layers": 2,
+   "jurisdictions": [
+    "AE",
+    "PA",
+    "DK"
+   ]
+  },
+  "CUST-2002": {
+   "customer_id": "CUST-2002",
+   "as_of": "2025-01-10",
+   "direct_holdings": [
+    {
+     "holder": "Anke Brandt",
+     "pct": 100.0,
+     "type": "NATURAL_PERSON"
+    }
+   ],
+   "paths": [
+    {
+     "person": "Anke Brandt",
+     "pcts": [
+      100.0
+     ],
+     "via": [
+      "direct"
+     ]
+    }
+   ],
+   "unresolved": [],
+   "nominee_declared": null,
+   "layers": 1,
+   "jurisdictions": [
+    "DE"
+   ]
+  },
+  "CUST-3003": {
+   "customer_id": "CUST-3003",
+   "as_of": "2026-08-01",
+   "direct_holdings": [
+    {
+     "holder": "Elena Vasquez",
+     "pct": 37.0,
+     "type": "NATURAL_PERSON"
+    },
+    {
+     "holder": "Viktor Sorensen",
+     "pct": 18.0,
+     "type": "NATURAL_PERSON"
+    },
+    {
+     "holder": "Nominee Holdings Inc",
+     "pct": 45.0,
+     "type": "NOMINEE"
+    }
+   ],
+   "paths": [
+    {
+     "person": "Elena Vasquez",
+     "pcts": [
+      37.0
+     ],
+     "via": [
+      "direct"
+     ]
+    },
+    {
+     "person": "Viktor Sorensen",
+     "pcts": [
+      18.0
+     ],
+     "via": [
+      "direct"
+     ]
+    }
+   ],
+   "unresolved": [
+    {
+     "holder": "Nominee Holdings Inc",
+     "pct": 45.0,
+     "reason": "nominee principal not declared"
+    }
+   ],
+   "nominee_declared": false,
+   "layers": 2,
+   "jurisdictions": [
+    "AE",
+    "PA",
+    "DK"
+   ]
+  }
+ }
+}

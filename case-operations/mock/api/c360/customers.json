@@ -1,0 +1,103 @@
+{
+ "records": {
+  "CUST-1001": {
+   "customer_id": "CUST-1001",
+   "legal_name": "Meridian Trade Holdings Ltd",
+   "trading_names": [
+    "Meridian Metals"
+   ],
+   "entity_type": "PRIVATE_LIMITED_COMPANY",
+   "registration": {
+    "number": "AE-8841-22",
+    "jurisdiction": "AE",
+    "incorporated": "2019-04-11"
+   },
+   "sector": {
+    "code": "MSTL",
+    "label": "metals trading",
+    "cash_intensive": false
+   },
+   "segments": [
+    "CORPORATE",
+    "TRADE_FINANCE"
+   ],
+   "channels": [
+    "REMOTE",
+    "INTRODUCED"
+   ],
+   "introducer": {
+    "name": "Gulf Bridge Partners",
+    "jurisdiction": "AE",
+    "reliance": "PARTIAL"
+   },
+   "onboarding": {
+    "date": "2024-02-19",
+    "in_person": false,
+    "country_of_operation": "AE"
+   },
+   "turnover_band": "50M-100M",
+   "employees": 6,
+   "premises": "SHARED_SERVICED_OFFICE",
+   "contacts": [
+    {
+     "role": "CFO",
+     "name": "Viktor Sorensen",
+     "email": "v.sorensen@meridian.example"
+    }
+   ],
+   "prior_sar": false,
+   "documents_on_file": [
+    "passport:Elena Vasquez",
+    "certificate_of_incorporation",
+    "shareholder_register:2024-02-01",
+    "board_resolution:2024-02-01"
+   ],
+   "notes": "Introduced by Gulf Bridge Partners; beneficial ownership partially evidenced."
+  },
+  "CUST-2002": {
+   "customer_id": "CUST-2002",
+   "legal_name": "Nordwind Logistics GmbH",
+   "entity_type": "GMBH",
+   "registration": {
+    "number": "DE-HRB-99112",
+    "jurisdiction": "DE",
+    "incorporated": "2011-06-02"
+   },
+   "sector": {
+    "code": "LOGX",
+    "label": "logistics",
+    "cash_intensive": false
+   },
+   "segments": [
+    "CORPORATE"
+   ],
+   "channels": [
+    "FACE_TO_FACE"
+   ],
+   "introducer": null,
+   "onboarding": {
+    "date": "2019-09-04",
+    "in_person": true,
+    "country_of_operation": "DE"
+   },
+   "turnover_band": "10M-50M",
+   "employees": 240,
+   "premises": "OWNED",
+   "contacts": [
+    {
+     "role": "Managing Director",
+     "name": "Anke Brandt",
+     "email": "a.brandt@nordwind.example"
+    }
+   ],
+   "prior_sar": false,
+   "documents_on_file": [
+    "passport:Anke Brandt",
+    "commercial_register_extract",
+    "shareholder_register:2025-01-10",
+    "audited_accounts:2024"
+   ],
+   "notes": "Long-standing relationship, in-person onboarding."
+  }
+ }
+}

@@ -1,0 +1,9 @@
+{
+  "agent_id": "AXIOM-POLICY",
+  "policy_version": "cdd-policy-2026.4",
+  "files": {
+    "prompts/system.md": "sha256:4547a1514f5e5de9a8cce3e70054f26f8875f768d49f950fdfdbc0a56dc5ce44",
+    "policy/data.json": "sha256:8bd2ba8e5fd823d267311147835c549746a05b1304fbdf7758a984c31e859eca"
+  },
+  "note": "data.json is pinned because thresholds/weights/floors are policy; make check-prompt recomputes both"
+}

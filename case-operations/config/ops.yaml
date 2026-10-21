@@ -1,0 +1,87 @@
+# OPS case-operations runtime — v1.0.0
+# Every number an operator might tune lives here, not in an agent. Agents read this file; they do
+# not contain thresholds. Changing a threshold is a config change with a diff, a review and a pin.
+
+version: 1.0.0
+package: ops-case-operations
+
+policy:
+  # The agents have no policy of their own: they call this service.
+  service: AXIOM-POLICY
+  bundle_root: ../policy-agent/policy
+  binary: ../policy-agent/bin/opa
+  version: cdd-policy-2026.4
+  rules:
+    decision: data.agent.decision.result
+    disposition: data.agent.disposition.result
+    authority: data.agent.authority.result
+  on_unavailable: STOP          # never approximate an envelope
+
+ledger:
+  path: out/ops_evidence.jsonl
+  idempotency_store: out/state/idem.json
+  hash: sha256
+  genesis: "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+  signature: kms-stub           # production: KMS asymmetric key, per-record signature
+  rotate_daily: true
+
+state:
+  dir: out/state
+  write: atomic                 # tmp file + os.replace; a kill never truncates a checkpoint
+  resume_from: last_complete_stage
+
+budget:
+  api_calls: 400
+  pages: 600
+  checks: 200
+  wall_clock_s: 900
+  on_exhausted: PARTIAL         # stop at a checkpoint, report the gap, never invent the page
+
+profile:
+  window_days: 90
+  prior_window_days: 90
+  peer_percentile_flag: 95      # above this, disclose in data_quality.notes
+  stale_after_days: 30
+  dormant_days_threshold: 60
+  round_amount_tolerance: 0.01
+  shell_entity_age_months: 12
+  shell_employee_threshold: 2
+
+screening:
+  # The list of required lists comes from the policy pack; this is only how the connector behaves.
+  retry_attempts: 3
+  on_unavailable: disclose      # name the list, mark screening incomplete, never assume a pass
+  strength_values: [TRUE, POSSIBLE, FALSE]
+
+outreach:
+  max_rounds: from_policy       # rfi_max_rounds in the policy pack
+  deadline_business_days: 10
+  business_calendar: US_FEDERAL
+  approval_ttl_hours: 24
+  approval_roles: [CASE_ANALYST, EDD_UNIT_HEAD, MLRO]
+  redact: [account_number, card_number, passport_number, home_address, dob]
+  reading_level: plain
+  locale: en-GB
+
+verification:
+  checks: 13                    # V-001 .. V-013, all of them, every run
+  fresh_days: 30
+  fail_closed_on_missing: true
+  minor_failures_flip_verdict: false
+
+decision:
+  conservative_order: [REFER_MLRO, ESCALATE_EDD, HOLD_FOR_RFI, PROCEED_WITH_CONDITIONS, PROCEED]
+  action_due_business_days:
+    COMPLETE_SCREENING: 2
+    HUMAN_EDD_APPROVAL: 5
+    ESCALATE_MLRO: 1
+    CLOSE_UBO_GAP: 10
+    OBTAIN_SOURCE_OF_WEALTH: 10
+  may_finalise: false           # structural: not a tunable
+  may_clear_sanctions_hit: false  # structural: not a tunable
+
+cases:
+  CASE-4831: {customer_id: CUST-1001, cdd_level_requested: EDD, jurisdiction_profile: EU_AMLD,
+              prior_rfi_rounds: 1}
+  CASE-4902: {customer_id: CUST-2002, cdd_level_requested: CDD, jurisdiction_profile: EU_AMLD,
+              prior_rfi_rounds: 0}

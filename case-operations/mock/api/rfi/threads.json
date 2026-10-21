@@ -1,0 +1,30 @@
+{
+ "records": {
+  "CASE-4831": {
+   "case_id": "CASE-4831",
+   "rounds_completed": 1,
+   "messages": [
+    {
+     "rfi_id": "RFI-4831-1",
+     "round": 1,
+     "sent": "2026-09-12T09:14:00Z",
+     "questions": [
+      "Provide a declaration of beneficial ownership",
+      "Provide source of wealth evidence for Elena Vasquez"
+     ],
+     "response_received": "2026-09-20T16:02:00Z",
+     "attachments": [
+      "ubo_response_signed.pdf"
+     ],
+     "outcome": "PARTIAL",
+     "notes": "nominee principal not identified"
+    }
+   ]
+  },
+  "CASE-4902": {
+   "case_id": "CASE-4902",
+   "rounds_completed": 0,
+   "messages": []
+  }
+ }
+}

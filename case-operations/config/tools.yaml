@@ -1,0 +1,140 @@
+# Tool manifest — OPS case-operations v1.0.0
+# A tool an agent is not granted in `grants` is not callable, and a call to it is an authority
+# violation that OPS-VERIFY's V-009 catches. Internal endpoints are the bank's APIs; in this package
+# they are served by a mock (`mock/api/`) with realistic latency, pagination and failure behaviour.
+
+version: 1.0.0
+
+defaults:
+  timeout_s: 30
+  max_retries: 3
+  backoff: exponential_jitter
+  idempotent: true
+  audit: ledger               # every call -> API_CALL record with request/response hashes
+  redact_fields: [account_number, card_number, passport_number, dob, home_address]
+
+endpoints:
+
+  c360.customers:
+    class: read
+    method: GET
+    path: /c360/customers/{customer_id}
+    outputs: {legal_name: string, entity_type: string, registration: object, sector: object,
+              segments: array, channels: array, introducer: object|null, onboarding: object,
+              employees: int, premises: string, turnover_band: string, prior_sar: bool}
+
+  c360.related_parties:
+    class: read
+    method: GET
+    path: /c360/related-parties/{customer_id}
+    outputs: {parties: array<{party_id, name, role, nationality, residency, pep, ownership_pct}>}
+
+  c360.ownership:
+    class: read
+    method: GET
+    path: /c360/ownership/{customer_id}
+    outputs: {paths: array, unresolved: array, direct_holdings: array, nominee_declared: bool}
+
+  tx.summary:
+    class: read
+    method: GET
+    path: /tx/summary/{customer_id}?window={days}
+    outputs: {txn_count, total_in, total_out, avg_txn, median_txn, max_single, cash_ratio,
+              round_amount_ratio, cross_border_ratio, peer_percentile, declared_monthly_turnover,
+              prior_window_monthly_mean, dormant_days_before_activity}
+
+  tx.flows:
+    class: read
+    method: GET
+    path: /tx/flows/{customer_id}?page={n}
+    pagination: {request: page, response: next_page, page_size: 100}
+    outputs: {months: array, top_counterparties: array, geographies: array}
+    notes: the paginated endpoint; pages are charged to the page budget and checkpointed
+
+  counterparties.detail:
+    class: read
+    method: GET
+    path: /counterparties/counterparties/{counterparty_id}
+    outputs: {name, country, entity_age_months, employees, premises, shared_address_with,
+              adverse_media, sanctions_screen}
+
+  risk.ratings:
+    class: read
+    method: GET
+    path: /risk/ratings/{customer_id}
+    outputs: {internal_rating, rating_date, watchlist, watchlist_reason, last_review,
+              next_review_due, expected_profile}
+
+  lists.jurisdictions:
+    class: read
+    method: GET
+    path: /lists/jurisdictions
+    outputs: {as_of, fatf_call_for_action, fatf_grey_list, sanctioned_jurisdictions,
+              secrecy_jurisdictions, high_corruption_cpi_band}
+
+  docs.documents:
+    class: read
+    method: GET
+    path: /docs/documents/{case_id}
+    outputs: {elements: array<{rde_id, requirement, document, dated, status, blocking}>}
+
+  rfi.threads:
+    class: read
+    method: GET
+    path: /rfi/threads/{case_id}
+    outputs: {rounds_completed, messages: array<{round, sent_at, outcome, response_summary}>}
+
+  policy.decide:
+    class: read
+    transport: opa
+    rule: data.agent.decision.result
+    notes: the only source of risk, band, gates, outcome and obligations
+
+  policy.dispose:
+    class: read
+    transport: opa
+    rule: data.agent.disposition.result
+    notes: is this recommendation admissible for this band, and may an agent finalise it
+
+  policy.authority:
+    class: read
+    transport: opa
+    rule: data.agent.authority.result
+    notes: gated / prohibited / allowed for a named action
+
+  rfi.issue:
+    class: gated
+    authority_action: rfi.issue
+    requires: {approver: human, approver_role: any_of[CASE_ANALYST, EDD_UNIT_HEAD, MLRO],
+               ttl_hours: ">0", approver_must_differ_from_requester: true,
+               approver_must_not_be_agent: true}
+    notes: OPS-OUTREACH may request this action and may never perform it
+
+  escalation.create:
+    class: gated
+    authority_action: escalation.create
+
+  risk.recommend:
+    class: gated
+    authority_action: risk.recommend
+    notes: proposing a new rating; the change itself is prohibited
+
+  case.finalise:
+    class: prohibited
+    notes: no agent in this package may finalise a case, at any risk level, for any reason
+  customer.approve:
+    class: prohibited
+  sanctions.clear:
+    class: prohibited
+  policy.activate:
+    class: prohibited
+  evidence.rewrite:
+    class: prohibited
+
+grants:
+  OPS-PROFILE:  [c360.customers, c360.related_parties, c360.ownership, tx.summary, tx.flows,
+                 counterparties.detail, risk.ratings, lists.jurisdictions, docs.documents,
+                 rfi.threads]
+  OPS-VERIFY:   [policy.decide, policy.dispose, policy.authority]
+  OPS-OUTREACH: [rfi.threads, docs.documents, policy.authority, rfi.issue]
+  OPS-DECIDE:   [policy.decide, policy.dispose, policy.authority, escalation.create, risk.recommend]

@@ -1,0 +1,13 @@
+{
+  "agent_id": "WEBIS-SEARCH",
+  "agent_version": "1.0.0",
+  "system_prompt": "prompts/system.md",
+  "system_prompt_sha256": "sha256:fc10414b7247cd9c8451bd3a7cb2c7e9b06f79400df595c9ec1fee61b69adda5",
+  "files": {
+    "prompts/system.md": "sha256:fc10414b7247cd9c8451bd3a7cb2c7e9b06f79400df595c9ec1fee61b69adda5",
+    "prompts/subsystem-prompts.md": "sha256:d01d0fe449f203256e976895ded8fb62be7580221262b84a49aadfbfff85280a"
+  },
+  "pack_schema": "schemas/evidence-pack.schema.json",
+  "source_policy": "config/sources.yaml",
+  "note": "make check-prompt recomputes these; changing a file without re-pinning fails CI"
+}

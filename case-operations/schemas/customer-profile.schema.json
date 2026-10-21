@@ -1,0 +1,891 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.ops.internal/1.0.0/customer-profile.schema.json",
+  "title": "CustomerProfile",
+  "description": "Output of OPS-PROFILE. One profile per (case, customer, as_of). Every derived number must be reproducible from the evidence records named in observations[*].evidence_ids.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "profile_id",
+    "case_id",
+    "customer_id",
+    "as_of",
+    "window_days",
+    "agent",
+    "customer_360",
+    "transactions",
+    "counterparties",
+    "geography",
+    "internal_risk",
+    "ownership",
+    "screening",
+    "coverage",
+    "factors",
+    "factors_triggered",
+    "observations",
+    "outreach",
+    "data_quality",
+    "evidence_id"
+  ],
+  "properties": {
+    "profile_id": {
+      "type": "string",
+      "pattern": "^PRF-CUST-[0-9]+-[0-9a-f]{8}$"
+    },
+    "case_id": {
+      "type": "string",
+      "pattern": "^CASE-[0-9]+$"
+    },
+    "customer_id": {
+      "type": "string",
+      "pattern": "^CUST-[0-9]+$"
+    },
+    "as_of": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "window_days": {
+      "type": "integer",
+      "minimum": 30,
+      "maximum": 400
+    },
+    "agent": {
+      "const": "OPS-PROFILE"
+    },
+    "customer_360": {
+      "type": "object",
+      "required": [
+        "legal_name",
+        "entity_type",
+        "registration",
+        "sector",
+        "segments",
+        "channels",
+        "introducer",
+        "onboarding",
+        "employees",
+        "premises",
+        "turnover_band",
+        "related_parties",
+        "prior_sar"
+      ],
+      "properties": {
+        "legal_name": {
+          "type": "string",
+          "minLength": 2
+        },
+        "entity_type": {
+          "type": "string"
+        },
+        "registration": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "sector": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "segments": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "channels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "introducer": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "onboarding": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "employees": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "premises": {
+          "type": "string"
+        },
+        "turnover_band": {
+          "type": "string"
+        },
+        "related_parties": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "party_id",
+              "name",
+              "role"
+            ],
+            "properties": {
+              "party_id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              },
+              "nationality": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "residency": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "pep": {
+                "type": [
+                  "boolean",
+                  "string",
+                  "null"
+                ]
+              },
+              "ownership_pct": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              }
+            }
+          }
+        },
+        "prior_sar": {
+          "type": "boolean"
+        }
+      }
+    },
+    "transactions": {
+      "type": "object",
+      "required": [
+        "txn_count",
+        "total_in",
+        "total_out",
+        "cash_ratio",
+        "round_amount_ratio",
+        "cross_border_ratio",
+        "new_counterparties",
+        "peer_percentile",
+        "declared_vs_observed_pct",
+        "top_counterparty_hhi",
+        "monthly_inflows"
+      ],
+      "properties": {
+        "txn_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "total_in": {
+          "type": "number",
+          "minimum": 0
+        },
+        "total_out": {
+          "type": "number",
+          "minimum": 0
+        },
+        "avg_txn": {
+          "type": "number",
+          "minimum": 0
+        },
+        "median_txn": {
+          "type": "number",
+          "minimum": 0
+        },
+        "max_single": {
+          "type": "number",
+          "minimum": 0
+        },
+        "cash_ratio": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "round_amount_ratio": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "cross_border_ratio": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "new_counterparties": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "peer_percentile": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "declared_monthly_turnover": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "observed_monthly_mean": {
+          "type": "number",
+          "minimum": 0
+        },
+        "prior_window_monthly_mean": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "declared_vs_observed_pct": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "period_on_period_pct": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "monthly_cv": {
+          "type": "number",
+          "minimum": 0
+        },
+        "dormant_days_before_activity": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "top_counterparty_hhi": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "max_month_share": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "monthly_inflows": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "month",
+              "in",
+              "out",
+              "txn_count"
+            ],
+            "properties": {
+              "month": {
+                "type": "string",
+                "pattern": "^[0-9]{4}-[0-9]{2}$"
+              },
+              "in": {
+                "type": "number",
+                "minimum": 0
+              },
+              "out": {
+                "type": "number",
+                "minimum": 0
+              },
+              "txn_count": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    "counterparties": {
+      "type": "object",
+      "required": [
+        "top",
+        "count_analysed",
+        "new_counterparties",
+        "new_high_value",
+        "shell_indicator_count",
+        "adverse_media_counterparties"
+      ],
+      "properties": {
+        "top": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "counterparty_id",
+              "name",
+              "country",
+              "amount",
+              "txn_count",
+              "is_new"
+            ],
+            "properties": {
+              "counterparty_id": {
+                "type": "string",
+                "pattern": "^CP-[0-9]+$"
+              },
+              "name": {
+                "type": "string"
+              },
+              "country": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "amount": {
+                "type": "number",
+                "minimum": 0
+              },
+              "txn_count": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "first_seen": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "is_new": {
+                "type": "boolean"
+              },
+              "entity_age_months": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "shell_flags": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "adverse_media": {
+                "type": [
+                  "string",
+                  "boolean"
+                ]
+              },
+              "sanctions_screen": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "count_analysed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "new_counterparties": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "new_high_value": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "shell_indicator_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "adverse_media_counterparties": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "geography": {
+      "type": "object",
+      "required": [
+        "nexus_countries",
+        "lists_as_of"
+      ],
+      "properties": {
+        "nexus_countries": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}$"
+          }
+        },
+        "incorporation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "operation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "counterparty_countries": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fatf_call_for_action": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fatf_grey_list": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sanctioned": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "secrecy": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "high_corruption": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "lists_as_of": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "internal_risk": {
+      "type": "object",
+      "required": [
+        "rating",
+        "watchlist"
+      ],
+      "properties": {
+        "rating": {
+          "type": "string"
+        },
+        "rating_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "watchlist": {
+          "type": "boolean"
+        },
+        "watchlist_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "last_review": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "next_review_due": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "expected_profile": {
+          "type": "object"
+        },
+        "expected_vs_observed": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "ownership": {
+      "type": "object",
+      "required": [
+        "paths",
+        "unresolved",
+        "direct_holdings",
+        "unresolved_pct"
+      ],
+      "properties": {
+        "paths": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "unresolved": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "direct_holdings": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "nominee_declared": {
+          "type": "boolean"
+        },
+        "layers": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unresolved_pct": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "natural_persons": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "screening": {
+      "type": "object",
+      "required": [
+        "queries",
+        "lists_queried",
+        "lists_unavailable",
+        "required_lists",
+        "hits",
+        "screening_complete"
+      ],
+      "properties": {
+        "queries": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "lists_queried": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "lists_unavailable": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "required_lists": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "hits": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "list",
+              "strength"
+            ],
+            "properties": {
+              "list": {
+                "type": "string"
+              },
+              "strength": {
+                "enum": [
+                  "TRUE",
+                  "POSSIBLE",
+                  "FALSE"
+                ]
+              },
+              "matched_name": {
+                "type": "string"
+              },
+              "basis": {
+                "type": "string"
+              },
+              "resolved": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "screening_complete": {
+          "type": "boolean"
+        }
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "required": [
+        "elements",
+        "applicable",
+        "satisfied",
+        "coverage_pct",
+        "blocking_rde_ids",
+        "missing_rde_ids"
+      ],
+      "properties": {
+        "elements": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "rde_id",
+              "status"
+            ],
+            "properties": {
+              "rde_id": {
+                "type": "string",
+                "pattern": "^RDE-[0-9]{2}$"
+              },
+              "requirement": {
+                "type": "string"
+              },
+              "status": {
+                "enum": [
+                  "SATISFIED",
+                  "PARTIAL",
+                  "MISSING",
+                  "NOT_APPLICABLE"
+                ]
+              },
+              "document": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "dated": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "blocking": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "applicable": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "satisfied": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "coverage_pct": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "blocking_rde_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "missing_rde_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "factors": {
+      "type": "object",
+      "description": "The complete policy factor vocabulary, every id present, true = triggered.",
+      "patternProperties": {
+        "^F-(CUST|PROD|GEO|CHAN|BEH)-[0-9]{2}$": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "factors_triggered": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Sorted ids of the triggered factors; must equal the true keys of `factors`."
+    },
+    "observations": {
+      "type": "object",
+      "description": "One entry per factor: the rule that fired, the value it compared, and the evidence ids behind it.",
+      "patternProperties": {
+        "^F-(CUST|PROD|GEO|CHAN|BEH)-[0-9]{2}$": {
+          "type": "object",
+          "required": [
+            "factor_id",
+            "triggered",
+            "rule",
+            "value",
+            "evidence_ids"
+          ],
+          "properties": {
+            "factor_id": {
+              "type": "string"
+            },
+            "triggered": {
+              "type": "boolean"
+            },
+            "rule": {
+              "type": "string",
+              "minLength": 4
+            },
+            "value": {},
+            "evidence_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^OX-[0-9]{6}$"
+              }
+            },
+            "note": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "outreach": {
+      "type": "object",
+      "required": [
+        "rounds_completed",
+        "messages"
+      ],
+      "properties": {
+        "rounds_completed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "last_outcome": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "SATISFIED",
+            "PARTIAL",
+            "INSUFFICIENT",
+            null
+          ]
+        },
+        "messages": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "data_quality": {
+      "type": "object",
+      "required": [
+        "api",
+        "missing_fields",
+        "notes"
+      ],
+      "properties": {
+        "api": {
+          "type": "object",
+          "required": [
+            "calls",
+            "p95_latency_ms",
+            "retried"
+          ],
+          "properties": {
+            "calls": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "p95_latency_ms": {
+              "type": "number",
+              "minimum": 0
+            },
+            "retried": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "endpoints": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "evidence_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^OX-[0-9]{6}$"
+              }
+            },
+            "replayed_from_checkpoint": {
+              "type": "boolean"
+            }
+          }
+        },
+        "missing_fields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "evidence_id": {
+      "type": "string",
+      "pattern": "^OX-[0-9]{6}$"
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+ "records": {
+  "CUST-1001": {
+   "customer_id": "CUST-1001",
+   "parties": [
+    {
+     "party_id": "P1",
+     "name": "Elena Vasquez",
+     "role": "DIRECTOR",
+     "nationality": "VE",
+     "dob": "1979-03-14",
+     "pep": true,
+     "pep_detail": "former deputy minister of energy (VE), 2013-2017",
+     "sanctions_lists_checked": [
+      "OFAC_SDN",
+      "UN_CONSOLIDATED",
+      "EU_CFSP",
+      "UK_OFSI"
+     ]
+    },
+    {
+     "party_id": "P2",
+     "name": "Viktor Sorensen",
+     "role": "CFO",
+     "nationality": "DK",
+     "dob": "1985-11-02",
+     "pep": false
+    },
+    {
+     "party_id": "P3",
+     "name": "Gulf Bridge Partners Ltd",
+     "role": "SHAREHOLDER",
+     "nationality": "AE",
+     "pep": false
+    },
+    {
+     "party_id": "P4",
+     "name": "Nominee Holdings Inc",
+     "role": "SHAREHOLDER",
+     "nationality": "PA",
+     "pep": false,
+     "nominee": true,
+     "principal_declared": false
+    }
+   ]
+  },
+  "CUST-2002": {
+   "customer_id": "CUST-2002",
+   "parties": [
+    {
+     "party_id": "P1",
+     "name": "Anke Brandt",
+     "role": "DIRECTOR",
+     "nationality": "DE",
+     "dob": "1974-02-20",
+     "pep": false
+    }
+   ]
+  },
+  "CUST-3003": {
+   "customer_id": "CUST-3003",
+   "parties": [
+    {
+     "party_id": "P1",
+     "name": "Rashid Al-Bastaki",
+     "role": "DIRECTOR",
+     "nationality": "VE",
+     "dob": "1979-03-14",
+     "pep": true,
+     "pep_detail": "former deputy minister of energy (VE), 2013-2017",
+     "sanctions_lists_checked": [
+      "OFAC_SDN",
+      "UN_CONSOLIDATED",
+      "EU_CFSP",
+      "UK_OFSI"
+     ],
+     "ownership_pct": 55
+    },
+    {
+     "party_id": "P2",
+     "name": "Viktor Sorensen",
+     "role": "CFO",
+     "nationality": "DK",
+     "dob": "1985-11-02",
+     "pep": false
+    },
+    {
+     "party_id": "P3",
+     "name": "Gulf Bridge Partners Ltd",
+     "role": "SHAREHOLDER",
+     "nationality": "AE",
+     "pep": false
+    },
+    {
+     "party_id": "P4",
+     "name": "Nominee Holdings Inc",
+     "role": "SHAREHOLDER",
+     "nationality": "PA",
+     "pep": false,
+     "nominee": true,
+     "principal_declared": false
+    }
+   ]
+  }
+ }
+}

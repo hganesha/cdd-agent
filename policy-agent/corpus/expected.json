@@ -1,0 +1,88 @@
+{
+ "note": "Pinned baseline for corpus/decisions/*.json. A mismatch is an undeclared policy change: update this file deliberately, in the same commit, with the reason recorded. 2026-10-21: eu_profile_sow re-pinned PERMIT_WITH_CONDITIONS -> PERMIT under P-2026-013 (source-of-wealth scoped to EDD / HIGH / VERY_HIGH); eu_profile_sow_high_risk added to keep the EU obligation covered.",
+ "policy_version": "cdd-policy-2026.4",
+ "cases": {
+  "clean_corporate": {
+   "outcome": "PERMIT",
+   "band": "LOW",
+   "cdd_level": "SDD",
+   "reasons_include": []
+  },
+  "clean_individual": {
+   "outcome": "PERMIT",
+   "band": "LOW",
+   "cdd_level": "SDD",
+   "reasons_include": []
+  },
+  "eu_profile_sow": {
+   "outcome": "PERMIT",
+   "band": "LOW",
+   "cdd_level": "SDD",
+   "reasons_include": []
+  },
+  "high_risk_geography": {
+   "outcome": "BLOCK",
+   "band": "VERY_HIGH",
+   "cdd_level": "EDD",
+   "reasons_include": [
+    "RISK_BAND_FLOOR_APPLIED",
+    "RISK_BAND_VERY_HIGH"
+   ]
+  },
+  "nominee_unresolved": {
+   "outcome": "BLOCK",
+   "band": "LOW",
+   "cdd_level": "SDD",
+   "reasons_include": [
+    "UNRESOLVED_BENEFICIAL_OWNERSHIP"
+   ]
+  },
+  "pep_principal": {
+   "outcome": "REQUIRE_EDD",
+   "band": "HIGH",
+   "cdd_level": "EDD",
+   "reasons_include": [
+    "RISK_BAND_FLOOR_APPLIED",
+    "RISK_BAND_HIGH"
+   ]
+  },
+  "sanctions_lookalike": {
+   "outcome": "PERMIT",
+   "band": "LOW",
+   "cdd_level": "SDD",
+   "reasons_include": []
+  },
+  "sanctions_true_hit": {
+   "outcome": "BLOCK",
+   "band": "LOW",
+   "cdd_level": "SDD",
+   "reasons_include": [
+    "SANCTIONS_HIT_REQUIRES_ADJUDICATION"
+   ]
+  },
+  "ubo_22pct_single": {
+   "outcome": "BLOCK",
+   "band": "LOW",
+   "cdd_level": "SDD",
+   "reasons_include": [
+    "CONTROL_PRONG_MISSING",
+    "UNRESOLVED_BENEFICIAL_OWNERSHIP"
+   ]
+  },
+  "ubo_24pct_two_paths": {
+   "outcome": "BLOCK",
+   "band": "LOW",
+   "cdd_level": "SDD",
+   "reasons_include": [
+    "CONTROL_PRONG_MISSING",
+    "UNRESOLVED_BENEFICIAL_OWNERSHIP"
+   ]
+  },
+  "eu_profile_sow_high_risk": {
+   "outcome": "PERMIT_WITH_CONDITIONS",
+   "band": "HIGH",
+   "cdd_level": "EDD",
+   "reasons_include": []
+  }
+ }
+}

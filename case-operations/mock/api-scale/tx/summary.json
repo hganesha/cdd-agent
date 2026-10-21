@@ -1,0 +1,94 @@
+{
+ "records": {
+  "CUST-1001": {
+   "customer_id": "CUST-1001",
+   "window_days": 90,
+   "accounts": [
+    "ACC-1001-01",
+    "ACC-1001-02"
+   ],
+   "txn_count": 412,
+   "total_in": 3284000.0,
+   "total_out": 3211500.0,
+   "avg_txn": 7970.87,
+   "max_single": 1890000.0,
+   "median_txn": 3120.0,
+   "cash_ratio": 0.031,
+   "round_amount_ratio": 0.42,
+   "cross_border_ratio": 0.71,
+   "new_counterparties": 4,
+   "dormant_days_before_activity": 63,
+   "peer_percentile": 97,
+   "declared_monthly_turnover": 450000.0,
+   "observed_monthly_mean": 1094666.67,
+   "prior_window_monthly_mean": 210000.0
+  },
+  "CUST-2002": {
+   "customer_id": "CUST-2002",
+   "window_days": 90,
+   "accounts": [
+    "ACC-2002-01"
+   ],
+   "txn_count": 1904,
+   "total_in": 2410000.0,
+   "total_out": 2398000.0,
+   "avg_txn": 1265.76,
+   "max_single": 88000.0,
+   "median_txn": 940.0,
+   "cash_ratio": 0.004,
+   "round_amount_ratio": 0.07,
+   "cross_border_ratio": 0.22,
+   "new_counterparties": 3,
+   "dormant_days_before_activity": 0,
+   "peer_percentile": 46,
+   "declared_monthly_turnover": 780000.0,
+   "observed_monthly_mean": 803333.33,
+   "prior_window_monthly_mean": 790000.0
+  },
+  "CUST-3003": {
+   "customer_id": "CUST-3003",
+   "window_days": 90,
+   "txn_count": 40000,
+   "total_in": 1980203300.86,
+   "total_out": 1991476661.67,
+   "avg_txn": 99292.0,
+   "median_txn": 52000.0,
+   "max_single": 264000.0,
+   "cash_ratio": 0.02,
+   "round_amount_ratio": 0.88,
+   "cross_border_ratio": 0.76,
+   "new_counterparties": 3,
+   "peer_percentile": 96,
+   "declared_monthly_turnover": 1900000.0,
+   "observed_monthly_mean": 992919990.63,
+   "prior_window_monthly_mean": 1750000.0,
+   "dormant_days_before_activity": 12,
+   "monthly_inflows": [
+    {
+     "month": "2026-07",
+     "in": 3534646.17,
+     "out": 3213314.7,
+     "txn_count": 10000
+    },
+    {
+     "month": "2026-08",
+     "in": 3534646.17,
+     "out": 3213314.7,
+     "txn_count": 10000
+    },
+    {
+     "month": "2026-09",
+     "in": 3534646.17,
+     "out": 3213314.7,
+     "txn_count": 10000
+    },
+    {
+     "month": "2026-10",
+     "in": 3534646.17,
+     "out": 3213314.7,
+     "txn_count": 10000
+    }
+   ]
+  }
+ }
+}

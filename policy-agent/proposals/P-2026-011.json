@@ -1,0 +1,64 @@
+{
+  "proposal_id": "P-2026-011",
+  "status": "DRAFT",
+  "author_agent": "AXIOM-POLICY",
+  "created_at": "2026-10-21T15:17:56.912Z",
+  "source": {
+    "document": "corpus/SOP_CDD_v4.2_excerpt.md",
+    "clauses_parsed": 15,
+    "clauses_without_implementing_rule": [
+      {
+        "clause_id": "4.2",
+        "kind": "MANDATORY_STEP",
+        "quote": "A passport, national identity card or equivalent official photographic document shall be obtained and its validity recorded at the time of onboarding."
+      },
+      {
+        "clause_id": "7.3",
+        "kind": "DEADLINE",
+        "quote": "Enhanced due diligence must be completed within 30 days of the relationship being established where the customer presents a high risk. Section 8 \u2014 Documentation"
+      }
+    ],
+    "coverage": 86.7
+  },
+  "change": {
+    "kind": "data_patch",
+    "description": "Lower the beneficial ownership threshold from 25% to 20% to align with the revised SOP 5.1",
+    "pointer": "/config/thresholds/ubo_pct",
+    "old": 25,
+    "new": 20,
+    "rationale": "SOP v4.2 clause 5.1 states 25 per cent; the firm's risk appetite statement tightens this to 20 per cent for all profiles.",
+    "source_clauses": [
+      "5.1"
+    ]
+  },
+  "candidate": {
+    "file": "policy/data.json",
+    "pointer": "/config/thresholds/ubo_pct",
+    "old": 25,
+    "new": 20
+  },
+  "validation": {
+    "check_ok": true,
+    "check_detail": "",
+    "tests_ok": false,
+    "tests_detail": "FAIL: 2/35",
+    "fmt_ok": true,
+    "unformatted_files": [],
+    "restricted_capabilities": true
+  },
+  "impact": {
+    "skipped": "candidate did not compile or failed tests",
+    "cases_evaluated": 0,
+    "changes": []
+  },
+  "required_approvals": [
+    "FINANCIAL_CRIME",
+    "MODEL_RISK",
+    "PLATFORM_SECURITY",
+    "POLICY_OWNER"
+  ],
+  "activation": {
+    "permitted_by_agent": false,
+    "reason": "policy.activate is a prohibited action for every agent"
+  }
+}

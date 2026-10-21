@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.ops.internal/1.0.0/ops-evidence-record.schema.json",
+  "title": "OpsEvidenceRecord",
+  "description": "One line of the OPS evidence ledger. Append-only: record_hash covers the canonical record minus record_hash and signature, and prev_hash names the previous record, so removing or editing a line breaks every hash after it.",
+  "type": "object",
+  "required": ["record_type", "agent_id", "seq", "created_at", "evidence_id", "prev_hash",
+               "record_hash", "signature"],
+  "properties": {
+    "record_type": {"enum": ["API_CALL", "PROFILE", "PROFILE_DELTA", "VERIFICATION", "RFI",
+                             "DISPOSITION", "EVENT"]},
+    "agent_id": {"type": "string", "minLength": 3},
+    "seq": {"type": "integer", "minimum": 1},
+    "created_at": {"type": "string", "format": "date-time"},
+    "evidence_id": {"type": "string", "pattern": "^OX-[0-9]{6}$"},
+    "prev_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "record_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "signature": {"type": "string", "pattern": "^kms-stub:[0-9a-f]{16}$"},
+    "endpoint": {"type": "string"},
+    "request_hash": {"type": "string"},
+    "response_hash": {"type": "string"},
+    "status": {"type": "integer"},
+    "latency_ms": {"type": "number", "minimum": 0},
+    "attempt": {"type": "integer", "minimum": 1},
+    "case_id": {"type": "string"},
+    "customer_id": {"type": "string"},
+    "profile_id": {"type": "string"},
+    "verification_id": {"type": "string"},
+    "critic_status": {"enum": ["PASS", "FAIL"]},
+    "rfi_id": {"type": "string"},
+    "disposition_id": {"type": "string"},
+    "recommendation": {"type": "string"},
+    "state": {"type": "string"},
+    "event": {"type": "string"},
+    "detail": {}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"record_type": {"const": "API_CALL"}}, "required": ["record_type"]},
+      "then": {"required": ["endpoint", "request_hash", "response_hash", "status", "latency_ms"]}
+    },
+    {
+      "if": {"properties": {"record_type": {"const": "DISPOSITION"}}, "required": ["record_type"]},
+      "then": {"required": ["disposition_id", "case_id", "recommendation"]}
+    },
+    {
+      "if": {"properties": {"record_type": {"const": "VERIFICATION"}}, "required": ["record_type"]},
+      "then": {"required": ["verification_id", "case_id", "critic_status"]}
+    }
+  ]
+}

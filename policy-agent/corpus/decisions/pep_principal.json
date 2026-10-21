@@ -1,0 +1,65 @@
+{
+ "case": {
+  "case_id": "PEP_PRINCIPAL",
+  "cdd_level_requested": "CDD",
+  "jurisdiction_profile": "US_FED_FINCEN_CDD"
+ },
+ "input_hash": "h",
+ "evaluate_at": "2026-10-21T00:00:00Z",
+ "critic_status": "PASS",
+ "injection_attempt": false,
+ "factors": {
+  "F-CUST-01": true
+ },
+ "risk": {
+  "cdd_level": "EDD",
+  "band": "HIGH"
+ },
+ "screening": {
+  "hits": [],
+  "queries": [
+   {
+    "list": "OFAC_SDN"
+   },
+   {
+    "list": "UN_CONSOLIDATED"
+   },
+   {
+    "list": "EU_CFSP"
+   },
+   {
+    "list": "UK_OFSI"
+   },
+   {
+    "list": "PEP_GLOBAL"
+   }
+  ],
+  "lists_unavailable": []
+ },
+ "ownership": {
+  "paths": [
+   {
+    "person": "P1",
+    "pcts": [
+     100
+    ],
+    "chain": []
+   }
+  ],
+  "unresolved": [],
+  "direct_holdings": [
+   {
+    "holder": "P1",
+    "pct": 100
+   }
+  ]
+ },
+ "coverage": {
+  "elements": [
+   {
+    "rde_id": "RDE-01",
+    "status": "SATISFIED"
+   }
+  ]
+ }
+}

@@ -1,0 +1,119 @@
+{
+  "proposal_id": "P-2026-012",
+  "status": "DRAFT",
+  "author_agent": "AXIOM-POLICY",
+  "created_at": "2026-10-21T15:17:56.257Z",
+  "source": {
+    "document": "corpus/SOP_CDD_v4.2_excerpt.md",
+    "clauses_parsed": 15,
+    "clauses_without_implementing_rule": [
+      {
+        "clause_id": "4.2",
+        "kind": "MANDATORY_STEP",
+        "quote": "A passport, national identity card or equivalent official photographic document shall be obtained and its validity recorded at the time of onboarding."
+      },
+      {
+        "clause_id": "7.3",
+        "kind": "DEADLINE",
+        "quote": "Enhanced due diligence must be completed within 30 days of the relationship being established where the customer presents a high risk. Section 8 \u2014 Documentation"
+      }
+    ],
+    "coverage": 86.7
+  },
+  "change": {
+    "kind": "data_patch",
+    "description": "Add the local regulator list to the mandatory screening set",
+    "pointer": "/config/screening/required_lists",
+    "old": [
+      "OFAC_SDN",
+      "UN_CONSOLIDATED",
+      "EU_CFSP",
+      "UK_OFSI",
+      "PEP_GLOBAL"
+    ],
+    "new": [
+      "OFAC_SDN",
+      "UN_CONSOLIDATED",
+      "EU_CFSP",
+      "UK_OFSI",
+      "PEP_GLOBAL",
+      "LOCAL_REGULATOR"
+    ],
+    "rationale": "SOP 6.1 requires screening against all applicable lists; the local regulator list was previously optional.",
+    "source_clauses": [
+      "6.1"
+    ]
+  },
+  "candidate": {
+    "file": "policy/data.json",
+    "pointer": "/config/screening/required_lists",
+    "old": [
+      "OFAC_SDN",
+      "UN_CONSOLIDATED",
+      "EU_CFSP",
+      "UK_OFSI",
+      "PEP_GLOBAL"
+    ],
+    "new": [
+      "OFAC_SDN",
+      "UN_CONSOLIDATED",
+      "EU_CFSP",
+      "UK_OFSI",
+      "PEP_GLOBAL",
+      "LOCAL_REGULATOR"
+    ]
+  },
+  "validation": {
+    "check_ok": true,
+    "check_detail": "",
+    "tests_ok": true,
+    "tests_detail": "PASS: 35/35",
+    "fmt_ok": true,
+    "unformatted_files": [],
+    "restricted_capabilities": true
+  },
+  "impact": {
+    "cases_evaluated": 10,
+    "cases_changed": 3,
+    "changes": [
+      {
+        "case": "clean_corporate",
+        "outcome": "PERMIT -> PERMIT_WITH_CONDITIONS",
+        "band": "LOW -> LOW",
+        "new_reasons": [
+          "SCREENING_INCOMPLETE"
+        ],
+        "dropped_reasons": []
+      },
+      {
+        "case": "clean_individual",
+        "outcome": "PERMIT -> PERMIT_WITH_CONDITIONS",
+        "band": "LOW -> LOW",
+        "new_reasons": [
+          "SCREENING_INCOMPLETE"
+        ],
+        "dropped_reasons": []
+      },
+      {
+        "case": "sanctions_lookalike",
+        "outcome": "PERMIT -> PERMIT_WITH_CONDITIONS",
+        "band": "LOW -> LOW",
+        "new_reasons": [
+          "SCREENING_INCOMPLETE"
+        ],
+        "dropped_reasons": []
+      }
+    ],
+    "materiality": "MEDIUM \u2014 outcomes move but none loosen a control"
+  },
+  "required_approvals": [
+    "FINANCIAL_CRIME",
+    "MODEL_RISK",
+    "PLATFORM_SECURITY",
+    "POLICY_OWNER"
+  ],
+  "activation": {
+    "permitted_by_agent": false,
+    "reason": "policy.activate is a prohibited action for every agent"
+  }
+}

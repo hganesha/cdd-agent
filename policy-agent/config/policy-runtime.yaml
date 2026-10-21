@@ -1,0 +1,54 @@
+# AXIOM-POLICY runtime configuration.
+# Everything here is *how the service runs*. What it decides lives in policy/ + policy/data.json,
+# which are hash-pinned and change-controlled (see spec/06-guardrails.md).
+version: 1.0.0
+effective_from: '2026-07-01'
+
+engine:
+  opa_binary: bin/opa              # vendored; falls back to `opa` on PATH
+  min_version: "1.21.0"            # rego.v1 syntax + capabilities CLI
+  entrypoints:
+    decision: data.agent.decision.result
+    authority: data.agent.authority.result
+  mode: cli                        # cli | server
+  server:
+    listen: 127.0.0.1:8181         # used only when mode: server
+    decision_path: /v1/data/agent/decision/result
+  timeout_ms: 250
+  explain: false                   # true in staging: returns a Rego trace with the decision
+
+capabilities:
+  # A policy that uses anything outside this list fails the compile. The list is the whole point:
+  # no network, no clock, no environment, no filesystem.
+  allow:
+    - "rego.v1"
+    - allowed_builtins_only
+  denied_builtins:
+    - http.send
+    - time.now_ns
+    - time.parse_ns
+    - opa.runtime
+    - io.jwt.decode_verify
+    - net.lookup_ip_addr
+    - graphql.parse
+  deny_by_default: true
+
+bundle:
+  dir: out/bundles
+  active_pointer: out/bundles/ACTIVE
+  require_verify_before_activate: true
+  require_named_approver: true
+  keep_superseded: true            # retention follows ledger retention (SOP 8.1)
+
+evidence:
+  ledger: out/decision_evidence.jsonl
+  id_prefix: PZ
+  hash: sha256
+  signature: kms-stub              # production: HSM-backed key the service cannot export
+  store_input_payload: false       # minimisation: input_hash + input_fields only
+
+decision:
+  fail_closed: true                # an undefined result is an error, never a permit
+  auto_final_allowed: false        # const in the schema; repeated here so a reviewer sees it twice
+  agent_may_clear_sanctions_hit: false
+  max_obligations: 8

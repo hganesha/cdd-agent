@@ -1,0 +1,69 @@
+# Model routing — OPS case-operations v1.0.0
+# Models are named by logical role and resolved to pinned ids at deploy time; the run manifest
+# records what was resolved. Everything that shapes a number is deterministic code, not a model.
+
+package_version: ops-case-operations-1.0.0
+
+prompts:
+  system:   {path: prompts/system.md,       hash: pinned}
+  profile:  {path: prompts/ops-profile.md,  hash: pinned}
+  verify:   {path: prompts/ops-verify.md,   hash: pinned}
+  outreach: {path: prompts/ops-outreach.md, hash: pinned}
+  decision: {path: prompts/ops-decision.md, hash: pinned}
+
+roles:
+
+  profile.narrative:
+    description: explains a derived factor in one sentence for the reviewer
+    model_class: mid
+    temperature: 0.0
+    max_output_tokens: 400
+    constrained: false           # prose only; never a number that is not already in the profile
+    forbidden: [compute_metrics, assign_factor, set_rating]
+
+  verify.detail:
+    description: turns a failed check into a sentence a case analyst can act on
+    model_class: mid
+    temperature: 0.0
+    max_output_tokens: 400
+    forbidden: [change_verdict, downgrade_severity, edit_artefact]
+
+  outreach.draft:
+    description: composes the customer letter from approved question templates
+    model_class: frontier
+    temperature: 0.2             # natural customer-facing prose
+    max_output_tokens: 1200
+    constrained_output: schemas/rfi.schema.json
+    forbidden: [add_question_not_in_template, mention_screening, mention_policy, reassure]
+    post_check: OPS-VERIFY V-010 (tipping-off), V-011 (PII)
+
+  outreach.assess:
+    description: maps a customer reply to per-question outcomes
+    model_class: frontier
+    temperature: 0.0
+    max_output_tokens: 800
+    constrained_output: rfi-assessment.schema.json
+    forbidden: [mark_satisfied_without_document, accept_undated_document]
+
+  decision.narrative:
+    description: renders the policy envelope and the admissibility result as a readable rationale
+    model_class: frontier
+    temperature: 0.0
+    max_output_tokens: 900
+    # The narrative is generated from fields that already exist. It may not introduce a reason, a
+    # gate, an obligation or a score that the envelope does not contain.
+    forbidden: [invent_reason, invent_obligation, alter_outcome, state_that_case_is_closed]
+
+  profile.explain_delta:
+    description: describes what changed between two profiles
+    model_class: small_fast
+    temperature: 0.0
+    max_output_tokens: 400
+
+determinism:
+  # These are not model calls. They are code with tests, and they are the only place a number that
+  # affects a decision can come from.
+  arithmetic: [F-BEH-01, F-BEH-02, F-BEH-03, coverage_pct, unresolved_pct, hhi, deviation,
+               cv, period_on_period, max_month_share]
+  policy: [risk_score, band, cdd_level, gates, outcome, obligations, admissibility]
+  verification: [V-001..V-013]

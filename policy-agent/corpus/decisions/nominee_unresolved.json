@@ -1,0 +1,71 @@
+{
+ "case": {
+  "case_id": "NOMINEE_UNRESOLVED",
+  "cdd_level_requested": "CDD",
+  "jurisdiction_profile": "US_FED_FINCEN_CDD"
+ },
+ "input_hash": "h",
+ "evaluate_at": "2026-10-21T00:00:00Z",
+ "critic_status": "PASS",
+ "injection_attempt": false,
+ "factors": {},
+ "risk": {
+  "cdd_level": "SDD",
+  "band": "LOW"
+ },
+ "screening": {
+  "hits": [],
+  "queries": [
+   {
+    "list": "OFAC_SDN"
+   },
+   {
+    "list": "UN_CONSOLIDATED"
+   },
+   {
+    "list": "EU_CFSP"
+   },
+   {
+    "list": "UK_OFSI"
+   },
+   {
+    "list": "PEP_GLOBAL"
+   }
+  ],
+  "lists_unavailable": []
+ },
+ "ownership": {
+  "paths": [
+   {
+    "person": "P4",
+    "pcts": [
+     55
+    ]
+   }
+  ],
+  "unresolved": [
+   {
+    "holder": "Nominee Ltd",
+    "pct": 45
+   }
+  ],
+  "direct_holdings": [
+   {
+    "holder": "P4",
+    "pct": 55
+   },
+   {
+    "holder": "Nominee Ltd",
+    "pct": 45
+   }
+  ]
+ },
+ "coverage": {
+  "elements": [
+   {
+    "rde_id": "RDE-01",
+    "status": "SATISFIED"
+   }
+  ]
+ }
+}

@@ -1,0 +1,20 @@
+budget:
+  max_queries: 18
+  max_fetches: 40
+  max_domains: 15
+  max_wallclock_s: 900
+  max_usd: 6.0
+  soft_stop_pct: 80
+
+retrieval:
+  concurrency_per_domain: 1        # politeness floor
+  timeout_s: 20
+  max_retries: 3
+  retry_on: [429, 500, 502, 503, 504, TIMEOUT]
+  user_visible_delay_policy: respect_retry_after
+
+extraction:
+  max_passages_per_document: 4
+  min_quote_chars: 40
+  require_span: true
+  language_allowlist: [en]

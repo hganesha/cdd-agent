@@ -1,0 +1,416 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.ops.internal/1.0.0/disposition.schema.json",
+  "title": "Disposition",
+  "description": "Output of OPS-DECIDE. A proposal, never a decision: finalised is always false and the approval record never carries an approver name until a human acts.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "disposition_id",
+    "case_id",
+    "customer_id",
+    "agent",
+    "as_of",
+    "recommendation",
+    "recommendation_proposed",
+    "profile_id",
+    "policy",
+    "policy_admissibility",
+    "obligations",
+    "actions",
+    "verification",
+    "approval",
+    "state",
+    "finalised",
+    "narrative",
+    "evidence_ids",
+    "evidence_id"
+  ],
+  "properties": {
+    "disposition_id": {
+      "type": "string",
+      "pattern": "^DSP-[0-9a-f]{8}$"
+    },
+    "case_id": {
+      "type": "string",
+      "pattern": "^CASE-[0-9]+$"
+    },
+    "customer_id": {
+      "type": "string",
+      "pattern": "^CUST-[0-9]+$"
+    },
+    "agent": {
+      "const": "OPS-DECIDE"
+    },
+    "as_of": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "recommendation": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/recommendation"
+        }
+      ]
+    },
+    "recommendation_proposed": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/recommendation"
+        }
+      ]
+    },
+    "policy": {
+      "type": "object",
+      "description": "Verbatim projection of the AXIOM-POLICY envelope. OPS-DECIDE may summarise it, never edit it.",
+      "required": [
+        "decision_id",
+        "policy_version",
+        "outcome",
+        "route",
+        "risk",
+        "reasons",
+        "agent_may_clear_sanctions_hit"
+      ],
+      "properties": {
+        "decision_id": {
+          "type": "string"
+        },
+        "policy_version": {
+          "type": "string"
+        },
+        "outcome": {
+          "enum": [
+            "PERMIT",
+            "PERMIT_WITH_CONDITIONS",
+            "REQUIRE_EDD",
+            "REQUIRE_RFI",
+            "BLOCK"
+          ]
+        },
+        "reasons": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "route": {
+          "type": "string"
+        },
+        "required_gates": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "risk": {
+          "type": "object",
+          "required": [
+            "score",
+            "band",
+            "weighted_score_band",
+            "cdd_level"
+          ],
+          "properties": {
+            "score": {
+              "type": "number",
+              "minimum": 0
+            },
+            "band": {
+              "enum": [
+                "LOW",
+                "MEDIUM",
+                "HIGH",
+                "VERY_HIGH"
+              ]
+            },
+            "weighted_score_band": {
+              "enum": [
+                "LOW",
+                "MEDIUM",
+                "HIGH",
+                "VERY_HIGH"
+              ]
+            },
+            "cdd_level": {
+              "enum": [
+                "SDD",
+                "CDD",
+                "EDD"
+              ]
+            }
+          }
+        },
+        "auto_final_allowed": {
+          "const": false
+        },
+        "agent_may_clear_sanctions_hit": {
+          "const": false
+        }
+      }
+    },
+    "policy_admissibility": {
+      "type": "object",
+      "required": [
+        "admissible",
+        "reason",
+        "allowed_recommendations",
+        "human_approval_required",
+        "agent_may_finalise"
+      ],
+      "properties": {
+        "admissible": {
+          "type": "boolean"
+        },
+        "reason": {
+          "enum": [
+            "ADMISSIBLE_FOR_BAND",
+            "NOT_IN_BAND_MATRIX",
+            "UNKNOWN_BAND"
+          ]
+        },
+        "allowed_recommendations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/recommendation"
+          }
+        },
+        "downgraded_from": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "human_approval_required": {
+          "const": true
+        },
+        "approval_reason": {
+          "type": "string"
+        },
+        "agent_may_finalise": {
+          "const": false
+        }
+      }
+    },
+    "obligations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "kind",
+          "because"
+        ],
+        "properties": {
+          "kind": {
+            "type": "string"
+          },
+          "because": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "actions": {
+      "type": "array",
+      "description": "One row per obligation: who does it, under what authority, by when.",
+      "items": {
+        "type": "object",
+        "required": [
+          "obligation",
+          "owner",
+          "action",
+          "due",
+          "status"
+        ],
+        "properties": {
+          "obligation": {
+            "type": "string"
+          },
+          "owner": {
+            "type": "string"
+          },
+          "action": {
+            "type": "string"
+          },
+          "authority": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "due": {
+            "type": "string",
+            "format": "date"
+          },
+          "status": {
+            "enum": [
+              "OPEN",
+              "AWAITING_CUSTOMER",
+              "AWAITING_HUMAN",
+              "EVIDENCE_RECEIVED",
+              "BLOCKED_NO_RFI",
+              "NEEDS_PROCESS_MAPPING",
+              "COMPLETE"
+            ]
+          },
+          "because": {
+            "type": "string"
+          },
+          "rfi_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "detail": {
+            "type": "string",
+            "minLength": 10
+          }
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "required": [
+        "verification_id",
+        "critic_status",
+        "blocking_check_ids"
+      ],
+      "properties": {
+        "verification_id": {
+          "type": "string"
+        },
+        "critic_status": {
+          "enum": [
+            "PASS",
+            "FAIL"
+          ]
+        },
+        "blocking_check_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "counts": {
+          "type": "object"
+        },
+        "subject_agent": {},
+        "stage": {
+          "type": "string"
+        }
+      }
+    },
+    "approval": {
+      "type": "object",
+      "required": [
+        "required",
+        "approver_role",
+        "approver",
+        "state"
+      ],
+      "properties": {
+        "required": {
+          "const": true
+        },
+        "approver_role": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "route": {
+          "type": "string"
+        },
+        "approver": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "approved_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "state": {
+          "enum": [
+            "PENDING",
+            "APPROVED",
+            "NOT_REQUESTED"
+          ]
+        },
+        "blocked_by": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "may_be_approved_while_blocked": {
+          "type": "boolean"
+        },
+        "approval_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "state": {
+      "enum": [
+        "PENDING_APPROVAL",
+        "RETURNED_FOR_REWORK",
+        "READY",
+        "AWAITING_RFI"
+      ]
+    },
+    "finalised": {
+      "const": false
+    },
+    "outreach": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "narrative": {
+      "type": "string",
+      "minLength": 80
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^OX-[0-9]{6}$"
+      },
+      "minItems": 1
+    },
+    "evidence_id": {
+      "type": "string",
+      "pattern": "^OX-[0-9]{6}$"
+    },
+    "profile_id": {
+      "type": "string",
+      "pattern": "^PRF-CUST-[0-9]+-[0-9a-f]{8}$"
+    }
+  },
+  "$defs": {
+    "recommendation": {
+      "enum": [
+        "PROCEED",
+        "PROCEED_WITH_CONDITIONS",
+        "HOLD_FOR_RFI",
+        "ESCALATE_EDD",
+        "REFER_MLRO"
+      ]
+    }
+  }
+}

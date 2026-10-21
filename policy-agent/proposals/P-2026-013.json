@@ -1,0 +1,64 @@
+{
+  "proposal_id": "P-2026-013",
+  "status": "DRAFT",
+  "author_agent": "AXIOM-POLICY",
+  "created_at": "2026-10-21T16:05:00.000Z",
+  "source": {
+    "document": "corpus/SOP_CDD_v4.2_excerpt.md",
+    "clauses_parsed": 15,
+    "clauses_without_implementing_rule": [
+      {
+        "clause_id": "4.2",
+        "kind": "MANDATORY_STEP",
+        "quote": "A passport, national identity card or equivalent official photographic document shall be obtained and its validity recorded at the time of onboarding."
+      },
+      {
+        "clause_id": "7.3",
+        "kind": "DEADLINE",
+        "quote": "Enhanced due diligence must be completed within 30 days of the relationship being established where the customer presents a high risk."
+      }
+    ],
+    "coverage": 86.7
+  },
+  "change": {
+    "kind": "rule_patch",
+    "description": "Scope the EU/UK source-of-wealth obligation to EDD, HIGH and VERY_HIGH files, and derive the trigger from the risk bundle rather than from a caller-supplied level",
+    "pointer": "/jurisdiction/overlay/require_source_of_wealth",
+    "rationale": "AMLD5/6 art.18 and MLR 2017 reg.33 require source of wealth as an *enhanced* measure. cdd-policy-2026.4 applied it to every file inside an EU/UK perimeter, including SDD files, which produced an OBTAIN_SOURCE_OF_WEALTH obligation on cases scoring LOW. That is a false positive with a customer-facing consequence: the obligation is routed to OPS-OUTREACH, which raises an RFI asking a low-risk customer for source of wealth. The overlay's own notes already said 'SoW required for high-risk'; the rule did not. The second half of the change hardens the trigger: the overlay now reads data.cdd.risk.result instead of input.risk, so a caller cannot switch the obligation off by asserting cdd_level SDD.",
+    "source_clauses": ["1.4", "7.3"],
+    "rego": "package jurisdiction.overlay.p2026013\n\nimport rego.v1\n\n# Candidate rule: SoW is an enhanced measure, so it attaches to the enhanced tiers.\n# Kept as a standalone predicate for review; the accepted change is applied in\n# policy/jurisdiction/overlay.rego.\n\ndefault requires_source_of_wealth := false\n\nrequires_source_of_wealth if {\n\tactive_requires\n\trisk_level == \"EDD\"\n}\n\nrequires_source_of_wealth if {\n\tactive_requires\n\trisk_band == \"HIGH\"\n}\n\nrequires_source_of_wealth if {\n\tactive_requires\n\trisk_band == \"VERY_HIGH\"\n}\n\nactive_requires if data.jurisdiction.overlay.active.require_source_of_wealth\n\nrisk_level := data.cdd.risk.result.cdd_level\n\nrisk_band := data.cdd.risk.result.band\n"
+  },
+  "candidate": {
+    "file": "proposals/candidates/P-2026-013.rego",
+    "content": "package jurisdiction.overlay.p2026013\n\nimport rego.v1\n\n# Candidate rule: SoW is an enhanced measure, so it attaches to the enhanced tiers.\n# Kept as a standalone predicate for review; the accepted change is applied in\n# policy/jurisdiction/overlay.rego.\n\ndefault requires_source_of_wealth := false\n\nrequires_source_of_wealth if {\n\tactive_requires\n\trisk_level == \"EDD\"\n}\n\nrequires_source_of_wealth if {\n\tactive_requires\n\trisk_band == \"HIGH\"\n}\n\nrequires_source_of_wealth if {\n\tactive_requires\n\trisk_band == \"VERY_HIGH\"\n}\n\nactive_requires if data.jurisdiction.overlay.active.require_source_of_wealth\n\nrisk_level := data.cdd.risk.result.cdd_level\n\nrisk_band := data.cdd.risk.result.band\n",
+    "applied_in": "policy/jurisdiction/overlay.rego"
+  },
+  "validation": {
+    "check_ok": true,
+    "tests_ok": true,
+    "fmt_ok": true,
+    "restricted_capabilities": true,
+    "tests_detail": "PASS: 44/44 (was 42/42; +2 tests: eu_profile_spares_a_low_risk_cdd_file_the_sow_question, us_profile_never_requires_source_of_wealth; eu_profile_requires_source_of_wealth re-scoped to high risk)"
+  },
+  "impact": {
+    "cases_evaluated": 11,
+    "cases_changed": 1,
+    "changes": [
+      {
+        "case": "eu_profile_sow",
+        "outcome": "PERMIT_WITH_CONDITIONS -> PERMIT",
+        "band": "LOW -> LOW",
+        "dropped_reasons": [],
+        "new_reasons": [],
+        "dropped_obligations": ["OBTAIN_SOURCE_OF_WEALTH"]
+      }
+    ],
+    "materiality": "MEDIUM — outcomes move but none loosen a control. One obligation is withdrawn from a LOW/SDD file that scored no risk factor; the obligation still fires on the same perimeter at HIGH (corpus case eu_profile_sow_high_risk, added with this change).",
+    "skipped": ""
+  },
+  "required_approvals": ["POLICY_OWNER", "PLATFORM_SECURITY", "MLRO"],
+  "activation": {
+    "permitted_by_agent": false,
+    "reason": "policy.activate is a prohibited action for every agent; a human policy owner activates the change with `make activate`"
+  }
+}

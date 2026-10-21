@@ -1,0 +1,145 @@
+{
+ "records": {
+  "CUST-1001": {
+   "page_size": 3,
+   "pages": [
+    {
+     "page": 1,
+     "months": [
+      {
+       "month": "2026-07",
+       "in": 2200000.0,
+       "out": 2150000.0,
+       "txn_count": 96
+      },
+      {
+       "month": "2026-08",
+       "in": 700000.0,
+       "out": 690000.0,
+       "txn_count": 151
+      },
+      {
+       "month": "2026-09",
+       "in": 384000.0,
+       "out": 371500.0,
+       "txn_count": 165
+      }
+     ]
+    },
+    {
+     "page": 2,
+     "top_counterparties": [
+      {
+       "counterparty_id": "CP-77",
+       "name": "Al-Rashid Metals FZE",
+       "country": "AE",
+       "amount": 1890000.0,
+       "txn_count": 3,
+       "first_seen": "2026-07-02"
+      },
+      {
+       "counterparty_id": "CP-78",
+       "name": "Helios Trading Ltd",
+       "country": "YE",
+       "amount": 820000.0,
+       "txn_count": 6,
+       "first_seen": "2026-07-15"
+      },
+      {
+       "counterparty_id": "CP-79",
+       "name": "Nordic Alloys OU",
+       "country": "EE",
+       "amount": 410000.0,
+       "txn_count": 22,
+       "first_seen": "2024-03-01"
+      }
+     ]
+    },
+    {
+     "page": 3,
+     "geographies": [
+      {
+       "country": "AE",
+       "inflow_pct": 0.58
+      },
+      {
+       "country": "YE",
+       "inflow_pct": 0.25
+      },
+      {
+       "country": "EE",
+       "inflow_pct": 0.12
+      },
+      {
+       "country": "TR",
+       "inflow_pct": 0.05
+      }
+     ]
+    }
+   ]
+  },
+  "CUST-2002": {
+   "page_size": 2,
+   "pages": [
+    {
+     "page": 1,
+     "months": [
+      {
+       "month": "2026-07",
+       "in": 810000.0,
+       "out": 805000.0,
+       "txn_count": 640
+      },
+      {
+       "month": "2026-08",
+       "in": 795000.0,
+       "out": 790000.0,
+       "txn_count": 628
+      },
+      {
+       "month": "2026-09",
+       "in": 805000.0,
+       "out": 803000.0,
+       "txn_count": 636
+      }
+     ]
+    },
+    {
+     "page": 2,
+     "top_counterparties": [
+      {
+       "counterparty_id": "CP-11",
+       "name": "Rhein Cargo AG",
+       "country": "DE",
+       "amount": 610000.0,
+       "txn_count": 180,
+       "first_seen": "2019-10-01"
+      },
+      {
+       "counterparty_id": "CP-12",
+       "name": "Baltic Freight OU",
+       "country": "EE",
+       "amount": 220000.0,
+       "txn_count": 96,
+       "first_seen": "2021-05-12"
+      }
+     ],
+     "geographies": [
+      {
+       "country": "DE",
+       "inflow_pct": 0.62
+      },
+      {
+       "country": "EE",
+       "inflow_pct": 0.3
+      },
+      {
+       "country": "PL",
+       "inflow_pct": 0.08
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

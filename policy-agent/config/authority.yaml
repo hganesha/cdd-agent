@@ -1,0 +1,40 @@
+# Human-facing projection of policy/agent/authority.rego.
+# The Rego table is authoritative; this file exists so that reviewers, platform security and the
+# change board can read the same rules without reading Rego. `make check-authority` asserts the two
+# agree (see scripts/check_authority.py).
+version: 1.0.0
+source_of_truth: policy/agent/authority.rego
+
+prohibited:                # never allowed for any actor, any input
+  - evidence.delete
+  - evidence.mutate
+  - case.close
+  - case.approve
+  - risk.override
+  - sanctions.clear
+  - report.file
+  - account.freeze
+  - network.arbitrary
+  - policy.activate
+  - policy.self_modify
+
+gated:                     # allowed only with a named approver, within a TTL
+  rfi.issue:              {approver: CASE_ANALYST, ttl_hours: 24}
+  escalation.create:      {approver: COMPLIANCE_OFFICER, ttl_hours: 8}
+  risk.recommend:         {approver: CASE_ANALYST, ttl_hours: 72}
+  policy.propose_change:  {approver: POLICY_OWNER, ttl_hours: 168}
+  bundle.stage:           {approver: PLATFORM_SECURITY, ttl_hours: 24}
+
+allowed:                   # no approval needed
+  - search.query
+  - search.fetch
+  - document.read
+  - policy.evaluate
+  - evidence.append
+  - case.read
+  - report.compose
+  - bundle.verify
+  - bundle.inspect
+
+default: denied            # anything not listed above
+self_approval: denied      # an actor may not approve its own gated request
