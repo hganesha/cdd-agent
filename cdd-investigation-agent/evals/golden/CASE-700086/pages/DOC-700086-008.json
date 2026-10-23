@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700086-008",
+  "filename": "trust_deed.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "TRUST DEED\nTrust: Elm Test Trust 700086\nVested beneficiary: Hale Simvale 700086\nTrust holds 10% of Galen Testwell Trading 700086 Ltd.\n"
+    }
+  ]
+}

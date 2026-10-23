@@ -1,0 +1,18 @@
+{
+  "attributes": {
+    "country": "AE",
+    "dob": "1979-03-23"
+  },
+  "case_id": "CASE-700153",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [],
+  "request_id": "SR-700153",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Eli Trialford 700153"
+}

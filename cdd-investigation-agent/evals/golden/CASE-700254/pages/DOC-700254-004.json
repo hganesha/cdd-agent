@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700254-004",
+  "filename": "owner_2_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Galen Mockley 700254\nDate of birth: 1991-09-03\nNationality: DE\nPassport number: O7002542\nValid until: 2031-12-31\n"
+    }
+  ]
+}

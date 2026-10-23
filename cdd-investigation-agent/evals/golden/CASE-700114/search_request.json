@@ -1,0 +1,18 @@
+{
+  "attributes": {
+    "country": "GB",
+    "dob": "1970-12-14"
+  },
+  "case_id": "CASE-700114",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [],
+  "request_id": "SR-700114",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Fara Mockley 700114"
+}

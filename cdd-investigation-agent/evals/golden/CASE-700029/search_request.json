@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700029"
+  },
+  "case_id": "CASE-700029",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Ari Exampleton 700029",
+    "Bela Simvale 700029"
+  ],
+  "request_id": "SR-700029",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Jori Trialford Trading 700029 Ltd"
+}

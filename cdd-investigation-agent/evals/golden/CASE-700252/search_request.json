@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700252"
+  },
+  "case_id": "CASE-700252",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Dara Testwell 700252",
+    "Eli Sampleton 700252"
+  ],
+  "request_id": "SR-700252",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Cato Exampleton Trading 700252 Ltd"
+}

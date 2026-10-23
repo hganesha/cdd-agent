@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700149-003",
+  "filename": "income_tax_return.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "INCOME TAX RETURN — Ari Mockley 700149\nYear ended: 2025-12-31\nAnnual income: USD 1,396,000\n"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700148-001",
+  "filename": "identity_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.78,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Jori Sampleton 700148\nDate of birth: 1974-10-08\nNationality: AE\nPassport number: X700148A\nValid until: 2031-12-31\n"
+    }
+  ]
+}

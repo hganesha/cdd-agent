@@ -1,0 +1,54 @@
+{
+  "doc_id": "DOC-700102-004",
+  "filename": "bank_statement.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "BANK STATEMENT — Dara Exampleton 700102\nPeriod: 2026-07-01 to 2026-09-30\nTotal credits: USD 80,000\nTotal debits: USD 72,800\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 2,
+      "text": "SUPPORTING RECORD — PAGE 2\nSynthetic reference REF-700102-0002; amount USD 18,000.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 3,
+      "text": "SUPPORTING RECORD — PAGE 3\nSynthetic reference REF-700102-0003; amount USD 8,600.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 4,
+      "text": "SUPPORTING RECORD — PAGE 4\nSynthetic reference REF-700102-0004; amount USD 3,900.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 5,
+      "text": "SUPPORTING RECORD — PAGE 5\nSynthetic reference REF-700102-0005; amount USD 36,300.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 6,
+      "text": "SUPPORTING RECORD — PAGE 6\nSynthetic reference REF-700102-0006; amount USD 27,900.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 7,
+      "text": "SUPPORTING RECORD — PAGE 7\nSynthetic reference REF-700102-0007; amount USD 43,700.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 8,
+      "text": "SUPPORTING RECORD — PAGE 8\nSynthetic reference REF-700102-0008; amount USD 26,900.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700067"
+  },
+  "case_id": "CASE-700067",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Iva Exampleton 700067",
+    "Jori Simvale 700067"
+  ],
+  "request_id": "SR-700067",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Hale Simvale Trading 700067 Ltd"
+}

@@ -1,0 +1,279 @@
+{
+  "case_id": "CASE-700182",
+  "mode": "SYNTHETIC_OFFLINE",
+  "registry_status": "AVAILABLE",
+  "screening_queries": [
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_SDN",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Testwell Trading 700182 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_CAPTA",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Testwell Trading 700182 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_SSI",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Testwell Trading 700182 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "UN_CONSOLIDATED",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Testwell Trading 700182 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "EU_CFSP",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Testwell Trading 700182 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "UK_OFSI",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Testwell Trading 700182 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "LOCAL_REGULATOR",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Testwell Trading 700182 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_GLOBAL",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Testwell Trading 700182 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_DOMESTIC",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Testwell Trading 700182 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_IO",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Testwell Trading 700182 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "RCA",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Testwell Trading 700182 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [
+        {
+          "case_ref": "SDN-700182",
+          "country": "SG",
+          "dob": "1978-08-02",
+          "name": "Dara Sampleton 700182",
+          "strength": "TRUE"
+        }
+      ],
+      "list": "OFAC_SDN",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Sampleton 700182"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_CAPTA",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Sampleton 700182"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_SSI",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Sampleton 700182"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "UN_CONSOLIDATED",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Sampleton 700182"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "EU_CFSP",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Sampleton 700182"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "UK_OFSI",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Sampleton 700182"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "LOCAL_REGULATOR",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Sampleton 700182"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_GLOBAL",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Sampleton 700182"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_DOMESTIC",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Sampleton 700182"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_IO",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Sampleton 700182"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "RCA",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Sampleton 700182"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_SDN",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Mockley 700182"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_CAPTA",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Mockley 700182"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_SSI",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Mockley 700182"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "UN_CONSOLIDATED",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Mockley 700182"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "EU_CFSP",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Mockley 700182"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "UK_OFSI",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Mockley 700182"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "LOCAL_REGULATOR",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Mockley 700182"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_GLOBAL",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Mockley 700182"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_DOMESTIC",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Mockley 700182"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_IO",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Mockley 700182"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "RCA",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Mockley 700182"
+    }
+  ]
+}

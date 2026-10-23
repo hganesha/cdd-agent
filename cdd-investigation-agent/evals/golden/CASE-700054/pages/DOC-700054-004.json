@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700054-004",
+  "filename": "owner_2_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Galen Sampleton 700054\nDate of birth: 1971-01-24\nNationality: DE\nPassport number: O7000542\nValid until: 2031-12-31\n"
+    }
+  ]
+}

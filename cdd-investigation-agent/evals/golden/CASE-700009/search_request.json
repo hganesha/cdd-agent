@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700009"
+  },
+  "case_id": "CASE-700009",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Ari Trialford 700009",
+    "Bela Exampleton 700009"
+  ],
+  "request_id": "SR-700009",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Jori Sampleton Trading 700009 Ltd"
+}

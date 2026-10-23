@@ -1,0 +1,48 @@
+{
+  "doc_id": "DOC-700110-004",
+  "filename": "bank_statement.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "BANK STATEMENT — Bela Sampleton 700110\nPeriod: 2026-07-01 to 2026-09-30\nTotal credits: USD 249,000\nTotal debits: USD 226,590\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 2,
+      "text": "SUPPORTING RECORD — PAGE 2\nSynthetic reference REF-700110-0002; amount USD 10,400.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 3,
+      "text": "SUPPORTING RECORD — PAGE 3\nSynthetic reference REF-700110-0003; amount USD 37,700.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 4,
+      "text": "SUPPORTING RECORD — PAGE 4\nSynthetic reference REF-700110-0004; amount USD 33,300.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 5,
+      "text": "SUPPORTING RECORD — PAGE 5\nSynthetic reference REF-700110-0005; amount USD 46,600.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 6,
+      "text": "SUPPORTING RECORD — PAGE 6\nSynthetic reference REF-700110-0006; amount USD 8,800.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 7,
+      "text": "SUPPORTING RECORD — PAGE 7\nSynthetic reference REF-700110-0007; amount USD 9,000.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    }
+  ]
+}

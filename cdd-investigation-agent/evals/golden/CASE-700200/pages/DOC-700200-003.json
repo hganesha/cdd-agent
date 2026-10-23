@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700200-003",
+  "filename": "owner_1_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Bela Sampleton 700200\nDate of birth: 1966-02-02\nNationality: DE\nPassport number: O7002001\nValid until: 2031-12-31\n"
+    }
+  ]
+}

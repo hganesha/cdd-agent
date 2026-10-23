@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700213"
+  },
+  "case_id": "CASE-700213",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Eli Simvale 700213",
+    "Fara Testwell 700213"
+  ],
+  "request_id": "SR-700213",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Dara Sampleton Trading 700213 Ltd"
+}

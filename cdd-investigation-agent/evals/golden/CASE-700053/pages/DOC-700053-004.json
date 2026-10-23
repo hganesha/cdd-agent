@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700053-004",
+  "filename": "owner_2_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Fara Sampleton 700053\nDate of birth: 1970-12-21\nNationality: GB\nPassport number: O7000532\nValid until: 2031-12-31\n"
+    }
+  ]
+}

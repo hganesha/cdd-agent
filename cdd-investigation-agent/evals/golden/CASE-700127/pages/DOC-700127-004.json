@@ -1,0 +1,78 @@
+{
+  "doc_id": "DOC-700127-004",
+  "filename": "bank_statement.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "BANK STATEMENT — Iva Testwell 700127\nPeriod: 2026-07-01 to 2026-09-30\nTotal credits: USD 94,000\nTotal debits: USD 85,540\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 2,
+      "text": "SUPPORTING RECORD — PAGE 2\nSynthetic reference REF-700127-0002; amount USD 17,500.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 3,
+      "text": "SUPPORTING RECORD — PAGE 3\nSynthetic reference REF-700127-0003; amount USD 7,500.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 4,
+      "text": "SUPPORTING RECORD — PAGE 4\nSynthetic reference REF-700127-0004; amount USD 9,200.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 5,
+      "text": "SUPPORTING RECORD — PAGE 5\nSynthetic reference REF-700127-0005; amount USD 6,400.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 6,
+      "text": "SUPPORTING RECORD — PAGE 6\nSynthetic reference REF-700127-0006; amount USD 2,100.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 7,
+      "text": "SUPPORTING RECORD — PAGE 7\nSynthetic reference REF-700127-0007; amount USD 16,100.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 8,
+      "text": "SUPPORTING RECORD — PAGE 8\nSynthetic reference REF-700127-0008; amount USD 29,300.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 9,
+      "text": "SUPPORTING RECORD — PAGE 9\nSynthetic reference REF-700127-0009; amount USD 28,400.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 10,
+      "text": "SUPPORTING RECORD — PAGE 10\nSynthetic reference REF-700127-0010; amount USD 15,100.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 11,
+      "text": "SUPPORTING RECORD — PAGE 11\nSynthetic reference REF-700127-0011; amount USD 46,100.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 12,
+      "text": "SUPPORTING RECORD — PAGE 12\nSynthetic reference REF-700127-0012; amount USD 43,300.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    }
+  ]
+}

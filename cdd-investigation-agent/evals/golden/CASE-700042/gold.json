@@ -1,0 +1,382 @@
+{
+  "activity": {
+    "annual_income_or_revenue_usd": 437000,
+    "annualised_credit_to_income_or_revenue_ratio": 0.7323,
+    "annualised_credits_usd": 320000.0,
+    "inconsistent": false,
+    "period_credits_usd": 80000,
+    "period_months": 3
+  },
+  "case_id": "CASE-700042",
+  "coverage": {
+    "documents_total": 15,
+    "pages_total": 189,
+    "pages_unreadable": 0
+  },
+  "decision_authority": "HUMAN",
+  "evidence_anchors": [
+    {
+      "char_span": [
+        29,
+        77
+      ],
+      "doc_id": "DOC-700042-001",
+      "key": "legal_name",
+      "page": 1,
+      "quote": "Company name: Cato Exampleton Trading 700042 Ltd",
+      "value": "Cato Exampleton Trading 700042 Ltd"
+    },
+    {
+      "char_span": [
+        78,
+        104
+      ],
+      "doc_id": "DOC-700042-001",
+      "key": "incorporation_number",
+      "page": 1,
+      "quote": "Company number: TST-700042",
+      "value": "TST-700042"
+    },
+    {
+      "char_span": [
+        65,
+        91
+      ],
+      "doc_id": "DOC-700042-002",
+      "key": "registry_number",
+      "page": 1,
+      "quote": "Company number: TST-700042",
+      "value": "TST-700042"
+    },
+    {
+      "char_span": [
+        19,
+        44
+      ],
+      "doc_id": "DOC-700042-003",
+      "key": "owner_1_name",
+      "page": 1,
+      "quote": "Name: Dara Mockley 700042",
+      "value": "Dara Mockley 700042"
+    },
+    {
+      "char_span": [
+        19,
+        45
+      ],
+      "doc_id": "DOC-700042-004",
+      "key": "owner_2_name",
+      "page": 1,
+      "quote": "Name: Eli Trialford 700042",
+      "value": "Eli Trialford 700042"
+    },
+    {
+      "char_span": [
+        22,
+        70
+      ],
+      "doc_id": "DOC-700042-005",
+      "key": "control_person",
+      "page": 1,
+      "quote": "Director and control person: Dara Mockley 700042",
+      "value": "Dara Mockley 700042"
+    },
+    {
+      "char_span": [
+        62,
+        104
+      ],
+      "doc_id": "DOC-700042-006",
+      "key": "address",
+      "page": 1,
+      "quote": "Address: 1 Test Street, Sample City 700042",
+      "value": "1 Test Street, Sample City 700042"
+    },
+    {
+      "char_span": [
+        52,
+        85
+      ],
+      "doc_id": "DOC-700042-007",
+      "key": "primary_share",
+      "page": 1,
+      "quote": "Layer 1 Holdings 700042 Ltd | 80%",
+      "value": 80
+    },
+    {
+      "char_span": [
+        86,
+        123
+      ],
+      "doc_id": "DOC-700042-007",
+      "key": "nominee_share",
+      "page": 1,
+      "quote": "Undisclosed Nominees 700042 Ltd | 20%",
+      "value": 20
+    },
+    {
+      "char_span": [
+        79,
+        99
+      ],
+      "doc_id": "DOC-700042-013",
+      "key": "annual_income_or_revenue",
+      "page": 1,
+      "quote": "Revenue: USD 437,000",
+      "value": 437000
+    },
+    {
+      "char_span": [
+        85,
+        110
+      ],
+      "doc_id": "DOC-700042-014",
+      "key": "period_credits",
+      "page": 1,
+      "quote": "Total credits: USD 80,000",
+      "value": 80000
+    },
+    {
+      "char_span": [
+        61,
+        105
+      ],
+      "doc_id": "DOC-700042-015",
+      "key": "source_of_funds",
+      "page": 1,
+      "quote": "Funds are from documented business receipts.",
+      "value": "declared receipts"
+    }
+  ],
+  "gaps": [
+    "LOOKTHROUGH_DEPTH_EXCEEDED",
+    "UNRESOLVED_UBO"
+  ],
+  "ownership": {
+    "beneficial_owners": [
+      {
+        "effective_pct": 56.0,
+        "name": "Dara Mockley 700042"
+      }
+    ],
+    "control_person": "Dara Mockley 700042",
+    "paths": [
+      {
+        "basis": "document",
+        "effective_pct": 56.0,
+        "nodes": [
+          "Dara Mockley 700042",
+          "Layer 5 Holdings 700042 Ltd",
+          "Layer 4 Holdings 700042 Ltd",
+          "Layer 3 Holdings 700042 Ltd",
+          "Layer 2 Holdings 700042 Ltd",
+          "Layer 1 Holdings 700042 Ltd",
+          "Cato Exampleton Trading 700042 Ltd"
+        ],
+        "percentages": [
+          70.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          80.0
+        ],
+        "person": "Dara Mockley 700042"
+      },
+      {
+        "basis": "document",
+        "effective_pct": 24.0,
+        "nodes": [
+          "Eli Trialford 700042",
+          "Layer 5 Holdings 700042 Ltd",
+          "Layer 4 Holdings 700042 Ltd",
+          "Layer 3 Holdings 700042 Ltd",
+          "Layer 2 Holdings 700042 Ltd",
+          "Layer 1 Holdings 700042 Ltd",
+          "Cato Exampleton Trading 700042 Ltd"
+        ],
+        "percentages": [
+          30.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          80.0
+        ],
+        "person": "Eli Trialford 700042"
+      }
+    ],
+    "unresolved_pct": 20.0
+  },
+  "provenance": {
+    "generator_seed": 20961064,
+    "human_reviewed": false,
+    "kind": "SYNTHETIC_ORACLE",
+    "release_gate_eligible": false
+  },
+  "quarantine_doc_ids": [],
+  "recommendation": "HOLD_FOR_RFI",
+  "required_gates": [
+    "G3"
+  ],
+  "required_refusals": [],
+  "risk": {
+    "band": "HIGH",
+    "cdd_level": "EDD",
+    "factor_inputs": {
+      "F-BEH-01": false,
+      "F-BEH-02": false,
+      "F-BEH-03": false,
+      "F-CHAN-01": false,
+      "F-CHAN-02": false,
+      "F-CUST-01": false,
+      "F-CUST-02": false,
+      "F-CUST-03": false,
+      "F-CUST-04": true,
+      "F-CUST-05": true,
+      "F-CUST-06": false,
+      "F-CUST-07": false,
+      "F-CUST-08": false,
+      "F-GEO-01": false,
+      "F-GEO-02": false,
+      "F-GEO-03": false,
+      "F-GEO-04": false,
+      "F-GEO-05": false,
+      "F-PROD-01": false,
+      "F-PROD-02": false
+    },
+    "overrides_applied": [
+      {
+        "factor_id": "F-CUST-04",
+        "min_band": "HIGH",
+        "reason": "opaque / unresolved ownership"
+      }
+    ],
+    "score": 11.2
+  },
+  "screening": {
+    "expected_query_count": 33,
+    "true_pep_subjects": [],
+    "true_sanctions_subjects": [],
+    "unavailable_lists": [],
+    "weak_sanctions_subjects": []
+  },
+  "search_mock": {
+    "namesake_exclusion_urls": [],
+    "paywall_gap_urls": [],
+    "quarantine_urls": [],
+    "refusal_urls": [],
+    "relevant_media_urls": [],
+    "source_urls": [
+      "https://citydesk.example/cases/case-700042/profile"
+    ]
+  },
+  "segment": "corporate_complex",
+  "tags": [
+    "corporate_complex",
+    "lookthrough_depth_exceeded",
+    "nominee_unresolved",
+    "ownership_depth_6"
+  ],
+  "verified_fields": [
+    {
+      "char_span": [
+        29,
+        77
+      ],
+      "doc_id": "DOC-700042-001",
+      "key": "legal_name",
+      "page": 1,
+      "quote": "Company name: Cato Exampleton Trading 700042 Ltd",
+      "value": "Cato Exampleton Trading 700042 Ltd"
+    },
+    {
+      "char_span": [
+        78,
+        104
+      ],
+      "doc_id": "DOC-700042-001",
+      "key": "incorporation_number",
+      "page": 1,
+      "quote": "Company number: TST-700042",
+      "value": "TST-700042"
+    },
+    {
+      "char_span": [
+        65,
+        91
+      ],
+      "doc_id": "DOC-700042-002",
+      "key": "registry_number",
+      "page": 1,
+      "quote": "Company number: TST-700042",
+      "value": "TST-700042"
+    },
+    {
+      "char_span": [
+        19,
+        44
+      ],
+      "doc_id": "DOC-700042-003",
+      "key": "owner_1_name",
+      "page": 1,
+      "quote": "Name: Dara Mockley 700042",
+      "value": "Dara Mockley 700042"
+    },
+    {
+      "char_span": [
+        19,
+        45
+      ],
+      "doc_id": "DOC-700042-004",
+      "key": "owner_2_name",
+      "page": 1,
+      "quote": "Name: Eli Trialford 700042",
+      "value": "Eli Trialford 700042"
+    },
+    {
+      "char_span": [
+        22,
+        70
+      ],
+      "doc_id": "DOC-700042-005",
+      "key": "control_person",
+      "page": 1,
+      "quote": "Director and control person: Dara Mockley 700042",
+      "value": "Dara Mockley 700042"
+    },
+    {
+      "char_span": [
+        62,
+        104
+      ],
+      "doc_id": "DOC-700042-006",
+      "key": "address",
+      "page": 1,
+      "quote": "Address: 1 Test Street, Sample City 700042",
+      "value": "1 Test Street, Sample City 700042"
+    },
+    {
+      "char_span": [
+        79,
+        99
+      ],
+      "doc_id": "DOC-700042-013",
+      "key": "annual_income_or_revenue",
+      "page": 1,
+      "quote": "Revenue: USD 437,000",
+      "value": 437000
+    },
+    {
+      "char_span": [
+        85,
+        110
+      ],
+      "doc_id": "DOC-700042-014",
+      "key": "period_credits",
+      "page": 1,
+      "quote": "Total credits: USD 80,000",
+      "value": 80000
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700075-004",
+  "filename": "owner_2_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Hale Mockley 700075\nDate of birth: 1992-10-06\nNationality: CA\nPassport number: O7000752\nValid until: 2031-12-31\n"
+    }
+  ]
+}

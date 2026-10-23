@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700170-002",
+  "filename": "proof_of_address.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "PROOF OF ADDRESS\nCustomer: Bela Trialford 700170\nAddress: 1 Test Street, Sample City 700170\nIssue date: 2026-09-15\n"
+    }
+  ]
+}

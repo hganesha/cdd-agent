@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700134-001",
+  "filename": "identity_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.78,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Fara Trialford 700134\nDate of birth: 1990-08-20\nNationality: GB\nPassport number: X700134A\nValid until: 2031-12-31\n"
+    }
+  ]
+}

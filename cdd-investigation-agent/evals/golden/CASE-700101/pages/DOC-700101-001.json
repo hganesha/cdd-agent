@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700101-001",
+  "filename": "identity_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.78,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Cato Exampleton 700101\nDate of birth: 1987-11-02\nNationality: CA\nPassport number: X700101A\nValid until: 2031-12-31\n"
+    }
+  ]
+}

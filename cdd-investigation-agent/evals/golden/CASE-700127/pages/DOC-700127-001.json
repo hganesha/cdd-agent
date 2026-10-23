@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700127-001",
+  "filename": "identity_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.78,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Iva Testwell 700127\nDate of birth: 1983-01-26\nNationality: SG\nPassport number: X700127A\nValid until: 2031-12-31\n"
+    }
+  ]
+}

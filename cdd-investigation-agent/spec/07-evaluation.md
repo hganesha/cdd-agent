@@ -21,6 +21,11 @@ red-team suite, and the release gate.
 Data: synthetic + licensed/public-record analogues. **No live customer data in eval.**
 Every case carries a machine-readable `gold.json` (fields, UBOs, rating band, gaps, required refusals).
 
+**Current status:** `evals/golden/` contains 260 generated JSON cases with deterministic,
+machine-derived labels. These labels have not received the senior-analyst review required
+by the target above and are not eligible for the release gate. See `evals/GOLDEN_SET.md`
+for coverage and limitations.
+
 ---
 
 ## 2. Metrics

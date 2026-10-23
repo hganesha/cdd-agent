@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700120-001",
+  "filename": "identity_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.78,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Bela Exampleton 700120\nDate of birth: 1976-06-05\nNationality: DE\nPassport number: X700120A\nValid until: 2031-12-31\n"
+    }
+  ]
+}

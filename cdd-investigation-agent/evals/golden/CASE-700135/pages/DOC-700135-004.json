@@ -1,0 +1,72 @@
+{
+  "doc_id": "DOC-700135-004",
+  "filename": "bank_statement.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "BANK STATEMENT — Galen Trialford 700135\nPeriod: 2026-07-01 to 2026-09-30\nTotal credits: USD 284,000\nTotal debits: USD 258,440\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 2,
+      "text": "SUPPORTING RECORD — PAGE 2\nSynthetic reference REF-700135-0002; amount USD 35,300.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 3,
+      "text": "SUPPORTING RECORD — PAGE 3\nSynthetic reference REF-700135-0003; amount USD 27,300.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 4,
+      "text": "SUPPORTING RECORD — PAGE 4\nSynthetic reference REF-700135-0004; amount USD 34,000.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 5,
+      "text": "SUPPORTING RECORD — PAGE 5\nSynthetic reference REF-700135-0005; amount USD 9,500.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 6,
+      "text": "SUPPORTING RECORD — PAGE 6\nSynthetic reference REF-700135-0006; amount USD 41,300.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 7,
+      "text": "SUPPORTING RECORD — PAGE 7\nSynthetic reference REF-700135-0007; amount USD 43,500.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 8,
+      "text": "SUPPORTING RECORD — PAGE 8\nSynthetic reference REF-700135-0008; amount USD 33,600.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 9,
+      "text": "SUPPORTING RECORD — PAGE 9\nSynthetic reference REF-700135-0009; amount USD 42,200.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 10,
+      "text": "SUPPORTING RECORD — PAGE 10\nSynthetic reference REF-700135-0010; amount USD 37,500.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 11,
+      "text": "SUPPORTING RECORD — PAGE 11\nSynthetic reference REF-700135-0011; amount USD 40,300.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700211-012",
+  "filename": "illegible_scan_attachment.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.25,
+      "page": 1,
+      "text": "[UNREADABLE PAGE — scan or extraction failed] Page 1."
+    }
+  ]
+}

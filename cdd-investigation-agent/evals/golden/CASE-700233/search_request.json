@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700233"
+  },
+  "case_id": "CASE-700233",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Eli Testwell 700233",
+    "Fara Sampleton 700233"
+  ],
+  "request_id": "SR-700233",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Dara Trialford Trading 700233 Ltd"
+}

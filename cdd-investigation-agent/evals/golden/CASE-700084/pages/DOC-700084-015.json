@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700084-015",
+  "filename": "audited_financials.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "AUDITED FINANCIALS — Eli Exampleton Trading 700084 Ltd\nYear ended: 2025-12-31\nRevenue: USD 1,091,000\nAuditor opinion: unqualified\n"
+    }
+  ]
+}

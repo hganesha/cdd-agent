@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700048"
+  },
+  "case_id": "CASE-700048",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Jori Exampleton 700048",
+    "Ari Simvale 700048"
+  ],
+  "request_id": "SR-700048",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Iva Exampleton Trading 700048 Ltd"
+}

@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700061"
+  },
+  "case_id": "CASE-700061",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Cato Mockley 700061",
+    "Dara Trialford 700061"
+  ],
+  "request_id": "SR-700061",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Bela Simvale Trading 700061 Ltd"
+}

@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700081-012",
+  "filename": "audited_financials.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "AUDITED FINANCIALS — Bela Sampleton Trading 700081 Ltd\nYear ended: 2025-12-31\nRevenue: USD 680,000\nAuditor opinion: unqualified\n"
+    }
+  ]
+}

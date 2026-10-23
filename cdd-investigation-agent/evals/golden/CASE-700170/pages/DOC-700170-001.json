@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700170-001",
+  "filename": "identity_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.78,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Bela Trialford 700170\nDate of birth: 1966-08-20\nNationality: DE\nPassport number: X700170A\nValid until: 2031-12-31\n"
+    }
+  ]
+}

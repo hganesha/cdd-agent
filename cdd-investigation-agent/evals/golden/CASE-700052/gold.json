@@ -1,0 +1,390 @@
+{
+  "activity": {
+    "annual_income_or_revenue_usd": 1807000,
+    "annualised_credit_to_income_or_revenue_ratio": 0.8102,
+    "annualised_credits_usd": 1464000.0,
+    "inconsistent": false,
+    "period_credits_usd": 366000,
+    "period_months": 3
+  },
+  "case_id": "CASE-700052",
+  "coverage": {
+    "documents_total": 17,
+    "pages_total": 307,
+    "pages_unreadable": 0
+  },
+  "decision_authority": "HUMAN",
+  "evidence_anchors": [
+    {
+      "char_span": [
+        29,
+        74
+      ],
+      "doc_id": "DOC-700052-001",
+      "key": "legal_name",
+      "page": 1,
+      "quote": "Company name: Cato Mockley Trading 700052 Ltd",
+      "value": "Cato Mockley Trading 700052 Ltd"
+    },
+    {
+      "char_span": [
+        75,
+        101
+      ],
+      "doc_id": "DOC-700052-001",
+      "key": "incorporation_number",
+      "page": 1,
+      "quote": "Company number: TST-700052",
+      "value": "TST-700052"
+    },
+    {
+      "char_span": [
+        62,
+        88
+      ],
+      "doc_id": "DOC-700052-002",
+      "key": "registry_number",
+      "page": 1,
+      "quote": "Company number: TST-700052",
+      "value": "TST-700052"
+    },
+    {
+      "char_span": [
+        19,
+        44
+      ],
+      "doc_id": "DOC-700052-003",
+      "key": "owner_1_name",
+      "page": 1,
+      "quote": "Name: Dara Simvale 700052",
+      "value": "Dara Simvale 700052"
+    },
+    {
+      "char_span": [
+        19,
+        44
+      ],
+      "doc_id": "DOC-700052-004",
+      "key": "owner_2_name",
+      "page": 1,
+      "quote": "Name: Eli Testwell 700052",
+      "value": "Eli Testwell 700052"
+    },
+    {
+      "char_span": [
+        22,
+        70
+      ],
+      "doc_id": "DOC-700052-005",
+      "key": "control_person",
+      "page": 1,
+      "quote": "Director and control person: Dara Simvale 700052",
+      "value": "Dara Simvale 700052"
+    },
+    {
+      "char_span": [
+        59,
+        101
+      ],
+      "doc_id": "DOC-700052-006",
+      "key": "address",
+      "page": 1,
+      "quote": "Address: 1 Test Street, Sample City 700052",
+      "value": "1 Test Street, Sample City 700052"
+    },
+    {
+      "char_span": [
+        49,
+        82
+      ],
+      "doc_id": "DOC-700052-007",
+      "key": "primary_share",
+      "page": 1,
+      "quote": "Layer 1 Holdings 700052 Ltd | 55%",
+      "value": 55
+    },
+    {
+      "char_span": [
+        83,
+        120
+      ],
+      "doc_id": "DOC-700052-007",
+      "key": "nominee_share",
+      "page": 1,
+      "quote": "Undisclosed Nominees 700052 Ltd | 45%",
+      "value": 45
+    },
+    {
+      "char_span": [
+        76,
+        98
+      ],
+      "doc_id": "DOC-700052-015",
+      "key": "annual_income_or_revenue",
+      "page": 1,
+      "quote": "Revenue: USD 1,807,000",
+      "value": 1807000
+    },
+    {
+      "char_span": [
+        82,
+        108
+      ],
+      "doc_id": "DOC-700052-016",
+      "key": "period_credits",
+      "page": 1,
+      "quote": "Total credits: USD 366,000",
+      "value": 366000
+    },
+    {
+      "char_span": [
+        58,
+        102
+      ],
+      "doc_id": "DOC-700052-017",
+      "key": "source_of_funds",
+      "page": 1,
+      "quote": "Funds are from documented business receipts.",
+      "value": "declared receipts"
+    }
+  ],
+  "gaps": [
+    "LOOKTHROUGH_DEPTH_EXCEEDED",
+    "UNRESOLVED_UBO"
+  ],
+  "ownership": {
+    "beneficial_owners": [
+      {
+        "effective_pct": 46.75,
+        "name": "Dara Simvale 700052"
+      }
+    ],
+    "control_person": "Dara Simvale 700052",
+    "paths": [
+      {
+        "basis": "document",
+        "effective_pct": 46.75,
+        "nodes": [
+          "Dara Simvale 700052",
+          "Layer 7 Holdings 700052 Ltd",
+          "Layer 6 Holdings 700052 Ltd",
+          "Layer 5 Holdings 700052 Ltd",
+          "Layer 4 Holdings 700052 Ltd",
+          "Layer 3 Holdings 700052 Ltd",
+          "Layer 2 Holdings 700052 Ltd",
+          "Layer 1 Holdings 700052 Ltd",
+          "Cato Mockley Trading 700052 Ltd"
+        ],
+        "percentages": [
+          85.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          55.0
+        ],
+        "person": "Dara Simvale 700052"
+      },
+      {
+        "basis": "document",
+        "effective_pct": 8.25,
+        "nodes": [
+          "Eli Testwell 700052",
+          "Layer 7 Holdings 700052 Ltd",
+          "Layer 6 Holdings 700052 Ltd",
+          "Layer 5 Holdings 700052 Ltd",
+          "Layer 4 Holdings 700052 Ltd",
+          "Layer 3 Holdings 700052 Ltd",
+          "Layer 2 Holdings 700052 Ltd",
+          "Layer 1 Holdings 700052 Ltd",
+          "Cato Mockley Trading 700052 Ltd"
+        ],
+        "percentages": [
+          15.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          55.0
+        ],
+        "person": "Eli Testwell 700052"
+      }
+    ],
+    "unresolved_pct": 45.0
+  },
+  "provenance": {
+    "generator_seed": 20961074,
+    "human_reviewed": false,
+    "kind": "SYNTHETIC_ORACLE",
+    "release_gate_eligible": false
+  },
+  "quarantine_doc_ids": [],
+  "recommendation": "HOLD_FOR_RFI",
+  "required_gates": [
+    "G3"
+  ],
+  "required_refusals": [],
+  "risk": {
+    "band": "HIGH",
+    "cdd_level": "EDD",
+    "factor_inputs": {
+      "F-BEH-01": false,
+      "F-BEH-02": false,
+      "F-BEH-03": false,
+      "F-CHAN-01": false,
+      "F-CHAN-02": false,
+      "F-CUST-01": false,
+      "F-CUST-02": false,
+      "F-CUST-03": false,
+      "F-CUST-04": true,
+      "F-CUST-05": true,
+      "F-CUST-06": false,
+      "F-CUST-07": false,
+      "F-CUST-08": false,
+      "F-GEO-01": false,
+      "F-GEO-02": false,
+      "F-GEO-03": false,
+      "F-GEO-04": false,
+      "F-GEO-05": false,
+      "F-PROD-01": false,
+      "F-PROD-02": false
+    },
+    "overrides_applied": [
+      {
+        "factor_id": "F-CUST-04",
+        "min_band": "HIGH",
+        "reason": "opaque / unresolved ownership"
+      }
+    ],
+    "score": 11.2
+  },
+  "screening": {
+    "expected_query_count": 33,
+    "true_pep_subjects": [],
+    "true_sanctions_subjects": [],
+    "unavailable_lists": [],
+    "weak_sanctions_subjects": []
+  },
+  "search_mock": {
+    "namesake_exclusion_urls": [],
+    "paywall_gap_urls": [],
+    "quarantine_urls": [],
+    "refusal_urls": [],
+    "relevant_media_urls": [],
+    "source_urls": [
+      "https://citydesk.example/cases/case-700052/profile"
+    ]
+  },
+  "segment": "corporate_complex",
+  "tags": [
+    "corporate_complex",
+    "lookthrough_depth_exceeded",
+    "nominee_unresolved",
+    "ownership_depth_8"
+  ],
+  "verified_fields": [
+    {
+      "char_span": [
+        29,
+        74
+      ],
+      "doc_id": "DOC-700052-001",
+      "key": "legal_name",
+      "page": 1,
+      "quote": "Company name: Cato Mockley Trading 700052 Ltd",
+      "value": "Cato Mockley Trading 700052 Ltd"
+    },
+    {
+      "char_span": [
+        75,
+        101
+      ],
+      "doc_id": "DOC-700052-001",
+      "key": "incorporation_number",
+      "page": 1,
+      "quote": "Company number: TST-700052",
+      "value": "TST-700052"
+    },
+    {
+      "char_span": [
+        62,
+        88
+      ],
+      "doc_id": "DOC-700052-002",
+      "key": "registry_number",
+      "page": 1,
+      "quote": "Company number: TST-700052",
+      "value": "TST-700052"
+    },
+    {
+      "char_span": [
+        19,
+        44
+      ],
+      "doc_id": "DOC-700052-003",
+      "key": "owner_1_name",
+      "page": 1,
+      "quote": "Name: Dara Simvale 700052",
+      "value": "Dara Simvale 700052"
+    },
+    {
+      "char_span": [
+        19,
+        44
+      ],
+      "doc_id": "DOC-700052-004",
+      "key": "owner_2_name",
+      "page": 1,
+      "quote": "Name: Eli Testwell 700052",
+      "value": "Eli Testwell 700052"
+    },
+    {
+      "char_span": [
+        22,
+        70
+      ],
+      "doc_id": "DOC-700052-005",
+      "key": "control_person",
+      "page": 1,
+      "quote": "Director and control person: Dara Simvale 700052",
+      "value": "Dara Simvale 700052"
+    },
+    {
+      "char_span": [
+        59,
+        101
+      ],
+      "doc_id": "DOC-700052-006",
+      "key": "address",
+      "page": 1,
+      "quote": "Address: 1 Test Street, Sample City 700052",
+      "value": "1 Test Street, Sample City 700052"
+    },
+    {
+      "char_span": [
+        76,
+        98
+      ],
+      "doc_id": "DOC-700052-015",
+      "key": "annual_income_or_revenue",
+      "page": 1,
+      "quote": "Revenue: USD 1,807,000",
+      "value": 1807000
+    },
+    {
+      "char_span": [
+        82,
+        108
+      ],
+      "doc_id": "DOC-700052-016",
+      "key": "period_credits",
+      "page": 1,
+      "quote": "Total credits: USD 366,000",
+      "value": 366000
+    }
+  ]
+}

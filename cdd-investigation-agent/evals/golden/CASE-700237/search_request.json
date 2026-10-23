@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700237"
+  },
+  "case_id": "CASE-700237",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Iva Sampleton 700237",
+    "Jori Mockley 700237"
+  ],
+  "request_id": "SR-700237",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Hale Sampleton Trading 700237 Ltd"
+}

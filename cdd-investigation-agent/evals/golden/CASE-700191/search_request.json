@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700191"
+  },
+  "case_id": "CASE-700191",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Cato Exampleton 700191",
+    "Dara Simvale 700191"
+  ],
+  "request_id": "SR-700191",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Bela Trialford Trading 700191 Ltd"
+}

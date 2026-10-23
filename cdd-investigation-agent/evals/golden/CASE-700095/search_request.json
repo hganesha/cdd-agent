@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700095"
+  },
+  "case_id": "CASE-700095",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Galen Mockley 700095",
+    "Hale Trialford 700095"
+  ],
+  "request_id": "SR-700095",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Fara Trialford Trading 700095 Ltd"
+}

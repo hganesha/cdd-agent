@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700083-008",
+  "filename": "trust_deed.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "TRUST DEED\nTrust: Elm Test Trust 700083\nVested beneficiary: Eli Exampleton 700083\nTrust holds 10% of Dara Trialford Trading 700083 Ltd.\n"
+    }
+  ]
+}

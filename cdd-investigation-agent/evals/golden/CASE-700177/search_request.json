@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700177"
+  },
+  "case_id": "CASE-700177",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Iva Simvale 700177",
+    "Jori Testwell 700177"
+  ],
+  "request_id": "SR-700177",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Hale Sampleton Trading 700177 Ltd"
+}

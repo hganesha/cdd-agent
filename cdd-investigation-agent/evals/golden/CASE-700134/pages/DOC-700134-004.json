@@ -1,0 +1,96 @@
+{
+  "doc_id": "DOC-700134-004",
+  "filename": "bank_statement.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "BANK STATEMENT — Fara Trialford 700134\nPeriod: 2026-07-01 to 2026-09-30\nTotal credits: USD 231,000\nTotal debits: USD 210,210\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 2,
+      "text": "SUPPORTING RECORD — PAGE 2\nSynthetic reference REF-700134-0002; amount USD 44,200.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 3,
+      "text": "SUPPORTING RECORD — PAGE 3\nSynthetic reference REF-700134-0003; amount USD 31,200.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 4,
+      "text": "SUPPORTING RECORD — PAGE 4\nSynthetic reference REF-700134-0004; amount USD 5,300.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 5,
+      "text": "SUPPORTING RECORD — PAGE 5\nSynthetic reference REF-700134-0005; amount USD 18,500.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 6,
+      "text": "SUPPORTING RECORD — PAGE 6\nSynthetic reference REF-700134-0006; amount USD 47,900.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 7,
+      "text": "SUPPORTING RECORD — PAGE 7\nSynthetic reference REF-700134-0007; amount USD 39,600.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 8,
+      "text": "SUPPORTING RECORD — PAGE 8\nSynthetic reference REF-700134-0008; amount USD 48,500.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 9,
+      "text": "SUPPORTING RECORD — PAGE 9\nSynthetic reference REF-700134-0009; amount USD 34,800.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 10,
+      "text": "SUPPORTING RECORD — PAGE 10\nSynthetic reference REF-700134-0010; amount USD 17,900.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 11,
+      "text": "SUPPORTING RECORD — PAGE 11\nSynthetic reference REF-700134-0011; amount USD 37,200.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 12,
+      "text": "SUPPORTING RECORD — PAGE 12\nSynthetic reference REF-700134-0012; amount USD 21,800.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 13,
+      "text": "SUPPORTING RECORD — PAGE 13\nSynthetic reference REF-700134-0013; amount USD 44,800.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 14,
+      "text": "SUPPORTING RECORD — PAGE 14\nSynthetic reference REF-700134-0014; amount USD 2,800.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 15,
+      "text": "SUPPORTING RECORD — PAGE 15\nSynthetic reference REF-700134-0015; amount USD 34,500.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    }
+  ]
+}

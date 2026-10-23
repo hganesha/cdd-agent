@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700066"
+  },
+  "case_id": "CASE-700066",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Hale Exampleton 700066",
+    "Iva Simvale 700066"
+  ],
+  "request_id": "SR-700066",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Galen Exampleton Trading 700066 Ltd"
+}

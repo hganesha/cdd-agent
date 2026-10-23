@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700115-001",
+  "filename": "identity_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.78,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Galen Mockley 700115\nDate of birth: 1971-01-17\nNationality: DE\nPassport number: X700115A\nValid until: 2031-12-31\n"
+    }
+  ]
+}

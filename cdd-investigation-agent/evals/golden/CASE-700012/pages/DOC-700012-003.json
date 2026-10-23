@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700012-003",
+  "filename": "owner_1_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Dara Exampleton 700012\nDate of birth: 1988-06-05\nNationality: SG\nPassport number: O7000121\nValid until: 2031-12-31\n"
+    }
+  ]
+}

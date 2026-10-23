@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700084"
+  },
+  "case_id": "CASE-700084",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Fara Exampleton 700084",
+    "Galen Simvale 700084"
+  ],
+  "request_id": "SR-700084",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Eli Exampleton Trading 700084 Ltd"
+}

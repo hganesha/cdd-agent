@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700193"
+  },
+  "case_id": "CASE-700193",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Eli Exampleton 700193",
+    "Fara Simvale 700193"
+  ],
+  "request_id": "SR-700193",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Dara Simvale Trading 700193 Ltd"
+}

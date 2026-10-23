@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700230-004",
+  "filename": "owner_2_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Cato Testwell 700230\nDate of birth: 1967-09-12\nNationality: CA\nPassport number: O7002302\nValid until: 2031-12-31\n"
+    }
+  ]
+}

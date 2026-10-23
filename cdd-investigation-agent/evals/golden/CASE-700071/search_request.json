@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700071"
+  },
+  "case_id": "CASE-700071",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Cato Testwell 700071",
+    "Dara Sampleton 700071"
+  ],
+  "request_id": "SR-700071",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Bela Trialford Trading 700071 Ltd"
+}

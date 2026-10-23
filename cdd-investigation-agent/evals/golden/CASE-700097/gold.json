@@ -1,0 +1,407 @@
+{
+  "activity": {
+    "annual_income_or_revenue_usd": 1172000,
+    "annualised_credit_to_income_or_revenue_ratio": 0.8089,
+    "annualised_credits_usd": 948000.0,
+    "inconsistent": false,
+    "period_credits_usd": 237000,
+    "period_months": 3
+  },
+  "case_id": "CASE-700097",
+  "coverage": {
+    "documents_total": 17,
+    "pages_total": 216,
+    "pages_unreadable": 0
+  },
+  "decision_authority": "HUMAN",
+  "evidence_anchors": [
+    {
+      "char_span": [
+        29,
+        74
+      ],
+      "doc_id": "DOC-700097-001",
+      "key": "legal_name",
+      "page": 1,
+      "quote": "Company name: Hale Simvale Trading 700097 Ltd",
+      "value": "Hale Simvale Trading 700097 Ltd"
+    },
+    {
+      "char_span": [
+        75,
+        101
+      ],
+      "doc_id": "DOC-700097-001",
+      "key": "incorporation_number",
+      "page": 1,
+      "quote": "Company number: TST-700097",
+      "value": "TST-700097"
+    },
+    {
+      "char_span": [
+        62,
+        88
+      ],
+      "doc_id": "DOC-700097-002",
+      "key": "registry_number",
+      "page": 1,
+      "quote": "Company number: TST-700097",
+      "value": "TST-700097"
+    },
+    {
+      "char_span": [
+        19,
+        43
+      ],
+      "doc_id": "DOC-700097-003",
+      "key": "owner_1_name",
+      "page": 1,
+      "quote": "Name: Iva Mockley 700097",
+      "value": "Iva Mockley 700097"
+    },
+    {
+      "char_span": [
+        19,
+        46
+      ],
+      "doc_id": "DOC-700097-004",
+      "key": "owner_2_name",
+      "page": 1,
+      "quote": "Name: Jori Trialford 700097",
+      "value": "Jori Trialford 700097"
+    },
+    {
+      "char_span": [
+        22,
+        69
+      ],
+      "doc_id": "DOC-700097-005",
+      "key": "control_person",
+      "page": 1,
+      "quote": "Director and control person: Iva Mockley 700097",
+      "value": "Iva Mockley 700097"
+    },
+    {
+      "char_span": [
+        59,
+        101
+      ],
+      "doc_id": "DOC-700097-006",
+      "key": "address",
+      "page": 1,
+      "quote": "Address: 1 Test Street, Sample City 700097",
+      "value": "1 Test Street, Sample City 700097"
+    },
+    {
+      "char_span": [
+        49,
+        83
+      ],
+      "doc_id": "DOC-700097-007",
+      "key": "primary_share",
+      "page": 1,
+      "quote": "Layer 1 Holdings 700097 Ltd | 100%",
+      "value": 100
+    },
+    {
+      "char_span": [
+        76,
+        98
+      ],
+      "doc_id": "DOC-700097-012",
+      "key": "annual_income_or_revenue",
+      "page": 1,
+      "quote": "Revenue: USD 1,172,000",
+      "value": 1172000
+    },
+    {
+      "char_span": [
+        82,
+        108
+      ],
+      "doc_id": "DOC-700097-013",
+      "key": "period_credits",
+      "page": 1,
+      "quote": "Total credits: USD 237,000",
+      "value": 237000
+    },
+    {
+      "char_span": [
+        135,
+        176
+      ],
+      "doc_id": "DOC-700097-013",
+      "key": "third_party_funding",
+      "page": 1,
+      "quote": "Unrelated third-party funding: USD 10,000",
+      "value": 10000
+    },
+    {
+      "char_span": [
+        58,
+        102
+      ],
+      "doc_id": "DOC-700097-014",
+      "key": "source_of_funds",
+      "page": 1,
+      "quote": "Funds are from documented business receipts.",
+      "value": "declared receipts"
+    },
+    {
+      "char_span": [
+        58,
+        89
+      ],
+      "doc_id": "DOC-700097-015",
+      "key": "media_status",
+      "page": 1,
+      "quote": "Status: regulatory final notice",
+      "value": "regulatory final notice"
+    },
+    {
+      "char_span": [
+        51,
+        80
+      ],
+      "doc_id": "DOC-700097-016",
+      "key": "business_sector",
+      "page": 1,
+      "quote": "Sector: cash intensive retail",
+      "value": "cash intensive retail"
+    },
+    {
+      "char_span": [
+        60,
+        84
+      ],
+      "doc_id": "DOC-700097-017",
+      "key": "prior_sar",
+      "page": 1,
+      "quote": "Prior SAR: filed in 2024",
+      "value": true
+    }
+  ],
+  "gaps": [],
+  "ownership": {
+    "beneficial_owners": [
+      {
+        "effective_pct": 85.0,
+        "name": "Iva Mockley 700097"
+      }
+    ],
+    "control_person": "Iva Mockley 700097",
+    "paths": [
+      {
+        "basis": "document",
+        "effective_pct": 85.0,
+        "nodes": [
+          "Iva Mockley 700097",
+          "Layer 4 Holdings 700097 Ltd",
+          "Layer 3 Holdings 700097 Ltd",
+          "Layer 2 Holdings 700097 Ltd",
+          "Layer 1 Holdings 700097 Ltd",
+          "Hale Simvale Trading 700097 Ltd"
+        ],
+        "percentages": [
+          85.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "person": "Iva Mockley 700097"
+      },
+      {
+        "basis": "document",
+        "effective_pct": 15.0,
+        "nodes": [
+          "Jori Trialford 700097",
+          "Layer 4 Holdings 700097 Ltd",
+          "Layer 3 Holdings 700097 Ltd",
+          "Layer 2 Holdings 700097 Ltd",
+          "Layer 1 Holdings 700097 Ltd",
+          "Hale Simvale Trading 700097 Ltd"
+        ],
+        "percentages": [
+          15.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "person": "Jori Trialford 700097"
+      }
+    ],
+    "unresolved_pct": 0.0
+  },
+  "provenance": {
+    "generator_seed": 20961119,
+    "human_reviewed": false,
+    "kind": "SYNTHETIC_ORACLE",
+    "release_gate_eligible": false
+  },
+  "quarantine_doc_ids": [],
+  "recommendation": "PROCEED_WITH_CONDITIONS",
+  "required_gates": [],
+  "required_refusals": [],
+  "risk": {
+    "band": "MEDIUM",
+    "cdd_level": "CDD",
+    "factor_inputs": {
+      "F-BEH-01": false,
+      "F-BEH-02": false,
+      "F-BEH-03": true,
+      "F-CHAN-01": true,
+      "F-CHAN-02": true,
+      "F-CUST-01": false,
+      "F-CUST-02": true,
+      "F-CUST-03": false,
+      "F-CUST-04": false,
+      "F-CUST-05": true,
+      "F-CUST-06": true,
+      "F-CUST-07": false,
+      "F-CUST-08": true,
+      "F-GEO-01": false,
+      "F-GEO-02": true,
+      "F-GEO-03": false,
+      "F-GEO-04": false,
+      "F-GEO-05": false,
+      "F-PROD-01": true,
+      "F-PROD-02": true
+    },
+    "overrides_applied": [],
+    "score": 40.15
+  },
+  "screening": {
+    "expected_query_count": 33,
+    "true_pep_subjects": [],
+    "true_sanctions_subjects": [],
+    "unavailable_lists": [],
+    "weak_sanctions_subjects": []
+  },
+  "search_mock": {
+    "namesake_exclusion_urls": [
+      "https://localnews.example/synthetic/case-700097/namesake"
+    ],
+    "paywall_gap_urls": [],
+    "quarantine_urls": [],
+    "refusal_urls": [],
+    "relevant_media_urls": [
+      "https://fca.org.uk/synthetic/case-700097/media"
+    ],
+    "source_urls": [
+      "https://citydesk.example/cases/case-700097/profile",
+      "https://fca.org.uk/synthetic/case-700097/media",
+      "https://localnews.example/synthetic/case-700097/namesake"
+    ]
+  },
+  "segment": "corporate_complex",
+  "tags": [
+    "compound_medium_risk",
+    "corporate_complex",
+    "media_final_notice",
+    "ownership_depth_5",
+    "third_party_funding"
+  ],
+  "verified_fields": [
+    {
+      "char_span": [
+        29,
+        74
+      ],
+      "doc_id": "DOC-700097-001",
+      "key": "legal_name",
+      "page": 1,
+      "quote": "Company name: Hale Simvale Trading 700097 Ltd",
+      "value": "Hale Simvale Trading 700097 Ltd"
+    },
+    {
+      "char_span": [
+        75,
+        101
+      ],
+      "doc_id": "DOC-700097-001",
+      "key": "incorporation_number",
+      "page": 1,
+      "quote": "Company number: TST-700097",
+      "value": "TST-700097"
+    },
+    {
+      "char_span": [
+        62,
+        88
+      ],
+      "doc_id": "DOC-700097-002",
+      "key": "registry_number",
+      "page": 1,
+      "quote": "Company number: TST-700097",
+      "value": "TST-700097"
+    },
+    {
+      "char_span": [
+        19,
+        43
+      ],
+      "doc_id": "DOC-700097-003",
+      "key": "owner_1_name",
+      "page": 1,
+      "quote": "Name: Iva Mockley 700097",
+      "value": "Iva Mockley 700097"
+    },
+    {
+      "char_span": [
+        19,
+        46
+      ],
+      "doc_id": "DOC-700097-004",
+      "key": "owner_2_name",
+      "page": 1,
+      "quote": "Name: Jori Trialford 700097",
+      "value": "Jori Trialford 700097"
+    },
+    {
+      "char_span": [
+        22,
+        69
+      ],
+      "doc_id": "DOC-700097-005",
+      "key": "control_person",
+      "page": 1,
+      "quote": "Director and control person: Iva Mockley 700097",
+      "value": "Iva Mockley 700097"
+    },
+    {
+      "char_span": [
+        59,
+        101
+      ],
+      "doc_id": "DOC-700097-006",
+      "key": "address",
+      "page": 1,
+      "quote": "Address: 1 Test Street, Sample City 700097",
+      "value": "1 Test Street, Sample City 700097"
+    },
+    {
+      "char_span": [
+        76,
+        98
+      ],
+      "doc_id": "DOC-700097-012",
+      "key": "annual_income_or_revenue",
+      "page": 1,
+      "quote": "Revenue: USD 1,172,000",
+      "value": 1172000
+    },
+    {
+      "char_span": [
+        82,
+        108
+      ],
+      "doc_id": "DOC-700097-013",
+      "key": "period_credits",
+      "page": 1,
+      "quote": "Total credits: USD 237,000",
+      "value": 237000
+    }
+  ]
+}

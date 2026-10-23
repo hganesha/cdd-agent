@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700014"
+  },
+  "case_id": "CASE-700014",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Fara Simvale 700014",
+    "Galen Testwell 700014"
+  ],
+  "request_id": "SR-700014",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Eli Testwell Trading 700014 Ltd"
+}

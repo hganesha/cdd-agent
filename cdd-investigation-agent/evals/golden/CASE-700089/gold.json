@@ -1,0 +1,437 @@
+{
+  "activity": {
+    "annual_income_or_revenue_usd": 1776000,
+    "annualised_credit_to_income_or_revenue_ratio": 0.6509,
+    "annualised_credits_usd": 1156000.0,
+    "inconsistent": false,
+    "period_credits_usd": 289000,
+    "period_months": 3
+  },
+  "case_id": "CASE-700089",
+  "coverage": {
+    "documents_total": 18,
+    "pages_total": 174,
+    "pages_unreadable": 0
+  },
+  "decision_authority": "HUMAN",
+  "evidence_anchors": [
+    {
+      "char_span": [
+        29,
+        76
+      ],
+      "doc_id": "DOC-700089-001",
+      "key": "legal_name",
+      "page": 1,
+      "quote": "Company name: Jori Trialford Trading 700089 Ltd",
+      "value": "Jori Trialford Trading 700089 Ltd"
+    },
+    {
+      "char_span": [
+        77,
+        103
+      ],
+      "doc_id": "DOC-700089-001",
+      "key": "incorporation_number",
+      "page": 1,
+      "quote": "Company number: TST-700089",
+      "value": "TST-700089"
+    },
+    {
+      "char_span": [
+        64,
+        90
+      ],
+      "doc_id": "DOC-700089-002",
+      "key": "registry_number",
+      "page": 1,
+      "quote": "Company number: TST-700089",
+      "value": "TST-700089"
+    },
+    {
+      "char_span": [
+        19,
+        44
+      ],
+      "doc_id": "DOC-700089-003",
+      "key": "owner_1_name",
+      "page": 1,
+      "quote": "Name: Ari Testwell 700089",
+      "value": "Ari Testwell 700089"
+    },
+    {
+      "char_span": [
+        19,
+        46
+      ],
+      "doc_id": "DOC-700089-004",
+      "key": "owner_2_name",
+      "page": 1,
+      "quote": "Name: Bela Sampleton 700089",
+      "value": "Bela Sampleton 700089"
+    },
+    {
+      "char_span": [
+        22,
+        70
+      ],
+      "doc_id": "DOC-700089-005",
+      "key": "control_person",
+      "page": 1,
+      "quote": "Director and control person: Ari Testwell 700089",
+      "value": "Ari Testwell 700089"
+    },
+    {
+      "char_span": [
+        61,
+        103
+      ],
+      "doc_id": "DOC-700089-006",
+      "key": "address",
+      "page": 1,
+      "quote": "Address: 1 Test Street, Sample City 700089",
+      "value": "1 Test Street, Sample City 700089"
+    },
+    {
+      "char_span": [
+        51,
+        84
+      ],
+      "doc_id": "DOC-700089-007",
+      "key": "primary_share",
+      "page": 1,
+      "quote": "Layer 1 Holdings 700089 Ltd | 90%",
+      "value": 90
+    },
+    {
+      "char_span": [
+        40,
+        79
+      ],
+      "doc_id": "DOC-700089-008",
+      "key": "vested_beneficiary",
+      "page": 1,
+      "quote": "Vested beneficiary: Ari Testwell 700089",
+      "value": "Ari Testwell 700089"
+    },
+    {
+      "char_span": [
+        78,
+        100
+      ],
+      "doc_id": "DOC-700089-013",
+      "key": "annual_income_or_revenue",
+      "page": 1,
+      "quote": "Revenue: USD 1,776,000",
+      "value": 1776000
+    },
+    {
+      "char_span": [
+        84,
+        110
+      ],
+      "doc_id": "DOC-700089-014",
+      "key": "period_credits",
+      "page": 1,
+      "quote": "Total credits: USD 289,000",
+      "value": 289000
+    },
+    {
+      "char_span": [
+        137,
+        178
+      ],
+      "doc_id": "DOC-700089-014",
+      "key": "third_party_funding",
+      "page": 1,
+      "quote": "Unrelated third-party funding: USD 10,000",
+      "value": 10000
+    },
+    {
+      "char_span": [
+        60,
+        104
+      ],
+      "doc_id": "DOC-700089-015",
+      "key": "source_of_funds",
+      "page": 1,
+      "quote": "Funds are from documented business receipts.",
+      "value": "declared receipts"
+    },
+    {
+      "char_span": [
+        59,
+        90
+      ],
+      "doc_id": "DOC-700089-016",
+      "key": "media_status",
+      "page": 1,
+      "quote": "Status: regulatory final notice",
+      "value": "regulatory final notice"
+    },
+    {
+      "char_span": [
+        53,
+        82
+      ],
+      "doc_id": "DOC-700089-017",
+      "key": "business_sector",
+      "page": 1,
+      "quote": "Sector: cash intensive retail",
+      "value": "cash intensive retail"
+    },
+    {
+      "char_span": [
+        62,
+        86
+      ],
+      "doc_id": "DOC-700089-018",
+      "key": "prior_sar",
+      "page": 1,
+      "quote": "Prior SAR: filed in 2024",
+      "value": true
+    }
+  ],
+  "gaps": [],
+  "ownership": {
+    "beneficial_owners": [
+      {
+        "effective_pct": 64.0,
+        "name": "Ari Testwell 700089"
+      },
+      {
+        "effective_pct": 36.0,
+        "name": "Bela Sampleton 700089"
+      }
+    ],
+    "control_person": "Ari Testwell 700089",
+    "paths": [
+      {
+        "basis": "document",
+        "effective_pct": 10.0,
+        "nodes": [
+          "Ari Testwell 700089",
+          "Elm Test Trust 700089",
+          "Jori Trialford Trading 700089 Ltd"
+        ],
+        "percentages": [
+          100.0,
+          10.0
+        ],
+        "person": "Ari Testwell 700089"
+      },
+      {
+        "basis": "document",
+        "effective_pct": 54.0,
+        "nodes": [
+          "Ari Testwell 700089",
+          "Layer 4 Holdings 700089 Ltd",
+          "Layer 3 Holdings 700089 Ltd",
+          "Layer 2 Holdings 700089 Ltd",
+          "Layer 1 Holdings 700089 Ltd",
+          "Jori Trialford Trading 700089 Ltd"
+        ],
+        "percentages": [
+          60.0,
+          100.0,
+          100.0,
+          100.0,
+          90.0
+        ],
+        "person": "Ari Testwell 700089"
+      },
+      {
+        "basis": "document",
+        "effective_pct": 36.0,
+        "nodes": [
+          "Bela Sampleton 700089",
+          "Layer 4 Holdings 700089 Ltd",
+          "Layer 3 Holdings 700089 Ltd",
+          "Layer 2 Holdings 700089 Ltd",
+          "Layer 1 Holdings 700089 Ltd",
+          "Jori Trialford Trading 700089 Ltd"
+        ],
+        "percentages": [
+          40.0,
+          100.0,
+          100.0,
+          100.0,
+          90.0
+        ],
+        "person": "Bela Sampleton 700089"
+      }
+    ],
+    "unresolved_pct": 0.0
+  },
+  "provenance": {
+    "generator_seed": 20961111,
+    "human_reviewed": false,
+    "kind": "SYNTHETIC_ORACLE",
+    "release_gate_eligible": false
+  },
+  "quarantine_doc_ids": [],
+  "recommendation": "PROCEED_WITH_CONDITIONS",
+  "required_gates": [],
+  "required_refusals": [],
+  "risk": {
+    "band": "MEDIUM",
+    "cdd_level": "CDD",
+    "factor_inputs": {
+      "F-BEH-01": false,
+      "F-BEH-02": false,
+      "F-BEH-03": true,
+      "F-CHAN-01": true,
+      "F-CHAN-02": true,
+      "F-CUST-01": false,
+      "F-CUST-02": true,
+      "F-CUST-03": false,
+      "F-CUST-04": false,
+      "F-CUST-05": true,
+      "F-CUST-06": true,
+      "F-CUST-07": false,
+      "F-CUST-08": true,
+      "F-GEO-01": false,
+      "F-GEO-02": true,
+      "F-GEO-03": false,
+      "F-GEO-04": false,
+      "F-GEO-05": false,
+      "F-PROD-01": true,
+      "F-PROD-02": true
+    },
+    "overrides_applied": [],
+    "score": 40.15
+  },
+  "screening": {
+    "expected_query_count": 33,
+    "true_pep_subjects": [],
+    "true_sanctions_subjects": [],
+    "unavailable_lists": [],
+    "weak_sanctions_subjects": []
+  },
+  "search_mock": {
+    "namesake_exclusion_urls": [
+      "https://localnews.example/synthetic/case-700089/namesake"
+    ],
+    "paywall_gap_urls": [],
+    "quarantine_urls": [],
+    "refusal_urls": [],
+    "relevant_media_urls": [
+      "https://fca.org.uk/synthetic/case-700089/media"
+    ],
+    "source_urls": [
+      "https://citydesk.example/cases/case-700089/profile",
+      "https://fca.org.uk/synthetic/case-700089/media",
+      "https://localnews.example/synthetic/case-700089/namesake"
+    ]
+  },
+  "segment": "corporate_complex",
+  "tags": [
+    "compound_medium_risk",
+    "corporate_complex",
+    "media_final_notice",
+    "ownership_depth_5",
+    "third_party_funding",
+    "vested_trust"
+  ],
+  "verified_fields": [
+    {
+      "char_span": [
+        29,
+        76
+      ],
+      "doc_id": "DOC-700089-001",
+      "key": "legal_name",
+      "page": 1,
+      "quote": "Company name: Jori Trialford Trading 700089 Ltd",
+      "value": "Jori Trialford Trading 700089 Ltd"
+    },
+    {
+      "char_span": [
+        77,
+        103
+      ],
+      "doc_id": "DOC-700089-001",
+      "key": "incorporation_number",
+      "page": 1,
+      "quote": "Company number: TST-700089",
+      "value": "TST-700089"
+    },
+    {
+      "char_span": [
+        64,
+        90
+      ],
+      "doc_id": "DOC-700089-002",
+      "key": "registry_number",
+      "page": 1,
+      "quote": "Company number: TST-700089",
+      "value": "TST-700089"
+    },
+    {
+      "char_span": [
+        19,
+        44
+      ],
+      "doc_id": "DOC-700089-003",
+      "key": "owner_1_name",
+      "page": 1,
+      "quote": "Name: Ari Testwell 700089",
+      "value": "Ari Testwell 700089"
+    },
+    {
+      "char_span": [
+        19,
+        46
+      ],
+      "doc_id": "DOC-700089-004",
+      "key": "owner_2_name",
+      "page": 1,
+      "quote": "Name: Bela Sampleton 700089",
+      "value": "Bela Sampleton 700089"
+    },
+    {
+      "char_span": [
+        22,
+        70
+      ],
+      "doc_id": "DOC-700089-005",
+      "key": "control_person",
+      "page": 1,
+      "quote": "Director and control person: Ari Testwell 700089",
+      "value": "Ari Testwell 700089"
+    },
+    {
+      "char_span": [
+        61,
+        103
+      ],
+      "doc_id": "DOC-700089-006",
+      "key": "address",
+      "page": 1,
+      "quote": "Address: 1 Test Street, Sample City 700089",
+      "value": "1 Test Street, Sample City 700089"
+    },
+    {
+      "char_span": [
+        78,
+        100
+      ],
+      "doc_id": "DOC-700089-013",
+      "key": "annual_income_or_revenue",
+      "page": 1,
+      "quote": "Revenue: USD 1,776,000",
+      "value": 1776000
+    },
+    {
+      "char_span": [
+        84,
+        110
+      ],
+      "doc_id": "DOC-700089-014",
+      "key": "period_credits",
+      "page": 1,
+      "quote": "Total credits: USD 289,000",
+      "value": 289000
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700002"
+  },
+  "case_id": "CASE-700002",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Dara Sampleton 700002",
+    "Eli Mockley 700002"
+  ],
+  "request_id": "SR-700002",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Cato Testwell Trading 700002 Ltd"
+}

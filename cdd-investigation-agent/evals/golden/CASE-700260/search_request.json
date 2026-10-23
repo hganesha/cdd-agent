@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700260"
+  },
+  "case_id": "CASE-700260",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Bela Trialford 700260",
+    "Cato Exampleton 700260"
+  ],
+  "request_id": "SR-700260",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Ari Testwell Trading 700260 Ltd"
+}

@@ -1,0 +1,51 @@
+{
+  "budget": {
+    "max_tokens": 6000000,
+    "max_usd": 45.0,
+    "max_wallclock_s": 21600
+  },
+  "bundle_ref": {
+    "doc_count": 11,
+    "manifest_uri": "evals/golden/CASE-700202/bundle.json",
+    "page_count": 85
+  },
+  "case_id": "CASE-700202",
+  "case_type": "LEGAL_ENTITY",
+  "cdd_level_requested": "CDD",
+  "claimed_customer": {
+    "incorporation_number": "TST-700202",
+    "jurisdiction_of_incorporation": "DE",
+    "legal_name": "Cato Mockley Trading 700202 Ltd"
+  },
+  "contains_special_category_data": false,
+  "created_at": "2026-10-20T12:00:00Z",
+  "jurisdiction_profile": "US_FED_FINCEN_CDD",
+  "policy_version": "risk-model-2026.3",
+  "relationship": {
+    "channels": [
+      "RELATIONSHIP_MANAGER"
+    ],
+    "expected_currency": "USD",
+    "expected_monthly_volume": {
+      "amount": "36000",
+      "currency": "USD"
+    },
+    "jurisdictions": [
+      "DE"
+    ],
+    "products": [
+      "TRANSACTION_ACCOUNT",
+      "FX"
+    ],
+    "purpose_statement": "Synthetic test of customer due diligence"
+  },
+  "requested_by": {
+    "analyst_id": "SYNTHETIC-EVAL",
+    "desk": "EVALUATION"
+  },
+  "schema_version": "1.0.0",
+  "sla": {
+    "deadline": "2026-10-30T17:00:00Z"
+  },
+  "trigger": "PERIODIC_REVIEW"
+}

@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700145-003",
+  "filename": "income_tax_return.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "INCOME TAX RETURN — Galen Testwell 700145\nYear ended: 2025-12-31\nAnnual income: USD 848,000\n"
+    }
+  ]
+}

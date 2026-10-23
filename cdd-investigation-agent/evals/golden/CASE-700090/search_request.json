@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700090"
+  },
+  "case_id": "CASE-700090",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Bela Testwell 700090",
+    "Cato Sampleton 700090"
+  ],
+  "request_id": "SR-700090",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Ari Exampleton Trading 700090 Ltd"
+}

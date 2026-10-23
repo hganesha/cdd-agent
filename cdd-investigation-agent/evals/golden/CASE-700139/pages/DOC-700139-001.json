@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700139-001",
+  "filename": "identity_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.78,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Ari Exampleton 700139\nDate of birth: 1965-01-08\nNationality: GB\nPassport number: X700139A\nValid until: 2031-12-31\n"
+    }
+  ]
+}

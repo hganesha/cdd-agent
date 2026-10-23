@@ -14,6 +14,7 @@ Evidence       spec/04-evidence-writes.md           append-only hash-chained led
 Long-running   spec/05-long-running-execution.md    checkpoint / resume / budget / degrade
 Guardrails     spec/06-guardrails.md                injection, fairness, data handling
 Evaluation     spec/07-evaluation.md                golden set, metrics, release gate
+Synthetic set  evals/GOLDEN_SET.md                  260 cases with reproducible gold
 Reference impl src/cdd_agent/                       runs the demo case offline
 Demo case      data/case_4831/                      23 documents, 300 pages
 ```
@@ -44,6 +45,44 @@ dossier before a regulator does.
 ## Run it
 
 No API keys, no network, no installs beyond `pyyaml` + `jsonschema`.
+
+### Compare with a Pi agent
+
+The one-case pilot in `evals/compare.py` runs the existing reference implementation,
+then optionally starts a Pi agent under the CDD instructions in `pi_cdd/AGENTS.md`.
+Pi receives the same synthetic case, policy, and seeded screening responses as read-only
+inputs in an isolated workspace. It does not see the reference output. The comparison
+records elapsed time, provider-reported Pi tokens/cost, reference estimates, seeded
+decision checks, and exact source-quote validity.
+
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install pyyaml jsonschema
+.venv/bin/python evals/compare.py --pi
+# output: out/benchmark/comparison.json
+```
+
+Pi must be installed and configured with an OpenRouter API key. The default model is
+`openai/gpt-4.1-mini`; pass `--model` to change it. This pilot is a **single synthetic
+case**. The 260-case synthetic oracle is available in `evals/golden/` and described
+in `evals/GOLDEN_SET.md`. Each case includes seeded screening and registry responses
+plus a mock web corpus for the sibling external-search agent. A separate corpus
+comparison runs five representative cases by default:
+
+```bash
+.venv/bin/python evals/compare_corpus.py --dry-run
+.venv/bin/python evals/compare_corpus.py --pi
+# output: out/corpus_benchmark/comparison.json
+```
+
+Use `--all --pi --resume` for the full set. The reference media stage now reads media
+printouts from the input bundle, but other stages remain specific to `CASE-4831`.
+The corpus runner rejects a dossier with the wrong customer or case before scoring.
+Generalize the remaining stages before interpreting the corpus as a head-to-head
+accuracy comparison. The reference's
+USD/token fields are simulated workload estimates, while Pi's are provider-reported
+usage. Pi's compact JSON answer does not replace the reference's schema-conformant
+dossier, evidence ledger, resume behavior, or human gates.
 
 ```bash
 cd src

@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700137-001",
+  "filename": "identity_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.78,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Iva Exampleton 700137\nDate of birth: 1993-11-02\nNationality: SG\nPassport number: X700137A\nValid until: 2031-12-31\n"
+    }
+  ]
+}

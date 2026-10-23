@@ -1,0 +1,18 @@
+{
+  "attributes": {
+    "country": "GB",
+    "dob": "1975-05-02"
+  },
+  "case_id": "CASE-700119",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [],
+  "request_id": "SR-700119",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Ari Exampleton 700119"
+}

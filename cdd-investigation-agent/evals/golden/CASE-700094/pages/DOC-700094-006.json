@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700094-006",
+  "filename": "proof_of_address.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "PROOF OF ADDRESS\nCustomer: Eli Mockley Trading 700094 Ltd\nAddress: 1 Test Street, Sample City 700094\nIssue date: 2025-01-01\n"
+    }
+  ]
+}

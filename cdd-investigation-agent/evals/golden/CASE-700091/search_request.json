@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700091"
+  },
+  "case_id": "CASE-700091",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Cato Testwell 700091",
+    "Dara Sampleton 700091"
+  ],
+  "request_id": "SR-700091",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Bela Simvale Trading 700091 Ltd"
+}

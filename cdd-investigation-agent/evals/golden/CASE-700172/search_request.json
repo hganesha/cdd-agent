@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700172"
+  },
+  "case_id": "CASE-700172",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Dara Trialford 700172",
+    "Eli Exampleton 700172"
+  ],
+  "request_id": "SR-700172",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Cato Mockley Trading 700172 Ltd"
+}

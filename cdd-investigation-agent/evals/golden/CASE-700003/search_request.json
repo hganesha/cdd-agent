@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700003"
+  },
+  "case_id": "CASE-700003",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Eli Sampleton 700003",
+    "Fara Mockley 700003"
+  ],
+  "request_id": "SR-700003",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Dara Sampleton Trading 700003 Ltd"
+}

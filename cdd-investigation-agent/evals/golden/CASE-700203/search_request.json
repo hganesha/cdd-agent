@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700203"
+  },
+  "case_id": "CASE-700203",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Eli Mockley 700203",
+    "Fara Trialford 700203"
+  ],
+  "request_id": "SR-700203",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Dara Trialford Trading 700203 Ltd"
+}

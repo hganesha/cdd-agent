@@ -1,0 +1,18 @@
+{
+  "doc_id": "DOC-700149-006",
+  "filename": "media_results.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "MEDIA RESULT\nSubject: Ari Mockley 700149\nDate: 2026-06-15\nStatus: allegation; no charges filed\nSource: Synthetic News Archive\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 2,
+      "text": "NAMESAKE EXCLUSION\nName: Ari Mockley 700149\nDifferent date of birth and country; this is another person.\n"
+    }
+  ]
+}

@@ -1,0 +1,276 @@
+{
+  "doc_id": "DOC-700005-009",
+  "filename": "bank_statement.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "BANK STATEMENT — Fara Trialford Trading 700005 Ltd\nPeriod: 2026-07-01 to 2026-09-30\nTotal credits: USD 155,000\nTotal debits: USD 141,050\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 2,
+      "text": "SUPPORTING RECORD — PAGE 2\nSynthetic reference REF-700005-0002; amount USD 18,600.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 3,
+      "text": "SUPPORTING RECORD — PAGE 3\nSynthetic reference REF-700005-0003; amount USD 37,000.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 4,
+      "text": "SUPPORTING RECORD — PAGE 4\nSynthetic reference REF-700005-0004; amount USD 26,800.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 5,
+      "text": "SUPPORTING RECORD — PAGE 5\nSynthetic reference REF-700005-0005; amount USD 16,600.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 6,
+      "text": "SUPPORTING RECORD — PAGE 6\nSynthetic reference REF-700005-0006; amount USD 25,200.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 7,
+      "text": "SUPPORTING RECORD — PAGE 7\nSynthetic reference REF-700005-0007; amount USD 8,400.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 8,
+      "text": "SUPPORTING RECORD — PAGE 8\nSynthetic reference REF-700005-0008; amount USD 11,100.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 9,
+      "text": "SUPPORTING RECORD — PAGE 9\nSynthetic reference REF-700005-0009; amount USD 5,000.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 10,
+      "text": "SUPPORTING RECORD — PAGE 10\nSynthetic reference REF-700005-0010; amount USD 36,600.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 11,
+      "text": "SUPPORTING RECORD — PAGE 11\nSynthetic reference REF-700005-0011; amount USD 2,300.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 12,
+      "text": "SUPPORTING RECORD — PAGE 12\nSynthetic reference REF-700005-0012; amount USD 26,500.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 13,
+      "text": "SUPPORTING RECORD — PAGE 13\nSynthetic reference REF-700005-0013; amount USD 36,800.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 14,
+      "text": "SUPPORTING RECORD — PAGE 14\nSynthetic reference REF-700005-0014; amount USD 16,300.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 15,
+      "text": "SUPPORTING RECORD — PAGE 15\nSynthetic reference REF-700005-0015; amount USD 2,200.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 16,
+      "text": "SUPPORTING RECORD — PAGE 16\nSynthetic reference REF-700005-0016; amount USD 45,000.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 17,
+      "text": "SUPPORTING RECORD — PAGE 17\nSynthetic reference REF-700005-0017; amount USD 27,900.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 18,
+      "text": "SUPPORTING RECORD — PAGE 18\nSynthetic reference REF-700005-0018; amount USD 40,900.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 19,
+      "text": "SUPPORTING RECORD — PAGE 19\nSynthetic reference REF-700005-0019; amount USD 18,000.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 20,
+      "text": "SUPPORTING RECORD — PAGE 20\nSynthetic reference REF-700005-0020; amount USD 5,100.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 21,
+      "text": "SUPPORTING RECORD — PAGE 21\nSynthetic reference REF-700005-0021; amount USD 27,200.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 22,
+      "text": "SUPPORTING RECORD — PAGE 22\nSynthetic reference REF-700005-0022; amount USD 41,100.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 23,
+      "text": "SUPPORTING RECORD — PAGE 23\nSynthetic reference REF-700005-0023; amount USD 1,900.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 24,
+      "text": "SUPPORTING RECORD — PAGE 24\nSynthetic reference REF-700005-0024; amount USD 46,000.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 25,
+      "text": "SUPPORTING RECORD — PAGE 25\nSynthetic reference REF-700005-0025; amount USD 46,000.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 26,
+      "text": "SUPPORTING RECORD — PAGE 26\nSynthetic reference REF-700005-0026; amount USD 20,300.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 27,
+      "text": "SUPPORTING RECORD — PAGE 27\nSynthetic reference REF-700005-0027; amount USD 35,600.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 28,
+      "text": "SUPPORTING RECORD — PAGE 28\nSynthetic reference REF-700005-0028; amount USD 12,200.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 29,
+      "text": "SUPPORTING RECORD — PAGE 29\nSynthetic reference REF-700005-0029; amount USD 24,200.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 30,
+      "text": "SUPPORTING RECORD — PAGE 30\nSynthetic reference REF-700005-0030; amount USD 14,300.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 31,
+      "text": "SUPPORTING RECORD — PAGE 31\nSynthetic reference REF-700005-0031; amount USD 45,200.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 32,
+      "text": "SUPPORTING RECORD — PAGE 32\nSynthetic reference REF-700005-0032; amount USD 31,200.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 33,
+      "text": "SUPPORTING RECORD — PAGE 33\nSynthetic reference REF-700005-0033; amount USD 38,600.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 34,
+      "text": "SUPPORTING RECORD — PAGE 34\nSynthetic reference REF-700005-0034; amount USD 26,900.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 35,
+      "text": "SUPPORTING RECORD — PAGE 35\nSynthetic reference REF-700005-0035; amount USD 45,300.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 36,
+      "text": "SUPPORTING RECORD — PAGE 36\nSynthetic reference REF-700005-0036; amount USD 46,400.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 37,
+      "text": "SUPPORTING RECORD — PAGE 37\nSynthetic reference REF-700005-0037; amount USD 7,900.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 38,
+      "text": "SUPPORTING RECORD — PAGE 38\nSynthetic reference REF-700005-0038; amount USD 17,200.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 39,
+      "text": "SUPPORTING RECORD — PAGE 39\nSynthetic reference REF-700005-0039; amount USD 18,500.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 40,
+      "text": "SUPPORTING RECORD — PAGE 40\nSynthetic reference REF-700005-0040; amount USD 6,600.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 41,
+      "text": "SUPPORTING RECORD — PAGE 41\nSynthetic reference REF-700005-0041; amount USD 14,100.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 42,
+      "text": "SUPPORTING RECORD — PAGE 42\nSynthetic reference REF-700005-0042; amount USD 36,300.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 43,
+      "text": "SUPPORTING RECORD — PAGE 43\nSynthetic reference REF-700005-0043; amount USD 5,600.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 44,
+      "text": "SUPPORTING RECORD — PAGE 44\nSynthetic reference REF-700005-0044; amount USD 32,100.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 45,
+      "text": "SUPPORTING RECORD — PAGE 45\nSynthetic reference REF-700005-0045; amount USD 43,500.\nNo additional identity, ownership, screening, or policy assertion on this page.\n"
+    }
+  ]
+}

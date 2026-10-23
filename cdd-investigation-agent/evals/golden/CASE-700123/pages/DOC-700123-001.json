@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700123-001",
+  "filename": "identity_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.78,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Eli Simvale 700123\nDate of birth: 1979-09-14\nNationality: AE\nPassport number: X700123A\nValid until: 2031-12-31\n"
+    }
+  ]
+}

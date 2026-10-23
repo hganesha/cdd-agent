@@ -1,0 +1,279 @@
+{
+  "case_id": "CASE-700213",
+  "mode": "SYNTHETIC_OFFLINE",
+  "registry_status": "AVAILABLE",
+  "screening_queries": [
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_SDN",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Sampleton Trading 700213 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_CAPTA",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Sampleton Trading 700213 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_SSI",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Sampleton Trading 700213 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "UN_CONSOLIDATED",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Sampleton Trading 700213 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "EU_CFSP",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Sampleton Trading 700213 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "UK_OFSI",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Sampleton Trading 700213 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "LOCAL_REGULATOR",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Sampleton Trading 700213 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_GLOBAL",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Sampleton Trading 700213 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_DOMESTIC",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Sampleton Trading 700213 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_IO",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Sampleton Trading 700213 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "RCA",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Sampleton Trading 700213 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [
+        {
+          "case_ref": "SDN-LOOKALIKE-700213",
+          "country": "ZZ",
+          "dob": "1958-01-01",
+          "name": "Eli Simvale 700213",
+          "strength": "WEAK"
+        }
+      ],
+      "list": "OFAC_SDN",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Simvale 700213"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_CAPTA",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Simvale 700213"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_SSI",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Simvale 700213"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "UN_CONSOLIDATED",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Simvale 700213"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "EU_CFSP",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Simvale 700213"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "UK_OFSI",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Simvale 700213"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "LOCAL_REGULATOR",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Simvale 700213"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_GLOBAL",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Simvale 700213"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_DOMESTIC",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Simvale 700213"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_IO",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Simvale 700213"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "RCA",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Simvale 700213"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_SDN",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Fara Testwell 700213"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_CAPTA",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Fara Testwell 700213"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_SSI",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Fara Testwell 700213"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "UN_CONSOLIDATED",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Fara Testwell 700213"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "EU_CFSP",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Fara Testwell 700213"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "UK_OFSI",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Fara Testwell 700213"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "LOCAL_REGULATOR",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Fara Testwell 700213"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_GLOBAL",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Fara Testwell 700213"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_DOMESTIC",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Fara Testwell 700213"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_IO",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Fara Testwell 700213"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "RCA",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Fara Testwell 700213"
+    }
+  ]
+}

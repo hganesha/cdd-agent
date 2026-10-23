@@ -1,6 +1,6 @@
 PY ?= python3
 
-.PHONY: help run verify kill resume budget test contracts demo clean all
+.PHONY: help run verify kill resume budget test corpus-tests contracts benchmark benchmark-pi benchmark-corpus benchmark-corpus-pi golden-check golden-regenerate search-mock demo clean all
 
 help:
 	@echo "ATLAS-CDD — CDD investigation agent"
@@ -11,7 +11,15 @@ help:
 	@echo "  make resume     resume from the last checkpoint"
 	@echo "  make budget     run with a \$6 budget to force a PARTIAL delivery"
 	@echo "  make test       resumability / guardrail tests (9)"
+	@echo "  make corpus-tests check blind export and fail-closed comparison scoring"
 	@echo "  make contracts  validate every artifact against its JSON Schema"
+	@echo "  make benchmark compare the reference on the synthetic case"
+	@echo "  make benchmark-pi compare reference and Pi on the same case"
+	@echo "  make benchmark-corpus run the reference on five golden cases"
+	@echo "  make benchmark-corpus-pi compare reference and Pi on five golden cases"
+	@echo "  make golden-check validate the 260-case synthetic oracle"
+	@echo "  make golden-regenerate rebuild the oracle from the fixed seed"
+	@echo "  make search-mock CASE=CASE-700141 run the search mock for one case"
 	@echo "  make demo       kill -> resume -> verify, then show the manifest"
 	@echo "  make clean      remove run artefacts"
 
@@ -33,8 +41,33 @@ budget:
 test:
 	$(PY) tests/test_resumability.py
 
+corpus-tests:
+	$(PY) tests/test_compare_corpus.py
+
 contracts:
 	$(PY) tests/test_contracts.py
+
+benchmark:
+	$(PY) evals/compare.py
+
+benchmark-pi:
+	$(PY) evals/compare.py --pi
+
+benchmark-corpus:
+	$(PY) evals/compare_corpus.py
+
+benchmark-corpus-pi:
+	$(PY) evals/compare_corpus.py --pi
+
+golden-check:
+	$(PY) evals/validate_golden.py
+
+golden-regenerate:
+	$(PY) evals/generate_golden.py --force
+	$(PY) evals/validate_golden.py
+
+search-mock:
+	$(PY) evals/run_search_mock.py $(CASE)
 
 demo: kill resume verify
 	@echo ""

@@ -188,7 +188,8 @@ class EvidenceLedger:
             "record_type": "EXTERNAL_QUERY",
             "subject": {"kind": "QUERY_SUBJECT", "name": subject_name, "dataset": dataset},
             "value": {"raw": f"{result_count} hit(s)", "normalized": result_count, "datatype": "count"},
-            "basis": "screening" if "sanction" in connector or "pep" in connector else "registry",
+            "basis": "screening" if any(kind in connector for kind in ("sanction", "pep", "media"))
+                     else "registry",
             "confidence": "HIGH",
             "query": {"connector": connector, "dataset": dataset, "dataset_version": dataset_version,
                       "queried_at": now(), "parameters_hash": sha256_str(canonical(params)),
@@ -232,17 +233,18 @@ class EvidenceLedger:
         prev, n = GENESIS, 0
         if not self.path.exists():
             return True, GENESIS, None
-        for line in self.path.open():
-            if not line.strip():
-                continue
-            rec = json.loads(line)
-            n += 1
-            if rec.get("prev_hash") != prev:
-                return False, prev, rec.get("seq")
-            body = {k: v for k, v in rec.items() if k not in ("record_hash", "signature")}
-            if sha256_str(canonical(body)) != rec.get("record_hash"):
-                return False, prev, rec.get("seq")
-            prev = rec["record_hash"]
+        with self.path.open() as fh:
+            for line in fh:
+                if not line.strip():
+                    continue
+                rec = json.loads(line)
+                n += 1
+                if rec.get("prev_hash") != prev:
+                    return False, prev, rec.get("seq")
+                body = {k: v for k, v in rec.items() if k not in ("record_hash", "signature")}
+                if sha256_str(canonical(body)) != rec.get("record_hash"):
+                    return False, prev, rec.get("seq")
+                prev = rec["record_hash"]
         return True, prev, None
 
     @property
@@ -251,8 +253,11 @@ class EvidenceLedger:
 
     def records(self) -> Iterable[dict]:
         if not self.path.exists():
-            return []
-        return (json.loads(l) for l in self.path.open() if l.strip())
+            return
+        with self.path.open() as fh:
+            for line in fh:
+                if line.strip():
+                    yield json.loads(line)
 
     def by_finding(self, finding_id: str) -> list[dict]:
         return [r for r in self.records()

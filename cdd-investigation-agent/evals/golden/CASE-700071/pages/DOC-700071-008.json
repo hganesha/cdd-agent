@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700071-008",
+  "filename": "trust_deed.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "TRUST DEED\nTrust: Elm Test Trust 700071\nVested beneficiary: Cato Testwell 700071\nTrust holds 10% of Bela Trialford Trading 700071 Ltd.\n"
+    }
+  ]
+}

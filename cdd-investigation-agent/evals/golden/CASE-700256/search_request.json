@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700256"
+  },
+  "case_id": "CASE-700256",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Hale Sampleton 700256",
+    "Iva Mockley 700256"
+  ],
+  "request_id": "SR-700256",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Galen Mockley Trading 700256 Ltd"
+}

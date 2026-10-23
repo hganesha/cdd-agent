@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700060-004",
+  "filename": "owner_2_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Cato Trialford 700060\nDate of birth: 1977-07-15\nNationality: CA\nPassport number: O7000602\nValid until: 2031-12-31\n"
+    }
+  ]
+}

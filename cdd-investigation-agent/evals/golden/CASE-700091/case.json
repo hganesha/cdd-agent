@@ -1,0 +1,51 @@
+{
+  "budget": {
+    "max_tokens": 6000000,
+    "max_usd": 45.0,
+    "max_wallclock_s": 21600
+  },
+  "bundle_ref": {
+    "doc_count": 16,
+    "manifest_uri": "evals/golden/CASE-700091/bundle.json",
+    "page_count": 250
+  },
+  "case_id": "CASE-700091",
+  "case_type": "LEGAL_ENTITY",
+  "cdd_level_requested": "CDD",
+  "claimed_customer": {
+    "incorporation_number": "TST-700091",
+    "jurisdiction_of_incorporation": "GB",
+    "legal_name": "Bela Simvale Trading 700091 Ltd"
+  },
+  "contains_special_category_data": false,
+  "created_at": "2026-10-20T12:00:00Z",
+  "jurisdiction_profile": "US_FED_FINCEN_CDD",
+  "policy_version": "risk-model-2026.3",
+  "relationship": {
+    "channels": [
+      "DIGITAL"
+    ],
+    "expected_currency": "USD",
+    "expected_monthly_volume": {
+      "amount": "29000",
+      "currency": "USD"
+    },
+    "jurisdictions": [
+      "GB"
+    ],
+    "products": [
+      "TRANSACTION_ACCOUNT",
+      "TRADE_FINANCE"
+    ],
+    "purpose_statement": "Synthetic test of customer due diligence"
+  },
+  "requested_by": {
+    "analyst_id": "SYNTHETIC-EVAL",
+    "desk": "EVALUATION"
+  },
+  "schema_version": "1.0.0",
+  "sla": {
+    "deadline": "2026-10-30T17:00:00Z"
+  },
+  "trigger": "TRIGGER_EVENT"
+}

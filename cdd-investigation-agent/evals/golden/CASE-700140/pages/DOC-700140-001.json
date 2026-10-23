@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700140-001",
+  "filename": "identity_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.78,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Bela Simvale 700140\nDate of birth: 1966-02-11\nNationality: DE\nPassport number: X700140A\nValid until: 2031-12-31\n"
+    }
+  ]
+}

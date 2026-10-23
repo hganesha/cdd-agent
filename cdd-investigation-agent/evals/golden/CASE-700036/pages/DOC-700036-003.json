@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700036-003",
+  "filename": "owner_1_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Hale Testwell 700036\nDate of birth: 1982-06-23\nNationality: CA\nPassport number: O7000361\nValid until: 2031-12-31\n"
+    }
+  ]
+}

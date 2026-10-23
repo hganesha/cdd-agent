@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700014-004",
+  "filename": "owner_2_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Galen Testwell 700014\nDate of birth: 1991-09-12\nNationality: DE\nPassport number: O7000142\nValid until: 2031-12-31\n"
+    }
+  ]
+}

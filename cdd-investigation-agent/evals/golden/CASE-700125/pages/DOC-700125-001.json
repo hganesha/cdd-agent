@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700125-001",
+  "filename": "identity_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.78,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Galen Testwell 700125\nDate of birth: 1981-11-20\nNationality: DE\nPassport number: X700125A\nValid until: 2031-12-31\n"
+    }
+  ]
+}

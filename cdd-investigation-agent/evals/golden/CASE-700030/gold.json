@@ -1,0 +1,341 @@
+{
+  "activity": {
+    "annual_income_or_revenue_usd": 873000,
+    "annualised_credit_to_income_or_revenue_ratio": 0.811,
+    "annualised_credits_usd": 708000.0,
+    "inconsistent": false,
+    "period_credits_usd": 177000,
+    "period_months": 3
+  },
+  "case_id": "CASE-700030",
+  "coverage": {
+    "documents_total": 10,
+    "pages_total": 28,
+    "pages_unreadable": 0
+  },
+  "decision_authority": "HUMAN",
+  "evidence_anchors": [
+    {
+      "char_span": [
+        29,
+        76
+      ],
+      "doc_id": "DOC-700030-001",
+      "key": "legal_name",
+      "page": 1,
+      "quote": "Company name: Ari Exampleton Trading 700030 Ltd",
+      "value": "Ari Exampleton Trading 700030 Ltd"
+    },
+    {
+      "char_span": [
+        77,
+        103
+      ],
+      "doc_id": "DOC-700030-001",
+      "key": "incorporation_number",
+      "page": 1,
+      "quote": "Company number: TST-700030",
+      "value": "TST-700030"
+    },
+    {
+      "char_span": [
+        64,
+        90
+      ],
+      "doc_id": "DOC-700030-002",
+      "key": "registry_number",
+      "page": 1,
+      "quote": "Company number: TST-700030",
+      "value": "TST-700030"
+    },
+    {
+      "char_span": [
+        19,
+        47
+      ],
+      "doc_id": "DOC-700030-003",
+      "key": "owner_1_name",
+      "page": 1,
+      "quote": "Name: Bela Exampleton 700030",
+      "value": "Bela Exampleton 700030"
+    },
+    {
+      "char_span": [
+        19,
+        44
+      ],
+      "doc_id": "DOC-700030-004",
+      "key": "owner_2_name",
+      "page": 1,
+      "quote": "Name: Cato Simvale 700030",
+      "value": "Cato Simvale 700030"
+    },
+    {
+      "char_span": [
+        22,
+        73
+      ],
+      "doc_id": "DOC-700030-005",
+      "key": "control_person",
+      "page": 1,
+      "quote": "Director and control person: Bela Exampleton 700030",
+      "value": "Bela Exampleton 700030"
+    },
+    {
+      "char_span": [
+        61,
+        103
+      ],
+      "doc_id": "DOC-700030-006",
+      "key": "address",
+      "page": 1,
+      "quote": "Address: 1 Test Street, Sample City 700030",
+      "value": "1 Test Street, Sample City 700030"
+    },
+    {
+      "char_span": [
+        51,
+        79
+      ],
+      "doc_id": "DOC-700030-007",
+      "key": "primary_share",
+      "page": 1,
+      "quote": "Bela Exampleton 700030 | 60%",
+      "value": 60
+    },
+    {
+      "char_span": [
+        78,
+        98
+      ],
+      "doc_id": "DOC-700030-008",
+      "key": "annual_income_or_revenue",
+      "page": 1,
+      "quote": "Revenue: USD 873,000",
+      "value": 873000
+    },
+    {
+      "char_span": [
+        84,
+        110
+      ],
+      "doc_id": "DOC-700030-009",
+      "key": "period_credits",
+      "page": 1,
+      "quote": "Total credits: USD 177,000",
+      "value": 177000
+    },
+    {
+      "char_span": [
+        60,
+        104
+      ],
+      "doc_id": "DOC-700030-010",
+      "key": "source_of_funds",
+      "page": 1,
+      "quote": "Funds are from documented business receipts.",
+      "value": "declared receipts"
+    }
+  ],
+  "gaps": [],
+  "ownership": {
+    "beneficial_owners": [
+      {
+        "effective_pct": 60.0,
+        "name": "Bela Exampleton 700030"
+      },
+      {
+        "effective_pct": 40.0,
+        "name": "Cato Simvale 700030"
+      }
+    ],
+    "control_person": "Bela Exampleton 700030",
+    "paths": [
+      {
+        "basis": "document",
+        "effective_pct": 60.0,
+        "nodes": [
+          "Bela Exampleton 700030",
+          "Ari Exampleton Trading 700030 Ltd"
+        ],
+        "percentages": [
+          60.0
+        ],
+        "person": "Bela Exampleton 700030"
+      },
+      {
+        "basis": "document",
+        "effective_pct": 40.0,
+        "nodes": [
+          "Cato Simvale 700030",
+          "Ari Exampleton Trading 700030 Ltd"
+        ],
+        "percentages": [
+          40.0
+        ],
+        "person": "Cato Simvale 700030"
+      }
+    ],
+    "unresolved_pct": 0.0
+  },
+  "provenance": {
+    "generator_seed": 20961052,
+    "human_reviewed": false,
+    "kind": "SYNTHETIC_ORACLE",
+    "release_gate_eligible": false
+  },
+  "quarantine_doc_ids": [],
+  "recommendation": "PROCEED",
+  "required_gates": [],
+  "required_refusals": [],
+  "risk": {
+    "band": "LOW",
+    "cdd_level": "SDD",
+    "factor_inputs": {
+      "F-BEH-01": false,
+      "F-BEH-02": false,
+      "F-BEH-03": false,
+      "F-CHAN-01": false,
+      "F-CHAN-02": false,
+      "F-CUST-01": false,
+      "F-CUST-02": false,
+      "F-CUST-03": false,
+      "F-CUST-04": false,
+      "F-CUST-05": false,
+      "F-CUST-06": false,
+      "F-CUST-07": false,
+      "F-CUST-08": false,
+      "F-GEO-01": false,
+      "F-GEO-02": false,
+      "F-GEO-03": false,
+      "F-GEO-04": false,
+      "F-GEO-05": false,
+      "F-PROD-01": false,
+      "F-PROD-02": false
+    },
+    "overrides_applied": [],
+    "score": 0.0
+  },
+  "screening": {
+    "expected_query_count": 33,
+    "true_pep_subjects": [],
+    "true_sanctions_subjects": [],
+    "unavailable_lists": [],
+    "weak_sanctions_subjects": []
+  },
+  "search_mock": {
+    "namesake_exclusion_urls": [],
+    "paywall_gap_urls": [],
+    "quarantine_urls": [],
+    "refusal_urls": [],
+    "relevant_media_urls": [],
+    "source_urls": [
+      "https://citydesk.example/cases/case-700030/profile"
+    ]
+  },
+  "segment": "corporate_simple",
+  "tags": [
+    "corporate_simple"
+  ],
+  "verified_fields": [
+    {
+      "char_span": [
+        29,
+        76
+      ],
+      "doc_id": "DOC-700030-001",
+      "key": "legal_name",
+      "page": 1,
+      "quote": "Company name: Ari Exampleton Trading 700030 Ltd",
+      "value": "Ari Exampleton Trading 700030 Ltd"
+    },
+    {
+      "char_span": [
+        77,
+        103
+      ],
+      "doc_id": "DOC-700030-001",
+      "key": "incorporation_number",
+      "page": 1,
+      "quote": "Company number: TST-700030",
+      "value": "TST-700030"
+    },
+    {
+      "char_span": [
+        64,
+        90
+      ],
+      "doc_id": "DOC-700030-002",
+      "key": "registry_number",
+      "page": 1,
+      "quote": "Company number: TST-700030",
+      "value": "TST-700030"
+    },
+    {
+      "char_span": [
+        19,
+        47
+      ],
+      "doc_id": "DOC-700030-003",
+      "key": "owner_1_name",
+      "page": 1,
+      "quote": "Name: Bela Exampleton 700030",
+      "value": "Bela Exampleton 700030"
+    },
+    {
+      "char_span": [
+        19,
+        44
+      ],
+      "doc_id": "DOC-700030-004",
+      "key": "owner_2_name",
+      "page": 1,
+      "quote": "Name: Cato Simvale 700030",
+      "value": "Cato Simvale 700030"
+    },
+    {
+      "char_span": [
+        22,
+        73
+      ],
+      "doc_id": "DOC-700030-005",
+      "key": "control_person",
+      "page": 1,
+      "quote": "Director and control person: Bela Exampleton 700030",
+      "value": "Bela Exampleton 700030"
+    },
+    {
+      "char_span": [
+        61,
+        103
+      ],
+      "doc_id": "DOC-700030-006",
+      "key": "address",
+      "page": 1,
+      "quote": "Address: 1 Test Street, Sample City 700030",
+      "value": "1 Test Street, Sample City 700030"
+    },
+    {
+      "char_span": [
+        78,
+        98
+      ],
+      "doc_id": "DOC-700030-008",
+      "key": "annual_income_or_revenue",
+      "page": 1,
+      "quote": "Revenue: USD 873,000",
+      "value": 873000
+    },
+    {
+      "char_span": [
+        84,
+        110
+      ],
+      "doc_id": "DOC-700030-009",
+      "key": "period_credits",
+      "page": 1,
+      "quote": "Total credits: USD 177,000",
+      "value": 177000
+    }
+  ]
+}

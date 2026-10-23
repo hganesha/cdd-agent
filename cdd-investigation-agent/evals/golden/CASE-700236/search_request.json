@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700236"
+  },
+  "case_id": "CASE-700236",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Hale Sampleton 700236",
+    "Iva Mockley 700236"
+  ],
+  "request_id": "SR-700236",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Galen Testwell Trading 700236 Ltd"
+}

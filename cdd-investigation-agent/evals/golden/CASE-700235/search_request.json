@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700235"
+  },
+  "case_id": "CASE-700235",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Galen Testwell 700235",
+    "Hale Sampleton 700235"
+  ],
+  "request_id": "SR-700235",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Fara Simvale Trading 700235 Ltd"
+}

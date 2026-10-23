@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700158-001",
+  "filename": "identity_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.78,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Jori Simvale 700158\nDate of birth: 1984-08-11\nNationality: AE\nPassport number: X700158A\nValid until: 2031-12-31\n"
+    }
+  ]
+}

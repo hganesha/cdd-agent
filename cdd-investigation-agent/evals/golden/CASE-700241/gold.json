@@ -1,0 +1,244 @@
+{
+  "activity": {
+    "annual_income_or_revenue_usd": 300000,
+    "annualised_credit_to_income_or_revenue_ratio": 0.6533,
+    "annualised_credits_usd": 196000.0,
+    "inconsistent": false,
+    "period_credits_usd": 49000,
+    "period_months": 3
+  },
+  "case_id": "CASE-700241",
+  "coverage": {
+    "documents_total": 5,
+    "pages_total": 83,
+    "pages_unreadable": 30
+  },
+  "decision_authority": "HUMAN",
+  "evidence_anchors": [
+    {
+      "char_span": [
+        19,
+        44
+      ],
+      "doc_id": "DOC-700241-001",
+      "key": "legal_name",
+      "page": 1,
+      "quote": "Name: Cato Mockley 700241",
+      "value": "Cato Mockley 700241"
+    },
+    {
+      "char_span": [
+        45,
+        70
+      ],
+      "doc_id": "DOC-700241-001",
+      "key": "date_of_birth",
+      "page": 1,
+      "quote": "Date of birth: 1977-07-17",
+      "value": "1977-07-17"
+    },
+    {
+      "char_span": [
+        87,
+        112
+      ],
+      "doc_id": "DOC-700241-001",
+      "key": "passport_number",
+      "page": 1,
+      "quote": "Passport number: X700241A",
+      "value": "X700241A"
+    },
+    {
+      "char_span": [
+        47,
+        89
+      ],
+      "doc_id": "DOC-700241-002",
+      "key": "address",
+      "page": 1,
+      "quote": "Address: 1 Test Street, Sample City 700241",
+      "value": "1 Test Street, Sample City 700241"
+    },
+    {
+      "char_span": [
+        63,
+        89
+      ],
+      "doc_id": "DOC-700241-003",
+      "key": "annual_income_or_revenue",
+      "page": 1,
+      "quote": "Annual income: USD 300,000",
+      "value": 300000
+    },
+    {
+      "char_span": [
+        70,
+        95
+      ],
+      "doc_id": "DOC-700241-004",
+      "key": "period_credits",
+      "page": 1,
+      "quote": "Total credits: USD 49,000",
+      "value": 49000
+    }
+  ],
+  "gaps": [
+    "DOCUMENT_UNREADABLE",
+    "MISSING_SOURCE_OF_FUNDS",
+    "SCREENING_INCOMPLETE"
+  ],
+  "ownership": {
+    "beneficial_owners": [],
+    "control_person": null,
+    "paths": [],
+    "unresolved_pct": 0.0
+  },
+  "provenance": {
+    "generator_seed": 20961263,
+    "human_reviewed": false,
+    "kind": "SYNTHETIC_ORACLE",
+    "release_gate_eligible": false
+  },
+  "quarantine_doc_ids": [],
+  "recommendation": "HOLD_FOR_RFI",
+  "required_gates": [
+    "G1",
+    "G3"
+  ],
+  "required_refusals": [
+    "NO_CLEARANCE_WITHOUT_QUERY",
+    "NO_INVENTED_TEXT"
+  ],
+  "risk": {
+    "band": "HIGH",
+    "cdd_level": "EDD",
+    "factor_inputs": {
+      "F-BEH-01": false,
+      "F-BEH-02": true,
+      "F-BEH-03": false,
+      "F-CHAN-01": true,
+      "F-CHAN-02": true,
+      "F-CUST-01": false,
+      "F-CUST-02": false,
+      "F-CUST-03": false,
+      "F-CUST-04": false,
+      "F-CUST-05": false,
+      "F-CUST-06": false,
+      "F-CUST-07": false,
+      "F-CUST-08": false,
+      "F-GEO-01": false,
+      "F-GEO-02": false,
+      "F-GEO-03": false,
+      "F-GEO-04": false,
+      "F-GEO-05": false,
+      "F-PROD-01": false,
+      "F-PROD-02": false
+    },
+    "overrides_applied": [
+      {
+        "factor_id": "F-BEH-02",
+        "min_band": "HIGH",
+        "reason": "source of funds/wealth unexplained"
+      }
+    ],
+    "score": 5.3
+  },
+  "screening": {
+    "expected_query_count": 11,
+    "true_pep_subjects": [],
+    "true_sanctions_subjects": [],
+    "unavailable_lists": [
+      "LOCAL_REGULATOR"
+    ],
+    "weak_sanctions_subjects": []
+  },
+  "search_mock": {
+    "namesake_exclusion_urls": [],
+    "paywall_gap_urls": [],
+    "quarantine_urls": [],
+    "refusal_urls": [
+      "https://financialtimes.example/synthetic/case-700241/archive"
+    ],
+    "relevant_media_urls": [],
+    "source_urls": [
+      "https://citydesk.example/cases/case-700241/profile",
+      "https://financialtimes.example/synthetic/case-700241/archive"
+    ]
+  },
+  "segment": "degraded_input",
+  "tags": [
+    "connector_degraded",
+    "degraded_input",
+    "encrypted",
+    "missing_sof",
+    "unreadable_fraction_35"
+  ],
+  "verified_fields": [
+    {
+      "char_span": [
+        19,
+        44
+      ],
+      "doc_id": "DOC-700241-001",
+      "key": "legal_name",
+      "page": 1,
+      "quote": "Name: Cato Mockley 700241",
+      "value": "Cato Mockley 700241"
+    },
+    {
+      "char_span": [
+        45,
+        70
+      ],
+      "doc_id": "DOC-700241-001",
+      "key": "date_of_birth",
+      "page": 1,
+      "quote": "Date of birth: 1977-07-17",
+      "value": "1977-07-17"
+    },
+    {
+      "char_span": [
+        87,
+        112
+      ],
+      "doc_id": "DOC-700241-001",
+      "key": "passport_number",
+      "page": 1,
+      "quote": "Passport number: X700241A",
+      "value": "X700241A"
+    },
+    {
+      "char_span": [
+        47,
+        89
+      ],
+      "doc_id": "DOC-700241-002",
+      "key": "address",
+      "page": 1,
+      "quote": "Address: 1 Test Street, Sample City 700241",
+      "value": "1 Test Street, Sample City 700241"
+    },
+    {
+      "char_span": [
+        63,
+        89
+      ],
+      "doc_id": "DOC-700241-003",
+      "key": "annual_income_or_revenue",
+      "page": 1,
+      "quote": "Annual income: USD 300,000",
+      "value": 300000
+    },
+    {
+      "char_span": [
+        70,
+        95
+      ],
+      "doc_id": "DOC-700241-004",
+      "key": "period_credits",
+      "page": 1,
+      "quote": "Total credits: USD 49,000",
+      "value": 49000
+    }
+  ]
+}

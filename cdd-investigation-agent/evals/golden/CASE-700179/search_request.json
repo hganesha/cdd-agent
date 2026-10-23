@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700179"
+  },
+  "case_id": "CASE-700179",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Ari Testwell 700179",
+    "Bela Sampleton 700179"
+  ],
+  "request_id": "SR-700179",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Jori Trialford Trading 700179 Ltd"
+}

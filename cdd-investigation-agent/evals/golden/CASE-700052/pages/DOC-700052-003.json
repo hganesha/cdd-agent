@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700052-003",
+  "filename": "owner_1_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Dara Simvale 700052\nDate of birth: 1968-10-17\nNationality: SG\nPassport number: O7000521\nValid until: 2031-12-31\n"
+    }
+  ]
+}

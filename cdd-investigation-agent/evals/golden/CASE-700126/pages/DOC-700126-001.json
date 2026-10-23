@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700126-001",
+  "filename": "identity_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.78,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Hale Testwell 700126\nDate of birth: 1982-12-23\nNationality: CA\nPassport number: X700126A\nValid until: 2031-12-31\n"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700035"
+  },
+  "case_id": "CASE-700035",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Galen Testwell 700035",
+    "Hale Sampleton 700035"
+  ],
+  "request_id": "SR-700035",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Fara Trialford Trading 700035 Ltd"
+}

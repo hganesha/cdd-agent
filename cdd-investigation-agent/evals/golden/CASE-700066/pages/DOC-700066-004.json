@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700066-004",
+  "filename": "owner_2_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Iva Simvale 700066\nDate of birth: 1983-01-06\nNationality: SG\nPassport number: O7000662\nValid until: 2031-12-31\n"
+    }
+  ]
+}

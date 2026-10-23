@@ -1,0 +1,111 @@
+{
+  "case_id": "CASE-700151",
+  "mode": "SYNTHETIC_OFFLINE",
+  "registry_status": "AVAILABLE",
+  "screening_queries": [
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [
+        {
+          "case_ref": "SDN-700151",
+          "country": "CA",
+          "dob": "1977-01-17",
+          "name": "Cato Mockley 700151",
+          "strength": "TRUE"
+        }
+      ],
+      "list": "OFAC_SDN",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Mockley 700151"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_CAPTA",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Mockley 700151"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_SSI",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Mockley 700151"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "UN_CONSOLIDATED",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Mockley 700151"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "EU_CFSP",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Mockley 700151"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "UK_OFSI",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Mockley 700151"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "LOCAL_REGULATOR",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Mockley 700151"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [
+        {
+          "case_ref": "PEP-700151",
+          "country": "CA",
+          "dob": "1977-01-17",
+          "name": "Cato Mockley 700151",
+          "strength": "TRUE"
+        }
+      ],
+      "list": "PEP_GLOBAL",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Mockley 700151"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_DOMESTIC",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Mockley 700151"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_IO",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Mockley 700151"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "RCA",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Mockley 700151"
+    }
+  ]
+}

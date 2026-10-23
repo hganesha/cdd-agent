@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700025"
+  },
+  "case_id": "CASE-700025",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Galen Mockley 700025",
+    "Hale Trialford 700025"
+  ],
+  "request_id": "SR-700025",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Fara Simvale Trading 700025 Ltd"
+}

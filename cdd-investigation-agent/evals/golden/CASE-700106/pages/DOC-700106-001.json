@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700106-001",
+  "filename": "identity_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.78,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Hale Simvale 700106\nDate of birth: 1992-04-17\nNationality: CA\nPassport number: X700106A\nValid until: 2031-12-31\n"
+    }
+  ]
+}

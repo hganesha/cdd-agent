@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700081"
+  },
+  "case_id": "CASE-700081",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Cato Trialford 700081",
+    "Dara Exampleton 700081"
+  ],
+  "request_id": "SR-700081",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Bela Sampleton Trading 700081 Ltd"
+}

@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700166-002",
+  "filename": "proof_of_address.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "PROOF OF ADDRESS\nCustomer: Hale Sampleton 700166\nAddress: 1 Test Street, Sample City 700166\nIssue date: 2026-09-15\n"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "attributes": {
+    "country": "SG",
+    "dob": "1988-12-05"
+  },
+  "case_id": "CASE-700102",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [],
+  "request_id": "SR-700102",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Dara Exampleton 700102"
+}

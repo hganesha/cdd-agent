@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700105-001",
+  "filename": "identity_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.78,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Galen Simvale 700105\nDate of birth: 1991-03-14\nNationality: DE\nPassport number: X700105A\nValid until: 2031-12-31\n"
+    }
+  ]
+}

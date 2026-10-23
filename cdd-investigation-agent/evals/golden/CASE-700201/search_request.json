@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700201"
+  },
+  "case_id": "CASE-700201",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Cato Sampleton 700201",
+    "Dara Mockley 700201"
+  ],
+  "request_id": "SR-700201",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Bela Sampleton Trading 700201 Ltd"
+}

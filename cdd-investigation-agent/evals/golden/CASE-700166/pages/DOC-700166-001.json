@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700166-001",
+  "filename": "identity_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.78,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Hale Sampleton 700166\nDate of birth: 1992-04-08\nNationality: CA\nPassport number: X700166A\nValid until: 2031-12-31\n"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700075"
+  },
+  "case_id": "CASE-700075",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Galen Sampleton 700075",
+    "Hale Mockley 700075"
+  ],
+  "request_id": "SR-700075",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Fara Sampleton Trading 700075 Ltd"
+}

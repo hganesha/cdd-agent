@@ -1,0 +1,42 @@
+{
+  "doc_id": "DOC-700250-010",
+  "filename": "oversized_attachment.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.25,
+      "page": 1,
+      "text": "[UNREADABLE PAGE — scan or extraction failed] Page 1."
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.25,
+      "page": 2,
+      "text": "[UNREADABLE PAGE — scan or extraction failed] Page 2."
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.25,
+      "page": 3,
+      "text": "[UNREADABLE PAGE — scan or extraction failed] Page 3."
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.25,
+      "page": 4,
+      "text": "[UNREADABLE PAGE — scan or extraction failed] Page 4."
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.25,
+      "page": 5,
+      "text": "[UNREADABLE PAGE — scan or extraction failed] Page 5."
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.25,
+      "page": 6,
+      "text": "[UNREADABLE PAGE — scan or extraction failed] Page 6."
+    }
+  ]
+}

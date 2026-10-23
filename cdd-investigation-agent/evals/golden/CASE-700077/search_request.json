@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700077"
+  },
+  "case_id": "CASE-700077",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Iva Mockley 700077",
+    "Jori Trialford 700077"
+  ],
+  "request_id": "SR-700077",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Hale Trialford Trading 700077 Ltd"
+}

@@ -1,0 +1,349 @@
+{
+  "activity": {
+    "annual_income_or_revenue_usd": 1533000,
+    "annualised_credit_to_income_or_revenue_ratio": 0.6497,
+    "annualised_credits_usd": 996000.0,
+    "inconsistent": false,
+    "period_credits_usd": 249000,
+    "period_months": 3
+  },
+  "case_id": "CASE-700250",
+  "coverage": {
+    "documents_total": 10,
+    "pages_total": 111,
+    "pages_unreadable": 6
+  },
+  "decision_authority": "HUMAN",
+  "evidence_anchors": [
+    {
+      "char_span": [
+        29,
+        73
+      ],
+      "doc_id": "DOC-700250-001",
+      "key": "legal_name",
+      "page": 1,
+      "quote": "Company name: Ari Mockley Trading 700250 Ltd",
+      "value": "Ari Mockley Trading 700250 Ltd"
+    },
+    {
+      "char_span": [
+        74,
+        100
+      ],
+      "doc_id": "DOC-700250-001",
+      "key": "incorporation_number",
+      "page": 1,
+      "quote": "Company number: TST-700250",
+      "value": "TST-700250"
+    },
+    {
+      "char_span": [
+        61,
+        87
+      ],
+      "doc_id": "DOC-700250-002",
+      "key": "registry_number",
+      "page": 1,
+      "quote": "Company number: TST-700250",
+      "value": "TST-700250"
+    },
+    {
+      "char_span": [
+        19,
+        44
+      ],
+      "doc_id": "DOC-700250-003",
+      "key": "owner_1_name",
+      "page": 1,
+      "quote": "Name: Bela Simvale 700250",
+      "value": "Bela Simvale 700250"
+    },
+    {
+      "char_span": [
+        19,
+        45
+      ],
+      "doc_id": "DOC-700250-004",
+      "key": "owner_2_name",
+      "page": 1,
+      "quote": "Name: Cato Testwell 700250",
+      "value": "Cato Testwell 700250"
+    },
+    {
+      "char_span": [
+        22,
+        70
+      ],
+      "doc_id": "DOC-700250-005",
+      "key": "control_person",
+      "page": 1,
+      "quote": "Director and control person: Bela Simvale 700250",
+      "value": "Bela Simvale 700250"
+    },
+    {
+      "char_span": [
+        58,
+        100
+      ],
+      "doc_id": "DOC-700250-006",
+      "key": "address",
+      "page": 1,
+      "quote": "Address: 1 Test Street, Sample City 700250",
+      "value": "1 Test Street, Sample City 700250"
+    },
+    {
+      "char_span": [
+        48,
+        73
+      ],
+      "doc_id": "DOC-700250-007",
+      "key": "primary_share",
+      "page": 1,
+      "quote": "Bela Simvale 700250 | 60%",
+      "value": 60
+    },
+    {
+      "char_span": [
+        75,
+        97
+      ],
+      "doc_id": "DOC-700250-008",
+      "key": "annual_income_or_revenue",
+      "page": 1,
+      "quote": "Revenue: USD 1,533,000",
+      "value": 1533000
+    },
+    {
+      "char_span": [
+        81,
+        107
+      ],
+      "doc_id": "DOC-700250-009",
+      "key": "period_credits",
+      "page": 1,
+      "quote": "Total credits: USD 249,000",
+      "value": 249000
+    }
+  ],
+  "gaps": [
+    "DOCUMENT_UNREADABLE",
+    "MISSING_SOURCE_OF_FUNDS"
+  ],
+  "ownership": {
+    "beneficial_owners": [
+      {
+        "effective_pct": 60.0,
+        "name": "Bela Simvale 700250"
+      },
+      {
+        "effective_pct": 40.0,
+        "name": "Cato Testwell 700250"
+      }
+    ],
+    "control_person": "Bela Simvale 700250",
+    "paths": [
+      {
+        "basis": "document",
+        "effective_pct": 60.0,
+        "nodes": [
+          "Bela Simvale 700250",
+          "Ari Mockley Trading 700250 Ltd"
+        ],
+        "percentages": [
+          60.0
+        ],
+        "person": "Bela Simvale 700250"
+      },
+      {
+        "basis": "document",
+        "effective_pct": 40.0,
+        "nodes": [
+          "Cato Testwell 700250",
+          "Ari Mockley Trading 700250 Ltd"
+        ],
+        "percentages": [
+          40.0
+        ],
+        "person": "Cato Testwell 700250"
+      }
+    ],
+    "unresolved_pct": 0.0
+  },
+  "provenance": {
+    "generator_seed": 20961272,
+    "human_reviewed": false,
+    "kind": "SYNTHETIC_ORACLE",
+    "release_gate_eligible": false
+  },
+  "quarantine_doc_ids": [],
+  "recommendation": "HOLD_FOR_RFI",
+  "required_gates": [
+    "G3"
+  ],
+  "required_refusals": [
+    "NO_INVENTED_TEXT"
+  ],
+  "risk": {
+    "band": "HIGH",
+    "cdd_level": "EDD",
+    "factor_inputs": {
+      "F-BEH-01": false,
+      "F-BEH-02": true,
+      "F-BEH-03": false,
+      "F-CHAN-01": false,
+      "F-CHAN-02": false,
+      "F-CUST-01": false,
+      "F-CUST-02": false,
+      "F-CUST-03": false,
+      "F-CUST-04": false,
+      "F-CUST-05": false,
+      "F-CUST-06": false,
+      "F-CUST-07": false,
+      "F-CUST-08": false,
+      "F-GEO-01": false,
+      "F-GEO-02": false,
+      "F-GEO-03": false,
+      "F-GEO-04": false,
+      "F-GEO-05": false,
+      "F-PROD-01": false,
+      "F-PROD-02": false
+    },
+    "overrides_applied": [
+      {
+        "factor_id": "F-BEH-02",
+        "min_band": "HIGH",
+        "reason": "source of funds/wealth unexplained"
+      }
+    ],
+    "score": 2.0
+  },
+  "screening": {
+    "expected_query_count": 33,
+    "true_pep_subjects": [],
+    "true_sanctions_subjects": [],
+    "unavailable_lists": [],
+    "weak_sanctions_subjects": []
+  },
+  "search_mock": {
+    "namesake_exclusion_urls": [],
+    "paywall_gap_urls": [
+      "https://financialtimes.example/synthetic/case-700250/archive"
+    ],
+    "quarantine_urls": [],
+    "refusal_urls": [],
+    "relevant_media_urls": [],
+    "source_urls": [
+      "https://citydesk.example/cases/case-700250/profile",
+      "https://financialtimes.example/synthetic/case-700250/archive"
+    ]
+  },
+  "segment": "degraded_input",
+  "tags": [
+    "degraded_input",
+    "missing_sof",
+    "oversized",
+    "unreadable_fraction_5"
+  ],
+  "verified_fields": [
+    {
+      "char_span": [
+        29,
+        73
+      ],
+      "doc_id": "DOC-700250-001",
+      "key": "legal_name",
+      "page": 1,
+      "quote": "Company name: Ari Mockley Trading 700250 Ltd",
+      "value": "Ari Mockley Trading 700250 Ltd"
+    },
+    {
+      "char_span": [
+        74,
+        100
+      ],
+      "doc_id": "DOC-700250-001",
+      "key": "incorporation_number",
+      "page": 1,
+      "quote": "Company number: TST-700250",
+      "value": "TST-700250"
+    },
+    {
+      "char_span": [
+        61,
+        87
+      ],
+      "doc_id": "DOC-700250-002",
+      "key": "registry_number",
+      "page": 1,
+      "quote": "Company number: TST-700250",
+      "value": "TST-700250"
+    },
+    {
+      "char_span": [
+        19,
+        44
+      ],
+      "doc_id": "DOC-700250-003",
+      "key": "owner_1_name",
+      "page": 1,
+      "quote": "Name: Bela Simvale 700250",
+      "value": "Bela Simvale 700250"
+    },
+    {
+      "char_span": [
+        19,
+        45
+      ],
+      "doc_id": "DOC-700250-004",
+      "key": "owner_2_name",
+      "page": 1,
+      "quote": "Name: Cato Testwell 700250",
+      "value": "Cato Testwell 700250"
+    },
+    {
+      "char_span": [
+        22,
+        70
+      ],
+      "doc_id": "DOC-700250-005",
+      "key": "control_person",
+      "page": 1,
+      "quote": "Director and control person: Bela Simvale 700250",
+      "value": "Bela Simvale 700250"
+    },
+    {
+      "char_span": [
+        58,
+        100
+      ],
+      "doc_id": "DOC-700250-006",
+      "key": "address",
+      "page": 1,
+      "quote": "Address: 1 Test Street, Sample City 700250",
+      "value": "1 Test Street, Sample City 700250"
+    },
+    {
+      "char_span": [
+        75,
+        97
+      ],
+      "doc_id": "DOC-700250-008",
+      "key": "annual_income_or_revenue",
+      "page": 1,
+      "quote": "Revenue: USD 1,533,000",
+      "value": 1533000
+    },
+    {
+      "char_span": [
+        81,
+        107
+      ],
+      "doc_id": "DOC-700250-009",
+      "key": "period_credits",
+      "page": 1,
+      "quote": "Total credits: USD 249,000",
+      "value": 249000
+    }
+  ]
+}

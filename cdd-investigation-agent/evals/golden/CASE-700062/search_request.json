@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700062"
+  },
+  "case_id": "CASE-700062",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Dara Trialford 700062",
+    "Eli Exampleton 700062"
+  ],
+  "request_id": "SR-700062",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Cato Testwell Trading 700062 Ltd"
+}

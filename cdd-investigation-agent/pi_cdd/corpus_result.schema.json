@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["case_id", "risk_band", "cdd_level", "recommendation", "decision_authority", "required_gates", "beneficial_owners", "unresolved_ubo", "pep_match", "sanctions_true_match", "sanctions_lookalike_not_cleared", "screening_unavailable_lists", "media_status", "activity_inconsistency", "injection_quarantined", "quarantine_doc_ids", "illegible_pages", "gaps", "required_refusals", "limitations", "claims"],
+  "properties": {
+    "case_id": {"type": "string", "pattern": "^CASE-[0-9]{4,8}$"},
+    "risk_band": {"enum": ["LOW", "MEDIUM", "HIGH", "VERY_HIGH", "UNRESOLVED"]},
+    "cdd_level": {"enum": ["SDD", "CDD", "EDD", "UNRESOLVED"]},
+    "recommendation": {"enum": ["PROCEED", "PROCEED_WITH_CONDITIONS", "HOLD_FOR_RFI", "ESCALATE_EDD", "REFER_MLRO", "UNRESOLVED"]},
+    "decision_authority": {"const": "HUMAN"},
+    "required_gates": {"type": "array", "uniqueItems": true, "items": {"enum": ["G1", "G2", "G3"]}},
+    "beneficial_owners": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["name", "effective_pct"], "properties": {"name": {"type": "string", "minLength": 1}, "effective_pct": {"type": "number", "minimum": 0, "maximum": 100}}}},
+    "unresolved_ubo": {"type": "boolean"},
+    "pep_match": {"type": "boolean"},
+    "sanctions_true_match": {"type": "boolean"},
+    "sanctions_lookalike_not_cleared": {"type": "boolean"},
+    "screening_unavailable_lists": {"$ref": "#/$defs/strings"},
+    "media_status": {"enum": ["NONE", "ALLEGATION", "FINAL_NOTICE", "UNRESOLVED"]},
+    "activity_inconsistency": {"type": "boolean"},
+    "injection_quarantined": {"type": "boolean"},
+    "quarantine_doc_ids": {"$ref": "#/$defs/strings"},
+    "illegible_pages": {"type": "integer", "minimum": 0},
+    "gaps": {"$ref": "#/$defs/strings"},
+    "required_refusals": {"$ref": "#/$defs/strings"},
+    "limitations": {"type": "array", "items": {"type": "string"}},
+    "claims": {"type": "array", "minItems": 1, "items": {"type": "object", "additionalProperties": false, "required": ["type", "claim", "doc_id", "page", "quote"], "properties": {"type": {"enum": ["IDENTITY", "OWNERSHIP", "SCREENING", "MEDIA", "ACTIVITY", "INJECTION", "GAP", "RISK"]}, "claim": {"type": "string", "minLength": 1}, "doc_id": {"type": "string", "minLength": 1}, "page": {"type": "integer", "minimum": 1}, "quote": {"type": "string", "minLength": 1}}}}
+  },
+  "$defs": {"strings": {"type": "array", "uniqueItems": true, "items": {"type": "string"}}}
+}

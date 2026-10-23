@@ -1,0 +1,18 @@
+{
+  "attributes": {
+    "country": "DE",
+    "dob": "1966-02-11"
+  },
+  "case_id": "CASE-700140",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [],
+  "request_id": "SR-700140",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Bela Simvale 700140"
+}

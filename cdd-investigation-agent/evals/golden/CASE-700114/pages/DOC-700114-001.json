@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700114-001",
+  "filename": "identity_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.78,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Fara Mockley 700114\nDate of birth: 1970-12-14\nNationality: GB\nPassport number: X700114A\nValid until: 2031-12-31\n"
+    }
+  ]
+}

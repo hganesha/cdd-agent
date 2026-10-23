@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700082-002",
+  "filename": "registry_extract.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "REGISTRY EXTRACT\nEntity name: Cato Mockley Trading 700082 Ltd\nCompany number: TST-700082\nStatus: ACTIVE\nExtract date: 2026-09-30\n"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700174-003",
+  "filename": "owner_1_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Fara Exampleton 700174\nDate of birth: 1970-12-05\nNationality: GB\nPassport number: O7001741\nValid until: 2031-12-31\n"
+    }
+  ]
+}

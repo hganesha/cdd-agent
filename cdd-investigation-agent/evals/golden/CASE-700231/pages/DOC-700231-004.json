@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700231-004",
+  "filename": "owner_2_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Dara Testwell 700231\nDate of birth: 1968-10-15\nNationality: SG\nPassport number: O7002312\nValid until: 2031-12-31\n"
+    }
+  ]
+}

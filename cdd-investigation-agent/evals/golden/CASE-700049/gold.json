@@ -1,0 +1,401 @@
+{
+  "activity": {
+    "annual_income_or_revenue_usd": 1396000,
+    "annualised_credit_to_income_or_revenue_ratio": 0.8109,
+    "annualised_credits_usd": 1132000.0,
+    "inconsistent": false,
+    "period_credits_usd": 283000,
+    "period_months": 3
+  },
+  "case_id": "CASE-700049",
+  "coverage": {
+    "documents_total": 17,
+    "pages_total": 204,
+    "pages_unreadable": 0
+  },
+  "decision_authority": "HUMAN",
+  "evidence_anchors": [
+    {
+      "char_span": [
+        29,
+        74
+      ],
+      "doc_id": "DOC-700049-001",
+      "key": "legal_name",
+      "page": 1,
+      "quote": "Company name: Jori Simvale Trading 700049 Ltd",
+      "value": "Jori Simvale Trading 700049 Ltd"
+    },
+    {
+      "char_span": [
+        75,
+        101
+      ],
+      "doc_id": "DOC-700049-001",
+      "key": "incorporation_number",
+      "page": 1,
+      "quote": "Company number: TST-700049",
+      "value": "TST-700049"
+    },
+    {
+      "char_span": [
+        62,
+        88
+      ],
+      "doc_id": "DOC-700049-002",
+      "key": "registry_number",
+      "page": 1,
+      "quote": "Company number: TST-700049",
+      "value": "TST-700049"
+    },
+    {
+      "char_span": [
+        19,
+        46
+      ],
+      "doc_id": "DOC-700049-003",
+      "key": "owner_1_name",
+      "page": 1,
+      "quote": "Name: Ari Exampleton 700049",
+      "value": "Ari Exampleton 700049"
+    },
+    {
+      "char_span": [
+        19,
+        44
+      ],
+      "doc_id": "DOC-700049-004",
+      "key": "owner_2_name",
+      "page": 1,
+      "quote": "Name: Bela Simvale 700049",
+      "value": "Bela Simvale 700049"
+    },
+    {
+      "char_span": [
+        22,
+        72
+      ],
+      "doc_id": "DOC-700049-005",
+      "key": "control_person",
+      "page": 1,
+      "quote": "Director and control person: Ari Exampleton 700049",
+      "value": "Ari Exampleton 700049"
+    },
+    {
+      "char_span": [
+        59,
+        101
+      ],
+      "doc_id": "DOC-700049-006",
+      "key": "address",
+      "page": 1,
+      "quote": "Address: 1 Test Street, Sample City 700049",
+      "value": "1 Test Street, Sample City 700049"
+    },
+    {
+      "char_span": [
+        49,
+        83
+      ],
+      "doc_id": "DOC-700049-007",
+      "key": "primary_share",
+      "page": 1,
+      "quote": "Layer 1 Holdings 700049 Ltd | 100%",
+      "value": 100
+    },
+    {
+      "char_span": [
+        76,
+        98
+      ],
+      "doc_id": "DOC-700049-012",
+      "key": "annual_income_or_revenue",
+      "page": 1,
+      "quote": "Revenue: USD 1,396,000",
+      "value": 1396000
+    },
+    {
+      "char_span": [
+        82,
+        108
+      ],
+      "doc_id": "DOC-700049-013",
+      "key": "period_credits",
+      "page": 1,
+      "quote": "Total credits: USD 283,000",
+      "value": 283000
+    },
+    {
+      "char_span": [
+        135,
+        176
+      ],
+      "doc_id": "DOC-700049-013",
+      "key": "third_party_funding",
+      "page": 1,
+      "quote": "Unrelated third-party funding: USD 10,000",
+      "value": 10000
+    },
+    {
+      "char_span": [
+        58,
+        102
+      ],
+      "doc_id": "DOC-700049-014",
+      "key": "source_of_funds",
+      "page": 1,
+      "quote": "Funds are from documented business receipts.",
+      "value": "declared receipts"
+    },
+    {
+      "char_span": [
+        61,
+        92
+      ],
+      "doc_id": "DOC-700049-015",
+      "key": "media_status",
+      "page": 1,
+      "quote": "Status: regulatory final notice",
+      "value": "regulatory final notice"
+    },
+    {
+      "char_span": [
+        51,
+        80
+      ],
+      "doc_id": "DOC-700049-016",
+      "key": "business_sector",
+      "page": 1,
+      "quote": "Sector: cash intensive retail",
+      "value": "cash intensive retail"
+    },
+    {
+      "char_span": [
+        60,
+        84
+      ],
+      "doc_id": "DOC-700049-017",
+      "key": "prior_sar",
+      "page": 1,
+      "quote": "Prior SAR: filed in 2024",
+      "value": true
+    }
+  ],
+  "gaps": [
+    "ADDRESS_OUTDATED"
+  ],
+  "ownership": {
+    "beneficial_owners": [
+      {
+        "effective_pct": 85.0,
+        "name": "Ari Exampleton 700049"
+      }
+    ],
+    "control_person": "Ari Exampleton 700049",
+    "paths": [
+      {
+        "basis": "document",
+        "effective_pct": 85.0,
+        "nodes": [
+          "Ari Exampleton 700049",
+          "Layer 4 Holdings 700049 Ltd",
+          "Layer 3 Holdings 700049 Ltd",
+          "Layer 2 Holdings 700049 Ltd",
+          "Layer 1 Holdings 700049 Ltd",
+          "Jori Simvale Trading 700049 Ltd"
+        ],
+        "percentages": [
+          85.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "person": "Ari Exampleton 700049"
+      },
+      {
+        "basis": "document",
+        "effective_pct": 15.0,
+        "nodes": [
+          "Bela Simvale 700049",
+          "Layer 4 Holdings 700049 Ltd",
+          "Layer 3 Holdings 700049 Ltd",
+          "Layer 2 Holdings 700049 Ltd",
+          "Layer 1 Holdings 700049 Ltd",
+          "Jori Simvale Trading 700049 Ltd"
+        ],
+        "percentages": [
+          15.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "person": "Bela Simvale 700049"
+      }
+    ],
+    "unresolved_pct": 0.0
+  },
+  "provenance": {
+    "generator_seed": 20961071,
+    "human_reviewed": false,
+    "kind": "SYNTHETIC_ORACLE",
+    "release_gate_eligible": false
+  },
+  "quarantine_doc_ids": [],
+  "recommendation": "HOLD_FOR_RFI",
+  "required_gates": [
+    "G3"
+  ],
+  "required_refusals": [],
+  "risk": {
+    "band": "MEDIUM",
+    "cdd_level": "CDD",
+    "factor_inputs": {
+      "F-BEH-01": false,
+      "F-BEH-02": false,
+      "F-BEH-03": true,
+      "F-CHAN-01": true,
+      "F-CHAN-02": true,
+      "F-CUST-01": false,
+      "F-CUST-02": true,
+      "F-CUST-03": false,
+      "F-CUST-04": false,
+      "F-CUST-05": true,
+      "F-CUST-06": true,
+      "F-CUST-07": false,
+      "F-CUST-08": true,
+      "F-GEO-01": false,
+      "F-GEO-02": true,
+      "F-GEO-03": false,
+      "F-GEO-04": false,
+      "F-GEO-05": false,
+      "F-PROD-01": true,
+      "F-PROD-02": true
+    },
+    "overrides_applied": [],
+    "score": 40.15
+  },
+  "screening": {
+    "expected_query_count": 33,
+    "true_pep_subjects": [],
+    "true_sanctions_subjects": [],
+    "unavailable_lists": [],
+    "weak_sanctions_subjects": []
+  },
+  "search_mock": {
+    "namesake_exclusion_urls": [
+      "https://localnews.example/synthetic/case-700049/namesake"
+    ],
+    "paywall_gap_urls": [],
+    "quarantine_urls": [],
+    "refusal_urls": [],
+    "relevant_media_urls": [
+      "https://fca.org.uk/synthetic/case-700049/media"
+    ],
+    "source_urls": [
+      "https://citydesk.example/cases/case-700049/profile",
+      "https://fca.org.uk/synthetic/case-700049/media",
+      "https://localnews.example/synthetic/case-700049/namesake"
+    ]
+  },
+  "segment": "corporate_complex",
+  "tags": [
+    "compound_medium_risk",
+    "corporate_complex",
+    "media_final_notice",
+    "ownership_depth_5",
+    "stale_address",
+    "third_party_funding"
+  ],
+  "verified_fields": [
+    {
+      "char_span": [
+        29,
+        74
+      ],
+      "doc_id": "DOC-700049-001",
+      "key": "legal_name",
+      "page": 1,
+      "quote": "Company name: Jori Simvale Trading 700049 Ltd",
+      "value": "Jori Simvale Trading 700049 Ltd"
+    },
+    {
+      "char_span": [
+        75,
+        101
+      ],
+      "doc_id": "DOC-700049-001",
+      "key": "incorporation_number",
+      "page": 1,
+      "quote": "Company number: TST-700049",
+      "value": "TST-700049"
+    },
+    {
+      "char_span": [
+        62,
+        88
+      ],
+      "doc_id": "DOC-700049-002",
+      "key": "registry_number",
+      "page": 1,
+      "quote": "Company number: TST-700049",
+      "value": "TST-700049"
+    },
+    {
+      "char_span": [
+        19,
+        46
+      ],
+      "doc_id": "DOC-700049-003",
+      "key": "owner_1_name",
+      "page": 1,
+      "quote": "Name: Ari Exampleton 700049",
+      "value": "Ari Exampleton 700049"
+    },
+    {
+      "char_span": [
+        19,
+        44
+      ],
+      "doc_id": "DOC-700049-004",
+      "key": "owner_2_name",
+      "page": 1,
+      "quote": "Name: Bela Simvale 700049",
+      "value": "Bela Simvale 700049"
+    },
+    {
+      "char_span": [
+        22,
+        72
+      ],
+      "doc_id": "DOC-700049-005",
+      "key": "control_person",
+      "page": 1,
+      "quote": "Director and control person: Ari Exampleton 700049",
+      "value": "Ari Exampleton 700049"
+    },
+    {
+      "char_span": [
+        76,
+        98
+      ],
+      "doc_id": "DOC-700049-012",
+      "key": "annual_income_or_revenue",
+      "page": 1,
+      "quote": "Revenue: USD 1,396,000",
+      "value": 1396000
+    },
+    {
+      "char_span": [
+        82,
+        108
+      ],
+      "doc_id": "DOC-700049-013",
+      "key": "period_credits",
+      "page": 1,
+      "quote": "Total credits: USD 283,000",
+      "value": 283000
+    }
+  ]
+}

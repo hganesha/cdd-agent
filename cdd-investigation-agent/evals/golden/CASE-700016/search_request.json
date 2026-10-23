@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700016"
+  },
+  "case_id": "CASE-700016",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Hale Simvale 700016",
+    "Iva Testwell 700016"
+  ],
+  "request_id": "SR-700016",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Galen Mockley Trading 700016 Ltd"
+}

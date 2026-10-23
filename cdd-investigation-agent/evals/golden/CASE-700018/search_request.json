@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700018"
+  },
+  "case_id": "CASE-700018",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Jori Testwell 700018",
+    "Ari Sampleton 700018"
+  ],
+  "request_id": "SR-700018",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Iva Exampleton Trading 700018 Ltd"
+}

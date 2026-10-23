@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700218"
+  },
+  "case_id": "CASE-700218",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Jori Sampleton 700218",
+    "Ari Mockley 700218"
+  ],
+  "request_id": "SR-700218",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Iva Testwell Trading 700218 Ltd"
+}

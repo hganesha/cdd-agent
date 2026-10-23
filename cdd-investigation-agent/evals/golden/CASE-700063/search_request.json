@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700063"
+  },
+  "case_id": "CASE-700063",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Eli Trialford 700063",
+    "Fara Exampleton 700063"
+  ],
+  "request_id": "SR-700063",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Dara Sampleton Trading 700063 Ltd"
+}

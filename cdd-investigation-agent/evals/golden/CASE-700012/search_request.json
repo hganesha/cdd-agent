@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700012"
+  },
+  "case_id": "CASE-700012",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Dara Exampleton 700012",
+    "Eli Simvale 700012"
+  ],
+  "request_id": "SR-700012",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Cato Exampleton Trading 700012 Ltd"
+}

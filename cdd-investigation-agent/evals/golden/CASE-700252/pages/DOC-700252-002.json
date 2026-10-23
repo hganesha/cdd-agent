@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700252-002",
+  "filename": "registry_extract.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "REGISTRY EXTRACT\nEntity name: Cato Exampleton Trading 700252 Ltd\nCompany number: TST-700252\nStatus: ACTIVE\nExtract date: 2026-09-30\n"
+    }
+  ]
+}

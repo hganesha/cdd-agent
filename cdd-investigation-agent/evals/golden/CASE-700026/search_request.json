@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700026"
+  },
+  "case_id": "CASE-700026",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Hale Trialford 700026",
+    "Iva Exampleton 700026"
+  ],
+  "request_id": "SR-700026",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Galen Testwell Trading 700026 Ltd"
+}

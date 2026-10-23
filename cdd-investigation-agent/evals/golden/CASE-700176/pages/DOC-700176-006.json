@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700176-006",
+  "filename": "proof_of_address.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "PROOF OF ADDRESS\nCustomer: Galen Testwell Trading 700176 Ltd\nAddress: 1 Test Street, Sample City 700176\nIssue date: 2026-09-15\n"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700174-004",
+  "filename": "owner_2_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Galen Simvale 700174\nDate of birth: 1971-01-06\nNationality: DE\nPassport number: O7001742\nValid until: 2031-12-31\n"
+    }
+  ]
+}

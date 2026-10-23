@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700151-001",
+  "filename": "identity_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.78,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Cato Mockley 700151\nDate of birth: 1977-01-17\nNationality: CA\nPassport number: X700151A\nValid until: 2031-12-31\n"
+    }
+  ]
+}

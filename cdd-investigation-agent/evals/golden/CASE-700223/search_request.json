@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700223"
+  },
+  "case_id": "CASE-700223",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Eli Mockley 700223",
+    "Fara Trialford 700223"
+  ],
+  "request_id": "SR-700223",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Dara Simvale Trading 700223 Ltd"
+}

@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700059"
+  },
+  "case_id": "CASE-700059",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Ari Mockley 700059",
+    "Bela Trialford 700059"
+  ],
+  "request_id": "SR-700059",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Jori Trialford Trading 700059 Ltd"
+}

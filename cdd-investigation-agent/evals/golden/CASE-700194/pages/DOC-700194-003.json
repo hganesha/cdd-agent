@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700194-003",
+  "filename": "owner_1_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Fara Simvale 700194\nDate of birth: 1990-08-11\nNationality: GB\nPassport number: O7001941\nValid until: 2031-12-31\n"
+    }
+  ]
+}

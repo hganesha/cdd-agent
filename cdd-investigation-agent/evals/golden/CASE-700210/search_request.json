@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700210"
+  },
+  "case_id": "CASE-700210",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Bela Exampleton 700210",
+    "Cato Simvale 700210"
+  ],
+  "request_id": "SR-700210",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Ari Exampleton Trading 700210 Ltd"
+}

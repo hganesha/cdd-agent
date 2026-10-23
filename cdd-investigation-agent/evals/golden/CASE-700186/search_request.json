@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700186"
+  },
+  "case_id": "CASE-700186",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Hale Mockley 700186",
+    "Iva Trialford 700186"
+  ],
+  "request_id": "SR-700186",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Galen Exampleton Trading 700186 Ltd"
+}

@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700007"
+  },
+  "case_id": "CASE-700007",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Iva Mockley 700007",
+    "Jori Trialford 700007"
+  ],
+  "request_id": "SR-700007",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Hale Simvale Trading 700007 Ltd"
+}

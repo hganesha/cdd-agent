@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700058"
+  },
+  "case_id": "CASE-700058",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Jori Sampleton 700058",
+    "Ari Mockley 700058"
+  ],
+  "request_id": "SR-700058",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Iva Mockley Trading 700058 Ltd"
+}

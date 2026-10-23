@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700227"
+  },
+  "case_id": "CASE-700227",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Iva Exampleton 700227",
+    "Jori Simvale 700227"
+  ],
+  "request_id": "SR-700227",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Hale Trialford Trading 700227 Ltd"
+}

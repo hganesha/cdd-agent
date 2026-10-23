@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700182-002",
+  "filename": "registry_extract.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "REGISTRY EXTRACT\nEntity name: Cato Testwell Trading 700182 Ltd\nCompany number: TST-700182\nStatus: ACTIVE\nExtract date: 2026-09-30\n"
+    }
+  ]
+}

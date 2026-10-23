@@ -30,6 +30,7 @@ class Ctx:
     bundle: dict
     pages: dict
     policy: dict
+    case_dir: pathlib.Path
     out_dir: pathlib.Path
     state_dir: pathlib.Path
     ledger: EvidenceLedger
@@ -56,11 +57,12 @@ class Ctx:
     @property
     def input_hashes(self) -> dict:
         h = lambda p: "sha256:" + hashlib.sha256(pathlib.Path(p).read_bytes()).hexdigest()
-        base = self.out_dir.parents[2] if False else pathlib.Path(self.state_dir).parents[1]
         root = pathlib.Path(__file__).resolve().parents[2]
-        return {"case": h(root / "data/case_4831/case.json"),
-                "bundle": h(root / "data/case_4831/bundle.json"),
-                "policy": h(root / "config/policy.yaml")}
+        local_policy = self.case_dir / "policy.yaml"
+        policy_path = local_policy if local_policy.exists() else root / "config/policy.yaml"
+        return {"case": h(self.case_dir / "case.json"),
+                "bundle": h(self.case_dir / "bundle.json"),
+                "policy": h(policy_path)}
 
     def next_finding_id(self) -> str:
         self._finding_n += 1
@@ -120,7 +122,8 @@ class Orchestrator:
         self.bundle = json.loads((self.case_dir / "bundle.json").read_text())
         self.pages = {d["doc_id"]: json.loads((self.case_dir / "pages" / f"{d['doc_id']}.json").read_text())
                       for d in self.bundle["documents"]}
-        self.policy = load_policy()
+        local_policy = self.case_dir / "policy.yaml"
+        self.policy = load_policy(local_policy if local_policy.exists() else None)
         self.budget_usd = budget_usd or self.case["budget"]["max_usd"]
         self.kill_at_unit = kill_at_unit
 
@@ -128,6 +131,7 @@ class Orchestrator:
         self.ledger = EvidenceLedger(self.out_dir / "evidence_ledger.jsonl", self.case["case_id"],
                                      self.run_id, IdempotencyStore(self.state_dir / "idem.json"))
         self.ctx = Ctx(case=self.case, bundle=self.bundle, pages=self.pages, policy=self.policy,
+                       case_dir=self.case_dir,
                        out_dir=self.out_dir, state_dir=self.state_dir, ledger=self.ledger,
                        run_id=self.run_id)
 
@@ -258,7 +262,7 @@ class Orchestrator:
 
         # LINK (entity resolution summary — deterministic here)
         if "STAGE:LINK" not in done:
-            self.progress("LINK", 0, "resolving entities across 23 documents")
+            self.progress("LINK", 0, f"resolving entities across {len(docs)} documents")
             self.checkpoint("LINK", "STAGE:LINK")
             self.progress("LINK", 100, "entity index built; 0 name-only merges")
 
@@ -476,7 +480,8 @@ class Orchestrator:
 def quick_verify(out_dir: pathlib.Path) -> dict:
     """Independent chain verification, as an auditor would run it."""
     from .evidence import EvidenceLedger, canonical
-    led = EvidenceLedger(out_dir / "evidence_ledger.jsonl", "CASE-4831", "verify")
+    case_id = json.loads((out_dir / "state" / "run_state.json").read_text())["case_id"]
+    led = EvidenceLedger(out_dir / "evidence_ledger.jsonl", case_id, "verify")
     ok, head, broken = led.verify_chain()
     recs = list(led.records())
     types: dict[str, int] = {}

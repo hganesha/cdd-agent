@@ -1,0 +1,271 @@
+{
+  "case_id": "CASE-700042",
+  "mode": "SYNTHETIC_OFFLINE",
+  "registry_status": "AVAILABLE",
+  "screening_queries": [
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_SDN",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Exampleton Trading 700042 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_CAPTA",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Exampleton Trading 700042 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_SSI",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Exampleton Trading 700042 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "UN_CONSOLIDATED",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Exampleton Trading 700042 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "EU_CFSP",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Exampleton Trading 700042 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "UK_OFSI",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Exampleton Trading 700042 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "LOCAL_REGULATOR",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Exampleton Trading 700042 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_GLOBAL",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Exampleton Trading 700042 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_DOMESTIC",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Exampleton Trading 700042 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_IO",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Exampleton Trading 700042 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "RCA",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Cato Exampleton Trading 700042 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_SDN",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Mockley 700042"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_CAPTA",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Mockley 700042"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_SSI",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Mockley 700042"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "UN_CONSOLIDATED",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Mockley 700042"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "EU_CFSP",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Mockley 700042"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "UK_OFSI",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Mockley 700042"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "LOCAL_REGULATOR",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Mockley 700042"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_GLOBAL",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Mockley 700042"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_DOMESTIC",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Mockley 700042"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_IO",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Mockley 700042"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "RCA",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Dara Mockley 700042"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_SDN",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Trialford 700042"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_CAPTA",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Trialford 700042"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_SSI",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Trialford 700042"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "UN_CONSOLIDATED",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Trialford 700042"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "EU_CFSP",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Trialford 700042"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "UK_OFSI",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Trialford 700042"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "LOCAL_REGULATOR",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Trialford 700042"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_GLOBAL",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Trialford 700042"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_DOMESTIC",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Trialford 700042"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_IO",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Trialford 700042"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "RCA",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Eli Trialford 700042"
+    }
+  ]
+}

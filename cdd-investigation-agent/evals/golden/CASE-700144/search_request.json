@@ -1,0 +1,18 @@
+{
+  "attributes": {
+    "country": "GB",
+    "dob": "1970-06-23"
+  },
+  "case_id": "CASE-700144",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [],
+  "request_id": "SR-700144",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Fara Testwell 700144"
+}

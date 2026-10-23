@@ -1,0 +1,86 @@
+{
+  "bundle_id": "BND-700145",
+  "case_id": "CASE-700145",
+  "channel": "EVAL_FIXTURE",
+  "documents": [
+    {
+      "detected_type": "PASSPORT",
+      "doc_date": "2026-09-30",
+      "doc_id": "DOC-700145-001",
+      "extractability": "ocr",
+      "filename": "identity_passport.json",
+      "issuer": "Synthetic Identity Office",
+      "language": "en",
+      "pages": 1,
+      "quality_score": 0.9,
+      "quarantine_flag": false,
+      "quarantine_reason": null
+    },
+    {
+      "detected_type": "UTILITY_BILL",
+      "doc_date": "2026-09-30",
+      "doc_id": "DOC-700145-002",
+      "extractability": "native_text",
+      "filename": "proof_of_address.json",
+      "issuer": "Synthetic Utilities",
+      "language": "en",
+      "pages": 1,
+      "quality_score": 0.96,
+      "quarantine_flag": false,
+      "quarantine_reason": null
+    },
+    {
+      "detected_type": "INCOME_TAX_RETURN",
+      "doc_date": "2026-09-30",
+      "doc_id": "DOC-700145-003",
+      "extractability": "native_text",
+      "filename": "income_tax_return.json",
+      "issuer": "Synthetic Tax Authority",
+      "language": "en",
+      "pages": 1,
+      "quality_score": 0.96,
+      "quarantine_flag": false,
+      "quarantine_reason": null
+    },
+    {
+      "detected_type": "BANK_STATEMENT_PERSONAL",
+      "doc_date": "2026-09-30",
+      "doc_id": "DOC-700145-004",
+      "extractability": "native_text",
+      "filename": "bank_statement.json",
+      "issuer": "Synthetic Bank",
+      "language": "en",
+      "pages": 46,
+      "quality_score": 0.96,
+      "quarantine_flag": false,
+      "quarantine_reason": null
+    },
+    {
+      "detected_type": "SOURCE_OF_FUNDS",
+      "doc_date": "2026-09-30",
+      "doc_id": "DOC-700145-005",
+      "extractability": "native_text",
+      "filename": "source_of_funds.json",
+      "issuer": "Customer supplied",
+      "language": "en",
+      "pages": 1,
+      "quality_score": 0.96,
+      "quarantine_flag": false,
+      "quarantine_reason": null
+    },
+    {
+      "detected_type": "ADVERSE_MEDIA_PRINTOUT",
+      "doc_date": "2026-09-30",
+      "doc_id": "DOC-700145-006",
+      "extractability": "native_text",
+      "filename": "media_results.json",
+      "issuer": "Synthetic News Archive",
+      "language": "en",
+      "pages": 2,
+      "quality_score": 0.96,
+      "quarantine_flag": false,
+      "quarantine_reason": null
+    }
+  ],
+  "received_at": "2026-10-20T12:00:00Z"
+}

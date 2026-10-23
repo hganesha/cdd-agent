@@ -10,6 +10,7 @@ import hashlib
 import json
 import re
 from dataclasses import dataclass, field
+from datetime import date
 from typing import Any
 
 from .evidence import EvidenceLedger, Finding, idem_key, now
@@ -564,65 +565,144 @@ def _triage(subj: dict, m: dict) -> tuple[str, list[str], list[str]]:
 def sk08_media(ctx, subjects: list[dict]) -> SkillResult:
     res = SkillResult("SK-08")
     events, exclusions, queries = [], [], []
+    media_docs = [doc for doc in ctx.bundle["documents"]
+                  if doc["detected_type"] == "ADVERSE_MEDIA_PRINTOUT"
+                  and doc["doc_id"] not in ctx.manifest["quarantined"]]
+    source_pages = []
+    for doc in media_docs:
+        for page in ctx.pages[doc["doc_id"]]["pages"]:
+            if page.get("blank") or (page.get("ocr_confidence") or 0) < 0.60:
+                continue
+            source_pages.append((doc, page))
 
-    for subj in subjects:
-        for variant in subj.get("aliases", []) + [subj["name"]]:
+    def field(text: str, name: str) -> str | None:
+        match = re.search(rf"^{re.escape(name)}:\s*(.+)$", text, re.I | re.M)
+        return match.group(1).strip() if match else None
+
+    def within_lookback(event_date: str | None) -> bool | None:
+        if not event_date:
+            return None
+        try:
+            event = date.fromisoformat(event_date)
+            as_of = date.fromisoformat(ctx.case["created_at"][:10])
+            year = as_of.year - ctx.policy["adverse_media"]["lookback_years"]
+            cutoff = as_of.replace(year=year)
+        except ValueError:
+            return None
+        return cutoff <= event <= as_of
+
+    def citation(doc: dict, page: dict, kind: str, subject_name: str, quote: str,
+                 normalized: str) -> str:
+        text = page["text"]
+        start = text.index(quote)
+        return ctx.ledger.extract(
+            subject={"kind": kind, "subject_name": subject_name},
+            value={"raw": quote, "normalized": normalized, "datatype": "event"},
+            quote=quote,
+            locator={"doc_id": doc["doc_id"], "page": page["page"],
+                     "char_span": [start, start + len(quote)]},
+            method="native_text" if page["ocr_confidence"] >= 0.95 else "ocr",
+            conf="HIGH" if page["ocr_confidence"] >= 0.90 else "MEDIUM",
+            basis="document",
+            key=idem_key(ctx.case_id, "SK-08", kind, doc["doc_id"], page["page"]),
+            skill="SK-08")
+
+    printed_subject = next((field(page["text"], "Subject") for _, page in source_pages
+                            if field(page["text"], "Subject")), None)
+    printed_subject = re.sub(r"\s*\(DOB\s+[^)]+\)$", "", printed_subject or "")
+    customer_name = ctx.case.get("claimed_customer", {}).get("legal_name", "")
+    query_subject = printed_subject or customer_name
+    matched_subject = next((s for s in subjects if s["name"].casefold() == query_subject.casefold()
+                            or query_subject.casefold() in
+                            [a.casefold() for a in s.get("aliases", [])]), None)
+    variants = list(dict.fromkeys((matched_subject or {}).get("aliases", []) + [query_subject]))
+
+    event_pages = []
+    exclusion_pages = []
+    for doc, page in source_pages:
+        text = page["text"]
+        low = text.casefold()
+        if "namesake exclusion" in low or "(excluded)" in low or "exclusion reason:" in low:
+            exclusion_pages.append((doc, page))
+        elif ("media result" in low or re.search(r"^result\s+\d+", text, re.I)) and \
+                not field(text, "Corroboration") and \
+                (field(text, "Status") or "inquiry" in low or "allegation" in low):
+            event_pages.append((doc, page))
+
+    if source_pages and query_subject:
+        for variant in variants:
             ev = ctx.ledger.query(
-                connector="media.search", dataset="MEDIA_T1_T3", dataset_version="2026-10-20",
-                params={"query": f'"{variant}" (fraud OR corruption OR sanctions OR investigation)',
-                        "lookback_years": ctx.policy["adverse_media"]["lookback_years"],
-                        "min_tier": 3},
-                result_count=2 if "Vasquez" in variant else 0,
-                response_ref=f"inline://media/{variant}", subject_name=subj["name"],
-                key=idem_key(ctx.case_id, "SK-08", variant), skill="SK-08")
-            queries.append({"subject": subj["name"], "query_variant": variant, "evidence_id": ev})
+                connector="media.bundle_review", dataset="SUPPLIED_MEDIA_PRINTOUT",
+                dataset_version=max((d.get("doc_date") or "unknown" for d in media_docs), default="unknown"),
+                params={"subject": variant, "lookback_years": ctx.policy["adverse_media"]["lookback_years"]},
+                result_count=len(event_pages) + len(exclusion_pages),
+                response_ref="bundle://" + ",".join(d["doc_id"] for d in media_docs),
+                subject_name=query_subject,
+                key=idem_key(ctx.case_id, "SK-08", "query", variant), skill="SK-08")
+            queries.append({"subject": query_subject, "query_variant": variant, "evidence_id": ev})
+    else:
+        res.status, res.reason_code = "PARTIAL", "MEDIA_SOURCE_UNAVAILABLE"
+        res.notes.append("No readable adverse-media printout in the bundle; no media clearance asserted")
 
-    # seeded corpus result (the printout document DOC-009 is corroborating material)
-    ms = ctx.pages["DOC-4831-009"]["pages"]
-    kept_q = ms[1]["text"]
-    excluded_q = ms[3]["text"]
-    ev_keep = ctx.ledger.extract(
-        subject={"kind": "ADVERSE_MEDIA", "subject_name": "Elena Maria Vasquez"},
-        value={"raw": "customs inquiry, no charges filed", "normalized": "ALLEGED/UNDER_INVESTIGATION",
-               "datatype": "event"},
-        quote='Extract: "Customs authorities in Limassol confirmed on Monday that they had opened an\ninquiry into alleged misdeclaration of consignment values by a metals trading company\nwhose director, Elena Vasquez, declined to comment. No charges have been filed and\nMs Vasquez has not been accused of any offence."',
-        locator={"doc_id": "DOC-4831-009", "page": 2, "char_span": [0, 400]},
-        method="native_text", conf="HIGH", basis="document",
-        key=idem_key(ctx.case_id, "SK-08", "event-1"), skill="SK-08")
-    ev_excl = ctx.ledger.extract(
-        subject={"kind": "ADVERSE_MEDIA_EXCLUSION", "subject_name": "Elena Maria Vasquez"},
-        value={"raw": "excluded — different individual", "normalized": "EXCLUDED", "datatype": "event"},
-        quote="Exclusion reason: different individual — DOB 1984, occupation and location do not match.",
-        locator={"doc_id": "DOC-4831-009", "page": 4, "char_span": [0, 88]},
-        method="native_text", conf="HIGH", basis="document",
-        key=idem_key(ctx.case_id, "SK-08", "event-2"), skill="SK-08")
+    for doc, page in exclusion_pages:
+        text = page["text"]
+        reason = field(text, "Exclusion reason") or next(
+            (line.strip() for line in text.splitlines() if "different" in line.casefold()),
+            "Excluded namesake; identifying details differ")
+        quote = next((line for line in text.splitlines() if reason in line), text.strip())
+        ev = citation(doc, page, "ADVERSE_MEDIA_EXCLUSION", printed_subject or customer_name,
+                      quote, "EXCLUDED")
+        exclusions.append({"reason": reason, "source": field(text, "Outlet") or field(text, "Source")
+                           or doc.get("issuer"), "evidence_id": ev})
+        res.evidence_ids.append(ev)
 
-    events.append({"event_id": "EVT-1", "subject": "Elena Maria Vasquez",
-                   "event_date": "2023-08-14", "category": "financial_crime",
-                   "allegation_stage": "UNDER_INVESTIGATION", "source": "Financial Gazette",
-                   "source_tier": 2, "corroboration_count": 2, "verification": "VERIFIED",
-                   "evidence_id": ev_keep, "within_lookback": True})
-    exclusions.append({"reason": "different individual (DOB/occupation mismatch)", "source": "Regional Business Wire",
-                       "evidence_id": ev_excl})
+    for doc, page in event_pages:
+        text = page["text"]
+        status = field(text, "Status") or ("inquiry open, no charges" if "inquiry" in text.casefold()
+                                              else "allegation")
+        stage = "FINAL_NOTICE" if "final notice" in status.casefold() else "UNDER_INVESTIGATION"
+        quote = (field(text, "Status") and next(line for line in text.splitlines()
+                 if line.casefold().startswith("status:"))) or text.strip()
+        subject_name = field(text, "Subject") or printed_subject or customer_name
+        subject_name = re.sub(r"\s*\(DOB\s+[^)]+\)$", "", subject_name)
+        ev = citation(doc, page, "ADVERSE_MEDIA", subject_name, quote, stage)
+        tier_match = re.search(r"TIER\s+(\d+)", text, re.I)
+        source_tier = int(tier_match.group(1)) if tier_match else None
+        event_date = field(text, "Date")
+        source = field(text, "Outlet") or field(text, "Source") or doc.get("issuer")
+        current = within_lookback(event_date)
+        events.append({"event_id": f"EVT-{len(events)+1}", "subject": subject_name,
+                       "event_date": event_date, "category": "financial_crime",
+                       "allegation_stage": stage, "source": source,
+                       "source_tier": source_tier, "corroboration_count": 1 + sum(
+                           bool(field(p["text"], "Corroboration")) for _, p in source_pages),
+                       "verification": "DOCUMENT_REVIEWED", "evidence_id": ev,
+                       "within_lookback": current})
+        if current is False:
+            res.evidence_ids.append(ev)
+            continue
+        severity = "HIGH" if stage == "FINAL_NOTICE" else "MEDIUM"
+        finding = Finding(
+            finding_id=ctx.next_finding_id(), type="ADVERSE_MEDIA", severity=severity,
+            title=f"{status} reported for {subject_name}",
+            detail=(f"The supplied media printout reports '{status}' for {subject_name}. "
+                    "Identity and underlying source must be reviewed by an analyst; "
+                    "an allegation is not a finding of wrongdoing."),
+            basis="document", confidence="MEDIUM", evidence_refs=[ev],
+            policy_refs=["MED-01", "RDE-16"],
+            rating_impact={"factor": "ADVERSE_MEDIA", "direction": "UP", "weight_points": 20})
+        ctx.ledger.finding(finding, "SK-08")
+        ctx.findings.append(finding.to_dict(ctx.case_id, "SK-08", ctx.run_id))
+        res.findings.append(finding.finding_id)
+        res.evidence_ids.append(ev)
 
-    f = Finding(finding_id=ctx.next_finding_id(), type="ADVERSE_MEDIA", severity="MEDIUM",
-                title="Open customs inquiry reported in established financial press (2023)",
-                detail=("A Tier 2 outlet reported a customs inquiry into alleged misdeclaration of "
-                        "consignment values at a company directed by the subject. No charges have been "
-                        "filed and the subject has not been accused of an offence. The company called the "
-                        "discrepancy a clerical error. Two sources (one syndicated) within the 5-year "
-                        "lookback. This is an allegation-stage event, not a finding of wrongdoing."),
-                basis="screening", confidence="MEDIUM", evidence_refs=[ev_keep, ev_excl],
-                policy_refs=["MED-01", "RDE-16"],
-                rating_impact={"factor": "ADVERSE_MEDIA", "direction": "UP", "weight_points": 20})
-    ctx.ledger.finding(f, "SK-08")
-    ctx.findings.append(f.to_dict(ctx.case_id, "SK-08", ctx.run_id))
-    res.findings.append(f.finding_id)
-
+    current_events = [e for e in events if e["within_lookback"] is not False]
     res.outputs = {"queries": queries, "events": events, "exclusions": exclusions,
-                   "residual_concern": "MEDIUM"}
-    res.evidence_ids = [q["evidence_id"] for q in queries] + [ev_keep, ev_excl]
-    res.confidence = "MEDIUM"
+                   "residual_concern": "HIGH" if any(e["allegation_stage"] == "FINAL_NOTICE"
+                                                      for e in current_events)
+                   else "MEDIUM" if current_events else "NONE"}
+    res.evidence_ids = [q["evidence_id"] for q in queries] + res.evidence_ids
+    res.confidence = "MEDIUM" if events else "LOW" if res.status == "PARTIAL" else "HIGH"
     return res
 
 

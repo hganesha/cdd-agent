@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700238-004",
+  "filename": "owner_2_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Ari Mockley 700238\nDate of birth: 1975-05-09\nNationality: GB\nPassport number: O7002382\nValid until: 2031-12-31\n"
+    }
+  ]
+}

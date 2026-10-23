@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700191-002",
+  "filename": "owner_1_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Cato Exampleton 700191\nDate of birth: 1987-05-02\nNationality: CA\nPassport number: O7001911\nValid until: 2031-12-31\n"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "attributes": {
+    "country": "GB",
+    "dob": "1980-10-17"
+  },
+  "case_id": "CASE-700124",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [],
+  "request_id": "SR-700124",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Fara Simvale 700124"
+}

@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700027-008",
+  "filename": "audited_financials.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "AUDITED FINANCIALS — Hale Sampleton Trading 700027 Ltd\nYear ended: 2025-12-31\nRevenue: USD 462,000\nAuditor opinion: unqualified\n"
+    }
+  ]
+}

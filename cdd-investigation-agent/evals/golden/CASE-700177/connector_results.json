@@ -1,0 +1,271 @@
+{
+  "case_id": "CASE-700177",
+  "mode": "SYNTHETIC_OFFLINE",
+  "registry_status": "UNAVAILABLE",
+  "screening_queries": [
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_SDN",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Hale Sampleton Trading 700177 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_CAPTA",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Hale Sampleton Trading 700177 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_SSI",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Hale Sampleton Trading 700177 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "UN_CONSOLIDATED",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Hale Sampleton Trading 700177 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "EU_CFSP",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Hale Sampleton Trading 700177 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "UK_OFSI",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Hale Sampleton Trading 700177 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "LOCAL_REGULATOR",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Hale Sampleton Trading 700177 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_GLOBAL",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Hale Sampleton Trading 700177 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_DOMESTIC",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Hale Sampleton Trading 700177 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_IO",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Hale Sampleton Trading 700177 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "RCA",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Hale Sampleton Trading 700177 Ltd"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_SDN",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Iva Simvale 700177"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_CAPTA",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Iva Simvale 700177"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_SSI",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Iva Simvale 700177"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "UN_CONSOLIDATED",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Iva Simvale 700177"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "EU_CFSP",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Iva Simvale 700177"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "UK_OFSI",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Iva Simvale 700177"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "LOCAL_REGULATOR",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Iva Simvale 700177"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_GLOBAL",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Iva Simvale 700177"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_DOMESTIC",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Iva Simvale 700177"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_IO",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Iva Simvale 700177"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "RCA",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Iva Simvale 700177"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_SDN",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Jori Testwell 700177"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_CAPTA",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Jori Testwell 700177"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "OFAC_SSI",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Jori Testwell 700177"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "UN_CONSOLIDATED",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Jori Testwell 700177"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "EU_CFSP",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Jori Testwell 700177"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "UK_OFSI",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Jori Testwell 700177"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "LOCAL_REGULATOR",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Jori Testwell 700177"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_GLOBAL",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Jori Testwell 700177"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_DOMESTIC",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Jori Testwell 700177"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "PEP_IO",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Jori Testwell 700177"
+    },
+    {
+      "dataset_version": "synthetic-2026-10",
+      "hits": [],
+      "list": "RCA",
+      "queried_at": "2026-10-20T12:00:00Z",
+      "status": "QUERIED",
+      "subject": "Jori Testwell 700177"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700254"
+  },
+  "case_id": "CASE-700254",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Fara Sampleton 700254",
+    "Galen Mockley 700254"
+  ],
+  "request_id": "SR-700254",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Eli Testwell Trading 700254 Ltd"
+}

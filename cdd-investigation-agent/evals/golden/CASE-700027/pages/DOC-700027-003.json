@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700027-003",
+  "filename": "owner_1_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Iva Trialford 700027\nDate of birth: 1973-09-23\nNationality: SG\nPassport number: O7000271\nValid until: 2031-12-31\n"
+    }
+  ]
+}

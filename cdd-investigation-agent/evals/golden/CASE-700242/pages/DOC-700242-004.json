@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700242-004",
+  "filename": "owner_2_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Eli Exampleton 700242\nDate of birth: 1979-09-21\nNationality: AE\nPassport number: O7002422\nValid until: 2031-12-31\n"
+    }
+  ]
+}

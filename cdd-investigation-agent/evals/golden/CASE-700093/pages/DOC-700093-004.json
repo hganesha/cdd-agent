@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700093-004",
+  "filename": "owner_2_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Fara Mockley 700093\nDate of birth: 1980-04-06\nNationality: GB\nPassport number: O7000932\nValid until: 2031-12-31\n"
+    }
+  ]
+}

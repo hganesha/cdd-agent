@@ -1,0 +1,3180 @@
+{
+  "case_count": 260,
+  "cases": [
+    {
+      "case_id": "CASE-700001",
+      "gold_sha256": "064df9c03a2a6b5a9ee1968e2128a7b4b9a68ab40a965a8f8c2ed04784dfb75f",
+      "pages": 25,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700002",
+      "gold_sha256": "7b08152285141f0258f2068110b61ce8daeea757eba7969489c9f9cf273b9387",
+      "pages": 22,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700003",
+      "gold_sha256": "e4de6f8ffd3fa242383a0dde082f98a3bcee9daf86ee5da7175eb23b6e6c3dd4",
+      "pages": 60,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700004",
+      "gold_sha256": "7ce5647ed2e56d77c6524ab2d10cb0fab9d0d4d6fa1383bb1198d1662378f0f9",
+      "pages": 57,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700005",
+      "gold_sha256": "0b24a57ae64529888e51b2f54371aa8fb47ed1c04672e291804cab0952de679d",
+      "pages": 54,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700006",
+      "gold_sha256": "f67e70d16f66b92058dd342e4d7c42c6d1b72ff339f1708b92783ad77e4e6348",
+      "pages": 51,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700007",
+      "gold_sha256": "32b41cb025c66f259977dc6cf42d0fdb561e61c48f926a1df777689d51c22d6a",
+      "pages": 37,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700008",
+      "gold_sha256": "e82f2c0ef358027a884b31ec73e4d11899d18691a4d177039cd181762049eec4",
+      "pages": 34,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700009",
+      "gold_sha256": "9d24c9771a6019b70f0fc39bc70bf31dadeb9a38410e1e72a208f53519b72295",
+      "pages": 31,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple",
+        "stale_address"
+      ]
+    },
+    {
+      "case_id": "CASE-700010",
+      "gold_sha256": "2244849f426476e987bd85d748dc41a0ac0b7ada31f4803e25293a204a8f101a",
+      "pages": 28,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700011",
+      "gold_sha256": "144f4e3721656b133d7b330959dd8fb7be4769b557370c9f7280dbfe4d156678",
+      "pages": 25,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700012",
+      "gold_sha256": "707eea43d77ca5569b8bf4e770c133766d508bf0ff197f0155b74faf39af62c0",
+      "pages": 22,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700013",
+      "gold_sha256": "ae2995425a5f3426daca4f9c5df4808d4b5187f1d0b6fcdb3f760f0b10c1e27a",
+      "pages": 60,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700014",
+      "gold_sha256": "c8f2f41725eb9888f8d6af0659d3f201b4072eb4929a58e9ea049af1334fb29b",
+      "pages": 57,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700015",
+      "gold_sha256": "0765df4710d5bc3eb114c3320057e87b92d72294ffd500a49ecf74edd1b2cc4b",
+      "pages": 54,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700016",
+      "gold_sha256": "f94d78eddc6ba400c4705f812ab94857a315c2e64bbb8a75b2c591a74dac4727",
+      "pages": 51,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700017",
+      "gold_sha256": "3b6e70715ef143cf83387e7dc8897d7321d2e1aeff976a67b76ba56f9fc4dbf3",
+      "pages": 48,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700018",
+      "gold_sha256": "3832224af00e4028014c6ee3ecd67db42875e7ff6e556c4b5c54962389c1d756",
+      "pages": 34,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple",
+        "stale_address"
+      ]
+    },
+    {
+      "case_id": "CASE-700019",
+      "gold_sha256": "b23d0caef78b61f8e835bcca59617f9212b06efe6e7a0975220c1046bc8dc4c9",
+      "pages": 31,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700020",
+      "gold_sha256": "8bc970a3974139fac1e1df461b1a1bbdef014ca16c26bc66745cf169659f1425",
+      "pages": 28,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700021",
+      "gold_sha256": "dc7e9c8ecff1db799ba3e2e543ca392c96b29d365a5b1bf9c5c8dff9076e08fe",
+      "pages": 25,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700022",
+      "gold_sha256": "c2db879081223063cc34c464a22773f491236f0787187730d9260b1369b04218",
+      "pages": 22,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700023",
+      "gold_sha256": "8d777adcd59a2149855259082fedd33d8cb972249233d3e6d9c1c1877510b9ac",
+      "pages": 60,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700024",
+      "gold_sha256": "c52bc3dd046fbfb1c23716ee296b91e553498cbfe9c29b517e06421e2b0c44a7",
+      "pages": 57,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700025",
+      "gold_sha256": "80d5cfe47f52adc92c818d6c458cffc41da4d61d81ad20bb432a282e254569cd",
+      "pages": 54,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700026",
+      "gold_sha256": "e633e1a7abef39ce9765c15d63ffeadaf3bb269d2ec5dd5881e7f8f3263fb3d0",
+      "pages": 51,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700027",
+      "gold_sha256": "3aea6d11c110c592fdf9a866376c86826b85d82b51b9f93b42d33363bef1f0bb",
+      "pages": 48,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple",
+        "stale_address"
+      ]
+    },
+    {
+      "case_id": "CASE-700028",
+      "gold_sha256": "99ed330f93a345380c965567c9a94485124ac6d4d384732a6c800a6cce8e589b",
+      "pages": 45,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700029",
+      "gold_sha256": "9d52db8763836c3e0ddafa54f3b9d4f6799b4ca9d56f70ab6a5151f3f5a844e5",
+      "pages": 31,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700030",
+      "gold_sha256": "72eab3ac8262982e5edfdf6be917f532a9fc585f33ba888fd7b96dbd1c5755ad",
+      "pages": 28,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700031",
+      "gold_sha256": "b6402931cc590d5ecf4bb0eeba195f50ff5aa45d711992226b88dea4a912f2a5",
+      "pages": 25,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700032",
+      "gold_sha256": "3cef5f6b53e74a6da13b544bed812fe22e7ad1a16dd552712fe9ef429b7b867c",
+      "pages": 22,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700033",
+      "gold_sha256": "84c2d16b1e4be4b766486ea51a0807d7da6873505885174748c4eab581e7b1cf",
+      "pages": 60,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700034",
+      "gold_sha256": "a10da88f5e3a3e4e3498e653ff6d6a9c2c4b33935a70de83c663672acaac6428",
+      "pages": 57,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700035",
+      "gold_sha256": "a5208ed9dc03b5fa380aae026b9db4fb8146e48a896d8ec69d56885f09e712ed",
+      "pages": 54,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700036",
+      "gold_sha256": "4177948709a4ec8e7ae07b8edf434ccd0ffcd9e84a5243f5b398d83f2d91efac",
+      "pages": 51,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple",
+        "stale_address"
+      ]
+    },
+    {
+      "case_id": "CASE-700037",
+      "gold_sha256": "eba7b635e93a751744eaaec7a6c379a8cf2345c7abb1bdaafde50ef5c9d152ac",
+      "pages": 48,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700038",
+      "gold_sha256": "6929bd83d2c200c32a35d351976fb433e5a1c17db768b94ebd85645a1597a0bf",
+      "pages": 45,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700039",
+      "gold_sha256": "b50966a7bedbab5a431513a1b6e8ac7e7df74eb38c7c6d6a7e7afd6eb81b8f95",
+      "pages": 42,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700040",
+      "gold_sha256": "db129e839235df1a0e9fee45f886892a31d3fb8ec66c5756ed890d7d97b3bfdf",
+      "pages": 28,
+      "risk_band": "LOW",
+      "segment": "corporate_simple",
+      "tags": [
+        "corporate_simple"
+      ]
+    },
+    {
+      "case_id": "CASE-700041",
+      "gold_sha256": "d37f5142e76196657e732e093a4397f675cdd81c8c6d11cc00ccfd73950533d6",
+      "pages": 151,
+      "risk_band": "MEDIUM",
+      "segment": "corporate_complex",
+      "tags": [
+        "compound_medium_risk",
+        "corporate_complex",
+        "media_final_notice",
+        "ownership_depth_5",
+        "third_party_funding",
+        "vested_trust"
+      ]
+    },
+    {
+      "case_id": "CASE-700042",
+      "gold_sha256": "629b6af7e9baeb514292637c1d5e59aaadb01958e9d095c958d76c1bd9788c15",
+      "pages": 189,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_6"
+      ]
+    },
+    {
+      "case_id": "CASE-700043",
+      "gold_sha256": "9bc98d06762612628d215217d2cd9fbefce593eeff3e80062e5744817883063a",
+      "pages": 227,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_7"
+      ]
+    },
+    {
+      "case_id": "CASE-700044",
+      "gold_sha256": "edd58784e3e33a86198353f52072f2ef0341ba3b2f000364bc1bb7f1af1a7fa4",
+      "pages": 265,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_8",
+        "vested_trust"
+      ]
+    },
+    {
+      "case_id": "CASE-700045",
+      "gold_sha256": "1e5af7f09b491d50244c2a13e33d963cb52b3072cdf5b61fe6f471854d9ad248",
+      "pages": 303,
+      "risk_band": "MEDIUM",
+      "segment": "corporate_complex",
+      "tags": [
+        "compound_medium_risk",
+        "corporate_complex",
+        "media_final_notice",
+        "ownership_depth_5",
+        "third_party_funding"
+      ]
+    },
+    {
+      "case_id": "CASE-700046",
+      "gold_sha256": "bef0d1d187147c3d8a4e8de67aa16fbfb4dcfee270d0e000722d2353eaed663a",
+      "pages": 341,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_6"
+      ]
+    },
+    {
+      "case_id": "CASE-700047",
+      "gold_sha256": "0360f835be510d33aa9da6fb06837457619bfcf67ff238ea8a9cda22ca672b0e",
+      "pages": 379,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_7",
+        "vested_trust"
+      ]
+    },
+    {
+      "case_id": "CASE-700048",
+      "gold_sha256": "f6da9132a10e2ecff5e0b93ac3cbd23d968bf7c5349b64fe2e60c2e12938f68a",
+      "pages": 166,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_8"
+      ]
+    },
+    {
+      "case_id": "CASE-700049",
+      "gold_sha256": "9d393b1058a4dc83f93a8b483e4152c63ee9d73bc790bd092ce8d7e52615d3a0",
+      "pages": 204,
+      "risk_band": "MEDIUM",
+      "segment": "corporate_complex",
+      "tags": [
+        "compound_medium_risk",
+        "corporate_complex",
+        "media_final_notice",
+        "ownership_depth_5",
+        "stale_address",
+        "third_party_funding"
+      ]
+    },
+    {
+      "case_id": "CASE-700050",
+      "gold_sha256": "8011ae37bcb3df4017b92face852e0f0484130a23be7c00a3044463b8bb65238",
+      "pages": 242,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_6",
+        "vested_trust"
+      ]
+    },
+    {
+      "case_id": "CASE-700051",
+      "gold_sha256": "df54e8e8d64399dd2c170e99cbba96a496cc43ab248d8141993666df59a1d6b6",
+      "pages": 269,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_7"
+      ]
+    },
+    {
+      "case_id": "CASE-700052",
+      "gold_sha256": "3a4c1f79c3b6f91ab74ed64e2b2881d391da8661097c1d6fbfe3a75fa3ffc743",
+      "pages": 307,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_8"
+      ]
+    },
+    {
+      "case_id": "CASE-700053",
+      "gold_sha256": "1516606a81bc8ba245f7beda2e9c5c4149f54360405109cb47732ee008a491eb",
+      "pages": 345,
+      "risk_band": "MEDIUM",
+      "segment": "corporate_complex",
+      "tags": [
+        "compound_medium_risk",
+        "corporate_complex",
+        "media_final_notice",
+        "ownership_depth_5",
+        "third_party_funding",
+        "vested_trust"
+      ]
+    },
+    {
+      "case_id": "CASE-700054",
+      "gold_sha256": "3e1c48c55081a3211f5189da057fa82613b7d131cd9929beb39cbe194e806682",
+      "pages": 383,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_6"
+      ]
+    },
+    {
+      "case_id": "CASE-700055",
+      "gold_sha256": "5889f82de815170e3a2e46add1f652a9d5e795e8a79d1eb4dcbdf061fd1122ac",
+      "pages": 170,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_7"
+      ]
+    },
+    {
+      "case_id": "CASE-700056",
+      "gold_sha256": "af42eadb051fc016055a9f3448df93325fad40fd88a7226cfdf7bc18a17add5e",
+      "pages": 208,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_8",
+        "vested_trust"
+      ]
+    },
+    {
+      "case_id": "CASE-700057",
+      "gold_sha256": "0428fe7cd334ed3f422b033aaab2819820300bfb6e1b9a228a52ba77aac517d5",
+      "pages": 246,
+      "risk_band": "MEDIUM",
+      "segment": "corporate_complex",
+      "tags": [
+        "compound_medium_risk",
+        "corporate_complex",
+        "media_final_notice",
+        "ownership_depth_5",
+        "third_party_funding"
+      ]
+    },
+    {
+      "case_id": "CASE-700058",
+      "gold_sha256": "8dc0921c9db6992ca3fbb62c22953cf305052b04996281f0029b2149ba76444d",
+      "pages": 284,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_6",
+        "stale_address"
+      ]
+    },
+    {
+      "case_id": "CASE-700059",
+      "gold_sha256": "7727039203844bf432ea148c8dde0808dbf614b6617156c7783af956c04bfdbd",
+      "pages": 322,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_7",
+        "vested_trust"
+      ]
+    },
+    {
+      "case_id": "CASE-700060",
+      "gold_sha256": "f2c57a292010204cb0678d89284a1522dcdea44261f6c9f0efff71b13c8cb2b6",
+      "pages": 360,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_8"
+      ]
+    },
+    {
+      "case_id": "CASE-700061",
+      "gold_sha256": "0e299937b925e79e96cab4139bbd8a686c45b5c38db6ef1c37b0341ee9c0d38a",
+      "pages": 398,
+      "risk_band": "MEDIUM",
+      "segment": "corporate_complex",
+      "tags": [
+        "compound_medium_risk",
+        "corporate_complex",
+        "media_final_notice",
+        "ownership_depth_5",
+        "third_party_funding"
+      ]
+    },
+    {
+      "case_id": "CASE-700062",
+      "gold_sha256": "52422627a33446641386be64b9a4b85a933263092d06611c6455f203aa5648c4",
+      "pages": 174,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_6",
+        "vested_trust"
+      ]
+    },
+    {
+      "case_id": "CASE-700063",
+      "gold_sha256": "86e608f8074c33cb6b62edff16651ad40f8651bb065d08be086b08d0a927f9e1",
+      "pages": 212,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_7"
+      ]
+    },
+    {
+      "case_id": "CASE-700064",
+      "gold_sha256": "9bf9837790b944083c0b5c0cf409cbc68d2f69e1f928ea7ce785815d9e778c92",
+      "pages": 250,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_8"
+      ]
+    },
+    {
+      "case_id": "CASE-700065",
+      "gold_sha256": "75f4cdbed04ab915355c6161f179c5478ae64401e999da92ace865f7354febfb",
+      "pages": 288,
+      "risk_band": "MEDIUM",
+      "segment": "corporate_complex",
+      "tags": [
+        "compound_medium_risk",
+        "corporate_complex",
+        "media_final_notice",
+        "ownership_depth_5",
+        "third_party_funding",
+        "vested_trust"
+      ]
+    },
+    {
+      "case_id": "CASE-700066",
+      "gold_sha256": "2887bd4ddaf61c0c65e86527966795ea291c816db07a9c99a857a5cbd33dd4ed",
+      "pages": 326,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_6"
+      ]
+    },
+    {
+      "case_id": "CASE-700067",
+      "gold_sha256": "5a29381e5d00dd5f485e4c57647157b9d0630861c814733e098933b71c0f7758",
+      "pages": 364,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_7",
+        "stale_address"
+      ]
+    },
+    {
+      "case_id": "CASE-700068",
+      "gold_sha256": "d4755380545caf0d7f127c6a8606b23049d6bb8e30bfbb8f7c06e298d59db46e",
+      "pages": 151,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_8",
+        "vested_trust"
+      ]
+    },
+    {
+      "case_id": "CASE-700069",
+      "gold_sha256": "e1504cad2e6fedfe9755f4069d9e8030476e7f2fb436c3c9e01e61bd184f7109",
+      "pages": 189,
+      "risk_band": "MEDIUM",
+      "segment": "corporate_complex",
+      "tags": [
+        "compound_medium_risk",
+        "corporate_complex",
+        "media_final_notice",
+        "ownership_depth_5",
+        "third_party_funding"
+      ]
+    },
+    {
+      "case_id": "CASE-700070",
+      "gold_sha256": "4352ebb625373ac15c8dc46515650c0a31be12480f8160ad72b0f2ffe57d0373",
+      "pages": 227,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_6"
+      ]
+    },
+    {
+      "case_id": "CASE-700071",
+      "gold_sha256": "16ac920a98ef50e0e362f48f325be5e4cbd6ed16943600d9ace50697c004e90b",
+      "pages": 265,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_7",
+        "vested_trust"
+      ]
+    },
+    {
+      "case_id": "CASE-700072",
+      "gold_sha256": "832e4fe14d73c46c09d6a1ee720367f9f79f65bd2dd9e5aa126705c271422832",
+      "pages": 303,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_8"
+      ]
+    },
+    {
+      "case_id": "CASE-700073",
+      "gold_sha256": "e3c1462a137e6eba451f515779314e48ebcd204b195533ab4c954aea677f304a",
+      "pages": 330,
+      "risk_band": "MEDIUM",
+      "segment": "corporate_complex",
+      "tags": [
+        "compound_medium_risk",
+        "corporate_complex",
+        "media_final_notice",
+        "ownership_depth_5",
+        "third_party_funding"
+      ]
+    },
+    {
+      "case_id": "CASE-700074",
+      "gold_sha256": "96ef10feeafa6d9a8484481a99de19c1d6fb4383a1fa9c945881404181050138",
+      "pages": 368,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_6",
+        "vested_trust"
+      ]
+    },
+    {
+      "case_id": "CASE-700075",
+      "gold_sha256": "377d0fb5c38409b6d46e5c6da30af8c8c84ab70a729e92eb3578e7d70a381816",
+      "pages": 155,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_7"
+      ]
+    },
+    {
+      "case_id": "CASE-700076",
+      "gold_sha256": "acafd5f003a1385b688fd2b9039f451552f3b20f3cfadeaf9205e2c3f84e8a36",
+      "pages": 193,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_8",
+        "stale_address"
+      ]
+    },
+    {
+      "case_id": "CASE-700077",
+      "gold_sha256": "29ed5bc2565817d1f13b607cd5cb4b01c9582a55719a893eb244fe69dffd8fff",
+      "pages": 231,
+      "risk_band": "MEDIUM",
+      "segment": "corporate_complex",
+      "tags": [
+        "compound_medium_risk",
+        "corporate_complex",
+        "media_final_notice",
+        "ownership_depth_5",
+        "third_party_funding",
+        "vested_trust"
+      ]
+    },
+    {
+      "case_id": "CASE-700078",
+      "gold_sha256": "e32e0c1c4ab1277b31f5606876f94b82d8a5e78a2203058d4cc2c4ada8607417",
+      "pages": 269,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_6"
+      ]
+    },
+    {
+      "case_id": "CASE-700079",
+      "gold_sha256": "8518f623e52d2a6ee47496c15d5dd896781e45ed72cac0f200041bc6e35630f1",
+      "pages": 307,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_7"
+      ]
+    },
+    {
+      "case_id": "CASE-700080",
+      "gold_sha256": "a4c8c07dd5736822032139a396a4468be6926cabc298595e394e54e2e47528fe",
+      "pages": 345,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_8",
+        "vested_trust"
+      ]
+    },
+    {
+      "case_id": "CASE-700081",
+      "gold_sha256": "84a472401e3b971db47cd539d291ca6fb1add7a81c02d7e7906ce89496c9d70b",
+      "pages": 383,
+      "risk_band": "MEDIUM",
+      "segment": "corporate_complex",
+      "tags": [
+        "compound_medium_risk",
+        "corporate_complex",
+        "media_final_notice",
+        "ownership_depth_5",
+        "third_party_funding"
+      ]
+    },
+    {
+      "case_id": "CASE-700082",
+      "gold_sha256": "93bf2a9cbc1d99259f983c571699b41b114b4f1c0faf976f6bef4aa581b03422",
+      "pages": 170,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_6"
+      ]
+    },
+    {
+      "case_id": "CASE-700083",
+      "gold_sha256": "967c55043b4f2e38dffb37240db570d395830a38cd6e558f14838d5691e36615",
+      "pages": 208,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_7",
+        "vested_trust"
+      ]
+    },
+    {
+      "case_id": "CASE-700084",
+      "gold_sha256": "a240c1dcce7e45a6393117756854ef3a3ab6d94266452696547c84afcd8f5adc",
+      "pages": 235,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_8"
+      ]
+    },
+    {
+      "case_id": "CASE-700085",
+      "gold_sha256": "48d954e28857623e4e69ed380e0b52737c7b8511678db988700a391157e174b6",
+      "pages": 273,
+      "risk_band": "MEDIUM",
+      "segment": "corporate_complex",
+      "tags": [
+        "compound_medium_risk",
+        "corporate_complex",
+        "media_final_notice",
+        "ownership_depth_5",
+        "stale_address",
+        "third_party_funding"
+      ]
+    },
+    {
+      "case_id": "CASE-700086",
+      "gold_sha256": "51efacc410a6725703a47f055c99afde1dbb3180fefe25ad8d09053de643a76f",
+      "pages": 311,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_6",
+        "vested_trust"
+      ]
+    },
+    {
+      "case_id": "CASE-700087",
+      "gold_sha256": "78e5cf0847d0256c089c12ee3f70b74e50d2b3735192627541304ad4d54964e1",
+      "pages": 349,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_7"
+      ]
+    },
+    {
+      "case_id": "CASE-700088",
+      "gold_sha256": "74da13b8c72523d4b94ca99311970b09791de54e390e8e2ec63169382abbfe65",
+      "pages": 387,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_8"
+      ]
+    },
+    {
+      "case_id": "CASE-700089",
+      "gold_sha256": "6c6435567eff052347422d9d72bb22774d5c90d651dcba94d9e836fee9718cab",
+      "pages": 174,
+      "risk_band": "MEDIUM",
+      "segment": "corporate_complex",
+      "tags": [
+        "compound_medium_risk",
+        "corporate_complex",
+        "media_final_notice",
+        "ownership_depth_5",
+        "third_party_funding",
+        "vested_trust"
+      ]
+    },
+    {
+      "case_id": "CASE-700090",
+      "gold_sha256": "c0810ee512ec1ef902a87a8be445b29b314be622f4c586cd2b1e2ec9018e4e7e",
+      "pages": 212,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_6"
+      ]
+    },
+    {
+      "case_id": "CASE-700091",
+      "gold_sha256": "0507fafdabe152ab8ff3b58782bfa7aab2ba0e252849ba6a3a2cd1e247d93e4b",
+      "pages": 250,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_7"
+      ]
+    },
+    {
+      "case_id": "CASE-700092",
+      "gold_sha256": "95f52f8187a90775acb88287598547835223c18e388933aae9d57225b8ca4143",
+      "pages": 288,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_8",
+        "vested_trust"
+      ]
+    },
+    {
+      "case_id": "CASE-700093",
+      "gold_sha256": "845b282d1fc417d47d204e5a0a91ab9ca59a5537eca919cb0d86b056a59c3d9d",
+      "pages": 326,
+      "risk_band": "MEDIUM",
+      "segment": "corporate_complex",
+      "tags": [
+        "compound_medium_risk",
+        "corporate_complex",
+        "media_final_notice",
+        "ownership_depth_5",
+        "third_party_funding"
+      ]
+    },
+    {
+      "case_id": "CASE-700094",
+      "gold_sha256": "1eaca619d3962b0b90f38885e22dd977df345b6a8711608228150bf9d65ae3c7",
+      "pages": 364,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_6",
+        "stale_address"
+      ]
+    },
+    {
+      "case_id": "CASE-700095",
+      "gold_sha256": "f45cd3cb2ead04a5154f24c421e7931b9c59bf1f9b75b26bedd5f1eb056838da",
+      "pages": 391,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_7",
+        "vested_trust"
+      ]
+    },
+    {
+      "case_id": "CASE-700096",
+      "gold_sha256": "e081af95301b35765433f071fe61ddfbd0edfbe75587b19a8b9b86f4cfb80fe1",
+      "pages": 178,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_8"
+      ]
+    },
+    {
+      "case_id": "CASE-700097",
+      "gold_sha256": "ee29135d41d996894bf23d0ca984accfc335cf35fa5b38cfa1775afbd24811a5",
+      "pages": 216,
+      "risk_band": "MEDIUM",
+      "segment": "corporate_complex",
+      "tags": [
+        "compound_medium_risk",
+        "corporate_complex",
+        "media_final_notice",
+        "ownership_depth_5",
+        "third_party_funding"
+      ]
+    },
+    {
+      "case_id": "CASE-700098",
+      "gold_sha256": "3b4837607f96b170a489dda1d89d757c752fad133e65660922ce66faa88b9cb9",
+      "pages": 254,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_6",
+        "vested_trust"
+      ]
+    },
+    {
+      "case_id": "CASE-700099",
+      "gold_sha256": "799b29947bd8361742e8cd85cff727faf9e3e80815570fad1dfc4e9a3cfbdaf8",
+      "pages": 292,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_7"
+      ]
+    },
+    {
+      "case_id": "CASE-700100",
+      "gold_sha256": "0d246708e3343989ae0d29e22107340171464087c6e58f6f043de94df240ce72",
+      "pages": 330,
+      "risk_band": "HIGH",
+      "segment": "corporate_complex",
+      "tags": [
+        "corporate_complex",
+        "lookthrough_depth_exceeded",
+        "nominee_unresolved",
+        "ownership_depth_8"
+      ]
+    },
+    {
+      "case_id": "CASE-700101",
+      "gold_sha256": "07132a6ee0c14dcff678e590387295933064ea8bf90e463eb57edda29e31e4aa",
+      "pages": 16,
+      "risk_band": "HIGH",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard",
+        "missing_sof"
+      ]
+    },
+    {
+      "case_id": "CASE-700102",
+      "gold_sha256": "d333681056b6c03d5d7fad68d3e630b174cabafbe5786667411551fb4aa3df3e",
+      "pages": 12,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700103",
+      "gold_sha256": "cedd20964fd46b5720d3194ccfcc0bf6a1f1e2d82aa2cd8d2674deb4e0248c76",
+      "pages": 29,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700104",
+      "gold_sha256": "4ed0e215fcee363afc240451d649cae58295411c0749342ac9ecbffce855e1e3",
+      "pages": 25,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700105",
+      "gold_sha256": "86986af5f8e0fcc984196ac94cbc6b8a88a38d6ed0387256a9c3f7f02ac2b70e",
+      "pages": 21,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700106",
+      "gold_sha256": "b7d4b624badf3fdfc0c1da270d9434c7744b9977ead11d53fb2be4ba46019e87",
+      "pages": 27,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700107",
+      "gold_sha256": "64eee178c151bdb5b694fcfa16d825c1e86e68ef74616d2ad86aeed281533915",
+      "pages": 23,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700108",
+      "gold_sha256": "087a265eaef448646da7a263e59648534875897a4d8d72a9eb57b74c62951523",
+      "pages": 19,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700109",
+      "gold_sha256": "4f0619714c4e489db76e7b45858a136d4fcbcc15a5594ee37222af9e4673c625",
+      "pages": 15,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard",
+        "stale_address"
+      ]
+    },
+    {
+      "case_id": "CASE-700110",
+      "gold_sha256": "6ee6d80e10907af4865709d3c0671eeacffcccad17d0ff31293923770a11c281",
+      "pages": 11,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700111",
+      "gold_sha256": "357d09d83f76fc3e69294e3ab4698bb9838a32897a863cbbd7d3bef79422d0f0",
+      "pages": 28,
+      "risk_band": "HIGH",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard",
+        "missing_sof"
+      ]
+    },
+    {
+      "case_id": "CASE-700112",
+      "gold_sha256": "25cdb8916104873e6a06abf33ecc84c44e0ea762c700343e41667f82d0c7d80d",
+      "pages": 24,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700113",
+      "gold_sha256": "21b10c7f6659bffebb179087171703ce38683e8d812635e06ea7a4631c916cfa",
+      "pages": 20,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700114",
+      "gold_sha256": "1bde42ff7e697a4b920c62a4f0e744b3afb6ce32f3e5b7618c4a66cb55dd0185",
+      "pages": 16,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700115",
+      "gold_sha256": "227fca40a61548bd03fe21c3025b595b1679029d3b4e9b4be65dedaeb346969a",
+      "pages": 12,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700116",
+      "gold_sha256": "02191f36361be0fb205d00779254ef3da2eadeef361c624048edbbf3c9ae20ae",
+      "pages": 29,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700117",
+      "gold_sha256": "c034e9daf7dba0ad5dc4087b96e59fa233fa22d7586fcf9ef49240d417d7c697",
+      "pages": 14,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700118",
+      "gold_sha256": "6563eacf1e4c2b9b766eb511a3789ecd3c1c1e36332c0e9e63512e90772bc2ae",
+      "pages": 10,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard",
+        "stale_address"
+      ]
+    },
+    {
+      "case_id": "CASE-700119",
+      "gold_sha256": "3c2e89bb94fa0ecd77c0717339dd495a3f8f4efd250df8b84aa0f61af27799e0",
+      "pages": 27,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700120",
+      "gold_sha256": "75445b1c252e913175f14702aace6aa63a5f8952772689daada26b748f0f3105",
+      "pages": 23,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700121",
+      "gold_sha256": "d4a5638872ce15290310877df0fddbdb1b93b9809024814d909523bae4e93ca9",
+      "pages": 19,
+      "risk_band": "HIGH",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard",
+        "missing_sof"
+      ]
+    },
+    {
+      "case_id": "CASE-700122",
+      "gold_sha256": "b042b3180939d7483a598c5ad1c468ca273a4c703a18d140f592e1bc202209aa",
+      "pages": 15,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700123",
+      "gold_sha256": "e35f70fa146a8e909cb0cd99dc85e9aefb70c7bfcf4dba781612f04e11c0baeb",
+      "pages": 11,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700124",
+      "gold_sha256": "a7b5079de0271db764591b7707e61a6052aaf0c4e067610bf8214520060a35aa",
+      "pages": 28,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700125",
+      "gold_sha256": "5a63c2bb0dc4762e9a4cf3282ce8f211b0855fb9a42299226c73301ccc60ec6f",
+      "pages": 24,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700126",
+      "gold_sha256": "b9910d28c67b9bc9a18385b3b2aab7e4ef3c557a3d7be690f4be13c957aa68f1",
+      "pages": 20,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700127",
+      "gold_sha256": "6738ce3b3c5b1ff4c87b40fae7a9a9cf3948082f1867ec29f9b3b6cfb1ead705",
+      "pages": 16,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard",
+        "stale_address"
+      ]
+    },
+    {
+      "case_id": "CASE-700128",
+      "gold_sha256": "32e2eebe564cd1de42d3576d887d31277e002bab1e5f7e0cbe09e6e2302c6d68",
+      "pages": 22,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700129",
+      "gold_sha256": "fd69041f2fca084067842a385820a42d61b900e51209c2b12f5f7cd8d7d59e78",
+      "pages": 18,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700130",
+      "gold_sha256": "f1a0a8bad8390420c976a6c22d8714ebf1516c42e8b19b113d44a750469d4dff",
+      "pages": 14,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700131",
+      "gold_sha256": "23ec84b6ef15c3533a1cd69b34efb274e84275c64d4af797ba50c761c9ecb650",
+      "pages": 10,
+      "risk_band": "HIGH",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard",
+        "missing_sof"
+      ]
+    },
+    {
+      "case_id": "CASE-700132",
+      "gold_sha256": "11f1723b82fd11e1559d5093c0183acd258b13d940bdee415d342d526c7d920b",
+      "pages": 27,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700133",
+      "gold_sha256": "1c49ebf47ac87c6a5e26069a8f59289ae59791d3d6bea0061504353b49d5d728",
+      "pages": 23,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700134",
+      "gold_sha256": "4e04b76e10bbdae9208840ebd6c326d810ce0cdb1ee6e5407dae51f0c5afb12d",
+      "pages": 19,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700135",
+      "gold_sha256": "12d091032672caa04e1d844e5b9cd02ca911df3ef24fbe14196bb97ea3130ea0",
+      "pages": 15,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700136",
+      "gold_sha256": "2a47419c83a0ac00e07a4a21592c2176a561c22a9cff82d72f3a704452546b17",
+      "pages": 11,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard",
+        "stale_address"
+      ]
+    },
+    {
+      "case_id": "CASE-700137",
+      "gold_sha256": "39aa742a92e1c18e59c2c8ac58215584358ea7067e6ec68435528c6d46f3c7b0",
+      "pages": 28,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700138",
+      "gold_sha256": "7e892b54c99084ef7ca473ed2b1934719db086decc20fcda3d3327f52be2b84d",
+      "pages": 24,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700139",
+      "gold_sha256": "376d0ceb72e8bb92869edee53133cb4939005b1cfe01c057d1db75867d89fee7",
+      "pages": 30,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700140",
+      "gold_sha256": "72e3af21b17275f931dc88963d74fa123432bcb0f8b9411482c6d6186dc39823",
+      "pages": 26,
+      "risk_band": "LOW",
+      "segment": "individual_standard",
+      "tags": [
+        "individual_standard"
+      ]
+    },
+    {
+      "case_id": "CASE-700141",
+      "gold_sha256": "a91a572ef012e729f84fab99c8b8a6f23ceac262f7a148924b30332fd4537b90",
+      "pages": 22,
+      "risk_band": "VERY_HIGH",
+      "segment": "individual_pep_media",
+      "tags": [
+        "individual_pep_media",
+        "media_final_notice",
+        "sanctions_true_hit"
+      ]
+    },
+    {
+      "case_id": "CASE-700142",
+      "gold_sha256": "b3b7aef136c4d9c4968852f102c6caff7c6aa3168bcd35c72a7cbdd8fd2b65f0",
+      "pages": 60,
+      "risk_band": "HIGH",
+      "segment": "individual_pep_media",
+      "tags": [
+        "individual_pep_media",
+        "pep_true_hit"
+      ]
+    },
+    {
+      "case_id": "CASE-700143",
+      "gold_sha256": "eb7556d4a5a54059ab738be558625ff575ac7ceae6de3e1d1c195837c2a522e2",
+      "pages": 37,
+      "risk_band": "HIGH",
+      "segment": "individual_pep_media",
+      "tags": [
+        "individual_pep_media",
+        "media_allegation",
+        "pep_true_hit"
+      ]
+    },
+    {
+      "case_id": "CASE-700144",
+      "gold_sha256": "2eae5ce10dfc59ef78629ccbcdba45dcd7bbe00cee757525e2b0435090a42c61",
+      "pages": 75,
+      "risk_band": "LOW",
+      "segment": "individual_pep_media",
+      "tags": [
+        "individual_pep_media",
+        "media_final_notice"
+      ]
+    },
+    {
+      "case_id": "CASE-700145",
+      "gold_sha256": "9b224fcb844ca66378eed8ae32d4bc7f72612139b41362ddabd5f91c1e336649",
+      "pages": 52,
+      "risk_band": "HIGH",
+      "segment": "individual_pep_media",
+      "tags": [
+        "individual_pep_media",
+        "media_allegation",
+        "pep_true_hit",
+        "sanctions_lookalike"
+      ]
+    },
+    {
+      "case_id": "CASE-700146",
+      "gold_sha256": "16a2b5f7703cd641d9c0d90b31bc29923034c6ec91cf98fcbe408062abcd46db",
+      "pages": 29,
+      "risk_band": "HIGH",
+      "segment": "individual_pep_media",
+      "tags": [
+        "individual_pep_media",
+        "pep_true_hit"
+      ]
+    },
+    {
+      "case_id": "CASE-700147",
+      "gold_sha256": "4df4124174c60cf19ae9374359bec007d817ec02520ee53f4c1235ad388b884f",
+      "pages": 67,
+      "risk_band": "LOW",
+      "segment": "individual_pep_media",
+      "tags": [
+        "individual_pep_media",
+        "media_final_notice"
+      ]
+    },
+    {
+      "case_id": "CASE-700148",
+      "gold_sha256": "e9262a715fdd9fc8f25d9c59e5bce78f79630734cdeff58835063e46d6ce07fa",
+      "pages": 44,
+      "risk_band": "HIGH",
+      "segment": "individual_pep_media",
+      "tags": [
+        "individual_pep_media",
+        "pep_true_hit"
+      ]
+    },
+    {
+      "case_id": "CASE-700149",
+      "gold_sha256": "9816cc2db4ba698bba3384a04adb308d33ccae4876dc8e54d9407a6c495cef82",
+      "pages": 21,
+      "risk_band": "HIGH",
+      "segment": "individual_pep_media",
+      "tags": [
+        "individual_pep_media",
+        "media_allegation",
+        "pep_true_hit",
+        "sanctions_lookalike",
+        "stale_address"
+      ]
+    },
+    {
+      "case_id": "CASE-700150",
+      "gold_sha256": "08bf3033455f1a4c89dc442b987db59475fe7b3c858ba99ff343df009a04750c",
+      "pages": 48,
+      "risk_band": "LOW",
+      "segment": "individual_pep_media",
+      "tags": [
+        "individual_pep_media",
+        "media_final_notice"
+      ]
+    },
+    {
+      "case_id": "CASE-700151",
+      "gold_sha256": "3a9010feaf9a372e06eb18f8a1ed5554102427ade8e36e22e386f49faaa72fcb",
+      "pages": 25,
+      "risk_band": "VERY_HIGH",
+      "segment": "individual_pep_media",
+      "tags": [
+        "individual_pep_media",
+        "media_allegation",
+        "pep_true_hit",
+        "sanctions_true_hit"
+      ]
+    },
+    {
+      "case_id": "CASE-700152",
+      "gold_sha256": "45c06da9ce2a6a838801a2d399fafae2551bf43c7aac6f39b450a8840a8d2d62",
+      "pages": 63,
+      "risk_band": "HIGH",
+      "segment": "individual_pep_media",
+      "tags": [
+        "individual_pep_media",
+        "pep_true_hit"
+      ]
+    },
+    {
+      "case_id": "CASE-700153",
+      "gold_sha256": "55c1861ff3eefa8fed19bc79cd6af47421cabc66289dc8a1c33d4f6ef7981334",
+      "pages": 40,
+      "risk_band": "LOW",
+      "segment": "individual_pep_media",
+      "tags": [
+        "individual_pep_media",
+        "media_final_notice",
+        "sanctions_lookalike"
+      ]
+    },
+    {
+      "case_id": "CASE-700154",
+      "gold_sha256": "868f4cab8b1e3cac4126b71ef799588cc9537957a3c480ad2dbc48304ca73477",
+      "pages": 78,
+      "risk_band": "HIGH",
+      "segment": "individual_pep_media",
+      "tags": [
+        "individual_pep_media",
+        "pep_true_hit"
+      ]
+    },
+    {
+      "case_id": "CASE-700155",
+      "gold_sha256": "300023e04fe30c23bc59771e4f9ef7a1c2f8e2e7939c46879255965f2cac3c6d",
+      "pages": 55,
+      "risk_band": "HIGH",
+      "segment": "individual_pep_media",
+      "tags": [
+        "individual_pep_media",
+        "media_allegation",
+        "pep_true_hit"
+      ]
+    },
+    {
+      "case_id": "CASE-700156",
+      "gold_sha256": "9eb6b3dc3906ed3b1c2cde92ab469b1a52247c03a9680933b71cecb7d18594af",
+      "pages": 32,
+      "risk_band": "LOW",
+      "segment": "individual_pep_media",
+      "tags": [
+        "individual_pep_media",
+        "media_final_notice"
+      ]
+    },
+    {
+      "case_id": "CASE-700157",
+      "gold_sha256": "d037128eb646e3e5701dbfe4cdf93fcfab402cd6ddaab1c06258a8e31ef41240",
+      "pages": 70,
+      "risk_band": "HIGH",
+      "segment": "individual_pep_media",
+      "tags": [
+        "individual_pep_media",
+        "media_allegation",
+        "pep_true_hit",
+        "sanctions_lookalike"
+      ]
+    },
+    {
+      "case_id": "CASE-700158",
+      "gold_sha256": "34a808fd33527fca6a29cabde165236ebed7c6c22d8f7a2d516824d78b9801b3",
+      "pages": 47,
+      "risk_band": "HIGH",
+      "segment": "individual_pep_media",
+      "tags": [
+        "individual_pep_media",
+        "pep_true_hit",
+        "stale_address"
+      ]
+    },
+    {
+      "case_id": "CASE-700159",
+      "gold_sha256": "e79b73806c32b243b5516b3018213ed57af3209ca67c9cdc104ebb4dc4337e7d",
+      "pages": 24,
+      "risk_band": "LOW",
+      "segment": "individual_pep_media",
+      "tags": [
+        "individual_pep_media",
+        "media_final_notice"
+      ]
+    },
+    {
+      "case_id": "CASE-700160",
+      "gold_sha256": "98fb714bee5678443bee85301d905201ec28d26ae414418cc25eae07e61d8c70",
+      "pages": 62,
+      "risk_band": "HIGH",
+      "segment": "individual_pep_media",
+      "tags": [
+        "individual_pep_media",
+        "pep_true_hit"
+      ]
+    },
+    {
+      "case_id": "CASE-700161",
+      "gold_sha256": "b60a792ebb47ed27591a356ed03e9cdf426422d8678244a34a0f507105ba6e17",
+      "pages": 28,
+      "risk_band": "VERY_HIGH",
+      "segment": "individual_pep_media",
+      "tags": [
+        "individual_pep_media",
+        "media_allegation",
+        "pep_true_hit",
+        "sanctions_true_hit"
+      ]
+    },
+    {
+      "case_id": "CASE-700162",
+      "gold_sha256": "f4af6f6b75b1fd17b0c3f3111455b50413dfae0a2c6d787f675a7daa96e2dcb6",
+      "pages": 66,
+      "risk_band": "LOW",
+      "segment": "individual_pep_media",
+      "tags": [
+        "individual_pep_media",
+        "media_final_notice"
+      ]
+    },
+    {
+      "case_id": "CASE-700163",
+      "gold_sha256": "8bf729ef6e11e1db9e967327dd2d78acc9e615b5704e0ee3fac9be0f144338d1",
+      "pages": 43,
+      "risk_band": "HIGH",
+      "segment": "individual_pep_media",
+      "tags": [
+        "individual_pep_media",
+        "media_allegation",
+        "pep_true_hit"
+      ]
+    },
+    {
+      "case_id": "CASE-700164",
+      "gold_sha256": "8a1dc7786dd9b936688c4b46c17813bf482171941f419c7880cc79109628b4c6",
+      "pages": 20,
+      "risk_band": "HIGH",
+      "segment": "individual_pep_media",
+      "tags": [
+        "individual_pep_media",
+        "pep_true_hit"
+      ]
+    },
+    {
+      "case_id": "CASE-700165",
+      "gold_sha256": "9ea59ff8407da295d781ca5a8c84667e5caf61a3abb4ee18aa4b6cfbec16d72a",
+      "pages": 58,
+      "risk_band": "LOW",
+      "segment": "individual_pep_media",
+      "tags": [
+        "individual_pep_media",
+        "media_final_notice",
+        "sanctions_lookalike"
+      ]
+    },
+    {
+      "case_id": "CASE-700166",
+      "gold_sha256": "be2dcd8c3a9e57fada51b4d32c7911a8f654ed321b99e73244da4195d8738c45",
+      "pages": 35,
+      "risk_band": "HIGH",
+      "segment": "individual_pep_media",
+      "tags": [
+        "individual_pep_media",
+        "pep_true_hit"
+      ]
+    },
+    {
+      "case_id": "CASE-700167",
+      "gold_sha256": "5f9de7c4687f8254375930ef3189f80f9125fdb7c875221ee74c621a731ac896",
+      "pages": 73,
+      "risk_band": "HIGH",
+      "segment": "individual_pep_media",
+      "tags": [
+        "individual_pep_media",
+        "media_allegation",
+        "pep_true_hit",
+        "stale_address"
+      ]
+    },
+    {
+      "case_id": "CASE-700168",
+      "gold_sha256": "35063b4dee67e2640acc6634cb24c2f6b776e03a9f29e14685aeabc909202ec3",
+      "pages": 50,
+      "risk_band": "LOW",
+      "segment": "individual_pep_media",
+      "tags": [
+        "individual_pep_media",
+        "media_final_notice"
+      ]
+    },
+    {
+      "case_id": "CASE-700169",
+      "gold_sha256": "637c9fbfbcab6616927544bd04d45d64967e0c9adf1d8470eee31f4443d10c88",
+      "pages": 27,
+      "risk_band": "HIGH",
+      "segment": "individual_pep_media",
+      "tags": [
+        "individual_pep_media",
+        "media_allegation",
+        "pep_true_hit",
+        "sanctions_lookalike"
+      ]
+    },
+    {
+      "case_id": "CASE-700170",
+      "gold_sha256": "a0d6fda5d7fe85df81097a3a76d5cde23cad04ffe00233f52b27dda38c4fc2ae",
+      "pages": 65,
+      "risk_band": "HIGH",
+      "segment": "individual_pep_media",
+      "tags": [
+        "individual_pep_media",
+        "pep_true_hit"
+      ]
+    },
+    {
+      "case_id": "CASE-700171",
+      "gold_sha256": "ab2636fd828cbb2f07b436ff67ad6bf66dde2cf5bf07198dcd6822c0c4ec7ae9",
+      "pages": 70,
+      "risk_band": "VERY_HIGH",
+      "segment": "high_risk_jurisdiction",
+      "tags": [
+        "activity_inconsistent",
+        "high_risk_jurisdiction",
+        "media_final_notice",
+        "nominee_unresolved",
+        "ownership_depth_3",
+        "pep_true_hit",
+        "registry_unavailable",
+        "sanctions_true_hit"
+      ]
+    },
+    {
+      "case_id": "CASE-700172",
+      "gold_sha256": "79f6dfa0a8c30a5fd9eba9065091b6f97a81f7e06559823aa5f457cd83812ffd",
+      "pages": 97,
+      "risk_band": "VERY_HIGH",
+      "segment": "high_risk_jurisdiction",
+      "tags": [
+        "high_risk_jurisdiction",
+        "nominee_unresolved",
+        "ownership_depth_4"
+      ]
+    },
+    {
+      "case_id": "CASE-700173",
+      "gold_sha256": "6fc47ed287c9ac424ed578b33d531ba986cf59469131ff089aac0670fb63b068",
+      "pages": 135,
+      "risk_band": "HIGH",
+      "segment": "high_risk_jurisdiction",
+      "tags": [
+        "high_risk_jurisdiction",
+        "nominee_unresolved",
+        "ownership_depth_3",
+        "registry_unavailable"
+      ]
+    },
+    {
+      "case_id": "CASE-700174",
+      "gold_sha256": "e800ec275832052af0d7742fcbcbaeb46475906caba194c74a1442c28af8b483",
+      "pages": 82,
+      "risk_band": "HIGH",
+      "segment": "high_risk_jurisdiction",
+      "tags": [
+        "activity_inconsistent",
+        "high_risk_jurisdiction",
+        "nominee_unresolved",
+        "ownership_depth_4"
+      ]
+    },
+    {
+      "case_id": "CASE-700175",
+      "gold_sha256": "0dadcf2fd20e1d33c1f52f25717bfccf38ecdc4925a92b6c60d4cfd14c1267df",
+      "pages": 120,
+      "risk_band": "VERY_HIGH",
+      "segment": "high_risk_jurisdiction",
+      "tags": [
+        "high_risk_jurisdiction",
+        "nominee_unresolved",
+        "ownership_depth_3",
+        "registry_unavailable"
+      ]
+    },
+    {
+      "case_id": "CASE-700176",
+      "gold_sha256": "2fd7eb3f5f3d8915d9b11b68b845f7964b3be53713fdc6b65079193c451594e5",
+      "pages": 67,
+      "risk_band": "HIGH",
+      "segment": "high_risk_jurisdiction",
+      "tags": [
+        "high_risk_jurisdiction",
+        "media_allegation",
+        "nominee_unresolved",
+        "ownership_depth_4"
+      ]
+    },
+    {
+      "case_id": "CASE-700177",
+      "gold_sha256": "a7da29c176135f031523e2981d0ddcb40c1d3b03f8a4380a3a93a2f9716d8310",
+      "pages": 105,
+      "risk_band": "HIGH",
+      "segment": "high_risk_jurisdiction",
+      "tags": [
+        "activity_inconsistent",
+        "high_risk_jurisdiction",
+        "nominee_unresolved",
+        "ownership_depth_3",
+        "registry_unavailable"
+      ]
+    },
+    {
+      "case_id": "CASE-700178",
+      "gold_sha256": "cf09237d46bad9ee2f87fc8e46ed629f0a9a4a0c6944144d8b669c5781de751a",
+      "pages": 143,
+      "risk_band": "VERY_HIGH",
+      "segment": "high_risk_jurisdiction",
+      "tags": [
+        "high_risk_jurisdiction",
+        "nominee_unresolved",
+        "ownership_depth_4",
+        "pep_true_hit"
+      ]
+    },
+    {
+      "case_id": "CASE-700179",
+      "gold_sha256": "11684326422c8621e55d1a41cdcc3e77985ee28bcc09adc6d1f9b973fb688e3b",
+      "pages": 90,
+      "risk_band": "HIGH",
+      "segment": "high_risk_jurisdiction",
+      "tags": [
+        "high_risk_jurisdiction",
+        "nominee_unresolved",
+        "ownership_depth_3",
+        "registry_unavailable",
+        "stale_address"
+      ]
+    },
+    {
+      "case_id": "CASE-700180",
+      "gold_sha256": "271d62079cf8d1e7b9b515239e8a17e6b575534c2bda7c9764626e8395bb41dc",
+      "pages": 128,
+      "risk_band": "HIGH",
+      "segment": "high_risk_jurisdiction",
+      "tags": [
+        "activity_inconsistent",
+        "high_risk_jurisdiction",
+        "nominee_unresolved",
+        "ownership_depth_4"
+      ]
+    },
+    {
+      "case_id": "CASE-700181",
+      "gold_sha256": "b124fc5e2bf9777c29dc61d669a780e90768908bf9a5a2365ef9fe8142e23dbd",
+      "pages": 75,
+      "risk_band": "VERY_HIGH",
+      "segment": "high_risk_jurisdiction",
+      "tags": [
+        "high_risk_jurisdiction",
+        "media_allegation",
+        "nominee_unresolved",
+        "ownership_depth_3",
+        "registry_unavailable"
+      ]
+    },
+    {
+      "case_id": "CASE-700182",
+      "gold_sha256": "972e0e5903926045fde18e84c5a001b1cbe1f1bbc6225d42739f8cb42db0577d",
+      "pages": 113,
+      "risk_band": "VERY_HIGH",
+      "segment": "high_risk_jurisdiction",
+      "tags": [
+        "high_risk_jurisdiction",
+        "nominee_unresolved",
+        "ownership_depth_4",
+        "sanctions_true_hit"
+      ]
+    },
+    {
+      "case_id": "CASE-700183",
+      "gold_sha256": "bc553bb62c24aec252f49c8e794ae8ae9b64d4f6693f449e6563bf7d43527ac5",
+      "pages": 140,
+      "risk_band": "HIGH",
+      "segment": "high_risk_jurisdiction",
+      "tags": [
+        "activity_inconsistent",
+        "high_risk_jurisdiction",
+        "nominee_unresolved",
+        "ownership_depth_3",
+        "registry_unavailable"
+      ]
+    },
+    {
+      "case_id": "CASE-700184",
+      "gold_sha256": "46adb8eec3f9cd19fb95298c4e8d27ee019cf2e059f7ad2d6cabf4550e9be560",
+      "pages": 87,
+      "risk_band": "VERY_HIGH",
+      "segment": "high_risk_jurisdiction",
+      "tags": [
+        "high_risk_jurisdiction",
+        "nominee_unresolved",
+        "ownership_depth_4"
+      ]
+    },
+    {
+      "case_id": "CASE-700185",
+      "gold_sha256": "fea89292f3cb80491677f95e93e38be2552bdbd9f30a92e4317e6f4db2aa5ceb",
+      "pages": 125,
+      "risk_band": "HIGH",
+      "segment": "high_risk_jurisdiction",
+      "tags": [
+        "high_risk_jurisdiction",
+        "nominee_unresolved",
+        "ownership_depth_3",
+        "pep_true_hit",
+        "registry_unavailable"
+      ]
+    },
+    {
+      "case_id": "CASE-700186",
+      "gold_sha256": "24d7478de80cc85f06f0dfb8ebf01539ffe618036c642c7a48062cd099477c69",
+      "pages": 72,
+      "risk_band": "HIGH",
+      "segment": "high_risk_jurisdiction",
+      "tags": [
+        "activity_inconsistent",
+        "high_risk_jurisdiction",
+        "media_final_notice",
+        "nominee_unresolved",
+        "ownership_depth_4"
+      ]
+    },
+    {
+      "case_id": "CASE-700187",
+      "gold_sha256": "289cd6b76bc04f87ded8f38241332a628297a0f2c5f22b6f34b067e16263b643",
+      "pages": 110,
+      "risk_band": "VERY_HIGH",
+      "segment": "high_risk_jurisdiction",
+      "tags": [
+        "high_risk_jurisdiction",
+        "nominee_unresolved",
+        "ownership_depth_3",
+        "registry_unavailable"
+      ]
+    },
+    {
+      "case_id": "CASE-700188",
+      "gold_sha256": "300a24b0306305320f9997fce228ea70c9252921808f9f64960c55c18396e785",
+      "pages": 148,
+      "risk_band": "HIGH",
+      "segment": "high_risk_jurisdiction",
+      "tags": [
+        "high_risk_jurisdiction",
+        "nominee_unresolved",
+        "ownership_depth_4",
+        "stale_address"
+      ]
+    },
+    {
+      "case_id": "CASE-700189",
+      "gold_sha256": "ed6f1a08e74a2385b4d6878226d8823cc9cee137936442e51de67e68c6092ac0",
+      "pages": 95,
+      "risk_band": "HIGH",
+      "segment": "high_risk_jurisdiction",
+      "tags": [
+        "activity_inconsistent",
+        "high_risk_jurisdiction",
+        "nominee_unresolved",
+        "ownership_depth_3",
+        "registry_unavailable"
+      ]
+    },
+    {
+      "case_id": "CASE-700190",
+      "gold_sha256": "2fe0c59e6d988ccbb29d029b29643bc66b85cb0ac3174d1221f93c34d9a91626",
+      "pages": 133,
+      "risk_band": "VERY_HIGH",
+      "segment": "high_risk_jurisdiction",
+      "tags": [
+        "high_risk_jurisdiction",
+        "nominee_unresolved",
+        "ownership_depth_4"
+      ]
+    },
+    {
+      "case_id": "CASE-700191",
+      "gold_sha256": "662502ed1f9852b3408888e3e4eb2f5ad9fd0421cfc451651afcf643bb0c8e6e",
+      "pages": 80,
+      "risk_band": "HIGH",
+      "segment": "high_risk_jurisdiction",
+      "tags": [
+        "high_risk_jurisdiction",
+        "media_allegation",
+        "nominee_unresolved",
+        "ownership_depth_3",
+        "registry_unavailable"
+      ]
+    },
+    {
+      "case_id": "CASE-700192",
+      "gold_sha256": "4b3ce3174b19a6838f30064be0c6e79d2008c19bd6b6bde9ea11967ef72a942c",
+      "pages": 118,
+      "risk_band": "HIGH",
+      "segment": "high_risk_jurisdiction",
+      "tags": [
+        "activity_inconsistent",
+        "high_risk_jurisdiction",
+        "nominee_unresolved",
+        "ownership_depth_4",
+        "pep_true_hit"
+      ]
+    },
+    {
+      "case_id": "CASE-700193",
+      "gold_sha256": "669d75fff6c116fb55d0d83bc123cef7c7b46b498f14bcb000dae65d19db41f4",
+      "pages": 65,
+      "risk_band": "VERY_HIGH",
+      "segment": "high_risk_jurisdiction",
+      "tags": [
+        "high_risk_jurisdiction",
+        "nominee_unresolved",
+        "ownership_depth_3",
+        "registry_unavailable",
+        "sanctions_true_hit"
+      ]
+    },
+    {
+      "case_id": "CASE-700194",
+      "gold_sha256": "cdf0aedd9daa397d79f1f7222201134778bb82db6ae53116efb0cdd26bd83aa4",
+      "pages": 92,
+      "risk_band": "HIGH",
+      "segment": "high_risk_jurisdiction",
+      "tags": [
+        "high_risk_jurisdiction",
+        "nominee_unresolved",
+        "ownership_depth_4"
+      ]
+    },
+    {
+      "case_id": "CASE-700195",
+      "gold_sha256": "b962edb06b1febe0ab9af92916cb22cfe4c13aa6c371d878610733976a5cd7c8",
+      "pages": 130,
+      "risk_band": "HIGH",
+      "segment": "high_risk_jurisdiction",
+      "tags": [
+        "activity_inconsistent",
+        "high_risk_jurisdiction",
+        "nominee_unresolved",
+        "ownership_depth_3",
+        "registry_unavailable"
+      ]
+    },
+    {
+      "case_id": "CASE-700196",
+      "gold_sha256": "81d4c678a8ce058f1f01fe645f9c81fd2a3813ef45c34ec751e53ffe4aa22a3b",
+      "pages": 77,
+      "risk_band": "VERY_HIGH",
+      "segment": "high_risk_jurisdiction",
+      "tags": [
+        "high_risk_jurisdiction",
+        "media_allegation",
+        "nominee_unresolved",
+        "ownership_depth_4"
+      ]
+    },
+    {
+      "case_id": "CASE-700197",
+      "gold_sha256": "1f2f88b0f2870ad037ecebc1bb72259a467cef69c9d33f358b12ba02341965dd",
+      "pages": 115,
+      "risk_band": "HIGH",
+      "segment": "high_risk_jurisdiction",
+      "tags": [
+        "high_risk_jurisdiction",
+        "nominee_unresolved",
+        "ownership_depth_3",
+        "registry_unavailable",
+        "stale_address"
+      ]
+    },
+    {
+      "case_id": "CASE-700198",
+      "gold_sha256": "8b473754081fc2a42ca633f6a8889e43c50bb3896201e3de49496244cf2e122e",
+      "pages": 62,
+      "risk_band": "HIGH",
+      "segment": "high_risk_jurisdiction",
+      "tags": [
+        "activity_inconsistent",
+        "high_risk_jurisdiction",
+        "nominee_unresolved",
+        "ownership_depth_4"
+      ]
+    },
+    {
+      "case_id": "CASE-700199",
+      "gold_sha256": "2aa32e462499a8db9a8a0f7349386578390d0decc1cc1ff6ce02bd1d4903b771",
+      "pages": 100,
+      "risk_band": "VERY_HIGH",
+      "segment": "high_risk_jurisdiction",
+      "tags": [
+        "high_risk_jurisdiction",
+        "nominee_unresolved",
+        "ownership_depth_3",
+        "pep_true_hit",
+        "registry_unavailable"
+      ]
+    },
+    {
+      "case_id": "CASE-700200",
+      "gold_sha256": "1f812bedbe0322ec7ec9b26f251de9dd5cbd5e4369df8358ff1bb537774a8336",
+      "pages": 138,
+      "risk_band": "HIGH",
+      "segment": "high_risk_jurisdiction",
+      "tags": [
+        "high_risk_jurisdiction",
+        "nominee_unresolved",
+        "ownership_depth_4"
+      ]
+    },
+    {
+      "case_id": "CASE-700201",
+      "gold_sha256": "e677a2d12c5d7dbc603fcbc9e1a6bb03a337d42ff7fb88c381d861b6b6b7869d",
+      "pages": 47,
+      "risk_band": "HIGH",
+      "segment": "adversarial",
+      "tags": [
+        "activity_inconsistent",
+        "adversarial",
+        "contradictory_registry_number",
+        "illegible_scan",
+        "injection_pattern_01",
+        "nominee_unresolved",
+        "sanctions_lookalike"
+      ]
+    },
+    {
+      "case_id": "CASE-700202",
+      "gold_sha256": "8c7a6226bb8d65b2df8073eadfcde4f41628a6983dce89803c05f8453547cc82",
+      "pages": 85,
+      "risk_band": "LOW",
+      "segment": "adversarial",
+      "tags": [
+        "adversarial",
+        "injection_pattern_02"
+      ]
+    },
+    {
+      "case_id": "CASE-700203",
+      "gold_sha256": "60acef9e7a3b2b55543d3ede42b35798db172537a61ee2e3d3bce53b7dc1fb58",
+      "pages": 42,
+      "risk_band": "HIGH",
+      "segment": "adversarial",
+      "tags": [
+        "activity_inconsistent",
+        "adversarial",
+        "injection_pattern_03",
+        "nominee_unresolved"
+      ]
+    },
+    {
+      "case_id": "CASE-700204",
+      "gold_sha256": "95d68ac985473586e95873b73e2f53cf3abd7f3901bd68ddadad1886f867362c",
+      "pages": 80,
+      "risk_band": "LOW",
+      "segment": "adversarial",
+      "tags": [
+        "adversarial",
+        "contradictory_registry_number",
+        "injection_pattern_04"
+      ]
+    },
+    {
+      "case_id": "CASE-700205",
+      "gold_sha256": "81be4fce80f8e57ab7ed09dc1e73aecca5c29db0e6c320ed5b842e430e285f54",
+      "pages": 107,
+      "risk_band": "HIGH",
+      "segment": "adversarial",
+      "tags": [
+        "activity_inconsistent",
+        "adversarial",
+        "injection_pattern_05",
+        "nominee_unresolved",
+        "sanctions_lookalike"
+      ]
+    },
+    {
+      "case_id": "CASE-700206",
+      "gold_sha256": "a26358058ce905660cb8773c136267042f1ce2c465fd76da016e10682d12ef13",
+      "pages": 64,
+      "risk_band": "LOW",
+      "segment": "adversarial",
+      "tags": [
+        "adversarial",
+        "illegible_scan",
+        "injection_pattern_06"
+      ]
+    },
+    {
+      "case_id": "CASE-700207",
+      "gold_sha256": "0264069347cb9fa45568e67b6a671e7379a076bafcebbaaf6cd9f57126642216",
+      "pages": 102,
+      "risk_band": "HIGH",
+      "segment": "adversarial",
+      "tags": [
+        "activity_inconsistent",
+        "adversarial",
+        "contradictory_registry_number",
+        "injection_pattern_07",
+        "nominee_unresolved"
+      ]
+    },
+    {
+      "case_id": "CASE-700208",
+      "gold_sha256": "643e47cfea788c123c626a4a4e4718d8bfb0ba627d68cedacf7e519fb783c9ac",
+      "pages": 59,
+      "risk_band": "LOW",
+      "segment": "adversarial",
+      "tags": [
+        "adversarial",
+        "injection_pattern_08"
+      ]
+    },
+    {
+      "case_id": "CASE-700209",
+      "gold_sha256": "b63fd5a4caf6cd102d0b234b84a0341c9cea414cb0de92efbfbcf4fc2117a337",
+      "pages": 97,
+      "risk_band": "HIGH",
+      "segment": "adversarial",
+      "tags": [
+        "activity_inconsistent",
+        "adversarial",
+        "injection_pattern_09",
+        "nominee_unresolved",
+        "sanctions_lookalike",
+        "stale_address"
+      ]
+    },
+    {
+      "case_id": "CASE-700210",
+      "gold_sha256": "df8fe9d1f365dc58b98167b021851e51252de4d5d891b5be9444948aab6c5046",
+      "pages": 54,
+      "risk_band": "LOW",
+      "segment": "adversarial",
+      "tags": [
+        "adversarial",
+        "contradictory_registry_number",
+        "injection_pattern_10"
+      ]
+    },
+    {
+      "case_id": "CASE-700211",
+      "gold_sha256": "c92aa53602571d5e7530f9792d9ad28af027986e544a24e6e1cc2bb359626556",
+      "pages": 92,
+      "risk_band": "HIGH",
+      "segment": "adversarial",
+      "tags": [
+        "activity_inconsistent",
+        "adversarial",
+        "illegible_scan",
+        "injection_pattern_11",
+        "nominee_unresolved"
+      ]
+    },
+    {
+      "case_id": "CASE-700212",
+      "gold_sha256": "de035d4c1fde6720d9595a7d464ae8a00f0fa2856d4f9a8f4382830fe482fb01",
+      "pages": 49,
+      "risk_band": "LOW",
+      "segment": "adversarial",
+      "tags": [
+        "adversarial",
+        "injection_pattern_12"
+      ]
+    },
+    {
+      "case_id": "CASE-700213",
+      "gold_sha256": "37d84ee50ac909a69d3a68b1e92ccd2b4bf03addd4f78abbd5553bb61cc93154",
+      "pages": 87,
+      "risk_band": "HIGH",
+      "segment": "adversarial",
+      "tags": [
+        "activity_inconsistent",
+        "adversarial",
+        "contradictory_registry_number",
+        "injection_pattern_13",
+        "nominee_unresolved",
+        "sanctions_lookalike"
+      ]
+    },
+    {
+      "case_id": "CASE-700214",
+      "gold_sha256": "2173a7369f35bd88766ffb3d7afde03aa9b792348f3c5fed6dcdac46488a9ac5",
+      "pages": 44,
+      "risk_band": "LOW",
+      "segment": "adversarial",
+      "tags": [
+        "adversarial",
+        "injection_pattern_14"
+      ]
+    },
+    {
+      "case_id": "CASE-700215",
+      "gold_sha256": "8ebe2c19af232f12efab5e6e077e89740b386c1d1c3f964edc95a51d3e918c24",
+      "pages": 82,
+      "risk_band": "HIGH",
+      "segment": "adversarial",
+      "tags": [
+        "activity_inconsistent",
+        "adversarial",
+        "injection_pattern_15",
+        "nominee_unresolved"
+      ]
+    },
+    {
+      "case_id": "CASE-700216",
+      "gold_sha256": "5d996f921e4acb50a65ed1d4f45e72e3f8d84ee6ec8cd754119c080dc261e288",
+      "pages": 109,
+      "risk_band": "LOW",
+      "segment": "adversarial",
+      "tags": [
+        "adversarial",
+        "contradictory_registry_number",
+        "illegible_scan",
+        "injection_pattern_16"
+      ]
+    },
+    {
+      "case_id": "CASE-700217",
+      "gold_sha256": "9e57ea092fce6c240c1f91e79ecb03356f914cca993df5d9475674d02bc8f488",
+      "pages": 66,
+      "risk_band": "HIGH",
+      "segment": "adversarial",
+      "tags": [
+        "activity_inconsistent",
+        "adversarial",
+        "injection_pattern_17",
+        "nominee_unresolved",
+        "sanctions_lookalike"
+      ]
+    },
+    {
+      "case_id": "CASE-700218",
+      "gold_sha256": "de365a594fbc6ef56efdd0ecfa2bb9f3ce7e9396aec2116b70f185c089553f52",
+      "pages": 104,
+      "risk_band": "LOW",
+      "segment": "adversarial",
+      "tags": [
+        "adversarial",
+        "injection_pattern_18",
+        "stale_address"
+      ]
+    },
+    {
+      "case_id": "CASE-700219",
+      "gold_sha256": "84adec8b9d8d06573f34341ae729c0a2886c1284cde3253242224c558489b8b9",
+      "pages": 61,
+      "risk_band": "HIGH",
+      "segment": "adversarial",
+      "tags": [
+        "activity_inconsistent",
+        "adversarial",
+        "contradictory_registry_number",
+        "injection_pattern_19",
+        "nominee_unresolved"
+      ]
+    },
+    {
+      "case_id": "CASE-700220",
+      "gold_sha256": "6fc8ff647d9598bffec9bc610edfe63ea84c2ef1aa6e20f3c036c0107184be0f",
+      "pages": 99,
+      "risk_band": "LOW",
+      "segment": "adversarial",
+      "tags": [
+        "adversarial",
+        "injection_pattern_20"
+      ]
+    },
+    {
+      "case_id": "CASE-700221",
+      "gold_sha256": "b4aeb45bb2be6ed2663a0b60aa299ac25c04e7e3f802bd129e90e07e9323fa97",
+      "pages": 56,
+      "risk_band": "HIGH",
+      "segment": "adversarial",
+      "tags": [
+        "activity_inconsistent",
+        "adversarial",
+        "illegible_scan",
+        "injection_pattern_21",
+        "nominee_unresolved",
+        "sanctions_lookalike"
+      ]
+    },
+    {
+      "case_id": "CASE-700222",
+      "gold_sha256": "6617ad98b1cc6b4a3234a00225642e0bd6458f9f768b1dca52178382cd25d539",
+      "pages": 94,
+      "risk_band": "LOW",
+      "segment": "adversarial",
+      "tags": [
+        "adversarial",
+        "contradictory_registry_number",
+        "injection_pattern_22"
+      ]
+    },
+    {
+      "case_id": "CASE-700223",
+      "gold_sha256": "c643971c5899ccc44ea5acd9ba9a145c715de0064b717944671fea881dc7a4fa",
+      "pages": 51,
+      "risk_band": "HIGH",
+      "segment": "adversarial",
+      "tags": [
+        "activity_inconsistent",
+        "adversarial",
+        "injection_pattern_23",
+        "nominee_unresolved"
+      ]
+    },
+    {
+      "case_id": "CASE-700224",
+      "gold_sha256": "7e4b5b852c7323cef944b590febc68d6a005f1f8ec45f960dedec9cc0ef18238",
+      "pages": 89,
+      "risk_band": "LOW",
+      "segment": "adversarial",
+      "tags": [
+        "adversarial",
+        "injection_pattern_24"
+      ]
+    },
+    {
+      "case_id": "CASE-700225",
+      "gold_sha256": "336a984a549c57db96ba4b108a9217898b8fd702aa24573ccba9cf84e342019e",
+      "pages": 46,
+      "risk_band": "HIGH",
+      "segment": "adversarial",
+      "tags": [
+        "activity_inconsistent",
+        "adversarial",
+        "contradictory_registry_number",
+        "injection_pattern_25",
+        "nominee_unresolved",
+        "sanctions_lookalike"
+      ]
+    },
+    {
+      "case_id": "CASE-700226",
+      "gold_sha256": "803d2c1f68281233b098cd6f74d8e69f738d1196a124f54b3f6bf0e558a2cf17",
+      "pages": 84,
+      "risk_band": "LOW",
+      "segment": "adversarial",
+      "tags": [
+        "adversarial",
+        "illegible_scan",
+        "injection_pattern_26"
+      ]
+    },
+    {
+      "case_id": "CASE-700227",
+      "gold_sha256": "50a8e6ea8780b74186b6fae20897199065150e4913e0387bd80b6f8e4dbb4344",
+      "pages": 111,
+      "risk_band": "HIGH",
+      "segment": "adversarial",
+      "tags": [
+        "activity_inconsistent",
+        "adversarial",
+        "injection_pattern_27",
+        "nominee_unresolved",
+        "stale_address"
+      ]
+    },
+    {
+      "case_id": "CASE-700228",
+      "gold_sha256": "c4a7c6e5003c684679ed7aa2e52b71d750872759e37129772a9461ad66e14504",
+      "pages": 68,
+      "risk_band": "LOW",
+      "segment": "adversarial",
+      "tags": [
+        "adversarial",
+        "contradictory_registry_number",
+        "injection_pattern_28"
+      ]
+    },
+    {
+      "case_id": "CASE-700229",
+      "gold_sha256": "06ffa9c298ee0309c970370b9b567af61da7ee8cd02af3967041c6431bc2508a",
+      "pages": 106,
+      "risk_band": "HIGH",
+      "segment": "adversarial",
+      "tags": [
+        "activity_inconsistent",
+        "adversarial",
+        "injection_pattern_29",
+        "nominee_unresolved",
+        "sanctions_lookalike"
+      ]
+    },
+    {
+      "case_id": "CASE-700230",
+      "gold_sha256": "b89afda3d45114d13146693c2480d2e63cbaf7314b5c53ca5e63f44e311e9d63",
+      "pages": 63,
+      "risk_band": "LOW",
+      "segment": "adversarial",
+      "tags": [
+        "adversarial",
+        "injection_pattern_30"
+      ]
+    },
+    {
+      "case_id": "CASE-700231",
+      "gold_sha256": "01b9fcf461c7d31d2d0af80ea7a45bfa7de2914d8271179d2018d05665be319f",
+      "pages": 101,
+      "risk_band": "HIGH",
+      "segment": "adversarial",
+      "tags": [
+        "activity_inconsistent",
+        "adversarial",
+        "contradictory_registry_number",
+        "illegible_scan",
+        "injection_pattern_31",
+        "nominee_unresolved"
+      ]
+    },
+    {
+      "case_id": "CASE-700232",
+      "gold_sha256": "fe48e887bb7962344589499282bd69328c637996239a56af1a37efb53d16fc3f",
+      "pages": 58,
+      "risk_band": "LOW",
+      "segment": "adversarial",
+      "tags": [
+        "adversarial",
+        "injection_pattern_32"
+      ]
+    },
+    {
+      "case_id": "CASE-700233",
+      "gold_sha256": "976f21691ad401cccbc1aa99a9b26ed863dc90970e09401b19b157e2387f2a0c",
+      "pages": 96,
+      "risk_band": "HIGH",
+      "segment": "adversarial",
+      "tags": [
+        "activity_inconsistent",
+        "adversarial",
+        "injection_pattern_33",
+        "nominee_unresolved",
+        "sanctions_lookalike"
+      ]
+    },
+    {
+      "case_id": "CASE-700234",
+      "gold_sha256": "34179e5fd3c7d0c392d521ea2b97232db3b6d23bcf9aa2a3c554ab2087b7d2fc",
+      "pages": 53,
+      "risk_band": "LOW",
+      "segment": "adversarial",
+      "tags": [
+        "adversarial",
+        "contradictory_registry_number",
+        "injection_pattern_34"
+      ]
+    },
+    {
+      "case_id": "CASE-700235",
+      "gold_sha256": "376238b0d1b7732267eabb81ad9c604fa7c987e4cb64f8a0aba3a05253bd78b5",
+      "pages": 91,
+      "risk_band": "HIGH",
+      "segment": "adversarial",
+      "tags": [
+        "activity_inconsistent",
+        "adversarial",
+        "injection_pattern_35",
+        "nominee_unresolved"
+      ]
+    },
+    {
+      "case_id": "CASE-700236",
+      "gold_sha256": "8ed3222c85ac72a1ca770a4439a36e5d35b0188298367ab97fef57ef9e1de175",
+      "pages": 48,
+      "risk_band": "LOW",
+      "segment": "adversarial",
+      "tags": [
+        "adversarial",
+        "illegible_scan",
+        "injection_pattern_36",
+        "stale_address"
+      ]
+    },
+    {
+      "case_id": "CASE-700237",
+      "gold_sha256": "c2485db22440461c4a3b8297a653b7c08cd07a5e08667ef891a00d9ace8d8970",
+      "pages": 86,
+      "risk_band": "HIGH",
+      "segment": "adversarial",
+      "tags": [
+        "activity_inconsistent",
+        "adversarial",
+        "contradictory_registry_number",
+        "injection_pattern_37",
+        "nominee_unresolved",
+        "sanctions_lookalike"
+      ]
+    },
+    {
+      "case_id": "CASE-700238",
+      "gold_sha256": "ae6ae9eb68507aeb7140c4cd14a527300763630e0142f7b3dbad490110d95823",
+      "pages": 113,
+      "risk_band": "LOW",
+      "segment": "adversarial",
+      "tags": [
+        "adversarial",
+        "injection_pattern_38"
+      ]
+    },
+    {
+      "case_id": "CASE-700239",
+      "gold_sha256": "8f397e3a5e7a052302c99063deb1a5a79fbe994681342cc94f46c36d8a65d9f8",
+      "pages": 70,
+      "risk_band": "HIGH",
+      "segment": "adversarial",
+      "tags": [
+        "activity_inconsistent",
+        "adversarial",
+        "injection_pattern_39",
+        "nominee_unresolved"
+      ]
+    },
+    {
+      "case_id": "CASE-700240",
+      "gold_sha256": "a7294f9f0831481ef1c90788f9e16ad3f44731a2b620c56bf0e9d344a0696d91",
+      "pages": 108,
+      "risk_band": "LOW",
+      "segment": "adversarial",
+      "tags": [
+        "adversarial",
+        "contradictory_registry_number",
+        "injection_pattern_40"
+      ]
+    },
+    {
+      "case_id": "CASE-700241",
+      "gold_sha256": "81c0780428d748fca5fba3d0fa6882de32a7dbf45a2cd3e7b3a178cfbad6782e",
+      "pages": 83,
+      "risk_band": "HIGH",
+      "segment": "degraded_input",
+      "tags": [
+        "connector_degraded",
+        "degraded_input",
+        "encrypted",
+        "missing_sof",
+        "unreadable_fraction_35"
+      ]
+    },
+    {
+      "case_id": "CASE-700242",
+      "gold_sha256": "5083b22f5355d04cf489d602e2f78968578cc6832dd5fa75041939573b69acb5",
+      "pages": 121,
+      "risk_band": "LOW",
+      "segment": "degraded_input",
+      "tags": [
+        "degraded_input",
+        "oversized",
+        "unreadable_fraction_5"
+      ]
+    },
+    {
+      "case_id": "CASE-700243",
+      "gold_sha256": "5eaf6ff9238619899bb37e9ec2ef1965d67a58b8c41a08d9c1062a6ce05065f7",
+      "pages": 159,
+      "risk_band": "LOW",
+      "segment": "degraded_input",
+      "tags": [
+        "degraded_input",
+        "mixed_language",
+        "unreadable_fraction_15"
+      ]
+    },
+    {
+      "case_id": "CASE-700244",
+      "gold_sha256": "ccb48898a5bec884e19d29db21ba7d1b7d259ae816570a45bf85f46c86bdaa7a",
+      "pages": 96,
+      "risk_band": "HIGH",
+      "segment": "degraded_input",
+      "tags": [
+        "degraded_input",
+        "missing_sof",
+        "rotated",
+        "unreadable_fraction_25"
+      ]
+    },
+    {
+      "case_id": "CASE-700245",
+      "gold_sha256": "b3adfbc78fa9dc124becf9881753d32553ffa5181d463c6a9c7d9efc61e44a2b",
+      "pages": 134,
+      "risk_band": "LOW",
+      "segment": "degraded_input",
+      "tags": [
+        "connector_degraded",
+        "degraded_input",
+        "encrypted",
+        "unreadable_fraction_35"
+      ]
+    },
+    {
+      "case_id": "CASE-700246",
+      "gold_sha256": "a627571b0b7ba6f10c6b63e3d2377e16e55af656da4c4e70e83ca5ca2aec34ba",
+      "pages": 172,
+      "risk_band": "LOW",
+      "segment": "degraded_input",
+      "tags": [
+        "degraded_input",
+        "oversized",
+        "unreadable_fraction_5"
+      ]
+    },
+    {
+      "case_id": "CASE-700247",
+      "gold_sha256": "b45103dcdbf6ee5a7c1c6f32e7fc8675304ef026ab570c5555a50919f5835ac2",
+      "pages": 109,
+      "risk_band": "HIGH",
+      "segment": "degraded_input",
+      "tags": [
+        "degraded_input",
+        "missing_sof",
+        "mixed_language",
+        "unreadable_fraction_15"
+      ]
+    },
+    {
+      "case_id": "CASE-700248",
+      "gold_sha256": "37225159eba647f04700ffce0f8ad084d163035c8fc8aed7c4aeb9b9d6f0df19",
+      "pages": 147,
+      "risk_band": "LOW",
+      "segment": "degraded_input",
+      "tags": [
+        "degraded_input",
+        "rotated",
+        "unreadable_fraction_25"
+      ]
+    },
+    {
+      "case_id": "CASE-700249",
+      "gold_sha256": "06b9c5eea1e9b023d62e3309c491a54dddbc4b3e3b4e4b65bea4f180f9ba443b",
+      "pages": 174,
+      "risk_band": "LOW",
+      "segment": "degraded_input",
+      "tags": [
+        "connector_degraded",
+        "degraded_input",
+        "encrypted",
+        "stale_address",
+        "unreadable_fraction_35"
+      ]
+    },
+    {
+      "case_id": "CASE-700250",
+      "gold_sha256": "a75e0e260392e4bf226278b04fd03376c8a8cd27cbc304ca81b5413254047f27",
+      "pages": 111,
+      "risk_band": "HIGH",
+      "segment": "degraded_input",
+      "tags": [
+        "degraded_input",
+        "missing_sof",
+        "oversized",
+        "unreadable_fraction_5"
+      ]
+    },
+    {
+      "case_id": "CASE-700251",
+      "gold_sha256": "816d90281fb21cd88ae560cb09842b11157ab547d780943b945450ecd72284d8",
+      "pages": 149,
+      "risk_band": "LOW",
+      "segment": "degraded_input",
+      "tags": [
+        "degraded_input",
+        "mixed_language",
+        "unreadable_fraction_15"
+      ]
+    },
+    {
+      "case_id": "CASE-700252",
+      "gold_sha256": "5d7750c4a00915da6245336672ea90d7af6ca9b81f0ce1266f2d6f1f78b8a3bc",
+      "pages": 86,
+      "risk_band": "LOW",
+      "segment": "degraded_input",
+      "tags": [
+        "degraded_input",
+        "rotated",
+        "unreadable_fraction_25"
+      ]
+    },
+    {
+      "case_id": "CASE-700253",
+      "gold_sha256": "fd2ddbd62549acfdab68a8af9a77228739849b83e0c20de95a27b2705a66ca5b",
+      "pages": 124,
+      "risk_band": "HIGH",
+      "segment": "degraded_input",
+      "tags": [
+        "connector_degraded",
+        "degraded_input",
+        "encrypted",
+        "missing_sof",
+        "unreadable_fraction_35"
+      ]
+    },
+    {
+      "case_id": "CASE-700254",
+      "gold_sha256": "b53dedb9a36b2f8930645b3350043101730d39f05b4c9b639a10a56afe949f6b",
+      "pages": 162,
+      "risk_band": "LOW",
+      "segment": "degraded_input",
+      "tags": [
+        "degraded_input",
+        "oversized",
+        "unreadable_fraction_5"
+      ]
+    },
+    {
+      "case_id": "CASE-700255",
+      "gold_sha256": "e1529cba2e778500686ced5dc65fa9a123b252ccf2d573f8a1f5fc3c128326fd",
+      "pages": 99,
+      "risk_band": "LOW",
+      "segment": "degraded_input",
+      "tags": [
+        "degraded_input",
+        "mixed_language",
+        "unreadable_fraction_15"
+      ]
+    },
+    {
+      "case_id": "CASE-700256",
+      "gold_sha256": "37e40a2bf0ae6e20d8afd4181f9c39e6b4ed85525d1f562084e7cbd31deac2dd",
+      "pages": 137,
+      "risk_band": "HIGH",
+      "segment": "degraded_input",
+      "tags": [
+        "degraded_input",
+        "missing_sof",
+        "rotated",
+        "unreadable_fraction_25"
+      ]
+    },
+    {
+      "case_id": "CASE-700257",
+      "gold_sha256": "4d39bc9ea81283a635ce3934c4717fc743be50d1d989beed982c65f90a691ed7",
+      "pages": 175,
+      "risk_band": "LOW",
+      "segment": "degraded_input",
+      "tags": [
+        "connector_degraded",
+        "degraded_input",
+        "encrypted",
+        "unreadable_fraction_35"
+      ]
+    },
+    {
+      "case_id": "CASE-700258",
+      "gold_sha256": "180511f2f283443ba680be62d07aea3bfaadee939629c6add89a62daf53701ba",
+      "pages": 112,
+      "risk_band": "LOW",
+      "segment": "degraded_input",
+      "tags": [
+        "degraded_input",
+        "oversized",
+        "stale_address",
+        "unreadable_fraction_5"
+      ]
+    },
+    {
+      "case_id": "CASE-700259",
+      "gold_sha256": "3fddabc086b30f06804683640ddf1fc096bb037b80c5b47c6821f0c69b666add",
+      "pages": 150,
+      "risk_band": "HIGH",
+      "segment": "degraded_input",
+      "tags": [
+        "degraded_input",
+        "missing_sof",
+        "mixed_language",
+        "unreadable_fraction_15"
+      ]
+    },
+    {
+      "case_id": "CASE-700260",
+      "gold_sha256": "a00202eb1689d41f10d5e189573fc34e9d6d04b56ed52df5d5b5d0f00bd683b6",
+      "pages": 177,
+      "risk_band": "LOW",
+      "segment": "degraded_input",
+      "tags": [
+        "degraded_input",
+        "rotated",
+        "unreadable_fraction_25"
+      ]
+    }
+  ],
+  "generator_seed": 20261022,
+  "policy_version": "risk-model-2026.3",
+  "risk_bands": {
+    "HIGH": 112,
+    "LOW": 118,
+    "MEDIUM": 15,
+    "VERY_HIGH": 15
+  },
+  "schema_version": "1.0.0",
+  "segments": {
+    "adversarial": 40,
+    "corporate_complex": 60,
+    "corporate_simple": 40,
+    "degraded_input": 20,
+    "high_risk_jurisdiction": 30,
+    "individual_pep_media": 30,
+    "individual_standard": 40
+  }
+}

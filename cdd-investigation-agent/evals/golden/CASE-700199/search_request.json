@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700199"
+  },
+  "case_id": "CASE-700199",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Ari Testwell 700199",
+    "Bela Sampleton 700199"
+  ],
+  "request_id": "SR-700199",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Jori Simvale Trading 700199 Ltd"
+}

@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700090-003",
+  "filename": "owner_1_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Bela Testwell 700090\nDate of birth: 1976-12-23\nNationality: DE\nPassport number: O7000901\nValid until: 2031-12-31\n"
+    }
+  ]
+}

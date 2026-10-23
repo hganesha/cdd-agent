@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700199-002",
+  "filename": "owner_1_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Ari Testwell 700199\nDate of birth: 1965-01-26\nNationality: GB\nPassport number: O7001991\nValid until: 2031-12-31\n"
+    }
+  ]
+}

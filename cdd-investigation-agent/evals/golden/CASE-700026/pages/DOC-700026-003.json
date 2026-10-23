@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700026-003",
+  "filename": "owner_1_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Hale Trialford 700026\nDate of birth: 1972-08-20\nNationality: CA\nPassport number: O7000261\nValid until: 2031-12-31\n"
+    }
+  ]
+}

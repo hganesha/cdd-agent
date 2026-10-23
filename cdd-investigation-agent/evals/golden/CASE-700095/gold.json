@@ -1,0 +1,412 @@
+{
+  "activity": {
+    "annual_income_or_revenue_usd": 898000,
+    "annualised_credit_to_income_or_revenue_ratio": 0.6503,
+    "annualised_credits_usd": 584000.0,
+    "inconsistent": false,
+    "period_credits_usd": 146000,
+    "period_months": 3
+  },
+  "case_id": "CASE-700095",
+  "coverage": {
+    "documents_total": 17,
+    "pages_total": 391,
+    "pages_unreadable": 0
+  },
+  "decision_authority": "HUMAN",
+  "evidence_anchors": [
+    {
+      "char_span": [
+        29,
+        76
+      ],
+      "doc_id": "DOC-700095-001",
+      "key": "legal_name",
+      "page": 1,
+      "quote": "Company name: Fara Trialford Trading 700095 Ltd",
+      "value": "Fara Trialford Trading 700095 Ltd"
+    },
+    {
+      "char_span": [
+        77,
+        103
+      ],
+      "doc_id": "DOC-700095-001",
+      "key": "incorporation_number",
+      "page": 1,
+      "quote": "Company number: TST-700095",
+      "value": "TST-700095"
+    },
+    {
+      "char_span": [
+        64,
+        90
+      ],
+      "doc_id": "DOC-700095-002",
+      "key": "registry_number",
+      "page": 1,
+      "quote": "Company number: TST-700095",
+      "value": "TST-700095"
+    },
+    {
+      "char_span": [
+        19,
+        45
+      ],
+      "doc_id": "DOC-700095-003",
+      "key": "owner_1_name",
+      "page": 1,
+      "quote": "Name: Galen Mockley 700095",
+      "value": "Galen Mockley 700095"
+    },
+    {
+      "char_span": [
+        19,
+        46
+      ],
+      "doc_id": "DOC-700095-004",
+      "key": "owner_2_name",
+      "page": 1,
+      "quote": "Name: Hale Trialford 700095",
+      "value": "Hale Trialford 700095"
+    },
+    {
+      "char_span": [
+        22,
+        71
+      ],
+      "doc_id": "DOC-700095-005",
+      "key": "control_person",
+      "page": 1,
+      "quote": "Director and control person: Galen Mockley 700095",
+      "value": "Galen Mockley 700095"
+    },
+    {
+      "char_span": [
+        61,
+        103
+      ],
+      "doc_id": "DOC-700095-006",
+      "key": "address",
+      "page": 1,
+      "quote": "Address: 1 Test Street, Sample City 700095",
+      "value": "1 Test Street, Sample City 700095"
+    },
+    {
+      "char_span": [
+        51,
+        84
+      ],
+      "doc_id": "DOC-700095-007",
+      "key": "primary_share",
+      "page": 1,
+      "quote": "Layer 1 Holdings 700095 Ltd | 60%",
+      "value": 60
+    },
+    {
+      "char_span": [
+        85,
+        122
+      ],
+      "doc_id": "DOC-700095-007",
+      "key": "nominee_share",
+      "page": 1,
+      "quote": "Undisclosed Nominees 700095 Ltd | 30%",
+      "value": 30
+    },
+    {
+      "char_span": [
+        40,
+        80
+      ],
+      "doc_id": "DOC-700095-008",
+      "key": "vested_beneficiary",
+      "page": 1,
+      "quote": "Vested beneficiary: Galen Mockley 700095",
+      "value": "Galen Mockley 700095"
+    },
+    {
+      "char_span": [
+        78,
+        98
+      ],
+      "doc_id": "DOC-700095-015",
+      "key": "annual_income_or_revenue",
+      "page": 1,
+      "quote": "Revenue: USD 898,000",
+      "value": 898000
+    },
+    {
+      "char_span": [
+        84,
+        110
+      ],
+      "doc_id": "DOC-700095-016",
+      "key": "period_credits",
+      "page": 1,
+      "quote": "Total credits: USD 146,000",
+      "value": 146000
+    },
+    {
+      "char_span": [
+        60,
+        104
+      ],
+      "doc_id": "DOC-700095-017",
+      "key": "source_of_funds",
+      "page": 1,
+      "quote": "Funds are from documented business receipts.",
+      "value": "declared receipts"
+    }
+  ],
+  "gaps": [
+    "LOOKTHROUGH_DEPTH_EXCEEDED",
+    "UNRESOLVED_UBO"
+  ],
+  "ownership": {
+    "beneficial_owners": [
+      {
+        "effective_pct": 46.0,
+        "name": "Galen Mockley 700095"
+      }
+    ],
+    "control_person": "Galen Mockley 700095",
+    "paths": [
+      {
+        "basis": "document",
+        "effective_pct": 10.0,
+        "nodes": [
+          "Galen Mockley 700095",
+          "Elm Test Trust 700095",
+          "Fara Trialford Trading 700095 Ltd"
+        ],
+        "percentages": [
+          100.0,
+          10.0
+        ],
+        "person": "Galen Mockley 700095"
+      },
+      {
+        "basis": "document",
+        "effective_pct": 36.0,
+        "nodes": [
+          "Galen Mockley 700095",
+          "Layer 6 Holdings 700095 Ltd",
+          "Layer 5 Holdings 700095 Ltd",
+          "Layer 4 Holdings 700095 Ltd",
+          "Layer 3 Holdings 700095 Ltd",
+          "Layer 2 Holdings 700095 Ltd",
+          "Layer 1 Holdings 700095 Ltd",
+          "Fara Trialford Trading 700095 Ltd"
+        ],
+        "percentages": [
+          60.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          60.0
+        ],
+        "person": "Galen Mockley 700095"
+      },
+      {
+        "basis": "document",
+        "effective_pct": 24.0,
+        "nodes": [
+          "Hale Trialford 700095",
+          "Layer 6 Holdings 700095 Ltd",
+          "Layer 5 Holdings 700095 Ltd",
+          "Layer 4 Holdings 700095 Ltd",
+          "Layer 3 Holdings 700095 Ltd",
+          "Layer 2 Holdings 700095 Ltd",
+          "Layer 1 Holdings 700095 Ltd",
+          "Fara Trialford Trading 700095 Ltd"
+        ],
+        "percentages": [
+          40.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          60.0
+        ],
+        "person": "Hale Trialford 700095"
+      }
+    ],
+    "unresolved_pct": 30.0
+  },
+  "provenance": {
+    "generator_seed": 20961117,
+    "human_reviewed": false,
+    "kind": "SYNTHETIC_ORACLE",
+    "release_gate_eligible": false
+  },
+  "quarantine_doc_ids": [],
+  "recommendation": "HOLD_FOR_RFI",
+  "required_gates": [
+    "G3"
+  ],
+  "required_refusals": [],
+  "risk": {
+    "band": "HIGH",
+    "cdd_level": "EDD",
+    "factor_inputs": {
+      "F-BEH-01": false,
+      "F-BEH-02": false,
+      "F-BEH-03": false,
+      "F-CHAN-01": false,
+      "F-CHAN-02": false,
+      "F-CUST-01": false,
+      "F-CUST-02": false,
+      "F-CUST-03": false,
+      "F-CUST-04": true,
+      "F-CUST-05": true,
+      "F-CUST-06": false,
+      "F-CUST-07": false,
+      "F-CUST-08": false,
+      "F-GEO-01": false,
+      "F-GEO-02": false,
+      "F-GEO-03": false,
+      "F-GEO-04": false,
+      "F-GEO-05": false,
+      "F-PROD-01": true,
+      "F-PROD-02": false
+    },
+    "overrides_applied": [
+      {
+        "factor_id": "F-CUST-04",
+        "min_band": "HIGH",
+        "reason": "opaque / unresolved ownership"
+      }
+    ],
+    "score": 15.2
+  },
+  "screening": {
+    "expected_query_count": 33,
+    "true_pep_subjects": [],
+    "true_sanctions_subjects": [],
+    "unavailable_lists": [],
+    "weak_sanctions_subjects": []
+  },
+  "search_mock": {
+    "namesake_exclusion_urls": [],
+    "paywall_gap_urls": [],
+    "quarantine_urls": [],
+    "refusal_urls": [],
+    "relevant_media_urls": [],
+    "source_urls": [
+      "https://citydesk.example/cases/case-700095/profile"
+    ]
+  },
+  "segment": "corporate_complex",
+  "tags": [
+    "corporate_complex",
+    "lookthrough_depth_exceeded",
+    "nominee_unresolved",
+    "ownership_depth_7",
+    "vested_trust"
+  ],
+  "verified_fields": [
+    {
+      "char_span": [
+        29,
+        76
+      ],
+      "doc_id": "DOC-700095-001",
+      "key": "legal_name",
+      "page": 1,
+      "quote": "Company name: Fara Trialford Trading 700095 Ltd",
+      "value": "Fara Trialford Trading 700095 Ltd"
+    },
+    {
+      "char_span": [
+        77,
+        103
+      ],
+      "doc_id": "DOC-700095-001",
+      "key": "incorporation_number",
+      "page": 1,
+      "quote": "Company number: TST-700095",
+      "value": "TST-700095"
+    },
+    {
+      "char_span": [
+        64,
+        90
+      ],
+      "doc_id": "DOC-700095-002",
+      "key": "registry_number",
+      "page": 1,
+      "quote": "Company number: TST-700095",
+      "value": "TST-700095"
+    },
+    {
+      "char_span": [
+        19,
+        45
+      ],
+      "doc_id": "DOC-700095-003",
+      "key": "owner_1_name",
+      "page": 1,
+      "quote": "Name: Galen Mockley 700095",
+      "value": "Galen Mockley 700095"
+    },
+    {
+      "char_span": [
+        19,
+        46
+      ],
+      "doc_id": "DOC-700095-004",
+      "key": "owner_2_name",
+      "page": 1,
+      "quote": "Name: Hale Trialford 700095",
+      "value": "Hale Trialford 700095"
+    },
+    {
+      "char_span": [
+        22,
+        71
+      ],
+      "doc_id": "DOC-700095-005",
+      "key": "control_person",
+      "page": 1,
+      "quote": "Director and control person: Galen Mockley 700095",
+      "value": "Galen Mockley 700095"
+    },
+    {
+      "char_span": [
+        61,
+        103
+      ],
+      "doc_id": "DOC-700095-006",
+      "key": "address",
+      "page": 1,
+      "quote": "Address: 1 Test Street, Sample City 700095",
+      "value": "1 Test Street, Sample City 700095"
+    },
+    {
+      "char_span": [
+        78,
+        98
+      ],
+      "doc_id": "DOC-700095-015",
+      "key": "annual_income_or_revenue",
+      "page": 1,
+      "quote": "Revenue: USD 898,000",
+      "value": 898000
+    },
+    {
+      "char_span": [
+        84,
+        110
+      ],
+      "doc_id": "DOC-700095-016",
+      "key": "period_credits",
+      "page": 1,
+      "quote": "Total credits: USD 146,000",
+      "value": 146000
+    }
+  ]
+}

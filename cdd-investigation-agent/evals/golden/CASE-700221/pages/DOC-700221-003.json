@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700221-003",
+  "filename": "owner_1_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Cato Mockley 700221\nDate of birth: 1987-11-11\nNationality: CA\nPassport number: O7002211\nValid until: 2031-12-31\n"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "doc_id": "DOC-700065-016",
+  "filename": "media_results.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "MEDIA RESULT\nSubject: Galen Exampleton 700065\nDate: 2026-06-15\nStatus: regulatory final notice\nSource: Synthetic News Archive\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 2,
+      "text": "NAMESAKE EXCLUSION\nName: Galen Exampleton 700065\nDifferent date of birth and country; this is another person.\n"
+    }
+  ]
+}

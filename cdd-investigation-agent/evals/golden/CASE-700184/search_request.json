@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700184"
+  },
+  "case_id": "CASE-700184",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Fara Sampleton 700184",
+    "Galen Mockley 700184"
+  ],
+  "request_id": "SR-700184",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Eli Mockley Trading 700184 Ltd"
+}

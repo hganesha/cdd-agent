@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700070"
+  },
+  "case_id": "CASE-700070",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Bela Simvale 700070",
+    "Cato Testwell 700070"
+  ],
+  "request_id": "SR-700070",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Ari Mockley Trading 700070 Ltd"
+}

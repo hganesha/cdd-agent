@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700100"
+  },
+  "case_id": "CASE-700100",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Bela Trialford 700100",
+    "Cato Exampleton 700100"
+  ],
+  "request_id": "SR-700100",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Ari Mockley Trading 700100 Ltd"
+}

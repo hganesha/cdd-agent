@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700170-003",
+  "filename": "income_tax_return.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "INCOME TAX RETURN — Bela Trialford 700170\nYear ended: 2025-12-31\nAnnual income: USD 873,000\n"
+    }
+  ]
+}

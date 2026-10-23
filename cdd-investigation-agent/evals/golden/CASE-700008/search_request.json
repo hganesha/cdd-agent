@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700008"
+  },
+  "case_id": "CASE-700008",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Jori Trialford 700008",
+    "Ari Exampleton 700008"
+  ],
+  "request_id": "SR-700008",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Iva Testwell Trading 700008 Ltd"
+}

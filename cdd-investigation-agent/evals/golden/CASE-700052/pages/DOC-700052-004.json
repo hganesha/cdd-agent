@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700052-004",
+  "filename": "owner_2_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Eli Testwell 700052\nDate of birth: 1969-11-18\nNationality: AE\nPassport number: O7000522\nValid until: 2031-12-31\n"
+    }
+  ]
+}

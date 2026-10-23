@@ -1,0 +1,412 @@
+{
+  "activity": {
+    "annual_income_or_revenue_usd": 1421000,
+    "annualised_credit_to_income_or_revenue_ratio": 0.6502,
+    "annualised_credits_usd": 924000.0,
+    "inconsistent": false,
+    "period_credits_usd": 231000,
+    "period_months": 3
+  },
+  "case_id": "CASE-700074",
+  "coverage": {
+    "documents_total": 16,
+    "pages_total": 368,
+    "pages_unreadable": 0
+  },
+  "decision_authority": "HUMAN",
+  "evidence_anchors": [
+    {
+      "char_span": [
+        29,
+        74
+      ],
+      "doc_id": "DOC-700074-001",
+      "key": "legal_name",
+      "page": 1,
+      "quote": "Company name: Eli Testwell Trading 700074 Ltd",
+      "value": "Eli Testwell Trading 700074 Ltd"
+    },
+    {
+      "char_span": [
+        75,
+        101
+      ],
+      "doc_id": "DOC-700074-001",
+      "key": "incorporation_number",
+      "page": 1,
+      "quote": "Company number: TST-700074",
+      "value": "TST-700074"
+    },
+    {
+      "char_span": [
+        62,
+        88
+      ],
+      "doc_id": "DOC-700074-002",
+      "key": "registry_number",
+      "page": 1,
+      "quote": "Company number: TST-700074",
+      "value": "TST-700074"
+    },
+    {
+      "char_span": [
+        19,
+        46
+      ],
+      "doc_id": "DOC-700074-003",
+      "key": "owner_1_name",
+      "page": 1,
+      "quote": "Name: Fara Sampleton 700074",
+      "value": "Fara Sampleton 700074"
+    },
+    {
+      "char_span": [
+        19,
+        45
+      ],
+      "doc_id": "DOC-700074-004",
+      "key": "owner_2_name",
+      "page": 1,
+      "quote": "Name: Galen Mockley 700074",
+      "value": "Galen Mockley 700074"
+    },
+    {
+      "char_span": [
+        22,
+        72
+      ],
+      "doc_id": "DOC-700074-005",
+      "key": "control_person",
+      "page": 1,
+      "quote": "Director and control person: Fara Sampleton 700074",
+      "value": "Fara Sampleton 700074"
+    },
+    {
+      "char_span": [
+        59,
+        101
+      ],
+      "doc_id": "DOC-700074-006",
+      "key": "address",
+      "page": 1,
+      "quote": "Address: 1 Test Street, Sample City 700074",
+      "value": "1 Test Street, Sample City 700074"
+    },
+    {
+      "char_span": [
+        49,
+        82
+      ],
+      "doc_id": "DOC-700074-007",
+      "key": "primary_share",
+      "page": 1,
+      "quote": "Layer 1 Holdings 700074 Ltd | 70%",
+      "value": 70
+    },
+    {
+      "char_span": [
+        83,
+        120
+      ],
+      "doc_id": "DOC-700074-007",
+      "key": "nominee_share",
+      "page": 1,
+      "quote": "Undisclosed Nominees 700074 Ltd | 20%",
+      "value": 20
+    },
+    {
+      "char_span": [
+        40,
+        81
+      ],
+      "doc_id": "DOC-700074-008",
+      "key": "vested_beneficiary",
+      "page": 1,
+      "quote": "Vested beneficiary: Fara Sampleton 700074",
+      "value": "Fara Sampleton 700074"
+    },
+    {
+      "char_span": [
+        76,
+        98
+      ],
+      "doc_id": "DOC-700074-014",
+      "key": "annual_income_or_revenue",
+      "page": 1,
+      "quote": "Revenue: USD 1,421,000",
+      "value": 1421000
+    },
+    {
+      "char_span": [
+        82,
+        108
+      ],
+      "doc_id": "DOC-700074-015",
+      "key": "period_credits",
+      "page": 1,
+      "quote": "Total credits: USD 231,000",
+      "value": 231000
+    },
+    {
+      "char_span": [
+        58,
+        102
+      ],
+      "doc_id": "DOC-700074-016",
+      "key": "source_of_funds",
+      "page": 1,
+      "quote": "Funds are from documented business receipts.",
+      "value": "declared receipts"
+    }
+  ],
+  "gaps": [
+    "LOOKTHROUGH_DEPTH_EXCEEDED",
+    "UNRESOLVED_UBO"
+  ],
+  "ownership": {
+    "beneficial_owners": [
+      {
+        "effective_pct": 52.0,
+        "name": "Fara Sampleton 700074"
+      },
+      {
+        "effective_pct": 28.0,
+        "name": "Galen Mockley 700074"
+      }
+    ],
+    "control_person": "Fara Sampleton 700074",
+    "paths": [
+      {
+        "basis": "document",
+        "effective_pct": 10.0,
+        "nodes": [
+          "Fara Sampleton 700074",
+          "Elm Test Trust 700074",
+          "Eli Testwell Trading 700074 Ltd"
+        ],
+        "percentages": [
+          100.0,
+          10.0
+        ],
+        "person": "Fara Sampleton 700074"
+      },
+      {
+        "basis": "document",
+        "effective_pct": 42.0,
+        "nodes": [
+          "Fara Sampleton 700074",
+          "Layer 5 Holdings 700074 Ltd",
+          "Layer 4 Holdings 700074 Ltd",
+          "Layer 3 Holdings 700074 Ltd",
+          "Layer 2 Holdings 700074 Ltd",
+          "Layer 1 Holdings 700074 Ltd",
+          "Eli Testwell Trading 700074 Ltd"
+        ],
+        "percentages": [
+          60.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          70.0
+        ],
+        "person": "Fara Sampleton 700074"
+      },
+      {
+        "basis": "document",
+        "effective_pct": 28.0,
+        "nodes": [
+          "Galen Mockley 700074",
+          "Layer 5 Holdings 700074 Ltd",
+          "Layer 4 Holdings 700074 Ltd",
+          "Layer 3 Holdings 700074 Ltd",
+          "Layer 2 Holdings 700074 Ltd",
+          "Layer 1 Holdings 700074 Ltd",
+          "Eli Testwell Trading 700074 Ltd"
+        ],
+        "percentages": [
+          40.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          70.0
+        ],
+        "person": "Galen Mockley 700074"
+      }
+    ],
+    "unresolved_pct": 20.0
+  },
+  "provenance": {
+    "generator_seed": 20961096,
+    "human_reviewed": false,
+    "kind": "SYNTHETIC_ORACLE",
+    "release_gate_eligible": false
+  },
+  "quarantine_doc_ids": [],
+  "recommendation": "HOLD_FOR_RFI",
+  "required_gates": [
+    "G3"
+  ],
+  "required_refusals": [],
+  "risk": {
+    "band": "HIGH",
+    "cdd_level": "EDD",
+    "factor_inputs": {
+      "F-BEH-01": false,
+      "F-BEH-02": false,
+      "F-BEH-03": false,
+      "F-CHAN-01": false,
+      "F-CHAN-02": false,
+      "F-CUST-01": false,
+      "F-CUST-02": false,
+      "F-CUST-03": false,
+      "F-CUST-04": true,
+      "F-CUST-05": true,
+      "F-CUST-06": false,
+      "F-CUST-07": false,
+      "F-CUST-08": false,
+      "F-GEO-01": false,
+      "F-GEO-02": false,
+      "F-GEO-03": false,
+      "F-GEO-04": false,
+      "F-GEO-05": false,
+      "F-PROD-01": false,
+      "F-PROD-02": false
+    },
+    "overrides_applied": [
+      {
+        "factor_id": "F-CUST-04",
+        "min_band": "HIGH",
+        "reason": "opaque / unresolved ownership"
+      }
+    ],
+    "score": 11.2
+  },
+  "screening": {
+    "expected_query_count": 33,
+    "true_pep_subjects": [],
+    "true_sanctions_subjects": [],
+    "unavailable_lists": [],
+    "weak_sanctions_subjects": []
+  },
+  "search_mock": {
+    "namesake_exclusion_urls": [],
+    "paywall_gap_urls": [],
+    "quarantine_urls": [],
+    "refusal_urls": [],
+    "relevant_media_urls": [],
+    "source_urls": [
+      "https://citydesk.example/cases/case-700074/profile"
+    ]
+  },
+  "segment": "corporate_complex",
+  "tags": [
+    "corporate_complex",
+    "lookthrough_depth_exceeded",
+    "nominee_unresolved",
+    "ownership_depth_6",
+    "vested_trust"
+  ],
+  "verified_fields": [
+    {
+      "char_span": [
+        29,
+        74
+      ],
+      "doc_id": "DOC-700074-001",
+      "key": "legal_name",
+      "page": 1,
+      "quote": "Company name: Eli Testwell Trading 700074 Ltd",
+      "value": "Eli Testwell Trading 700074 Ltd"
+    },
+    {
+      "char_span": [
+        75,
+        101
+      ],
+      "doc_id": "DOC-700074-001",
+      "key": "incorporation_number",
+      "page": 1,
+      "quote": "Company number: TST-700074",
+      "value": "TST-700074"
+    },
+    {
+      "char_span": [
+        62,
+        88
+      ],
+      "doc_id": "DOC-700074-002",
+      "key": "registry_number",
+      "page": 1,
+      "quote": "Company number: TST-700074",
+      "value": "TST-700074"
+    },
+    {
+      "char_span": [
+        19,
+        46
+      ],
+      "doc_id": "DOC-700074-003",
+      "key": "owner_1_name",
+      "page": 1,
+      "quote": "Name: Fara Sampleton 700074",
+      "value": "Fara Sampleton 700074"
+    },
+    {
+      "char_span": [
+        19,
+        45
+      ],
+      "doc_id": "DOC-700074-004",
+      "key": "owner_2_name",
+      "page": 1,
+      "quote": "Name: Galen Mockley 700074",
+      "value": "Galen Mockley 700074"
+    },
+    {
+      "char_span": [
+        22,
+        72
+      ],
+      "doc_id": "DOC-700074-005",
+      "key": "control_person",
+      "page": 1,
+      "quote": "Director and control person: Fara Sampleton 700074",
+      "value": "Fara Sampleton 700074"
+    },
+    {
+      "char_span": [
+        59,
+        101
+      ],
+      "doc_id": "DOC-700074-006",
+      "key": "address",
+      "page": 1,
+      "quote": "Address: 1 Test Street, Sample City 700074",
+      "value": "1 Test Street, Sample City 700074"
+    },
+    {
+      "char_span": [
+        76,
+        98
+      ],
+      "doc_id": "DOC-700074-014",
+      "key": "annual_income_or_revenue",
+      "page": 1,
+      "quote": "Revenue: USD 1,421,000",
+      "value": 1421000
+    },
+    {
+      "char_span": [
+        82,
+        108
+      ],
+      "doc_id": "DOC-700074-015",
+      "key": "period_credits",
+      "page": 1,
+      "quote": "Total credits: USD 231,000",
+      "value": 231000
+    }
+  ]
+}

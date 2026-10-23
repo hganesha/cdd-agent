@@ -1,0 +1,18 @@
+{
+  "attributes": {
+    "country": "CA",
+    "dob": "1967-09-05"
+  },
+  "case_id": "CASE-700111",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [],
+  "request_id": "SR-700111",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Cato Sampleton 700111"
+}

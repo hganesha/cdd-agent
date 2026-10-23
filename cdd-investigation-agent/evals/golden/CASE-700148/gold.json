@@ -1,0 +1,241 @@
+{
+  "activity": {
+    "annual_income_or_revenue_usd": 1259000,
+    "annualised_credit_to_income_or_revenue_ratio": 0.7307,
+    "annualised_credits_usd": 920000.0,
+    "inconsistent": false,
+    "period_credits_usd": 230000,
+    "period_months": 3
+  },
+  "case_id": "CASE-700148",
+  "coverage": {
+    "documents_total": 5,
+    "pages_total": 44,
+    "pages_unreadable": 0
+  },
+  "decision_authority": "HUMAN",
+  "evidence_anchors": [
+    {
+      "char_span": [
+        19,
+        46
+      ],
+      "doc_id": "DOC-700148-001",
+      "key": "legal_name",
+      "page": 1,
+      "quote": "Name: Jori Sampleton 700148",
+      "value": "Jori Sampleton 700148"
+    },
+    {
+      "char_span": [
+        47,
+        72
+      ],
+      "doc_id": "DOC-700148-001",
+      "key": "date_of_birth",
+      "page": 1,
+      "quote": "Date of birth: 1974-10-08",
+      "value": "1974-10-08"
+    },
+    {
+      "char_span": [
+        89,
+        114
+      ],
+      "doc_id": "DOC-700148-001",
+      "key": "passport_number",
+      "page": 1,
+      "quote": "Passport number: X700148A",
+      "value": "X700148A"
+    },
+    {
+      "char_span": [
+        49,
+        91
+      ],
+      "doc_id": "DOC-700148-002",
+      "key": "address",
+      "page": 1,
+      "quote": "Address: 1 Test Street, Sample City 700148",
+      "value": "1 Test Street, Sample City 700148"
+    },
+    {
+      "char_span": [
+        65,
+        93
+      ],
+      "doc_id": "DOC-700148-003",
+      "key": "annual_income_or_revenue",
+      "page": 1,
+      "quote": "Annual income: USD 1,259,000",
+      "value": 1259000
+    },
+    {
+      "char_span": [
+        72,
+        98
+      ],
+      "doc_id": "DOC-700148-004",
+      "key": "period_credits",
+      "page": 1,
+      "quote": "Total credits: USD 230,000",
+      "value": 230000
+    },
+    {
+      "char_span": [
+        48,
+        90
+      ],
+      "doc_id": "DOC-700148-005",
+      "key": "source_of_funds",
+      "page": 1,
+      "quote": "Funds are from documented salary receipts.",
+      "value": "declared receipts"
+    }
+  ],
+  "gaps": [],
+  "ownership": {
+    "beneficial_owners": [],
+    "control_person": null,
+    "paths": [],
+    "unresolved_pct": 0.0
+  },
+  "provenance": {
+    "generator_seed": 20961170,
+    "human_reviewed": false,
+    "kind": "SYNTHETIC_ORACLE",
+    "release_gate_eligible": false
+  },
+  "quarantine_doc_ids": [],
+  "recommendation": "HOLD_FOR_RFI",
+  "required_gates": [
+    "G3"
+  ],
+  "required_refusals": [],
+  "risk": {
+    "band": "HIGH",
+    "cdd_level": "EDD",
+    "factor_inputs": {
+      "F-BEH-01": false,
+      "F-BEH-02": false,
+      "F-BEH-03": false,
+      "F-CHAN-01": false,
+      "F-CHAN-02": true,
+      "F-CUST-01": true,
+      "F-CUST-02": false,
+      "F-CUST-03": false,
+      "F-CUST-04": false,
+      "F-CUST-05": false,
+      "F-CUST-06": false,
+      "F-CUST-07": false,
+      "F-CUST-08": false,
+      "F-GEO-01": false,
+      "F-GEO-02": false,
+      "F-GEO-03": false,
+      "F-GEO-04": false,
+      "F-GEO-05": false,
+      "F-PROD-01": false,
+      "F-PROD-02": false
+    },
+    "overrides_applied": [
+      {
+        "factor_id": "F-CUST-01",
+        "min_band": "HIGH",
+        "reason": "PEP exposure"
+      }
+    ],
+    "score": 10.55
+  },
+  "screening": {
+    "expected_query_count": 11,
+    "true_pep_subjects": [
+      "Jori Sampleton 700148"
+    ],
+    "true_sanctions_subjects": [],
+    "unavailable_lists": [],
+    "weak_sanctions_subjects": []
+  },
+  "search_mock": {
+    "namesake_exclusion_urls": [],
+    "paywall_gap_urls": [],
+    "quarantine_urls": [],
+    "refusal_urls": [],
+    "relevant_media_urls": [],
+    "source_urls": [
+      "https://citydesk.example/cases/case-700148/profile"
+    ]
+  },
+  "segment": "individual_pep_media",
+  "tags": [
+    "individual_pep_media",
+    "pep_true_hit"
+  ],
+  "verified_fields": [
+    {
+      "char_span": [
+        19,
+        46
+      ],
+      "doc_id": "DOC-700148-001",
+      "key": "legal_name",
+      "page": 1,
+      "quote": "Name: Jori Sampleton 700148",
+      "value": "Jori Sampleton 700148"
+    },
+    {
+      "char_span": [
+        47,
+        72
+      ],
+      "doc_id": "DOC-700148-001",
+      "key": "date_of_birth",
+      "page": 1,
+      "quote": "Date of birth: 1974-10-08",
+      "value": "1974-10-08"
+    },
+    {
+      "char_span": [
+        89,
+        114
+      ],
+      "doc_id": "DOC-700148-001",
+      "key": "passport_number",
+      "page": 1,
+      "quote": "Passport number: X700148A",
+      "value": "X700148A"
+    },
+    {
+      "char_span": [
+        49,
+        91
+      ],
+      "doc_id": "DOC-700148-002",
+      "key": "address",
+      "page": 1,
+      "quote": "Address: 1 Test Street, Sample City 700148",
+      "value": "1 Test Street, Sample City 700148"
+    },
+    {
+      "char_span": [
+        65,
+        93
+      ],
+      "doc_id": "DOC-700148-003",
+      "key": "annual_income_or_revenue",
+      "page": 1,
+      "quote": "Annual income: USD 1,259,000",
+      "value": 1259000
+    },
+    {
+      "char_span": [
+        72,
+        98
+      ],
+      "doc_id": "DOC-700148-004",
+      "key": "period_credits",
+      "page": 1,
+      "quote": "Total credits: USD 230,000",
+      "value": 230000
+    }
+  ]
+}

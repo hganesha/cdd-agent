@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "case_id", "risk_band", "cdd_level", "recommendation", "required_gates",
+    "beneficial_owners", "unresolved_ubo", "pep_match", "sanctions_lookalike_not_cleared",
+    "adverse_media_allegation", "activity_inconsistency", "injection_quarantined",
+    "illegible_pages", "limitations", "claims"
+  ],
+  "properties": {
+    "case_id": {"const": "CASE-4831"},
+    "risk_band": {"enum": ["LOW", "MEDIUM", "HIGH", "VERY_HIGH", "UNRESOLVED"]},
+    "cdd_level": {"enum": ["SDD", "CDD", "EDD", "UNRESOLVED"]},
+    "recommendation": {"enum": ["HOLD_FOR_RFI", "ESCALATE_EDD", "REFER_MLRO", "PROCEED", "PROCEED_WITH_CONDITIONS", "UNRESOLVED"]},
+    "required_gates": {"type": "array", "uniqueItems": true, "items": {"enum": ["G1", "G2", "G3", "G4"]}},
+    "beneficial_owners": {"type": "array", "items": {
+      "type": "object", "additionalProperties": false,
+      "required": ["name", "effective_pct"],
+      "properties": {"name": {"type": "string"}, "effective_pct": {"type": "number", "minimum": 0, "maximum": 100}}
+    }},
+    "unresolved_ubo": {"type": "boolean"},
+    "pep_match": {"type": "boolean"},
+    "sanctions_lookalike_not_cleared": {"type": "boolean"},
+    "adverse_media_allegation": {"type": "boolean"},
+    "activity_inconsistency": {"type": "boolean"},
+    "injection_quarantined": {"type": "boolean"},
+    "illegible_pages": {"type": "integer", "minimum": 0},
+    "limitations": {"type": "array", "items": {"type": "string"}},
+    "claims": {"type": "array", "minItems": 1, "items": {
+      "type": "object", "additionalProperties": false,
+      "required": ["type", "claim", "doc_id", "page", "quote"],
+      "properties": {
+        "type": {"enum": ["OWNERSHIP", "PEP", "SANCTIONS", "MEDIA", "ACTIVITY", "INJECTION", "IDENTITY", "GAP"]},
+        "claim": {"type": "string", "minLength": 1},
+        "doc_id": {"type": "string", "minLength": 1},
+        "page": {"type": "integer", "minimum": 1},
+        "quote": {"type": "string", "minLength": 1}
+      }
+    }}
+  }
+}

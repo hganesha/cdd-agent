@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700219-003",
+  "filename": "owner_1_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Ari Sampleton 700219\nDate of birth: 1985-09-05\nNationality: GB\nPassport number: O7002191\nValid until: 2031-12-31\n"
+    }
+  ]
+}

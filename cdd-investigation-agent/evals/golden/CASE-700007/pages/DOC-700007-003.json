@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700007-003",
+  "filename": "owner_1_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Iva Mockley 700007\nDate of birth: 1983-01-17\nNationality: SG\nPassport number: O7000071\nValid until: 2031-12-31\n"
+    }
+  ]
+}

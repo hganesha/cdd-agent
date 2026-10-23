@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700054"
+  },
+  "case_id": "CASE-700054",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Fara Testwell 700054",
+    "Galen Sampleton 700054"
+  ],
+  "request_id": "SR-700054",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Eli Exampleton Trading 700054 Ltd"
+}

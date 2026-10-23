@@ -1,0 +1,18 @@
+{
+  "doc_id": "DOC-700150-006",
+  "filename": "media_results.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "MEDIA RESULT\nSubject: Bela Mockley 700150\nDate: 2026-06-15\nStatus: regulatory final notice\nSource: Synthetic News Archive\n"
+    },
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 2,
+      "text": "NAMESAKE EXCLUSION\nName: Bela Mockley 700150\nDifferent date of birth and country; this is another person.\n"
+    }
+  ]
+}

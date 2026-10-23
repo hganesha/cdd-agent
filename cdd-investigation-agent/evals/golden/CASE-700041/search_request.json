@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "registration_number": "TST-700041"
+  },
+  "case_id": "CASE-700041",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [
+    "Cato Mockley 700041",
+    "Dara Trialford 700041"
+  ],
+  "request_id": "SR-700041",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Bela Trialford Trading 700041 Ltd"
+}

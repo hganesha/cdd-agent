@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700069-003",
+  "filename": "owner_1_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Ari Simvale 700069\nDate of birth: 1985-03-14\nNationality: GB\nPassport number: O7000691\nValid until: 2031-12-31\n"
+    }
+  ]
+}

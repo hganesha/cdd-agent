@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700108-001",
+  "filename": "identity_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.78,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Jori Testwell 700108\nDate of birth: 1994-06-23\nNationality: AE\nPassport number: X700108A\nValid until: 2031-12-31\n"
+    }
+  ]
+}

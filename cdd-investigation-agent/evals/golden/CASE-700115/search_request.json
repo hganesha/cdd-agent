@@ -1,0 +1,18 @@
+{
+  "attributes": {
+    "country": "DE",
+    "dob": "1971-01-17"
+  },
+  "case_id": "CASE-700115",
+  "facets": [
+    "IDENTITY",
+    "ADVERSE",
+    "REGULATORY"
+  ],
+  "max_queries": 18,
+  "per_query_limit": 4,
+  "related_parties": [],
+  "request_id": "SR-700115",
+  "retrieved_at": "2026-10-20T12:00:00Z",
+  "subject": "Galen Mockley 700115"
+}

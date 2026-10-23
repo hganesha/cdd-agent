@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700132-001",
+  "filename": "identity_passport.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.78,
+      "page": 1,
+      "text": "SYNTHETIC PASSPORT\nName: Dara Mockley 700132\nDate of birth: 1988-06-14\nNationality: SG\nPassport number: X700132A\nValid until: 2031-12-31\n"
+    }
+  ]
+}

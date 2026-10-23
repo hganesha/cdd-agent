@@ -1,0 +1,12 @@
+{
+  "doc_id": "DOC-700074-008",
+  "filename": "trust_deed.json",
+  "pages": [
+    {
+      "blank": false,
+      "ocr_confidence": 0.98,
+      "page": 1,
+      "text": "TRUST DEED\nTrust: Elm Test Trust 700074\nVested beneficiary: Fara Sampleton 700074\nTrust holds 10% of Eli Testwell Trading 700074 Ltd.\n"
+    }
+  ]
+}
