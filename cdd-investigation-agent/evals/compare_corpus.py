@@ -1,10 +1,5 @@
 #!/usr/bin/env python3
-"""Blind, resumable corpus comparison of the reference CDD runner and Pi.
-
-The reference still contains demo-specific analysis and composition. A completed
-run is rejected if its dossier belongs to another customer or case. Pi is opt-in
-because a full 260-case run incurs provider charges.
-"""
+"""Blind, resumable corpus comparison of the synthetic reference CDD analyzer and Pi."""
 from __future__ import annotations
 
 import argparse
@@ -20,6 +15,7 @@ import sys
 import tempfile
 import time
 from collections import Counter, defaultdict
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 
 from jsonschema import Draft202012Validator
@@ -30,6 +26,7 @@ DEFAULT_OUT = ROOT / "out" / "corpus_benchmark"
 DEFAULT_CASES = ["CASE-700001", "CASE-700041", "CASE-700141", "CASE-700201", "CASE-700241"]
 sys.path.insert(0, str(ROOT / "src"))
 from cdd_agent.orchestrator import Orchestrator, quick_verify  # noqa: E402
+from cdd_agent.corpus_reference import run as run_corpus_reference  # noqa: E402
 from cdd_agent.policy import load_policy  # noqa: E402
 from export_blind_case import export  # noqa: E402
 
@@ -181,7 +178,7 @@ def score_answer(answer: dict, gold: dict, pages: dict, *, require_pi_schema: bo
             "schema_errors": schema_errors[:20], **quotes}
 
 
-def reference_run(workspace: pathlib.Path, case_out: pathlib.Path, pages: dict) -> dict:
+def legacy_reference_run(workspace: pathlib.Path, case_out: pathlib.Path, pages: dict) -> dict:
     run_dir = case_out / "reference"
     if run_dir.exists():
         shutil.rmtree(run_dir)
@@ -271,6 +268,38 @@ def reference_run(workspace: pathlib.Path, case_out: pathlib.Path, pages: dict) 
     return result
 
 
+def reference_run(workspace: pathlib.Path, case_out: pathlib.Path, pages: dict) -> dict:
+    """Run the input-driven reference over only the exported blind workspace."""
+    run_dir = case_out / "reference"
+    if run_dir.exists():
+        shutil.rmtree(run_dir)
+    start = time.perf_counter()
+    try:
+        analysis = run_corpus_reference(workspace, run_dir)
+        answer = analysis["answer"]
+        invalid = []
+        if answer["case_id"] != read(workspace / "case.json")["case_id"]:
+            invalid.append("output case ID differs from input")
+        for kind in ("case", "bundle", "policy", "connector_results"):
+            ext = "yaml" if kind == "policy" else "json"
+            if analysis["input_hashes"].get(kind) != "sha256:" + digest(workspace / f"{kind}.{ext}"):
+                invalid.append(f"{kind} input hash differs from this workspace")
+        claims = quote_metrics(answer.get("claims"), pages)
+        if claims["invalid_quote_indices"]:
+            invalid.append("claim quote is absent from cited source page")
+        return {"status": "INVALID_CASE_OUTPUT" if invalid else "OK",
+                "elapsed_s": round(time.perf_counter() - start, 4),
+                "implementation": "deterministic corpus reference",
+                "cost_kind": "local compute", "answer": answer,
+                "input_hashes": analysis["input_hashes"],
+                "factor_inputs": analysis["factor_inputs"],
+                "risk": analysis["risk"], "invalid_reasons": invalid}
+    except Exception as exc:
+        return {"status": "ERROR", "elapsed_s": round(time.perf_counter() - start, 4),
+                "implementation": "deterministic corpus reference", "cost_kind": "local compute",
+                "error_type": type(exc).__name__, "error": str(exc)}
+
+
 def pi_run(workspace: pathlib.Path, case_out: pathlib.Path, case_id: str, *,
            provider: str, model: str, thinking: str, timeout: int) -> dict:
     shutil.copy2(ROOT / "pi_cdd" / "corpus_AGENTS.md", workspace / "AGENTS.md")
@@ -353,6 +382,7 @@ def config_hash(args: argparse.Namespace) -> str:
              "manifest": digest(CORPUS / "manifest.json"),
              "policy": digest(ROOT / "config" / "policy.yaml"),
              "runner": digest(pathlib.Path(__file__)),
+             "reference_analyzer": digest(ROOT / "src" / "cdd_agent" / "corpus_reference.py"),
              "exporter": digest(ROOT / "evals" / "export_blind_case.py"),
              "instructions": {name: digest(ROOT / "pi_cdd" / name)
                               for name in ("corpus_AGENTS.md", "corpus_task.md",
@@ -402,9 +432,9 @@ def summarize(rows: list[dict], *, pi_requested: bool, reference_requested: bool
             "elapsed_s_total": round(sum(run.get("elapsed_s", 0) for run in runs), 3),
             "quotes_exact": sum(s["quotes_exact"] for s in scores),
             "claims": sum(s["claims"] for s in scores),
+            "schema_valid_answers": sum(s["schema_valid"] for s in scores),
         }
         if engine == "pi":
-            summary[engine]["schema_valid_answers"] = sum(s["schema_valid"] for s in scores)
             summary[engine]["provider_cost_usd_total"] = round(
                 sum((run.get("usage") or {}).get("cost_usd", 0) for run in runs), 6)
             summary[engine]["tokens_input_total"] = sum(
@@ -412,6 +442,40 @@ def summarize(rows: list[dict], *, pi_requested: bool, reference_requested: bool
             summary[engine]["tokens_output_total"] = sum(
                 (run.get("usage") or {}).get("output", 0) for run in runs)
     return summary
+
+
+def process_case(entry: dict, args: argparse.Namespace, out: pathlib.Path,
+                 run_hash: str) -> tuple[dict, bool]:
+    cid = entry["case_id"]
+    case_out = out / cid
+    case_out.mkdir(parents=True, exist_ok=True)
+    row_path = case_out / "result.json"
+    if args.resume and row_path.exists():
+        prior = read(row_path)
+        if prior.get("config_hash") == run_hash and prior.get("gold_sha256") == entry["gold_sha256"]:
+            if (not args.pi or prior.get("pi", {}).get("status") == "OK") and (args.skip_reference or prior.get("reference", {}).get("status") == "OK"):
+                return prior, True
+    with tempfile.TemporaryDirectory(prefix=f"cdd-{cid.lower()}-") as tmp:
+        workspace = pathlib.Path(tmp) / "case"
+        export(cid, workspace)
+        connector = connector_page(workspace, cid)
+        pages = page_lookup(workspace, connector)
+        row = {"case_id": cid, "segment": entry["segment"], "risk_band": entry["risk_band"],
+               "gold_sha256": entry["gold_sha256"], "config_hash": run_hash,
+               "evaluated_at_utc": datetime.now(timezone.utc).isoformat()}
+        if not args.skip_reference:
+            row["reference"] = reference_run(workspace, case_out, pages)
+        if args.pi:
+            row["pi"] = pi_run(workspace, case_out, cid, provider=args.provider,
+                               model=args.model, thinking=args.thinking, timeout=args.timeout)
+        gold = read(CORPUS / cid / "gold.json")
+        for engine in ("reference", "pi"):
+            run = row.get(engine)
+            if run and run.get("status") in {"OK", "COMPLETE", "PARTIAL", "AWAITING_HUMAN"} and isinstance(run.get("answer"), dict):
+                run["score"] = score_answer(run["answer"], gold, pages,
+                                            require_pi_schema=True)
+        row_path.write_text(json.dumps(row, indent=2, ensure_ascii=False) + "\n")
+        return row, False
 
 
 def main() -> int:
@@ -426,12 +490,15 @@ def main() -> int:
     parser.add_argument("--model", default="openai/gpt-4.1-mini")
     parser.add_argument("--thinking", default="off")
     parser.add_argument("--timeout", type=int, default=900, help="seconds per Pi case")
+    parser.add_argument("--workers", type=int, default=1, help="concurrent case workspaces (default: 1)")
     parser.add_argument("--out", type=pathlib.Path, default=DEFAULT_OUT)
     parser.add_argument("--resume", action="store_true", help="reuse completed matching case results")
     parser.add_argument("--dry-run", action="store_true", help="print selected cases without running")
     args = parser.parse_args()
     if args.limit is not None and args.limit < 1:
         parser.error("--limit must be positive")
+    if args.workers < 1:
+        parser.error("--workers must be positive")
     if args.skip_reference and not args.pi:
         parser.error("nothing to run: --skip-reference requires --pi")
     manifest = read(CORPUS / "manifest.json")
@@ -443,44 +510,20 @@ def main() -> int:
     out = args.out.resolve()
     out.mkdir(parents=True, exist_ok=True)
     run_hash = config_hash(args)
-    rows = []
-    for position, entry in enumerate(entries, 1):
-        cid = entry["case_id"]
-        case_out = out / cid
-        case_out.mkdir(parents=True, exist_ok=True)
-        row_path = case_out / "result.json"
-        if args.resume and row_path.exists():
-            prior = read(row_path)
-            if prior.get("config_hash") == run_hash and prior.get("gold_sha256") == entry["gold_sha256"]:
-                rows.append(prior)
-                print(f"[{position}/{len(entries)}] {cid}: reused")
-                continue
-        with tempfile.TemporaryDirectory(prefix=f"cdd-{cid.lower()}-") as tmp:
-            workspace = pathlib.Path(tmp) / "case"
-            export(cid, workspace)
-            connector = connector_page(workspace, cid)
-            pages = page_lookup(workspace, connector)
-            row = {"case_id": cid, "segment": entry["segment"], "risk_band": entry["risk_band"],
-                   "gold_sha256": entry["gold_sha256"], "config_hash": run_hash,
-                   "evaluated_at_utc": datetime.now(timezone.utc).isoformat()}
-            if not args.skip_reference:
-                row["reference"] = reference_run(workspace, case_out, pages)
-            if args.pi:
-                row["pi"] = pi_run(workspace, case_out, cid, provider=args.provider,
-                                   model=args.model, thinking=args.thinking, timeout=args.timeout)
-            gold = read(CORPUS / cid / "gold.json")
-            for engine in ("reference", "pi"):
-                run = row.get(engine)
-                if run and run.get("status") in {"OK", "COMPLETE", "PARTIAL", "AWAITING_HUMAN"} and isinstance(run.get("answer"), dict):
-                    run["score"] = score_answer(run["answer"], gold, pages,
-                                                require_pi_schema=(engine == "pi"))
-            row_path.write_text(json.dumps(row, indent=2, ensure_ascii=False) + "\n")
-            rows.append(row)
-            summary = ", ".join(f"{name}={row[name]['status']}"
-                                for name in ("reference", "pi") if name in row)
-            print(f"[{position}/{len(entries)}] {cid}: {summary}")
+    rows_by_id = {}
+    with ThreadPoolExecutor(max_workers=args.workers) as executor:
+        pending = {executor.submit(process_case, entry, args, out, run_hash): entry
+                   for entry in entries}
+        for completed, future in enumerate(as_completed(pending), 1):
+            entry = pending[future]
+            row, reused = future.result()
+            rows_by_id[entry["case_id"]] = row
+            summary = "reused" if reused else ", ".join(
+                f"{name}={row[name]['status']}" for name in ("reference", "pi") if name in row)
+            print(f"[{completed}/{len(entries)}] {entry['case_id']}: {summary}", flush=True)
+    rows = [rows_by_id[entry["case_id"]] for entry in entries]
     report = {"scope": "synthetic oracle; no human-reviewed release gate",
-              "reference_note": "reference media lookup is input-driven, but other demo-specific output is rejected before scoring",
+              "reference_note": "deterministic corpus reference reads blind workspace inputs; distinct from the original CASE-4831 demo orchestrator",
               "config_hash": run_hash, "selected_case_ids": [e["case_id"] for e in entries],
               "summary": summarize(rows, pi_requested=args.pi, reference_requested=not args.skip_reference),
               "cases": rows}

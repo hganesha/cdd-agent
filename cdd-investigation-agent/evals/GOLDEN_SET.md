@@ -93,25 +93,27 @@ uses a live model provider. Results are written per case under
 `out/corpus_benchmark/CASE-*/result.json`, with raw Pi events and stderr beside them,
 and an aggregate `out/corpus_benchmark/comparison.json`. The report includes field
 matches, schema and exact-quote checks, wall time, provider-reported Pi tokens/cost,
-and failure status by segment and risk band. Reference cost figures are simulated
-estimates and are not directly comparable with provider charges.
+and failure status by segment and risk band. The deterministic corpus reference
+uses local compute, while Pi cost is provider-reported and charged by the model
+provider.
 
 ```bash
 .venv/bin/python evals/compare_corpus.py --dry-run
 .venv/bin/python evals/compare_corpus.py --pi
-.venv/bin/python evals/compare_corpus.py --all --pi --resume
-.venv/bin/python evals/compare_corpus.py --segment individual_media --pi --limit 10
+.venv/bin/python evals/compare_corpus.py --all --pi --workers 4 --resume
+.venv/bin/python evals/compare_corpus.py --segment individual_pep_media --pi --limit 10
 ```
 
-The reference media stage now discovers printouts by document type and cites their
-actual pages. Other ownership, screening, risk, and dossier code still contains
-`CASE-4831` demo facts. A generated case may complete the pipeline while producing
-a dossier about the wrong customer. The corpus runner therefore checks the output
-case, input hashes, and customer dossier before scoring, and records these runs as
-`INVALID_CASE_OUTPUT` or `ERROR`. Zero scored reference answers measure corpus
-compatibility, not relative investigation accuracy. `evals/compare.py` remains the
-working one-case benchmark for `CASE-4831`. The remaining stages must be generalized
-before a meaningful head-to-head accuracy comparison across the corpus.
+The corpus runner uses `src/cdd_agent/corpus_reference.py` for an input-driven
+reference answer. It parses the blind page sources, computes ownership paths,
+triages seeded screening and media, calculates activity ratios and policy factors,
+then emits the same compact JSON schema as Pi. It checks case ID, input hashes,
+schema, and exact source quotes before scoring. The original `CASE-4831` demo
+orchestrator remains in `evals/compare.py`; the corpus reference is a distinct
+implementation and does not produce its dossier or hash-chained evidence ledger.
+The 260-case reference run reached 260/260 valid answers, 100% field agreement with
+the machine-derived synthetic oracle, and 1,583/1,583 exact cited quotes. This is
+fixture agreement and is not a production accuracy or human review claim.
 
 Pi receives the same case bundle, seeded connector responses, mock search pages,
 and pinned policy in a temporary workspace. The gold file and manifest are retained

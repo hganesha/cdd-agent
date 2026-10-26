@@ -67,7 +67,7 @@ class CorpusComparisonTests(unittest.TestCase):
                 source = doc["pages"][loc["page"] - 1]["text"]
                 self.assertEqual(source[slice(*loc["char_span"])], record["verbatim_quote"])
 
-    def test_absent_media_source_does_not_invent_an_event_or_score_demo_report(self):
+    def test_absent_media_source_does_not_invent_an_event(self):
         with tempfile.TemporaryDirectory() as tmp:
             workspace = pathlib.Path(tmp) / "case"
             export("CASE-700001", workspace)
@@ -81,9 +81,26 @@ class CorpusComparisonTests(unittest.TestCase):
             connector = connector_page(workspace, "CASE-700001")
             pages = page_lookup(workspace, connector)
             result = reference_run(workspace, pathlib.Path(tmp), pages)
-            self.assertEqual(result["status"], "INVALID_CASE_OUTPUT")
-            self.assertNotIn("answer", result)
-            self.assertIn("dossier for CASE-700001 was not written", result["invalid_reasons"])
+            self.assertEqual(result["status"], "OK")
+            self.assertEqual(result["answer"]["case_id"], "CASE-700001")
+            self.assertEqual(result["answer"]["media_status"], "NONE")
+
+    def test_blind_reference_scores_representative_cases_across_all_segments(self):
+        import json
+        for case_id in ("CASE-700001", "CASE-700041", "CASE-700101", "CASE-700141",
+                        "CASE-700171", "CASE-700201", "CASE-700241"):
+            with self.subTest(case_id=case_id), tempfile.TemporaryDirectory() as tmp:
+                workspace = pathlib.Path(tmp) / "case"
+                export(case_id, workspace)
+                connector = connector_page(workspace, case_id)
+                pages = page_lookup(workspace, connector)
+                result = reference_run(workspace, pathlib.Path(tmp), pages)
+                self.assertEqual(result["status"], "OK", result.get("error"))
+                gold = json.loads((ROOT / "evals" / "golden" / case_id / "gold.json").read_text())
+                score = score_answer(result["answer"], gold, pages, require_pi_schema=True)
+                self.assertTrue(score["schema_valid"], score["schema_errors"])
+                self.assertEqual(score["fields_correct"], score["fields_total"])
+                self.assertEqual(score["quotes_exact"], score["claims"])
 
 
 if __name__ == "__main__":

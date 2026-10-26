@@ -15,7 +15,7 @@ Long-running   spec/05-long-running-execution.md    checkpoint / resume / budget
 Guardrails     spec/06-guardrails.md                injection, fairness, data handling
 Evaluation     spec/07-evaluation.md                golden set, metrics, release gate
 Synthetic set  evals/GOLDEN_SET.md                  260 cases with reproducible gold
-Reference impl src/cdd_agent/                       runs the demo case offline
+Reference impl src/cdd_agent/                       demo orchestrator and corpus analyzer
 Demo case      data/case_4831/                      23 documents, 300 pages
 ```
 
@@ -75,14 +75,14 @@ comparison runs five representative cases by default:
 # output: out/corpus_benchmark/comparison.json
 ```
 
-Use `--all --pi --resume` for the full set. The reference media stage now reads media
-printouts from the input bundle, but other stages remain specific to `CASE-4831`.
-The corpus runner rejects a dossier with the wrong customer or case before scoring.
-Generalize the remaining stages before interpreting the corpus as a head-to-head
-accuracy comparison. The reference's
-USD/token fields are simulated workload estimates, while Pi's are provider-reported
-usage. Pi's compact JSON answer does not replace the reference's schema-conformant
-dossier, evidence ledger, resume behavior, or human gates.
+Use `--all --pi --workers 4 --resume` for the full set. The corpus runner now uses
+`src/cdd_agent/corpus_reference.py`, an input-driven deterministic analyzer that
+reads each blind case bundle, page text, connector result, and local policy. It
+outputs the same compact JSON schema as Pi, with exact document quotes. It is a
+separate implementation from the `CASE-4831` orchestrator used by `evals/compare.py`.
+The comparison therefore measures synthetic case interpretation and runtime, not
+the demo orchestrator's dossier, evidence ledger, or resume behavior. The
+corpus reference uses local compute; Pi's tokens and cost are provider-reported.
 
 ```bash
 cd src
